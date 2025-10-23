@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { projects as enProjects } from './projectsData.en'
-import { projects as frProjects } from './projectsData.fr'
+import { projects } from '../../data/projects/projectsData'
+import { hexToRgba } from '../../utils/colorHelpers'
 import styles from './ProjectsGrid.module.scss'
 
 const ProjectsGrid = () => {
-  const [hoveredProject, setHoveredProject] = useState(null)
-  const { t, i18n } = useTranslation()
-
-  const projects = i18n.language === 'fr' ? frProjects : enProjects
+  const { t } = useTranslation()
 
   return (
     <section className={styles.section} id="projects">
@@ -16,171 +13,218 @@ const ProjectsGrid = () => {
 
       <div className={styles.grid}>
         {projects.map(project => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            isHovered={hoveredProject === project.id}
-            onMouseEnter={() => setHoveredProject(project.id)}
-            onMouseLeave={() => setHoveredProject(null)}
-            t={t}
-          />
+          <ProjectCard key={project.id} project={project} t={t} />
         ))}
       </div>
     </section>
   )
 }
 
-// Sous-composant Header
+// ============================================================================
+// Section Header
+// ============================================================================
 const SectionHeader = ({ t }) => (
-  <div className={styles.header}>
+  <header className={styles.header}>
     <span className={styles.sectionLabel}>{t('projects.selectedWork')}</span>
     <h2 className={styles.sectionTitle}>{t('projects.title')}</h2>
     <p className={styles.sectionDescription}>{t('projects.description')}</p>
-  </div>
+  </header>
 )
 
-// Sous-composant Carte de projet
-const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave, t }) => {
-  // Calcul dynamique de la couleur de bordure avec opacité
-  const getBorderColor = () => {
-    if (!isHovered) return undefined // Laisse le CSS gérer la couleur par défaut
+// ============================================================================
+// Project Card
+// ============================================================================
+const ProjectCard = ({ project, t }) => {
+  const [isHovered, setIsHovered] = useState(false)
 
-    // Crée une version avec opacité réduite pour la bordure
-    const hexToRgba = (hex, alpha) => {
-      const r = parseInt(hex.slice(1, 3), 16)
-      const g = parseInt(hex.slice(3, 5), 16)
-      const b = parseInt(hex.slice(5, 7), 16)
-      return `rgba(${r}, ${g}, ${b}, ${alpha})`
-    }
-
-    return hexToRgba(project.color, 0.7)
+  // Récupération des traductions depuis i18n
+  const translations = {
+    title: t(`projects.${project.id}.title`),
+    subtitle: t(`projects.${project.id}.subtitle`),
+    category: t(`projects.${project.id}.category`),
+    description: t(`projects.${project.id}.description`),
+    highlights: t(`projects.${project.id}.highlights`, { returnObjects: true }),
+    methodology: project.hasMethodology
+      ? t(`projects.${project.id}.methodology`, { returnObjects: true })
+      : null,
+    lore: project.hasLore ? t(`projects.${project.id}.lore`) : null,
   }
 
   return (
     <article
       className={styles.projectCard}
-      style={{ borderColor: getBorderColor() }}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      style={{
+        '--project-color': project.color,
+        borderColor: isHovered ? hexToRgba(project.color, 0.7) : undefined,
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      role="article"
+      aria-labelledby={`project-title-${project.id}`}
     >
-      <ProjectVisual project={project} />
-      <ProjectContent project={project} t={t} />
+      <ProjectVisual
+        image={project.image}
+        category={translations.category}
+        color={project.color}
+      />
+      <ProjectContent
+        projectId={project.id}
+        translations={translations}
+        tags={project.tags}
+        color={project.color}
+        hasMethodology={project.hasMethodology}
+        hasLore={project.hasLore}
+        t={t}
+      />
     </article>
   )
 }
 
-// Sous-composant Visuel du projet
-const ProjectVisual = ({ project }) => (
+// ============================================================================
+// Project Visual (Image + Badge)
+// ============================================================================
+const ProjectVisual = ({ image, category, color }) => (
   <div
     className={styles.projectImage}
     style={{
-      backgroundColor: `${project.color}15`,
-      // Ajout d'une transition smooth pour le background
-      transition: 'background-color var(--transition-base)',
+      backgroundColor: `${color}15`,
     }}
   >
-    <span className={styles.emoji}>{project.image}</span>
-    <span
-      className={styles.categoryBadge}
-      style={{ backgroundColor: project.color }}
-    >
-      {project.category}
+    <span className={styles.emoji} role="img" aria-hidden="true">
+      {image}
+    </span>
+    <span className={styles.categoryBadge} style={{ backgroundColor: color }}>
+      {category}
     </span>
   </div>
 )
 
-// Sous-composant Contenu du projet
-const ProjectContent = ({ project, t }) => (
+// ============================================================================
+// Project Content
+// ============================================================================
+const ProjectContent = ({
+  projectId,
+  translations,
+  tags,
+  color,
+  hasMethodology,
+  hasLore,
+  t,
+}) => (
   <div className={styles.projectContent}>
-    <h3 className={styles.projectTitle}>{project.title}</h3>
-    <p className={styles.projectSubtitle}>{project.subtitle}</p>
+    <h3 id={`project-title-${projectId}`} className={styles.projectTitle}>
+      {translations.title}
+    </h3>
+    <p className={styles.projectSubtitle}>{translations.subtitle}</p>
 
-    <Tags tags={project.tags} />
+    <Tags tags={tags} />
 
-    <p className={styles.projectDescription}>{project.description}</p>
+    <p
+      id={`project-desc-${projectId}`}
+      className={styles.projectDescription}
+    >
+      {translations.description}
+    </p>
 
-    <Highlights highlights={project.highlights} t={t} />
+    <Highlights highlights={translations.highlights} t={t} />
 
-    {project.methodology && (
-      <Methodology methodology={project.methodology} t={t} />
+    {hasMethodology && (
+      <Methodology methodology={translations.methodology} t={t} />
     )}
-    {project.lore && <Lore lore={project.lore} t={t} />}
 
-    <ViewButton color={project.color} t={t} />
+    {hasLore && <Lore lore={translations.lore} t={t} />}
+
+    <ViewButton
+      color={color}
+      projectTitle={translations.title}
+      projectId={projectId}
+      t={t}
+    />
   </div>
 )
 
-// Sous-composants spécialisés
+// ============================================================================
+// Sub-components
+// ============================================================================
+
 const Tags = ({ tags }) => (
-  <div className={styles.tags}>
+  <div className={styles.tags} role="list">
     {tags.map((tag, index) => (
-      <span key={index} className={styles.tag}>
+      <span key={index} className={styles.tag} role="listitem">
         {tag}
       </span>
     ))}
   </div>
 )
 
-const Highlights = ({ highlights, t }) => (
-  <div className={styles.highlights}>
-    <h4 className={styles.highlightsTitle}>
-      {t('projects.keyAchievements', 'Key Achievements')}
-    </h4>
-    <ul className={styles.highlightsList}>
-      {highlights.map((highlight, index) => (
-        <li key={index} className={styles.highlightItem}>
-          {highlight}
-        </li>
-      ))}
-    </ul>
-  </div>
-)
+const Highlights = ({ highlights, t }) => {
+  if (!highlights || highlights.length === 0) return null
 
-const Methodology = ({ methodology, t }) => (
-  <div className={styles.methodology}>
-    <h4 className={styles.methodologyTitle}>
-      {t('projects.researchMethodology', 'Research Methodology')}
-    </h4>
-    <div className={styles.methodologyGrid}>
-      <div>
-        <strong>{t('projects.research', 'Research')}:</strong>{' '}
-        {methodology.research}
-      </div>
-      <div>
-        <strong>{t('projects.testing', 'Testing')}:</strong>{' '}
-        {methodology.testing}
-      </div>
-      <div>
-        <strong>{t('projects.iterations', 'Iterations')}:</strong>{' '}
-        {methodology.iterations}
+  return (
+    <div className={styles.highlights}>
+      <h4 className={styles.highlightsTitle}>{t('projects.keyAchievements')}</h4>
+      <ul className={styles.highlightsList}>
+        {highlights.map((highlight, index) => (
+          <li key={index} className={styles.highlightItem}>
+            {highlight}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+const Methodology = ({ methodology, t }) => {
+  if (!methodology) return null
+
+  return (
+    <div className={styles.methodology}>
+      <h4 className={styles.methodologyTitle}>
+        {t('projects.researchMethodology')}
+      </h4>
+      <div className={styles.methodologyGrid}>
+        <div>
+          <strong>{t('projects.research')}:</strong> {methodology.research}
+        </div>
+        <div>
+          <strong>{t('projects.testing')}:</strong> {methodology.testing}
+        </div>
+        <div>
+          <strong>{t('projects.iterations')}:</strong> {methodology.iterations}
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
-const Lore = ({ lore, t }) => (
-  <div className={styles.lore}>
-    <h4 className={styles.loreTitle}>{t('projects.theLore', 'The Lore')}</h4>
-    <p className={styles.loreText}>{lore}</p>
-  </div>
-)
+const Lore = ({ lore, t }) => {
+  if (!lore) return null
 
-const ViewButton = ({ color, t }) => (
-  <button
-    className={styles.viewButton}
-    style={{ borderColor: color }}
-    onMouseEnter={e => {
-      // Effet hover dynamique basé sur la couleur du projet
-      e.target.style.backgroundColor = color
-      e.target.style.color = '#ffffff'
-    }}
-    onMouseLeave={e => {
-      e.target.style.backgroundColor = 'transparent'
-      e.target.style.color = color
-    }}
-  >
-    {t('projects.viewCaseStudy')}
-  </button>
-)
+  return (
+    <div className={styles.lore}>
+      <h4 className={styles.loreTitle}>{t('projects.theLore')}</h4>
+      <p className={styles.loreText}>{lore}</p>
+    </div>
+  )
+}
+
+const ViewButton = ({ color, projectTitle, projectId, t }) => {
+  const [isHovered, setIsHovered] = useState(false)
+
+  return (
+    <button
+      className={`${styles.viewButton} ${isHovered ? styles.viewButtonHovered : ''}`}
+      style={{
+        '--button-color': color,
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={`View case study for ${projectTitle}`}
+      aria-describedby={`project-desc-${projectId}`}
+    >
+      {t('projects.viewCaseStudy')}
+    </button>
+  )
+}
 
 export default ProjectsGrid
