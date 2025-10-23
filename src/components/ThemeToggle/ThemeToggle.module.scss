@@ -8,6 +8,7 @@
   border: 2px solid var(--color-border);
   border-radius: 50%;
   background-color: var(--color-bg);
+  color: var(--color-text); // Ajout important pour la couleur du texte/icône
   transition: all var(--transition-base);
   cursor: pointer;
 
@@ -18,6 +19,7 @@
 
     .icon {
       transform: rotate(15deg);
+      color: var(--color-accent); // Couleur d'accent au hover
     }
 
     .dot {
@@ -40,8 +42,8 @@
   .icon {
     width: 24px;
     height: 24px;
-    color: var(--color-accent);
-    transition: transform var(--transition-base);
+    color: currentColor; // Hérite de la couleur du bouton
+    transition: all var(--transition-base);
   }
 
   // Point indicateur
