@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { projects } from './projectsData'
-import styles from './ProjectsGrid.module.css'
+import styles from './ProjectsGrid.module.scss'
 
 const ProjectsGrid = () => {
   const [hoveredProject, setHoveredProject] = useState(null)
@@ -37,23 +37,44 @@ const SectionHeader = () => (
 )
 
 // Sous-composant Carte de projet
-const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave }) => (
-  <article
-    className={`${styles.projectCard} project-card`}
-    style={{ borderColor: isHovered ? project.color : '#e0e0e0' }}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-  >
-    <ProjectVisual project={project} />
-    <ProjectContent project={project} />
-  </article>
-)
+const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave }) => {
+  // Calcul dynamique de la couleur de bordure avec opacité
+  const getBorderColor = () => {
+    if (!isHovered) return undefined // Laisse le CSS gérer la couleur par défaut
+
+    // Crée une version avec opacité réduite pour la bordure
+    const hexToRgba = (hex, alpha) => {
+      const r = parseInt(hex.slice(1, 3), 16)
+      const g = parseInt(hex.slice(3, 5), 16)
+      const b = parseInt(hex.slice(5, 7), 16)
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`
+    }
+
+    return hexToRgba(project.color, 0.7)
+  }
+
+  return (
+    <article
+      className={styles.projectCard}
+      style={{ borderColor: getBorderColor() }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <ProjectVisual project={project} />
+      <ProjectContent project={project} />
+    </article>
+  )
+}
 
 // Sous-composant Visuel du projet
 const ProjectVisual = ({ project }) => (
   <div
-    className={`${styles.projectImage} project-image`}
-    style={{ backgroundColor: `${project.color}15` }}
+    className={styles.projectImage}
+    style={{
+      backgroundColor: `${project.color}15`,
+      // Ajout d'une transition smooth pour le background
+      transition: 'background-color var(--transition-base)',
+    }}
   >
     <span className={styles.emoji}>{project.image}</span>
     <span
@@ -133,7 +154,19 @@ const Lore = ({ lore }) => (
 )
 
 const ViewButton = ({ color }) => (
-  <button className={styles.viewButton} style={{ borderColor: color }}>
+  <button
+    className={styles.viewButton}
+    style={{ borderColor: color }}
+    onMouseEnter={e => {
+      // Effet hover dynamique basé sur la couleur du projet
+      e.target.style.backgroundColor = color
+      e.target.style.color = '#ffffff'
+    }}
+    onMouseLeave={e => {
+      e.target.style.backgroundColor = 'transparent'
+      e.target.style.color = color
+    }}
+  >
     View Case Study →
   </button>
 )

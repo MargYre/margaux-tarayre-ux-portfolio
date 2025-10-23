@@ -12,7 +12,7 @@ export const projects = [
       'Custom design system with 50+ components',
       'Accessibility-first approach (WCAG AA)',
     ],
-    color: '#2D2D2D',
+    color: '#2D2D2D', // Noir élégant
     image: '🛍️',
   },
   {
@@ -33,7 +33,7 @@ export const projects = [
       testing: 'Moderated usability tests with think-aloud protocol',
       iterations: '3 rounds of testing with 5 students each',
     },
-    color: '#1E40AF',
+    color: '#2D2D2D', // Même noir que le projet 1
     image: '📱',
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
       'Corporate pitch deck aesthetic',
       'Critical design questioning surveillance capitalism',
     ],
-    color: '#DC2626',
+    color: '#2D2D2D', // Même noir que les projets 1 et 2
     image: '👁️',
   },
 ]

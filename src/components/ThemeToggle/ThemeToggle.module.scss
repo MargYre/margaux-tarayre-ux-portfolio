@@ -1,0 +1,59 @@
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+
+  // États interactifs
+  &:hover {
+    border-color: var(--color-accent);
+    transform: scale(1.1);
+
+    .icon {
+      transform: rotate(15deg);
+    }
+
+    .dot {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  // Accessibilité
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  // Icône
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent);
+    transition: transform var(--transition-base);
+  }
+
+  // Point indicateur
+  .dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    opacity: 0.6;
+    transition: all var(--transition-base);
+  }
+}

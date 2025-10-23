@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { personas, personaMessages } from './personas'
-import styles from './HeroSection.module.css'
+import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')

@@ -1,0 +1,79 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    transform var(--transition-fast),
+    width var(--transition-fast),
+    height var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+// Styles de base communs à tous les curseurs
+%cursor-base {
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+// Curseur par défaut - petit point
+.default {
+  @extend %cursor-base;
+  width: 10px;
+  height: 10px;
+}
+
+// Curseur pour les liens
+.link {
+  @extend %cursor-base;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--color-accent);
+  background-color: rgba(var(--color-accent-rgb), 0.05);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+// Curseur pour les boutons
+.button {
+  @extend %cursor-base;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--color-accent);
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+// Curseur pour la visualisation
+.view {
+  @extend %cursor-base;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--color-accent);
+  background-color: rgba(var(--color-accent-rgb), 0.15);
+}
+
+// Curseur pour le drag & drop
+.drag {
+  @extend %cursor-base;
+  width: 70px;
+  height: 70px;
+  border: 2px dashed var(--color-accent);
+  background-color: transparent;
+}
+
+// Label à l'intérieur du curseur
+.cursorLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+}

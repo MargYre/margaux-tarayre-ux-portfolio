@@ -2,15 +2,12 @@ import { useEffect } from 'react'
 import CustomCursor from './components/Cursor/CustomCursor'
 import HeroSection from './components/Hero/HeroSection'
 import ProjectsGrid from './components/Projects/ProjectsGrid'
-import styles from './App.module.css'
+import ThemeToggle from './components/ThemeToggle/ThemeToggle'
+import styles from './App.module.scss'
 
 function App() {
-  // État pour masquer le curseur système
   useEffect(() => {
-    // Cache le curseur par défaut du navigateur
     document.body.style.cursor = 'none'
-
-    // Cleanup : restore le curseur si le composant est démonté
     return () => {
       document.body.style.cursor = 'auto'
     }
@@ -18,10 +15,8 @@ function App() {
 
   return (
     <>
-      {/* Curseur personnalisé - Toujours au top niveau */}
       <CustomCursor />
 
-      {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navContent}>
           <h1 className={styles.logo}>Margaux Tarayre</h1>
@@ -37,17 +32,17 @@ function App() {
             >
               Dev Portfolio →
             </a>
+            {/* Ajoute le toggle ici */}
+            <ThemeToggle />
           </div>
         </div>
       </nav>
 
-      {/* Contenu principal */}
       <main>
         <HeroSection />
         <ProjectsGrid />
       </main>
 
-      {/* Footer simple */}
       <footer className={styles.footer}>
         <p className={styles.footerText}>
           © 2025 Margaux Tarayre — UX/UI Designer & Developer
