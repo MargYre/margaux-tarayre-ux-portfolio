@@ -1,0 +1,15 @@
+.toggle {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+  }
+}

@@ -1,11 +1,15 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next' // ← IMPORT
 import CustomCursor from './components/Cursor/CustomCursor'
 import HeroSection from './components/Hero/HeroSection'
 import ProjectsGrid from './components/Projects/ProjectsGrid'
 import ThemeToggle from './components/ThemeToggle/ThemeToggle'
+import LanguageToggle from './components/LanguageToggle/LanguageToggle' // ← IMPORT
 import styles from './App.module.scss'
 
 function App() {
+  const { t } = useTranslation() // ← HOOK
+
   useEffect(() => {
     document.body.style.cursor = 'none'
     return () => {
@@ -22,7 +26,7 @@ function App() {
           <h1 className={styles.logo}>Margaux Tarayre</h1>
           <div className={styles.navLinks}>
             <a href="#projects" className={styles.navLink}>
-              Projects
+              {t('nav.projects')} {/* ← TRADUCTION */}
             </a>
             <a
               href="https://margaux-tarayre.netlify.app/"
@@ -30,9 +34,9 @@ function App() {
               rel="noopener noreferrer"
               className={styles.navLinkHighlight}
             >
-              Dev Portfolio →
+              {t('nav.devPortfolio')} {/* ← TRADUCTION */}
             </a>
-            {/* Ajoute le toggle ici */}
+            <LanguageToggle /> {/* ← BOUTON LANGUE */}
             <ThemeToggle />
           </div>
         </div>
@@ -45,11 +49,11 @@ function App() {
 
       <footer className={styles.footer}>
         <p className={styles.footerText}>
-          © 2025 Margaux Tarayre — UX/UI Designer & Developer
+          {t('footer.copyright')} {/* ← TRADUCTION */}
         </p>
         <div className={styles.footerLinks}>
           <a href="mailto:ton-email@example.com" className={styles.footerLink}>
-            Email
+            {t('footer.email')} {/* ← TRADUCTION */}
           </a>
           <a
             href="https://linkedin.com/in/ton-profil"
@@ -57,7 +61,7 @@ function App() {
             rel="noopener noreferrer"
             className={styles.footerLink}
           >
-            LinkedIn
+            {t('footer.linkedin')} {/* ← TRADUCTION */}
           </a>
           <a
             href="https://github.com/ton-profil"
@@ -65,7 +69,7 @@ function App() {
             rel="noopener noreferrer"
             className={styles.footerLink}
           >
-            GitHub
+            {t('footer.github')} {/* ← TRADUCTION */}
           </a>
         </div>
       </footer>

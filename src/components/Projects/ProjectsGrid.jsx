@@ -1,13 +1,18 @@
 import { useState } from 'react'
-import { projects } from './projectsData'
+import { useTranslation } from 'react-i18next'
+import { projects as enProjects } from './projectsData.en'
+import { projects as frProjects } from './projectsData.fr'
 import styles from './ProjectsGrid.module.scss'
 
 const ProjectsGrid = () => {
   const [hoveredProject, setHoveredProject] = useState(null)
+  const { t, i18n } = useTranslation()
+
+  const projects = i18n.language === 'fr' ? frProjects : enProjects
 
   return (
     <section className={styles.section} id="projects">
-      <SectionHeader />
+      <SectionHeader t={t} />
 
       <div className={styles.grid}>
         {projects.map(project => (
@@ -17,6 +22,7 @@ const ProjectsGrid = () => {
             isHovered={hoveredProject === project.id}
             onMouseEnter={() => setHoveredProject(project.id)}
             onMouseLeave={() => setHoveredProject(null)}
+            t={t}
           />
         ))}
       </div>
@@ -25,19 +31,16 @@ const ProjectsGrid = () => {
 }
 
 // Sous-composant Header
-const SectionHeader = () => (
+const SectionHeader = ({ t }) => (
   <div className={styles.header}>
-    <span className={styles.sectionLabel}>Selected Work</span>
-    <h2 className={styles.sectionTitle}>Projects</h2>
-    <p className={styles.sectionDescription}>
-      A collection of design explorations spanning e-commerce, user research,
-      and speculative futures.
-    </p>
+    <span className={styles.sectionLabel}>{t('projects.selectedWork')}</span>
+    <h2 className={styles.sectionTitle}>{t('projects.title')}</h2>
+    <p className={styles.sectionDescription}>{t('projects.description')}</p>
   </div>
 )
 
 // Sous-composant Carte de projet
-const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave }) => {
+const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave, t }) => {
   // Calcul dynamique de la couleur de bordure avec opacité
   const getBorderColor = () => {
     if (!isHovered) return undefined // Laisse le CSS gérer la couleur par défaut
@@ -61,7 +64,7 @@ const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave }) => {
       onMouseLeave={onMouseLeave}
     >
       <ProjectVisual project={project} />
-      <ProjectContent project={project} />
+      <ProjectContent project={project} t={t} />
     </article>
   )
 }
@@ -87,7 +90,7 @@ const ProjectVisual = ({ project }) => (
 )
 
 // Sous-composant Contenu du projet
-const ProjectContent = ({ project }) => (
+const ProjectContent = ({ project, t }) => (
   <div className={styles.projectContent}>
     <h3 className={styles.projectTitle}>{project.title}</h3>
     <p className={styles.projectSubtitle}>{project.subtitle}</p>
@@ -96,12 +99,14 @@ const ProjectContent = ({ project }) => (
 
     <p className={styles.projectDescription}>{project.description}</p>
 
-    <Highlights highlights={project.highlights} />
+    <Highlights highlights={project.highlights} t={t} />
 
-    {project.methodology && <Methodology methodology={project.methodology} />}
-    {project.lore && <Lore lore={project.lore} />}
+    {project.methodology && (
+      <Methodology methodology={project.methodology} t={t} />
+    )}
+    {project.lore && <Lore lore={project.lore} t={t} />}
 
-    <ViewButton color={project.color} />
+    <ViewButton color={project.color} t={t} />
   </div>
 )
 
@@ -116,9 +121,11 @@ const Tags = ({ tags }) => (
   </div>
 )
 
-const Highlights = ({ highlights }) => (
+const Highlights = ({ highlights, t }) => (
   <div className={styles.highlights}>
-    <h4 className={styles.highlightsTitle}>Key Achievements</h4>
+    <h4 className={styles.highlightsTitle}>
+      {t('projects.keyAchievements', 'Key Achievements')}
+    </h4>
     <ul className={styles.highlightsList}>
       {highlights.map((highlight, index) => (
         <li key={index} className={styles.highlightItem}>
@@ -129,31 +136,36 @@ const Highlights = ({ highlights }) => (
   </div>
 )
 
-const Methodology = ({ methodology }) => (
+const Methodology = ({ methodology, t }) => (
   <div className={styles.methodology}>
-    <h4 className={styles.methodologyTitle}>Research Methodology</h4>
+    <h4 className={styles.methodologyTitle}>
+      {t('projects.researchMethodology', 'Research Methodology')}
+    </h4>
     <div className={styles.methodologyGrid}>
       <div>
-        <strong>Research:</strong> {methodology.research}
+        <strong>{t('projects.research', 'Research')}:</strong>{' '}
+        {methodology.research}
       </div>
       <div>
-        <strong>Testing:</strong> {methodology.testing}
+        <strong>{t('projects.testing', 'Testing')}:</strong>{' '}
+        {methodology.testing}
       </div>
       <div>
-        <strong>Iterations:</strong> {methodology.iterations}
+        <strong>{t('projects.iterations', 'Iterations')}:</strong>{' '}
+        {methodology.iterations}
       </div>
     </div>
   </div>
 )
 
-const Lore = ({ lore }) => (
+const Lore = ({ lore, t }) => (
   <div className={styles.lore}>
-    <h4 className={styles.loreTitle}>The Lore</h4>
+    <h4 className={styles.loreTitle}>{t('projects.theLore', 'The Lore')}</h4>
     <p className={styles.loreText}>{lore}</p>
   </div>
 )
 
-const ViewButton = ({ color }) => (
+const ViewButton = ({ color, t }) => (
   <button
     className={styles.viewButton}
     style={{ borderColor: color }}
@@ -167,7 +179,7 @@ const ViewButton = ({ color }) => (
       e.target.style.color = color
     }}
   >
-    View Case Study →
+    {t('projects.viewCaseStudy')}
   </button>
 )
 

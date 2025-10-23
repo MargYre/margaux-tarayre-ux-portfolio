@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Hi, I'm Margaux",
+    "subtitle": "UX/UI Designer & Developer",
+    "description": "I craft digital experiences that blend thoughtful design with technical execution. Let me show you how design thinking meets code.",
+    "forAnyone": "For Anyone",
+    "recruiter": "Recruiter",
+    "designDirector": "Design Director",
+    "productManager": "Product Manager",
+    "engineer": "Engineer"
+  },
+  "nav": {
+    "projects": "Projects",
+    "devPortfolio": "Dev Portfolio →"
+  },
+  "projects": {
+    "selectedWork": "Selected Work",
+    "title": "Projects",
+    "description": "A collection of design explorations spanning e-commerce, user research, and speculative futures.",
+    "viewCaseStudy": "View Case Study →"
+  },
+  "footer": {
+    "copyright": "© 2025 Margaux Tarayre — UX/UI Designer & Developer",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}

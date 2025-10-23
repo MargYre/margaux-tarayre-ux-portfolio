@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { personas, personaMessages } from './personas'
 import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')
+  const { t } = useTranslation()
 
   const handlePersonaClick = personaId => {
     setSelectedPersona(personaId)
@@ -11,11 +13,18 @@ const HeroSection = () => {
 
   const currentMessage = personaMessages[selectedPersona]
 
+  const translatedPersonas = [
+    { id: 'anyone', label: t('hero.forAnyone') },
+    { id: 'recruiter', label: t('hero.recruiter') },
+    { id: 'director', label: t('hero.designDirector') },
+    { id: 'pm', label: t('hero.productManager') },
+    { id: 'engineer', label: t('hero.engineer') },
+  ]
+
   return (
     <section className={styles.hero}>
-      {/* Persona Navigation */}
       <nav className={styles.personaNav}>
-        {personas.map(persona => (
+        {translatedPersonas.map(persona => (
           <PersonaButton
             key={persona.id}
             persona={persona}
@@ -25,16 +34,17 @@ const HeroSection = () => {
         ))}
       </nav>
 
-      {/* Hero Content */}
-      <HeroContent message={currentMessage} selectedPersona={selectedPersona} />
+      <HeroContent
+        message={currentMessage}
+        selectedPersona={selectedPersona}
+        t={t}
+      />
 
-      {/* Scroll Indicator */}
-      <ScrollIndicator />
+      <ScrollIndicator t={t} />
     </section>
   )
 }
 
-// Sous-composant pour les boutons Persona
 const PersonaButton = ({ persona, isActive, onClick }) => (
   <button
     onClick={() => onClick(persona.id)}
@@ -44,16 +54,15 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
   </button>
 )
 
-// Sous-composant pour le contenu Hero
-const HeroContent = ({ message, selectedPersona }) => (
+const HeroContent = ({ message, selectedPersona, t }) => (
   <div className={styles.heroContent} key={selectedPersona}>
-    <h1 className={styles.title}>{message.title}</h1>
-    <h2 className={styles.subtitle}>{message.subtitle}</h2>
-    <p className={styles.description}>{message.description}</p>
+    <h1 className={styles.title}>{t('hero.title')}</h1>
+    <h2 className={styles.subtitle}>{t('hero.subtitle')}</h2>
+    <p className={styles.description}>{t('hero.description')}</p>
 
     <div className={styles.ctaGroup}>
       <a href="#projects" className={styles.primaryCta}>
-        View Projects
+        {t('nav.projects')}
       </a>
 
       {selectedPersona === 'engineer' && (
@@ -63,17 +72,16 @@ const HeroContent = ({ message, selectedPersona }) => (
           rel="noopener noreferrer"
           className={styles.secondaryCta}
         >
-          See Technical Portfolio →
+          {t('nav.devPortfolio')}
         </a>
       )}
     </div>
   </div>
 )
 
-// Sous-composant pour l'indicateur de scroll
-const ScrollIndicator = () => (
+const ScrollIndicator = ({ t }) => (
   <div className={styles.scrollIndicator}>
-    <span className={styles.scrollText}>Scroll to explore</span>
+    <span className={styles.scrollText}>{t('hero.scrollToExplore')}</span>
     <div className={styles.scrollLine}></div>
   </div>
 )
