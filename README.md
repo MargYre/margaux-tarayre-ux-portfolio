@@ -1,16 +1,27 @@
-# React + Vite
+# Margaux Tarayre - UX/UI Designer & Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**UX/UI Designer & Frontend Developer in training**
 
-Currently, two official plugins are available:
+A React portfolio showcasing my journey from development to UX/UI design. Currently learning and building projects that bridge both worlds.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Preview](./src/assets/portfolio-preview.png)
 
-## React Compiler
+## 🎯 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Frontend developer transitioning into UX/UI design. Passionate about creating user-centered interfaces that are both beautiful and functional.
 
-## Expanding the ESLint configuration
+## 🔧 Technical Skills
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, JavaScript, HTML/CSS
+- **Design:** Figma, User Research, Wireframing
+- **Tools:** Git, Vite, npm
+
+## 📁 Projects Included
+
+- **Luxe & Threads** - E-commerce UI/UX design
+- **Campus Connect** - User research & mobile app design
+- **EduWatch** - Speculative design project
+
+## 🚀 Live Demo
+
+## Work in progress...
