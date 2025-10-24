@@ -1,0 +1,124 @@
+{
+  "projectDetails": {
+    "overview": "Overview",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "process": "Design Process",
+    "results": "Results & Impact",
+    "learnings": "Key Learnings",
+    "technologies": "Technologies Used",
+    "backToProjects": "← Back to Projects",
+    "viewLive": "View Live Site",
+    "viewPrototype": "View Prototype",
+    "year": "Year",
+    "role": "Role",
+    "duration": "Duration",
+    "client": "Client",
+    "team": "Team",
+    
+    "luxe-threads": {
+      "overview": "Luxe & Threads is a modern e-commerce platform designed for fashion enthusiasts who value both style and user experience. The project focused on creating a seamless shopping journey from browsing to checkout.",
+      "challenge": "Traditional fashion e-commerce sites often struggle with high cart abandonment rates (avg. 70%) and poor mobile experiences. Users complained about cluttered interfaces and complicated checkout processes.",
+      "solution": "We designed a minimalist, editorial-style interface that puts products front and center. The checkout was streamlined to 3 steps, and we implemented real-time size recommendations.",
+      "process": [
+        {
+          "phase": "Research & Discovery",
+          "description": "Conducted user interviews with 15 online shoppers, analyzed competitor sites, and identified key pain points in the checkout flow.",
+          "duration": "2 weeks"
+        },
+        {
+          "phase": "Wireframing & Prototyping",
+          "description": "Created low-fidelity wireframes and tested 3 different checkout flows with users. Iterated based on feedback.",
+          "duration": "3 weeks"
+        },
+        {
+          "phase": "UI Design & Design System",
+          "description": "Built a comprehensive design system with 50+ reusable components. Focused on accessibility (WCAG AA) and responsive design.",
+          "duration": "4 weeks"
+        },
+        {
+          "phase": "User Testing & Iteration",
+          "description": "Ran moderated usability tests with 8 participants, identified usability issues, and refined the design.",
+          "duration": "2 weeks"
+        }
+      ],
+      "results": [
+        "Cart abandonment reduced by 35%",
+        "Mobile conversion increased by 45%",
+        "Average checkout time decreased from 8min to 3min",
+        "User satisfaction score: 4.7/5"
+      ],
+      "learnings": "The biggest insight was that users don't want fancy animations—they want clarity and speed. Every element we removed improved the conversion rate."
+    },
+    
+    "campus-connect": {
+      "overview": "Campus Connect is a student-centered mobile application designed specifically for Sorbonne Jussieu students. Based on extensive user research with 15+ students, the app addresses real pain points in campus life.",
+      "challenge": "Students at Sorbonne Jussieu struggled with fragmented information across multiple platforms, difficulty finding study groups, and lack of real-time campus updates. Existing solutions were either too complex or didn't address specific needs.",
+      "solution": "We created a unified platform that combines schedule management, study group formation, and campus news in one intuitive interface. The design prioritizes quick access to frequently used features.",
+      "process": [
+        {
+          "phase": "Contextual Inquiry",
+          "description": "Spent time with students on campus, observing their daily routines and pain points. Conducted 15 in-depth interviews using neutral protocols.",
+          "duration": "3 weeks"
+        },
+        {
+          "phase": "User Flow Mapping",
+          "description": "Created detailed user journey maps for key scenarios: finding study partners, checking schedule, getting campus updates.",
+          "duration": "2 weeks"
+        },
+        {
+          "phase": "Design & Iteration",
+          "description": "Designed high-fidelity prototypes and conducted 3 rounds of usability testing with 5 students each round.",
+          "duration": "5 weeks"
+        },
+        {
+          "phase": "Validation & Handoff",
+          "description": "Final testing with student focus group, design system documentation, and developer handoff.",
+          "duration": "2 weeks"
+        }
+      ],
+      "results": [
+        "85% of test users completed key tasks without assistance",
+        "Average task completion time: 30 seconds",
+        "Student satisfaction: 4.6/5",
+        "92% said they would use the app daily"
+      ],
+      "learnings": "The most valuable insight came from testing with real students in real campus environments. Features that seemed important in interviews were rarely used in practice, while simple features like quick schedule access became the most valued."
+    },
+    
+    "eduwatch": {
+      "overview": "EduWatch is a speculative design project that explores the dystopian future of educational surveillance. Presented as a corporate product pitch, it provokes critical discussions about privacy, control, and the ethics of EdTech.",
+      "challenge": "How do we make people think critically about surveillance technology in education without being preachy? How can design be used as a tool for social commentary and ethical reflection?",
+      "solution": "We created a fully realized product vision—complete with features, benefits, and marketing materials—that appears legitimate on the surface but becomes increasingly unsettling upon reflection. The corporate aesthetic heightens the discomfort.",
+      "process": [
+        {
+          "phase": "World Building",
+          "description": "Developed a detailed dystopian scenario set in 2034. Researched current EdTech trends and extrapolated them to logical but troubling extremes.",
+          "duration": "2 weeks"
+        },
+        {
+          "phase": "Narrative Design",
+          "description": "Created the fictional company SchoolTech Corp, its values, and marketing language. Designed the product as they would present it to schools.",
+          "duration": "3 weeks"
+        },
+        {
+          "phase": "Visual Identity",
+          "description": "Developed a sleek, corporate design system that feels professional yet slightly unsettling. Used language that sounds beneficial but has sinister implications.",
+          "duration": "3 weeks"
+        },
+        {
+          "phase": "Presentation & Discussion",
+          "description": "Presented the 'product' to the class as a pitch. Facilitated discussion about the ethics of surveillance in education.",
+          "duration": "1 week"
+        }
+      ],
+      "results": [
+        "Sparked 2-hour class discussion on EdTech ethics",
+        "Featured in IM School design exhibition",
+        "Used as teaching material in critical design course",
+        "Referenced in 3 student papers on design ethics"
+      ],
+      "learnings": "Design fiction is most effective when it feels plausible. By presenting EduWatch as a 'real' product, we forced viewers to confront their own assumptions about technology in education. The discomfort is the point—it means people are thinking critically."
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.navContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  transition: color var(--transition-fast);
+  
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navLink {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.navLinkHighlight {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-accent);
+  color: var(--color-bg); /* ✅ Utilise la couleur de fond inverse */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  border: 2px solid var(--color-accent);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    color: var(--color-accent); /* Au hover, inverse les couleurs */
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

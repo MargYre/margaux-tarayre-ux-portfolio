@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { projects } from '../../data/projects/projectsData'
 import { hexToRgba } from '../../utils/colorHelpers'
 import styles from './ProjectsGrid.module.scss'
@@ -10,7 +11,6 @@ const ProjectsGrid = () => {
   return (
     <section className={styles.section} id="projects">
       <SectionHeader t={t} />
-
       <div className={styles.grid}>
         {projects.map(project => (
           <ProjectCard key={project.id} project={project} t={t} />
@@ -20,9 +20,6 @@ const ProjectsGrid = () => {
   )
 }
 
-// ============================================================================
-// Section Header
-// ============================================================================
 const SectionHeader = ({ t }) => (
   <header className={styles.header}>
     <span className={styles.sectionLabel}>{t('projects.selectedWork')}</span>
@@ -31,13 +28,9 @@ const SectionHeader = ({ t }) => (
   </header>
 )
 
-// ============================================================================
-// Project Card
-// ============================================================================
 const ProjectCard = ({ project, t }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  // Récupération des traductions depuis i18n
   const translations = {
     title: t(`projects.${project.id}.title`),
     subtitle: t(`projects.${project.id}.subtitle`),
@@ -53,6 +46,7 @@ const ProjectCard = ({ project, t }) => {
   return (
     <article
       className={styles.projectCard}
+      data-project-card="true"
       style={{
         '--project-color': project.color,
         borderColor: isHovered ? hexToRgba(project.color, 0.7) : undefined,
@@ -72,6 +66,7 @@ const ProjectCard = ({ project, t }) => {
         translations={translations}
         tags={project.tags}
         color={project.color}
+        project={project}
         hasMethodology={project.hasMethodology}
         hasLore={project.hasLore}
         t={t}
@@ -80,15 +75,10 @@ const ProjectCard = ({ project, t }) => {
   )
 }
 
-// ============================================================================
-// Project Visual (Image + Badge)
-// ============================================================================
 const ProjectVisual = ({ image, category, color }) => (
   <div
     className={styles.projectImage}
-    style={{
-      backgroundColor: `${color}15`,
-    }}
+    style={{ backgroundColor: `${color}15` }}
   >
     <span className={styles.emoji} role="img" aria-hidden="true">
       {image}
@@ -99,14 +89,12 @@ const ProjectVisual = ({ image, category, color }) => (
   </div>
 )
 
-// ============================================================================
-// Project Content
-// ============================================================================
 const ProjectContent = ({
   projectId,
   translations,
   tags,
   color,
+  project,
   hasMethodology,
   hasLore,
   t,
@@ -116,36 +104,24 @@ const ProjectContent = ({
       {translations.title}
     </h3>
     <p className={styles.projectSubtitle}>{translations.subtitle}</p>
-
     <Tags tags={tags} />
-
-    <p
-      id={`project-desc-${projectId}`}
-      className={styles.projectDescription}
-    >
+    <p id={`project-desc-${projectId}`} className={styles.projectDescription}>
       {translations.description}
     </p>
-
     <Highlights highlights={translations.highlights} t={t} />
-
     {hasMethodology && (
       <Methodology methodology={translations.methodology} t={t} />
     )}
-
     {hasLore && <Lore lore={translations.lore} t={t} />}
-
     <ViewButton
       color={color}
       projectTitle={translations.title}
       projectId={projectId}
+      project={project}
       t={t}
     />
   </div>
 )
-
-// ============================================================================
-// Sub-components
-// ============================================================================
 
 const Tags = ({ tags }) => (
   <div className={styles.tags} role="list">
@@ -159,10 +135,11 @@ const Tags = ({ tags }) => (
 
 const Highlights = ({ highlights, t }) => {
   if (!highlights || highlights.length === 0) return null
-
   return (
     <div className={styles.highlights}>
-      <h4 className={styles.highlightsTitle}>{t('projects.keyAchievements')}</h4>
+      <h4 className={styles.highlightsTitle}>
+        {t('projects.keyAchievements')}
+      </h4>
       <ul className={styles.highlightsList}>
         {highlights.map((highlight, index) => (
           <li key={index} className={styles.highlightItem}>
@@ -176,7 +153,6 @@ const Highlights = ({ highlights, t }) => {
 
 const Methodology = ({ methodology, t }) => {
   if (!methodology) return null
-
   return (
     <div className={styles.methodology}>
       <h4 className={styles.methodologyTitle}>
@@ -199,7 +175,6 @@ const Methodology = ({ methodology, t }) => {
 
 const Lore = ({ lore, t }) => {
   if (!lore) return null
-
   return (
     <div className={styles.lore}>
       <h4 className={styles.loreTitle}>{t('projects.theLore')}</h4>
@@ -208,22 +183,20 @@ const Lore = ({ lore, t }) => {
   )
 }
 
-const ViewButton = ({ color, projectTitle, projectId, t }) => {
+const ViewButton = ({ color, projectTitle, projectId, project, t }) => {
   const [isHovered, setIsHovered] = useState(false)
-
   return (
-    <button
+    <Link
+      to={`/projects/${project.slug}`}
       className={`${styles.viewButton} ${isHovered ? styles.viewButtonHovered : ''}`}
-      style={{
-        '--button-color': color,
-      }}
+      style={{ '--button-color': color }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`View case study for ${projectTitle}`}
       aria-describedby={`project-desc-${projectId}`}
     >
-      {t('projects.viewCaseStudy')}
-    </button>
+      {t('projects.viewCaseStudy')} →
+    </Link>
   )
 }
 

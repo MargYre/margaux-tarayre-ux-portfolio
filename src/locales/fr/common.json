@@ -1,28 +1,20 @@
 {
+  "nav": {
+    "projects": "Projets",
+    "devPortfolio": "Portfolio développeuse"
+  },
+  "cursor": {
+    "view": "Voir"
+  },
   "hero": {
-    "title": "Bonjour, je suis Margaux",
+    "title": "Margaux Tarayre",
     "subtitle": "UX/UI Designer & Développeuse",
-    "description": "Je crée des expériences digitales qui allient design réfléchi et exécution technique. Découvrez comment la pensée design rencontre le code.",
-    "forAnyone": "Pour Tous",
+    "description": "Je crée des expériences numériques qui allient design réfléchi et exécution technique.",
+    "scrollToExplore": "Découvrir mes projets",
+    "forAnyone": "Pour tous",
     "recruiter": "Recruteur",
     "designDirector": "Directeur Design",
     "productManager": "Product Manager",
-    "engineer": "Ingénieur"
-  },
-  "nav": {
-    "projects": "Projets",
-    "devPortfolio": "Portfolio Dev →"
-  },
-  "projects": {
-    "selectedWork": "Travaux Sélectionnés",
-    "title": "Projets",
-    "description": "Une collection d'explorations design couvrant l'e-commerce, la recherche utilisateur et les futurs spéculatifs.",
-    "viewCaseStudy": "Voir l'Étude de Cas →"
-  },
-  "footer": {
-    "copyright": "© 2025 Margaux Tarayre — UX/UI Designer & Developer",
-    "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "engineer": "Développeur"
   }
 }

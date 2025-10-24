@@ -1,75 +1,68 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './CustomCursor.module.scss'
 
 const CustomCursor = () => {
+  const { t } = useTranslation()
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [cursorType, setCursorType] = useState('default')
-  const [isVisible, setIsVisible] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
+  const [showText, setShowText] = useState(false)
 
-  // Gestion du mouvement de souris
   useEffect(() => {
-    const handleMouseMove = e => {
+    const updatePosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY })
-      if (!isVisible) setIsVisible(true)
     }
 
-    const handleMouseLeave = () => setIsVisible(false)
-
-    window.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('mouseleave', handleMouseLeave)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseleave', handleMouseLeave)
-    }
-  }, [isVisible])
-
-  // Gestion du type de curseur contextuel
-  useEffect(() => {
-    const handleMouseOver = e => {
-      const target = e.target
-
-      if (target.tagName === 'A' || target.closest('a')) {
-        setCursorType('link')
-      } else if (target.tagName === 'BUTTON' || target.closest('button')) {
-        setCursorType('button')
-      } else if (target.classList.contains('project-image')) {
-        setCursorType('view')
-      } else if (target.classList.contains('draggable')) {
-        setCursorType('drag')
+    const handleMouseMove = (e) => {
+      // Vérifie si on survole une carte de projet
+      const projectCard = e.target.closest('[data-project-card]')
+      
+      if (projectCard) {
+        setIsHovering(true)
+        setShowText(true)
+      } else if (
+        e.target.closest('a') ||
+        e.target.closest('button') ||
+        e.target.closest('[role="button"]')
+      ) {
+        setIsHovering(true)
+        setShowText(false)
       } else {
-        setCursorType('default')
+        setIsHovering(false)
+        setShowText(false)
       }
     }
 
-    document.addEventListener('mouseover', handleMouseOver)
-    return () => document.removeEventListener('mouseover', handleMouseOver)
+    window.addEventListener('mousemove', updatePosition)
+    window.addEventListener('mousemove', handleMouseMove)
+
+    return () => {
+      window.removeEventListener('mousemove', updatePosition)
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
   }, [])
 
-  const getCursorClass = () => {
-    return `${styles.cursor} ${styles[cursorType]} ${isVisible ? styles.visible : styles.hidden}`
-  }
-
-  const getCursorLabel = () => {
-    const labels = {
-      view: 'VIEW',
-      drag: 'DRAG',
-    }
-    return labels[cursorType] || null
-  }
-
   return (
-    <div
-      className={getCursorClass()}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      }}
-    >
-      {getCursorLabel() && (
-        <span className={styles.cursorLabel}>{getCursorLabel()}</span>
-      )}
-    </div>
+    <>
+      <div
+        className={`${styles.cursor} ${isHovering ? styles.hovering : ''} ${showText ? styles.showText : ''}`}
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      >
+        {showText && (
+          <span className={styles.cursorText}>{t('cursor.view')}</span>
+        )}
+      </div>
+      <div
+        className={`${styles.cursorDot} ${isHovering ? styles.hovering : ''}`}
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      />
+    </>
   )
 }
 

@@ -1,0 +1,124 @@
+{
+  "projectDetails": {
+    "overview": "Vue d'ensemble",
+    "challenge": "Le Défi",
+    "solution": "La Solution",
+    "process": "Processus de Design",
+    "results": "Résultats & Impact",
+    "learnings": "Enseignements Clés",
+    "technologies": "Technologies Utilisées",
+    "backToProjects": "← Retour aux Projets",
+    "viewLive": "Voir le Site Live",
+    "viewPrototype": "Voir le Prototype",
+    "year": "Année",
+    "role": "Rôle",
+    "duration": "Durée",
+    "client": "Client",
+    "team": "Équipe",
+    
+    "luxe-threads": {
+      "overview": "Luxe & Threads est une plateforme e-commerce moderne conçue pour les passionnés de mode qui valorisent autant le style que l'expérience utilisateur. Le projet s'est concentré sur la création d'un parcours d'achat fluide de la navigation au paiement.",
+      "challenge": "Les sites e-commerce de mode traditionnels souffrent souvent de taux d'abandon de panier élevés (moyenne de 70%) et d'expériences mobiles médiocres. Les utilisateurs se plaignaient d'interfaces encombrées et de processus de paiement compliqués.",
+      "solution": "Nous avons conçu une interface minimaliste au style éditorial qui met les produits au premier plan. Le processus de paiement a été rationalisé en 3 étapes, et nous avons implémenté des recommandations de taille en temps réel.",
+      "process": [
+        {
+          "phase": "Recherche & Découverte",
+          "description": "Entretiens utilisateurs avec 15 acheteurs en ligne, analyse des sites concurrents, identification des points de friction majeurs dans le tunnel d'achat.",
+          "duration": "2 semaines"
+        },
+        {
+          "phase": "Wireframing & Prototypage",
+          "description": "Création de wireframes basse fidélité et test de 3 flux de paiement différents avec les utilisateurs. Itérations basées sur les retours.",
+          "duration": "3 semaines"
+        },
+        {
+          "phase": "UI Design & Design System",
+          "description": "Construction d'un design system complet avec 50+ composants réutilisables. Focus sur l'accessibilité (WCAG AA) et le design responsive.",
+          "duration": "4 semaines"
+        },
+        {
+          "phase": "Tests Utilisateurs & Itération",
+          "description": "Tests d'utilisabilité modérés avec 8 participants, identification des problèmes d'utilisabilité, raffinement du design.",
+          "duration": "2 semaines"
+        }
+      ],
+      "results": [
+        "Abandon de panier réduit de 35%",
+        "Conversion mobile augmentée de 45%",
+        "Temps de paiement moyen réduit de 8min à 3min",
+        "Score de satisfaction utilisateur : 4.7/5"
+      ],
+      "learnings": "L'enseignement majeur : les utilisateurs ne veulent pas d'animations sophistiquées—ils veulent de la clarté et de la rapidité. Chaque élément que nous avons retiré a amélioré le taux de conversion."
+    },
+    
+    "campus-connect": {
+      "overview": "Campus Connect est une application mobile centrée sur l'étudiant, conçue spécifiquement pour les étudiants de la Sorbonne Jussieu. Basée sur une recherche utilisateur approfondie avec 15+ étudiants, l'app répond aux vrais problèmes de la vie universitaire.",
+      "challenge": "Les étudiants de la Sorbonne Jussieu souffraient d'informations fragmentées sur plusieurs plateformes, de difficultés à trouver des groupes d'étude, et du manque d'actualités campus en temps réel. Les solutions existantes étaient soit trop complexes, soit ne répondaient pas aux besoins spécifiques.",
+      "solution": "Nous avons créé une plateforme unifiée qui combine gestion d'emploi du temps, formation de groupes d'étude, et actualités du campus dans une interface intuitive. Le design priorise l'accès rapide aux fonctionnalités fréquemment utilisées.",
+      "process": [
+        {
+          "phase": "Enquête Contextuelle",
+          "description": "Temps passé avec les étudiants sur le campus, observation de leurs routines quotidiennes et points de friction. 15 entretiens approfondis avec protocoles neutres.",
+          "duration": "3 semaines"
+        },
+        {
+          "phase": "Cartographie des Parcours",
+          "description": "Création de cartes détaillées des parcours utilisateurs pour les scénarios clés : trouver des partenaires d'étude, consulter l'emploi du temps, obtenir les actualités du campus.",
+          "duration": "2 semaines"
+        },
+        {
+          "phase": "Design & Itération",
+          "description": "Conception de prototypes haute fidélité et conduite de 3 cycles de tests d'utilisabilité avec 5 étudiants par cycle.",
+          "duration": "5 semaines"
+        },
+        {
+          "phase": "Validation & Livraison",
+          "description": "Tests finaux avec groupe focus d'étudiants, documentation du design system, livraison aux développeurs.",
+          "duration": "2 semaines"
+        }
+      ],
+      "results": [
+        "85% des utilisateurs testés ont complété les tâches clés sans aide",
+        "Temps moyen de complétion des tâches : 30 secondes",
+        "Satisfaction étudiante : 4.6/5",
+        "92% ont déclaré qu'ils utiliseraient l'app quotidiennement"
+      ],
+      "learnings": "L'enseignement le plus précieux est venu des tests avec de vrais étudiants dans de vrais environnements campus. Les fonctionnalités qui semblaient importantes en entretien étaient rarement utilisées en pratique, tandis que des fonctions simples comme l'accès rapide à l'emploi du temps sont devenues les plus valorisées."
+    },
+    
+    "eduwatch": {
+      "overview": "EduWatch est un projet de design spéculatif qui explore le futur dystopique de la surveillance éducative. Présenté comme un pitch produit corporate, il provoque des discussions critiques sur la vie privée, le contrôle et l'éthique des EdTech.",
+      "challenge": "Comment amener les gens à réfléchir de manière critique sur la technologie de surveillance dans l'éducation sans être moralisateur ? Comment le design peut-il être utilisé comme outil de commentaire social et de réflexion éthique ?",
+      "solution": "Nous avons créé une vision produit complètement réalisée—avec fonctionnalités, bénéfices et supports marketing—qui paraît légitime en surface mais devient de plus en plus inquiétante à la réflexion. L'esthétique corporate renforce le malaise.",
+      "process": [
+        {
+          "phase": "Construction d'Univers",
+          "description": "Développement d'un scénario dystopique détaillé situé en 2034. Recherche sur les tendances EdTech actuelles et extrapolation vers des extrêmes logiques mais troublants.",
+          "duration": "2 semaines"
+        },
+        {
+          "phase": "Design Narratif",
+          "description": "Création de la société fictive SchoolTech Corp, ses valeurs et son langage marketing. Design du produit tel qu'ils le présenteraient aux écoles.",
+          "duration": "3 semaines"
+        },
+        {
+          "phase": "Identité Visuelle",
+          "description": "Développement d'un design system corporate élégant mais légèrement inquiétant. Utilisation d'un langage qui semble bénéfique mais a des implications sinistres.",
+          "duration": "3 semaines"
+        },
+        {
+          "phase": "Présentation & Discussion",
+          "description": "Présentation du 'produit' à la classe sous forme de pitch. Animation de discussion sur l'éthique de la surveillance dans l'éducation.",
+          "duration": "1 semaine"
+        }
+      ],
+      "results": [
+        "Discussion de classe de 2 heures sur l'éthique EdTech",
+        "Présenté dans l'exposition design de l'IM School",
+        "Utilisé comme matériel pédagogique dans le cours de design critique",
+        "Référencé dans 3 travaux étudiants sur l'éthique du design"
+      ],
+      "learnings": "La fiction design est plus efficace quand elle semble plausible. En présentant EduWatch comme un produit 'réel', nous avons forcé les spectateurs à confronter leurs propres présupposés sur la technologie dans l'éducation. Le malaise est le but—cela signifie que les gens réfléchissent de manière critique."
+    }
+  }
+}
