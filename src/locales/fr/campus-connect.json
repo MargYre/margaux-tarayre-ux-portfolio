@@ -1,0 +1,106 @@
+{
+  "campusConnect": {
+    "nav": {
+      "back": "← Accueil",
+      "title": "Campus Connect"
+    },
+    "hero": {
+      "tag": "Recherche UX & Design",
+      "title": "Campus Connect",
+      "subtitle": "Application mobile centrée sur l'étudiant pour faciliter la vie universitaire et créer des connexions sociales sur le campus de Sorbonne Jussieu.",
+      "link": "Voir le prototype Figma",
+      "details": {
+        "year": {
+          "label": "Année",
+          "value": "2024"
+        },
+        "client": {
+          "label": "Contexte",
+          "value": "Cours UX/UI Design"
+        },
+        "team": {
+          "label": "Équipe",
+          "value": "4 personnes"
+        }
+      }
+    },
+    "sections": {
+      "overview": {
+        "number": "01",
+        "label": "Vue d'ensemble",
+        "title": "Un projet complet alliant pratique et théorie",
+        "description": "Campus Connect est une application mobile qui facilite la vie étudiante en centralisant les informations sur les événements du campus, en permettant de créer et rejoindre des sorties, et en favorisant les rencontres entre étudiants. Ce projet a été l'occasion de mettre en pratique une méthodologie UX rigoureuse, de la recherche utilisateur aux tests d'utilisabilité.",
+        "highlights": {
+          "items": [
+            "15+ entretiens utilisateurs avec protocole neutre documenté",
+            "Création de personas basés sur des données réelles",
+            "Maquettes interactives haute-fidélité sur Figma",
+            "Protocoles de test structurés (objectifs, hypothèses, panel)",
+            "Tests utilisateurs avec d'autres étudiants",
+            "Rapport d'audit UX complet"
+          ]
+        }
+      },
+      "research": {
+        "number": "02",
+        "label": "Recherche",
+        "title": "Comprendre les besoins réels des étudiants",
+        "intro": "La phase de recherche a été centrale dans ce projet. Nous avons mené des entretiens approfondis avec plus de 15 étudiants pour comprendre leurs frustrations et leurs besoins en termes de vie sociale et de découverte d'événements sur le campus.",
+        "showDetails": "Voir la méthodologie détaillée",
+        "hideDetails": "Masquer les détails",
+        "methodology": {
+          "title": "Méthodologie de recherche",
+          "items": [
+            {
+              "title": "Entretiens qualitatifs",
+              "description": "15+ entretiens semi-directifs avec un protocole neutre pour éviter les biais. Questions ouvertes centrées sur les habitudes, les frustrations et les besoins."
+            },
+            {
+              "title": "Enquête contextuelle",
+              "description": "Observation des étudiants dans leur environnement naturel : sur le campus, entre les cours, pendant les pauses."
+            },
+            {
+              "title": "Analyse des données",
+              "description": "Regroupement des insights, identification des patterns récurrents, création d'une carte d'affinité pour structurer les résultats."
+            }
+          ]
+        }
+      },
+      "design": {
+        "number": "03",
+        "label": "Prototypes",
+        "title": "De la recherche au prototype interactif",
+        "intro": "Forts des insights de la recherche, nous avons conçu une interface intuitive qui répond directement aux besoins identifiés : découverte d'événements, création simplifiée, connexions sociales et personnalisation."
+      },
+      "testing": {
+        "number": "04",
+        "label": "Tests",
+        "title": "Validation avec les utilisateurs",
+        "intro": "La phase de test a été structurée avec des protocoles rigoureux pour valider nos hypothèses de design et identifier les points d'amélioration. Nous avons créé des templates complets pour documenter chaque aspect des tests.",
+        "showProtocols": "Voir les protocoles de test",
+        "hideProtocols": "Masquer les protocoles",
+        "audit": {
+          "title": "Audit UX",
+          "description": "Nous avons réalisé un audit UX complet de l'application, évaluant l'accessibilité, l'utilisabilité, et la cohérence de l'interface selon les heuristiques de Nielsen."
+        },
+        "protocols": {
+          "title": "Documentation de test",
+          "items": [
+            {
+              "title": "Protocole d'entretien",
+              "description": "Questions ouvertes et neutres pour éviter les biais, guide de conversation pour les entretiens semi-directifs avec les étudiants."
+            },
+            {
+              "title": "Protocole de test utilisateur",
+              "description": "Objectifs clairs, hypothèses à valider, scénarios de test, métriques de succès, et définition du panel d'utilisateurs représentatif."
+            },
+            {
+              "title": "Questionnaire post-test",
+              "description": "Questions quantitatives et qualitatives pour mesurer la satisfaction et recueillir les retours détaillés des testeurs."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

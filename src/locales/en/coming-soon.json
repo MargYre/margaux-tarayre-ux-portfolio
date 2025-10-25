@@ -1,0 +1,35 @@
+{
+  "comingSoon": {
+    "nav": {
+      "back": "← Home"
+    },
+    "hero": {
+      "tag": "In Development",
+      "status": "Case study in progress",
+      "backButton": "← Back to projects"
+    },
+    "content": {
+      "title": "This case study is coming soon",
+      "description": "I'm currently working on the detailed documentation for this project. Check back soon to discover the full process, methodologies, and results.",
+      "preview": {
+        "title": "Project Overview",
+        "year": "Year",
+        "role": "Role",
+        "duration": "Duration",
+        "client": "Client",
+        "team": "Team",
+        "tags": "Technologies & Tools"
+      },
+      "highlights": {
+        "title": "Key Highlights",
+        "empty": "Coming soon..."
+      },
+      "cta": {
+        "title": "Interested in my work?",
+        "description": "Explore my other projects or get in touch to discuss.",
+        "viewProjects": "View other projects",
+        "contact": "Contact me"
+      }
+    }
+  }
+}

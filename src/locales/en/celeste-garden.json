@@ -1,0 +1,84 @@
+{
+  "celesteGarden": {
+    "nav": {
+      "back": "← Home",
+      "title": "Celeste's Garden"
+    },
+    "hero": {
+      "tag": "Academic Exercise",
+      "title": "Celeste's Garden",
+      "subtitle": "Mockup of an online clothing e-commerce website created on Figma as part of a design course.",
+      "details": {
+        "program": {
+          "label": "Program",
+          "value": "Professional Design Degree, Sorbonne"
+        },
+        "supervisor": {
+          "label": "Supervisor",
+          "value": "Julien Crusson"
+        },
+        "tool": {
+          "label": "Tool",
+          "value": "Figma"
+        }
+      }
+    },
+    "carousel": {
+      "prevButton": "Previous image",
+      "nextButton": "Next image",
+      "imageAlt": "Celeste's Garden - Screen",
+      "goToImage": "Go to image",
+      "caption": "Screen {current} / {total}",
+      "loading": "Image loading..."
+    },
+    "sections": {
+      "context": {
+        "number": "01",
+        "label": "Context",
+        "title": "A First Educational Exercise",
+        "paragraphs": [
+          "This project was completed as part of my Professional Design Degree at Sorbonne University, under the supervision of Julien Crusson. These are my first interface mockups, created for a fictional e-commerce clothing website.",
+          "The goal was to design an online retail site by applying the fundamental principles of web design and UX learned in class."
+        ]
+      },
+      "learnings": {
+        "number": "02",
+        "label": "Learnings",
+        "title": "Applied Design Principles",
+        "intro": "Theoretical concepts put into practice in this first project:",
+        "principles": [
+          {
+            "title": "User-Centered Design",
+            "description": "Understanding user needs to create adapted interfaces. Reflection on different visitor profiles of an e-commerce site."
+          },
+          {
+            "title": "Information Architecture",
+            "description": "Organizing content logically: navigation between categories, product pages, cart, and checkout process."
+          },
+          {
+            "title": "Visual Hierarchy",
+            "description": "Guiding the eye with size and spacing. Highlighting products and call-to-action buttons for purchasing."
+          },
+          {
+            "title": "Visual Consistency",
+            "description": "Maintaining consistency across pages with reusable components created in Figma."
+          },
+          {
+            "title": "Responsive Design",
+            "description": "Adapting the interface to mobile constraints with generous touch areas and simplified navigation."
+          },
+          {
+            "title": "Accessibility",
+            "description": "Attention to color contrasts and text sizes for an interface readable by everyone."
+          }
+        ]
+      }
+    },
+    "projectFooter": {
+      "title": "About the Program",
+      "description": "Professional Design Degree at Sorbonne University. Training focused on interface design, UX and web design.",
+      "link": "Learn more →",
+      "backButton": "← Home"
+    }
+  }
+}

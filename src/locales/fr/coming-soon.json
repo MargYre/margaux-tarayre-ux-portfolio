@@ -1,0 +1,35 @@
+{
+  "comingSoon": {
+    "nav": {
+      "back": "← Accueil"
+    },
+    "hero": {
+      "tag": "En Développement",
+      "status": "Étude de cas en cours de rédaction",
+      "backButton": "← Retour aux projets"
+    },
+    "content": {
+      "title": "Cette étude de cas arrive bientôt",
+      "description": "Je travaille actuellement sur la documentation détaillée de ce projet. Revenez bientôt pour découvrir le processus complet, les méthodologies et les résultats.",
+      "preview": {
+        "title": "Aperçu du projet",
+        "year": "Année",
+        "role": "Rôle",
+        "duration": "Durée",
+        "client": "Client",
+        "team": "Équipe",
+        "tags": "Technologies & Outils"
+      },
+      "highlights": {
+        "title": "Points clés",
+        "empty": "À venir..."
+      },
+      "cta": {
+        "title": "Intéressé par mon travail ?",
+        "description": "Découvrez mes autres projets ou contactez-moi pour en discuter.",
+        "viewProjects": "Voir les autres projets",
+        "contact": "Me contacter"
+      }
+    }
+  }
+}

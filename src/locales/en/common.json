@@ -16,5 +16,11 @@
     "designDirector": "Design Director",
     "productManager": "Product Manager",
     "engineer": "Engineer"
+  },
+  "footer": {
+    "copyright": "© 2025 Margaux Tarayre. All rights reserved.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }

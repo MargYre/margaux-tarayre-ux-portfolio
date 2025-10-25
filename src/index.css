@@ -202,10 +202,6 @@ main {
   :root {
     font-size: 14px;
   }
-
-  main {
-    padding-top: 100px;
-  }
 }
 
 /* Accessibilité */

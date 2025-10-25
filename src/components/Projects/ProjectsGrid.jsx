@@ -31,17 +31,14 @@ const SectionHeader = ({ t }) => (
 const ProjectCard = ({ project, t }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const translations = {
-    title: t(`projects.${project.id}.title`),
-    subtitle: t(`projects.${project.id}.subtitle`),
-    category: t(`projects.${project.id}.category`),
-    description: t(`projects.${project.id}.description`),
-    highlights: t(`projects.${project.id}.highlights`, { returnObjects: true }),
-    methodology: project.hasMethodology
-      ? t(`projects.${project.id}.methodology`, { returnObjects: true })
-      : null,
-    lore: project.hasLore ? t(`projects.${project.id}.lore`) : null,
+  // Mapper les IDs des projets aux clés de traduction
+  const projectKeyMap = {
+    'celeste-garden': 'celesteGarden',
+    'campus-connect': 'campusConnect',
+    eduwatch: 'eduwatch',
   }
+
+  const projectKey = projectKeyMap[project.id] || project.id
 
   return (
     <article
@@ -58,64 +55,67 @@ const ProjectCard = ({ project, t }) => {
     >
       <ProjectVisual
         image={project.image}
-        category={translations.category}
+        category={t(`projects.${projectKey}.category`)}
         color={project.color}
+        projectId={project.id}
       />
       <ProjectContent
         projectId={project.id}
-        translations={translations}
+        projectKey={projectKey}
         tags={project.tags}
         color={project.color}
         project={project}
-        hasMethodology={project.hasMethodology}
-        hasLore={project.hasLore}
         t={t}
       />
     </article>
   )
 }
 
-const ProjectVisual = ({ image, category, color }) => (
+const ProjectVisual = ({ image, category, color, projectId }) => (
   <div
     className={styles.projectImage}
     style={{ backgroundColor: `${color}15` }}
   >
-    <span className={styles.emoji} role="img" aria-hidden="true">
-      {image}
-    </span>
+    {projectId === 'celeste-garden' ? (
+      <img
+        src="/images/celeste/page1.png"
+        alt="Celeste's Garden preview"
+        className={styles.projectPreviewImage}
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      />
+    ) : projectId === 'campus-connect' ? (
+      <img
+        src="/images/campus-connect/screenshot1.png"
+        alt="Campus Connect preview"
+        className={styles.projectPreviewImage}
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      />
+    ) : (
+      <span className={styles.emoji} role="img" aria-hidden="true">
+        {image}
+      </span>
+    )}
     <span className={styles.categoryBadge} style={{ backgroundColor: color }}>
       {category}
     </span>
   </div>
 )
 
-const ProjectContent = ({
-  projectId,
-  translations,
-  tags,
-  color,
-  project,
-  hasMethodology,
-  hasLore,
-  t,
-}) => (
+const ProjectContent = ({ projectId, projectKey, tags, color, project, t }) => (
   <div className={styles.projectContent}>
     <h3 id={`project-title-${projectId}`} className={styles.projectTitle}>
-      {translations.title}
+      {t(`projects.${projectKey}.title`)}
     </h3>
-    <p className={styles.projectSubtitle}>{translations.subtitle}</p>
+    <p className={styles.projectSubtitle}>
+      {t(`projects.${projectKey}.subtitle`)}
+    </p>
     <Tags tags={tags} />
     <p id={`project-desc-${projectId}`} className={styles.projectDescription}>
-      {translations.description}
+      {t(`projects.${projectKey}.description`)}
     </p>
-    <Highlights highlights={translations.highlights} t={t} />
-    {hasMethodology && (
-      <Methodology methodology={translations.methodology} t={t} />
-    )}
-    {hasLore && <Lore lore={translations.lore} t={t} />}
     <ViewButton
       color={color}
-      projectTitle={translations.title}
+      projectTitle={t(`projects.${projectKey}.title`)}
       projectId={projectId}
       project={project}
       t={t}
@@ -133,56 +133,6 @@ const Tags = ({ tags }) => (
   </div>
 )
 
-const Highlights = ({ highlights, t }) => {
-  if (!highlights || highlights.length === 0) return null
-  return (
-    <div className={styles.highlights}>
-      <h4 className={styles.highlightsTitle}>
-        {t('projects.keyAchievements')}
-      </h4>
-      <ul className={styles.highlightsList}>
-        {highlights.map((highlight, index) => (
-          <li key={index} className={styles.highlightItem}>
-            {highlight}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-const Methodology = ({ methodology, t }) => {
-  if (!methodology) return null
-  return (
-    <div className={styles.methodology}>
-      <h4 className={styles.methodologyTitle}>
-        {t('projects.researchMethodology')}
-      </h4>
-      <div className={styles.methodologyGrid}>
-        <div>
-          <strong>{t('projects.research')}:</strong> {methodology.research}
-        </div>
-        <div>
-          <strong>{t('projects.testing')}:</strong> {methodology.testing}
-        </div>
-        <div>
-          <strong>{t('projects.iterations')}:</strong> {methodology.iterations}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const Lore = ({ lore, t }) => {
-  if (!lore) return null
-  return (
-    <div className={styles.lore}>
-      <h4 className={styles.loreTitle}>{t('projects.theLore')}</h4>
-      <p className={styles.loreText}>{lore}</p>
-    </div>
-  )
-}
-
 const ViewButton = ({ color, projectTitle, projectId, project, t }) => {
   const [isHovered, setIsHovered] = useState(false)
   return (
@@ -192,7 +142,7 @@ const ViewButton = ({ color, projectTitle, projectId, project, t }) => {
       style={{ '--button-color': color }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      aria-label={`View case study for ${projectTitle}`}
+      aria-label={`Voir le projet ${projectTitle}`}
       aria-describedby={`project-desc-${projectId}`}
     >
       {t('projects.viewCaseStudy')} →

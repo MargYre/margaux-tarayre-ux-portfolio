@@ -1,0 +1,106 @@
+{
+  "campusConnect": {
+    "nav": {
+      "back": "← Home",
+      "title": "Campus Connect"
+    },
+    "hero": {
+      "tag": "UX Research & Design",
+      "title": "Campus Connect",
+      "subtitle": "A student-centered mobile application designed to facilitate university life and create social connections on the Sorbonne Jussieu campus.",
+      "link": "View Figma prototype",
+      "details": {
+        "year": {
+          "label": "Year",
+          "value": "2024"
+        },
+        "client": {
+          "label": "Context",
+          "value": "UX/UI Design Course"
+        },
+        "team": {
+          "label": "Team",
+          "value": "4 people"
+        }
+      }
+    },
+    "sections": {
+      "overview": {
+        "number": "01",
+        "label": "Overview",
+        "title": "A comprehensive project bridging practice and theory",
+        "description": "Campus Connect is a mobile application that facilitates student life by centralizing campus event information, enabling users to create and join outings, and fostering connections between students. This project was an opportunity to apply rigorous UX methodology, from user research to usability testing.",
+        "highlights": {
+          "items": [
+            "15+ user interviews with documented neutral protocol",
+            "Personas created based on real data",
+            "High-fidelity interactive mockups on Figma",
+            "Structured testing protocols (objectives, hypotheses, panel)",
+            "User testing with fellow students",
+            "Complete UX audit report"
+          ]
+        }
+      },
+      "research": {
+        "number": "02",
+        "label": "Research",
+        "title": "Understanding real student needs",
+        "intro": "The research phase was central to this project. We conducted in-depth interviews with over 15 students to understand their frustrations and needs regarding social life and event discovery on campus.",
+        "showDetails": "View detailed methodology",
+        "hideDetails": "Hide details",
+        "methodology": {
+          "title": "Research methodology",
+          "items": [
+            {
+              "title": "Qualitative interviews",
+              "description": "15+ semi-structured interviews with a neutral protocol to avoid bias. Open-ended questions focused on habits, frustrations, and needs."
+            },
+            {
+              "title": "Contextual inquiry",
+              "description": "Observation of students in their natural environment: on campus, between classes, during breaks."
+            },
+            {
+              "title": "Data analysis",
+              "description": "Grouping insights, identifying recurring patterns, creating an affinity map to structure results."
+            }
+          ]
+        }
+      },
+      "design": {
+        "number": "03",
+        "label": "Prototypes",
+        "title": "From research to interactive prototype",
+        "intro": "Armed with research insights, we designed an intuitive interface that directly addresses identified needs: event discovery, simplified creation, social connections, and personalization."
+      },
+      "testing": {
+        "number": "04",
+        "label": "Testing",
+        "title": "Validation with users",
+        "intro": "The testing phase was structured with rigorous protocols to validate our design hypotheses and identify improvement opportunities. We created comprehensive templates to document every aspect of testing.",
+        "showProtocols": "View testing protocols",
+        "hideProtocols": "Hide protocols",
+        "audit": {
+          "title": "UX Audit",
+          "description": "We conducted a comprehensive UX audit of the application, evaluating accessibility, usability, and interface consistency according to Nielsen's heuristics."
+        },
+        "protocols": {
+          "title": "Testing documentation",
+          "items": [
+            {
+              "title": "Interview protocol",
+              "description": "Open and neutral questions to avoid bias, conversation guide for semi-structured interviews with students."
+            },
+            {
+              "title": "User testing protocol",
+              "description": "Clear objectives, hypotheses to validate, test scenarios, success metrics, and definition of representative user panel."
+            },
+            {
+              "title": "Post-test questionnaire",
+              "description": "Quantitative and qualitative questions to measure satisfaction and gather detailed feedback from testers."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

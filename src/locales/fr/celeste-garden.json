@@ -1,0 +1,84 @@
+{
+  "celesteGarden": {
+    "nav": {
+      "back": "← Accueil",
+      "title": "Celeste's Garden"
+    },
+    "hero": {
+      "tag": "Exercice Académique",
+      "title": "Celeste's Garden",
+      "subtitle": "Maquette d'un site e-commerce de vêtements en ligne réalisées sur Figma dans le cadre d'un cours de design.",
+      "details": {
+        "program": {
+          "label": "Formation",
+          "value": "Licence Pro Design, Sorbonne"
+        },
+        "supervisor": {
+          "label": "Encadrant",
+          "value": "Julien Crusson"
+        },
+        "tool": {
+          "label": "Outil",
+          "value": "Figma"
+        }
+      }
+    },
+    "carousel": {
+      "prevButton": "Image précédente",
+      "nextButton": "Image suivante",
+      "imageAlt": "Celeste's Garden - Écran",
+      "goToImage": "Aller à l'image",
+      "caption": "Écran {current} / {total}",
+      "loading": "Image en cours de chargement..."
+    },
+    "sections": {
+      "context": {
+        "number": "01",
+        "label": "Contexte",
+        "title": "Un premier exercice pédagogique",
+        "paragraphs": [
+          "Ce projet a été réalisé dans le cadre de ma Licence Professionnelle Design à Sorbonne Université, sous la supervision de Julien Crusson. Il s'agit de mes premières maquettes d'interface, créées pour un site e-commerce fictif de vêtements.",
+          "L'objectif était de concevoir un site de vente en ligne en appliquant les principes fondamentaux du design web et de l'UX appris en cours."
+        ]
+      },
+      "learnings": {
+        "number": "02",
+        "label": "Apprentissages",
+        "title": "Principes de design appliqués",
+        "intro": "Les concepts théoriques mis en pratique dans ce premier projet :",
+        "principles": [
+          {
+            "title": "Design Centré Utilisateur",
+            "description": "Comprendre les besoins des utilisateurs pour créer des interfaces adaptées. Réflexion sur les différents profils de visiteurs d'un site e-commerce."
+          },
+          {
+            "title": "Architecture de l'Information",
+            "description": "Organiser le contenu de manière logique : navigation entre les catégories, pages produits, panier et processus de commande."
+          },
+          {
+            "title": "Hiérarchie Visuelle",
+            "description": "Guider l'œil avec la taille et l'espacement. Mise en avant des produits et des call-to-action pour l'achat."
+          },
+          {
+            "title": "Cohérence Visuelle",
+            "description": "Maintenir une cohérence à travers les pages avec des composants réutilisables créés dans Figma."
+          },
+          {
+            "title": "Design Responsive",
+            "description": "Adapter l'interface aux contraintes du mobile avec des zones de toucher généreuses et une navigation simplifiée."
+          },
+          {
+            "title": "Accessibilité",
+            "description": "Attention portée aux contrastes de couleurs et à la taille des textes pour une interface lisible par tous."
+          }
+        ]
+      }
+    },
+    "projectFooter": {
+      "title": "À propos de la formation",
+      "description": "Licence Professionnelle Design à Sorbonne Université. Formation centrée sur le design d'interface, l'UX et le web design.",
+      "link": "En savoir plus →",
+      "backButton": "← Accueil"
+    }
+  }
+}
