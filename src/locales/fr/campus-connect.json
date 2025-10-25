@@ -28,16 +28,15 @@
       "overview": {
         "number": "01",
         "label": "Vue d'ensemble",
-        "title": "Un projet complet alliant pratique et théorie",
-        "description": "Campus Connect est une application mobile qui facilite la vie étudiante en centralisant les informations sur les événements du campus, en permettant de créer et rejoindre des sorties, et en favorisant les rencontres entre étudiants. Ce projet a été l'occasion de mettre en pratique une méthodologie UX rigoureuse, de la recherche utilisateur aux tests d'utilisabilité.",
+        "title": "Un projet académique complet",
+        "description": "Campus Connect est un projet fictif réalisé dans le cadre d'un cours d'UX/UI Design. L'application n'existe pas réellement - nous avons uniquement créé les maquettes, protocoles et documents de recherche pour simuler un processus UX complet. L'objectif était d'imaginer une application facilitant la vie étudiante en centralisant les événements du campus, en permettant de créer et rejoindre des sorties, et en favorisant les rencontres entre étudiants.",
         "highlights": {
           "items": [
-            "15+ entretiens utilisateurs avec protocole neutre documenté",
-            "Création de personas basés sur des données réelles",
-            "Maquettes interactives haute-fidélité sur Figma",
+            "Entretiens utilisateurs avec protocole documenté",
+            "Création de personas détaillés",
+            "Maquettes interactives sur Figma",
             "Protocoles de test structurés (objectifs, hypothèses, panel)",
-            "Tests utilisateurs avec d'autres étudiants",
-            "Rapport d'audit UX complet"
+            "Tests utilisateurs avec d'autres étudiants"
           ]
         }
       },
@@ -45,7 +44,7 @@
         "number": "02",
         "label": "Recherche",
         "title": "Comprendre les besoins réels des étudiants",
-        "intro": "La phase de recherche a été centrale dans ce projet. Nous avons mené des entretiens approfondis avec plus de 15 étudiants pour comprendre leurs frustrations et leurs besoins en termes de vie sociale et de découverte d'événements sur le campus.",
+        "intro": "Dans le cadre de ce projet académique, nous avons mené des entretiens avec 3-4 étudiants pour comprendre leurs besoins. Nous nous sommes également mis à la place d'étudiants pour imaginer les frustrations et attentes typiques concernant la vie sociale et la découverte d'événements sur le campus.",
         "showDetails": "Voir la méthodologie détaillée",
         "hideDetails": "Masquer les détails",
         "methodology": {
@@ -53,15 +52,15 @@
           "items": [
             {
               "title": "Entretiens qualitatifs",
-              "description": "15+ entretiens semi-directifs avec un protocole neutre pour éviter les biais. Questions ouvertes centrées sur les habitudes, les frustrations et les besoins."
+              "description": "3-4 entretiens semi-directifs avec un protocole neutre pour éviter les biais. Questions ouvertes centrées sur les habitudes, les frustrations et les besoins liés à la vie sociale étudiante."
             },
             {
-              "title": "Enquête contextuelle",
-              "description": "Observation des étudiants dans leur environnement naturel : sur le campus, entre les cours, pendant les pauses."
+              "title": "Mise en situation",
+              "description": "N'ayant pas le temps pour une phase d'observation approfondie dans le cadre d'un cours, nous nous sommes mis à la place d'étudiants et avons choisi un thème que nous connaissions bien."
             },
             {
-              "title": "Analyse des données",
-              "description": "Regroupement des insights, identification des patterns récurrents, création d'une carte d'affinité pour structurer les résultats."
+              "title": "Analyse et synthèse",
+              "description": "Regroupement des insights, identification des patterns récurrents, création de personas détaillés pour guider la conception."
             }
           ]
         }
@@ -79,10 +78,6 @@
         "intro": "La phase de test a été structurée avec des protocoles rigoureux pour valider nos hypothèses de design et identifier les points d'amélioration. Nous avons créé des templates complets pour documenter chaque aspect des tests.",
         "showProtocols": "Voir les protocoles de test",
         "hideProtocols": "Masquer les protocoles",
-        "audit": {
-          "title": "Audit UX",
-          "description": "Nous avons réalisé un audit UX complet de l'application, évaluant l'accessibilité, l'utilisabilité, et la cohérence de l'interface selon les heuristiques de Nielsen."
-        },
         "protocols": {
           "title": "Documentation de test",
           "items": [

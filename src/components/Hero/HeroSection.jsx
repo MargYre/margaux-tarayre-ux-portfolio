@@ -5,21 +5,25 @@ import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  // Obtenir la langue courante (fr ou en)
+  const currentLang = i18n.language
 
   const handlePersonaClick = personaId => {
     setSelectedPersona(personaId)
   }
 
-  const currentMessage = personaMessages[selectedPersona]
+  // Obtenir le message personnalisé selon la langue ET le persona
+  const currentMessage =
+    personaMessages[currentLang]?.[selectedPersona] ||
+    personaMessages.en[selectedPersona]
 
-  const translatedPersonas = [
-    { id: 'anyone', label: t('hero.forAnyone') },
-    { id: 'recruiter', label: t('hero.recruiter') },
-    { id: 'director', label: t('hero.designDirector') },
-    { id: 'pm', label: t('hero.productManager') },
-    { id: 'engineer', label: t('hero.engineer') },
-  ]
+  // Traduire les labels des boutons
+  const translatedPersonas = personas.map(p => ({
+    id: p.id,
+    label: currentLang === 'fr' ? p.labelFr : p.labelEn,
+  }))
 
   return (
     <section className={styles.hero}>
@@ -37,6 +41,7 @@ const HeroSection = () => {
       <HeroContent
         message={currentMessage}
         selectedPersona={selectedPersona}
+        currentLang={currentLang}
         t={t}
       />
 
@@ -54,11 +59,12 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
   </button>
 )
 
-const HeroContent = ({ message, selectedPersona, t }) => (
+const HeroContent = ({ message, selectedPersona, currentLang, t }) => (
   <div className={styles.heroContent} key={selectedPersona}>
-    <h1 className={styles.title}>{t('hero.title')}</h1>
-    <h2 className={styles.subtitle}>{t('hero.subtitle')}</h2>
-    <p className={styles.description}>{t('hero.description')}</p>
+    {/* Utiliser les messages personnalisés au lieu des traductions statiques */}
+    <h1 className={styles.title}>{message.title}</h1>
+    <h2 className={styles.subtitle}>{message.subtitle}</h2>
+    <p className={styles.description}>{message.description}</p>
 
     <div className={styles.ctaGroup}>
       <a href="#projects" className={styles.primaryCta}>

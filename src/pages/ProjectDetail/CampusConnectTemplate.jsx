@@ -262,19 +262,6 @@ const DesignSection = ({ t, images }) => (
           <p className={styles.paragraph}>
             {t('campusConnect.sections.design.intro')}
           </p>
-
-          {/* Grille de screenshots simplifiée */}
-          <div className={styles.screenshotsSimple}>
-            {images.slice(0, 2).map((img, index) => (
-              <div key={index} className={styles.screenshotWrapper}>
-                <img
-                  src={img}
-                  alt={`Campus Connect - Aperçu ${index + 1}`}
-                  className={styles.screenshot}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
@@ -303,16 +290,6 @@ const TestingSection = ({ t }) => {
             <p className={styles.paragraph}>
               {t('campusConnect.sections.testing.intro')}
             </p>
-
-            {/* Audit Box en évidence */}
-            <div className={styles.auditBox}>
-              <h4 className={styles.auditTitle}>
-                {t('campusConnect.sections.testing.audit.title')}
-              </h4>
-              <p className={styles.auditDesc}>
-                {t('campusConnect.sections.testing.audit.description')}
-              </p>
-            </div>
 
             {/* Bouton Afficher plus */}
             <button

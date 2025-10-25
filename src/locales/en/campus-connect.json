@@ -28,16 +28,15 @@
       "overview": {
         "number": "01",
         "label": "Overview",
-        "title": "A comprehensive project bridging practice and theory",
-        "description": "Campus Connect is a mobile application that facilitates student life by centralizing campus event information, enabling users to create and join outings, and fostering connections between students. This project was an opportunity to apply rigorous UX methodology, from user research to usability testing.",
+        "title": "A comprehensive academic project",
+        "description": "Campus Connect is a fictional project created as part of a UX/UI Design course. The application doesn't actually exist - we only created the mockups, protocols, and research documents to simulate a complete UX process. The goal was to imagine an application that would facilitate student life by centralizing campus events, enabling users to create and join outings, and fostering connections between students.",
         "highlights": {
           "items": [
-            "15+ user interviews with documented neutral protocol",
-            "Personas created based on real data",
-            "High-fidelity interactive mockups on Figma",
+            "User interviews with documented protocol",
+            "Creation of detailed personas",
+            "Interactive mockups on Figma",
             "Structured testing protocols (objectives, hypotheses, panel)",
-            "User testing with fellow students",
-            "Complete UX audit report"
+            "User testing with fellow students"
           ]
         }
       },
@@ -45,7 +44,7 @@
         "number": "02",
         "label": "Research",
         "title": "Understanding real student needs",
-        "intro": "The research phase was central to this project. We conducted in-depth interviews with over 15 students to understand their frustrations and needs regarding social life and event discovery on campus.",
+        "intro": "As part of this academic project, we conducted interviews with 3-4 students to understand their needs. We also put ourselves in students' shoes to imagine typical frustrations and expectations regarding social life and event discovery on campus.",
         "showDetails": "View detailed methodology",
         "hideDetails": "Hide details",
         "methodology": {
@@ -53,15 +52,15 @@
           "items": [
             {
               "title": "Qualitative interviews",
-              "description": "15+ semi-structured interviews with a neutral protocol to avoid bias. Open-ended questions focused on habits, frustrations, and needs."
+              "description": "3-4 semi-structured interviews with a neutral protocol to avoid bias. Open-ended questions focused on habits, frustrations, and needs related to student social life."
             },
             {
-              "title": "Contextual inquiry",
-              "description": "Observation of students in their natural environment: on campus, between classes, during breaks."
+              "title": "Role-playing",
+              "description": "Not having time for an in-depth observation phase in a course setting, we put ourselves in students' shoes and chose a theme we knew well."
             },
             {
-              "title": "Data analysis",
-              "description": "Grouping insights, identifying recurring patterns, creating an affinity map to structure results."
+              "title": "Analysis and synthesis",
+              "description": "Grouping insights, identifying recurring patterns, creating detailed personas to guide the design."
             }
           ]
         }
@@ -79,10 +78,6 @@
         "intro": "The testing phase was structured with rigorous protocols to validate our design hypotheses and identify improvement opportunities. We created comprehensive templates to document every aspect of testing.",
         "showProtocols": "View testing protocols",
         "hideProtocols": "Hide protocols",
-        "audit": {
-          "title": "UX Audit",
-          "description": "We conducted a comprehensive UX audit of the application, evaluating accessibility, usability, and interface consistency according to Nielsen's heuristics."
-        },
         "protocols": {
           "title": "Testing documentation",
           "items": [
