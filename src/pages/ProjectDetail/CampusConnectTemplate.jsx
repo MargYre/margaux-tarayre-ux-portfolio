@@ -39,9 +39,7 @@ const CampusConnectTemplate = ({ project }) => {
             {/* Texte à gauche */}
             <div className={styles.heroText}>
               <div className={styles.heroTag}>
-                <span className={styles.tag}>
-                  {t('campusConnect.hero.tag')}
-                </span>
+                <span>{t('campusConnect.hero.tag')}</span>
                 <span className={styles.year}>{project.year || 2024}</span>
               </div>
 
@@ -73,7 +71,7 @@ const CampusConnectTemplate = ({ project }) => {
                 rel="noopener noreferrer"
                 className={styles.figmaLink}
               >
-                {t('campusConnect.hero.link')} →
+                {t('campusConnect.hero.link')}
               </a>
             </div>
 
