@@ -2,6 +2,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import { projects } from '../data/projects/projectsData'
 import CelesteGardenTemplate from './ProjectDetail/CelesteGardenTemplate'
 import CampusConnectTemplate from './ProjectDetail/CampusConnectTemplate'
+import EvasionTemplate from './ProjectDetail/EvasionTemplate'
 import FutureTemplate from './ProjectDetail/FutureTemplate'
 import styles from './ProjectDetail.module.scss'
 
@@ -24,6 +25,9 @@ const ProjectDetail = () => {
 
       case 'campus-connect':
         return <CampusConnectTemplate project={project} />
+
+      case 'evasion':
+        return <EvasionTemplate project={project} />
 
       default:
         return <FutureTemplate project={project} />

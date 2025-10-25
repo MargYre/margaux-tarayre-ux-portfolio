@@ -43,21 +43,17 @@ export const projects = [
     images: [],
   },
   {
-    id: 'eduwatch',
-    slug: 'eduwatch',
-    tags: ['Design Thinking', 'IM School', 'Critical Design'],
-    color: '#8b5cf6',
-    image: '👁️',
-    hasMethodology: false,
-    hasLore: true,
+    id: 'evasion',
+    slug: 'evasion',
+    titleKey: 'projects.evasion.title',
+    descriptionKey: 'projects.evasion.description',
     year: 2025,
-    client: 'IM School - Design Fiction Course',
-    role: 'Speculative Designer',
-    duration: '2 months',
-    team: ['Solo'],
-    link: null,
-    prototype: null,
-    images: [],
+    category: 'design-fiction',
+    color: '#1a1a1a', // Noir
+    image: '🎭', // Emoji masque
+    tags: ['Design Fiction', 'UX Research', 'Narrative Design'], // ← AJOUTER ÇA
+    cover: '/images/evasion/cover.png',
+    template: 'evasion',
   },
 ]
 

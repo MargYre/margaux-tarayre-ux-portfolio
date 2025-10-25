@@ -11,6 +11,8 @@ import frCelesteGarden from '../locales/fr/celeste-garden.json'
 import enCelesteGarden from '../locales/en/celeste-garden.json'
 import frCampusConnect from '../locales/fr/campus-connect.json'
 import enCampusConnect from '../locales/en/campus-connect.json'
+import frEvasion from '../locales/fr/evasion.json'
+import enEvasion from '../locales/en/evasion.json'
 import frComingSoon from '../locales/fr/coming-soon.json'
 import enComingSoon from '../locales/en/coming-soon.json'
 
@@ -23,6 +25,7 @@ i18n.use(initReactI18next).init({
         ...frProjectDetails,
         ...frCelesteGarden,
         ...frCampusConnect,
+        ...frEvasion,
         ...frComingSoon,
       },
     },
@@ -33,6 +36,7 @@ i18n.use(initReactI18next).init({
         ...enProjectDetails,
         ...enCelesteGarden,
         ...enCampusConnect,
+        ...enEvasion,
         ...enComingSoon,
       },
     },

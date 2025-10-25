@@ -1,0 +1,160 @@
+{
+  "evasion": {
+    "nav": {
+      "back": "← Accueil"
+    },
+    "hero": {
+      "tag": "Design Fiction",
+      "title": "É.V.A.S.I.O.N",
+      "subtitle": "Quand les enfants deviennent la ressource principale du système",
+      "link": "Voir la présentation Figma",
+      "details": {
+        "duration": {
+          "label": "Durée",
+          "value": "Workshop 1 semaine"
+        },
+        "school": {
+          "label": "École",
+          "value": "IIM Paris"
+        },
+        "supervisor": {
+          "label": "Encadrant",
+          "value": "Romain Asse"
+        }
+      }
+    },
+    "sections": {
+      "context": {
+        "number": "01",
+        "label": "Contexte",
+        "title": "Un workshop de design fiction",
+        "intro": "Dans le cadre du Mastère UX Design Interactif à l'IIM Paris, nous avons imaginé un futur dystopique où le système scolaire trie et élimine les enfants jugés non productifs. É.V.A.S.I.O.N est le programme gouvernemental censé leur offrir une seconde chance.",
+        "showDetails": "Voir le contexte complet",
+        "hideDetails": "Masquer les détails",
+        "details": [
+          {
+            "title": "Thème de départ",
+            "text": "Les tendances de l'enfance, sous-thème : \"S'évader de l'école\""
+          },
+          {
+            "title": "L'univers : La Cité Rouge",
+            "text": "Une société où la Terre épuisée sacrifie une partie de ses enfants considérés comme \"non productifs\" par le système scolaire traditionnel."
+          },
+          {
+            "title": "Le Monocle Cognitif",
+            "text": "Implant visuel intégré dès l'âge de 3 ans, qui surveille et contrôle les habitants. À 6 ans, l'application É.V.A.S.I.O.N s'active automatiquement."
+          },
+          {
+            "title": "Notre approche",
+            "text": "Nous incarnons une fausse agence gouvernementale présentant le programme comme une expérience d'évasion gamifiée, une \"seconde chance\" pour les profils atypiques."
+          }
+        ]
+      },
+      "concept": {
+        "number": "02",
+        "label": "Concept",
+        "title": "Le programme É.V.A.S.I.O.N",
+        "intro": "É.V.A.S.I.O.N se présente comme une expérience d'évasion gamifiée pour les enfants dont le potentiel n'est pas détecté par les méthodes scolaires classiques. Sous ses airs de jeu, c'est en réalité un système de tri et de contrôle qui leur offre une chance étroite de survie.",
+        "showStory": "Lire le scénario complet",
+        "hideStory": "Masquer le scénario",
+        "fullStory": [
+          "Dans la Cité Rouge, le système scolaire sélectionne environ 65% des enfants jugés immédiatement productifs. Les 35% restants — ceux dont le potentiel n'est pas détecté par les méthodes classiques — sont normalement sacrifiés pour nourrir la société.",
+          "É.V.A.S.I.O.N a été conçu pour \"sauver\" une partie de ces profils. C'est un programme expérimental intégré au Monocle Cognitif, un implant visuel dont chaque habitant est équipé dès l'âge de 3 ans. À 6 ans, l'application É.V.A.S.I.O.N est activée automatiquement.",
+          "L'application se présente comme une expérience d'évasion gamifiée, une sorte d'escape game grandeur réelle. Les enfants y accomplissent des missions qui testent leur créativité, leur intuition, ou leur capacité d'adaptation — des qualités que le système scolaire traditionnel ne valorise pas.",
+          "Seuls environ 10% de ces profils atypiques parviennent à \"réussir\" le programme et obtiennent le droit de rejoindre les rangs actifs de la société. Ce n'est pas une porte de sortie — c'est une seconde chance parfaitement intégrée au système de contrôle."
+        ]
+      },
+      "personas": {
+        "number": "03",
+        "label": "Personas",
+        "title": "Kael et Romain",
+        "intro": "Nous avons créé deux personas pour incarner les différentes faces du système : l'enfant surveillé et l'instructeur désabusé.",
+        "showPersonas": "Voir les personas",
+        "hidePersonas": "Masquer les personas",
+        "list": [
+          {
+            "name": "Kael Sinnasse",
+            "role": "Élève • Cycle Primaire 2",
+            "description": "6 ans, profil non conforme détecté par le système. Intégré au programme É.V.A.S.I.O.N, il doit accomplir des missions pour prouver sa valeur et éviter l'élimination. Son parcours révèle la pression constante et la gamification de la survie."
+          },
+          {
+            "name": "Romain",
+            "role": "Instructeur • Ancien Professeur de SVT",
+            "description": "Ancien enseignant devenu instructeur É.V.A.S.I.O.N après 15 ans dans le système. Désabusé, il exécute le programme sans conviction, conscient qu'il participe à un tri organisé plutôt qu'à un sauvetage réel."
+          }
+        ]
+      },
+      "design": {
+        "number": "04",
+        "label": "Direction artistique",
+        "title": "Un design qui inspire le contrôle",
+        "intro": "Nous avons créé une identité visuelle froide, militarisée et déshumanisée pour renforcer l'oppression systémique du programme.",
+        "showElements": "Voir les choix de design",
+        "hideElements": "Masquer les choix",
+        "elements": [
+          {
+            "title": "Palette : verts militaires et gris industriels",
+            "description": "Couleurs désaturées évoquant surveillance et structure rigide. Pas de chaleur, pas d'humanité."
+          },
+          {
+            "title": "Typographie : futuriste et technique",
+            "description": "Polices angulaires qui renforcent le caractère institutionnel et dystopique du système."
+          },
+          {
+            "title": "Interface de surveillance",
+            "description": "Dashboard de missions, graphiques de performance, calendrier de suivi. L'enfant est quantifié, optimisé, contrôlé."
+          },
+          {
+            "title": "Symbolique du Monocle",
+            "description": "L'implant visuel comme extension panoptique. Le regard du système est permanent, intégré au corps même de l'individu."
+          }
+        ]
+      },
+      "role": {
+        "number": "05",
+        "label": "Mon rôle",
+        "title": "Contribution au projet",
+        "intro": "J'ai participé à toutes les phases du workshop, de la construction narrative à la direction artistique.",
+        "showDetails": "Voir les détails",
+        "hideDetails": "Masquer les détails",
+        "contributions": [
+          {
+            "title": "Construction narrative et conceptuelle",
+            "description": "Développement de l'univers de la Cité Rouge, cohérence entre système scolaire, technologie et élimination. Participation active à la définition du concept É.V.A.S.I.O.N."
+          },
+          {
+            "title": "Création des personas",
+            "description": "Conception de Kael (élève surveillé) et Romain (instructeur désabusé). Définition de leurs parcours, motivations et rôles dans le système."
+          },
+          {
+            "title": "Direction artistique",
+            "description": "Recherches visuelles, moodboards, et mise en forme de l'identité dystopique. Cohérence entre symbolique, narration et interface."
+          },
+          {
+            "title": "Réflexion UX",
+            "description": "Conception de l'interface du Monocle et de l'application É.V.A.S.I.O.N. Design d'une expérience oppressive mais gamifiée."
+          },
+          {
+            "title": "Mise en scène finale",
+            "description": "Participation à la présentation Figma Slides immersive incarnant l'agence gouvernementale fictive."
+          }
+        ]
+      },
+      "reflection": {
+        "number": "06",
+        "label": "Réflexion",
+        "title": "Un projet qui explore le design spéculatif",
+        "paragraphs": [
+          "É.V.A.S.I.O.N m'a permis d'explorer le design fiction comme outil de réflexion critique. En créant un système dystopique cohérent, nous avons questionné les logiques actuelles de tri scolaire, de quantification des individus, et d'optimisation des ressources humaines.",
+          "Ce workshop a été une première immersion dans la construction d'univers narratifs complexes, où chaque choix de design renforce une critique systémique. J'ai appris à articuler concept, émotion et interface pour créer une expérience immersive qui interroge autant qu'elle démontre.",
+          "Ce projet s'inscrit dans mon parcours au sein du Mastère UX Design Interactif à l'IIM Paris, où j'apprends à concevoir des expériences qui questionnent autant qu'elles servent."
+        ]
+      }
+    },
+    "formation": {
+      "title": "À propos de ma formation",
+      "description": "Ce projet a été réalisé dans le cadre du Mastère UX Design Interactif à l'IIM Paris, une formation qui m'apprend à concevoir des expériences numériques innovantes, critiques et centrées sur l'humain.",
+      "linkText": "En savoir plus sur la formation"
+    }
+  }
+}

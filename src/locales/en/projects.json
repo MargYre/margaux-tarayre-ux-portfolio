@@ -24,12 +24,9 @@
       "category": "User Testing",
       "description": "App facilitating student life with comprehensive testing protocol."
     },
-
-    "eduwatch": {
-      "title": "EduWatch",
-      "subtitle": "Dystopian design fiction",
-      "category": "Critical Design",
-      "description": "Critical project exploring surveillance abuses in education."
+    "evasion": {
+      "title": "É.V.A.S.I.O.N",
+      "description": "Dystopian government program testing atypical children"
     }
   }
 }

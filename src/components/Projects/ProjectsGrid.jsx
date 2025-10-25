@@ -90,6 +90,13 @@ const ProjectVisual = ({ image, category, color, projectId }) => (
         className={styles.projectPreviewImage}
         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
       />
+    ) : projectId === 'evasion' ? (
+      <img
+        src="/images/evasion/interface-missions.png"
+        alt="EVASION preview"
+        className={styles.projectPreviewImage}
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      />
     ) : (
       <span className={styles.emoji} role="img" aria-hidden="true">
         {image}
@@ -145,7 +152,7 @@ const ViewButton = ({ color, projectTitle, projectId, project, t }) => {
       aria-label={`Voir le projet ${projectTitle}`}
       aria-describedby={`project-desc-${projectId}`}
     >
-      {t('projects.viewCaseStudy')} →
+      {t('projects.viewCaseStudy')}
     </Link>
   )
 }

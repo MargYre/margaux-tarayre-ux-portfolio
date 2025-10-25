@@ -1,0 +1,160 @@
+{
+  "evasion": {
+    "nav": {
+      "back": "← Home"
+    },
+    "hero": {
+      "tag": "Design Fiction",
+      "title": "É.V.A.S.I.O.N",
+      "subtitle": "When children become the system's main resource",
+      "link": "View Figma Presentation",
+      "details": {
+        "duration": {
+          "label": "Duration",
+          "value": "1-week workshop"
+        },
+        "school": {
+          "label": "School",
+          "value": "IIM Paris"
+        },
+        "supervisor": {
+          "label": "Supervisor",
+          "value": "Romain Asse"
+        }
+      }
+    },
+    "sections": {
+      "context": {
+        "number": "01",
+        "label": "Context",
+        "title": "A design fiction workshop",
+        "intro": "As part of the Interactive UX Design Master's program at IIM Paris, we imagined a dystopian future where the school system sorts and eliminates children deemed unproductive. É.V.A.S.I.O.N is the government program meant to offer them a second chance.",
+        "showDetails": "View full context",
+        "hideDetails": "Hide details",
+        "details": [
+          {
+            "title": "Starting theme",
+            "text": "Childhood trends, sub-theme: \"Escaping from school\""
+          },
+          {
+            "title": "The universe: The Red City",
+            "text": "A society where an exhausted Earth sacrifices part of its children deemed \"unproductive\" by the traditional school system."
+          },
+          {
+            "title": "The Cognitive Monocle",
+            "text": "Visual implant integrated from age 3, which monitors and controls inhabitants. At age 6, the É.V.A.S.I.O.N application activates automatically."
+          },
+          {
+            "title": "Our approach",
+            "text": "We embody a fake government agency presenting the program as a gamified escape experience, a \"second chance\" for atypical profiles."
+          }
+        ]
+      },
+      "concept": {
+        "number": "02",
+        "label": "Concept",
+        "title": "The É.V.A.S.I.O.N program",
+        "intro": "É.V.A.S.I.O.N presents itself as a gamified escape experience for children whose potential isn't detected by conventional school methods. Beneath its game-like appearance, it's actually a sorting and control system offering them a narrow chance at survival.",
+        "showStory": "Read the full scenario",
+        "hideStory": "Hide scenario",
+        "fullStory": [
+          "In the Red City, the school system selects about 65% of children deemed immediately productive. The remaining 35% — those whose potential isn't detected by conventional methods — are normally sacrificed to feed society.",
+          "É.V.A.S.I.O.N was designed to \"save\" some of these profiles. It's an experimental program integrated into the Cognitive Monocle, a visual implant that every inhabitant is equipped with from age 3. At age 6, the É.V.A.S.I.O.N application activates automatically.",
+          "The application presents itself as a gamified escape experience, a sort of life-sized escape room. Children complete missions that test their creativity, intuition, or adaptability — qualities that the traditional school system doesn't value.",
+          "Only about 10% of these atypical profiles manage to \"succeed\" in the program and earn the right to join society's active ranks. It's not an exit door — it's a second chance perfectly integrated into the control system."
+        ]
+      },
+      "personas": {
+        "number": "03",
+        "label": "Personas",
+        "title": "Kael and Romain",
+        "intro": "We created two personas to embody the different faces of the system: the monitored child and the disillusioned instructor.",
+        "showPersonas": "View personas",
+        "hidePersonas": "Hide personas",
+        "list": [
+          {
+            "name": "Kael Sinnasse",
+            "role": "Student • Primary Cycle 2",
+            "description": "6 years old, non-conforming profile detected by the system. Integrated into the É.V.A.S.I.O.N program, he must complete missions to prove his worth and avoid elimination. His journey reveals the constant pressure and gamification of survival."
+          },
+          {
+            "name": "Romain",
+            "role": "Instructor • Former Biology Teacher",
+            "description": "Former teacher turned É.V.A.S.I.O.N instructor after 15 years in the system. Disillusioned, he executes the program without conviction, aware that he's participating in organized sorting rather than real rescue."
+          }
+        ]
+      },
+      "design": {
+        "number": "04",
+        "label": "Art Direction",
+        "title": "A design that inspires control",
+        "intro": "We created a cold, militarized, and dehumanized visual identity to reinforce the program's systemic oppression.",
+        "showElements": "View design choices",
+        "hideElements": "Hide choices",
+        "elements": [
+          {
+            "title": "Palette: military greens and industrial grays",
+            "description": "Desaturated colors evoking surveillance and rigid structure. No warmth, no humanity."
+          },
+          {
+            "title": "Typography: futuristic and technical",
+            "description": "Angular fonts that reinforce the institutional and dystopian character of the system."
+          },
+          {
+            "title": "Surveillance interface",
+            "description": "Mission dashboard, performance graphs, tracking calendar. The child is quantified, optimized, controlled."
+          },
+          {
+            "title": "Monocle symbolism",
+            "description": "The visual implant as a panoptic extension. The system's gaze is permanent, integrated into the individual's very body."
+          }
+        ]
+      },
+      "role": {
+        "number": "05",
+        "label": "My Role",
+        "title": "Project contribution",
+        "intro": "I participated in all phases of the workshop, from narrative construction to art direction.",
+        "showDetails": "View details",
+        "hideDetails": "Hide details",
+        "contributions": [
+          {
+            "title": "Narrative and conceptual construction",
+            "description": "Development of the Red City universe, coherence between school system, technology, and elimination. Active participation in defining the É.V.A.S.I.O.N concept."
+          },
+          {
+            "title": "Persona creation",
+            "description": "Design of Kael (monitored student) and Romain (disillusioned instructor). Definition of their journeys, motivations, and roles in the system."
+          },
+          {
+            "title": "Art direction",
+            "description": "Visual research, moodboards, and shaping of the dystopian identity. Coherence between symbolism, narration, and interface."
+          },
+          {
+            "title": "UX thinking",
+            "description": "Design of the Monocle interface and É.V.A.S.I.O.N application. Designing an oppressive yet gamified experience."
+          },
+          {
+            "title": "Final staging",
+            "description": "Participation in the immersive Figma Slides presentation embodying the fictional government agency."
+          }
+        ]
+      },
+      "reflection": {
+        "number": "06",
+        "label": "Reflection",
+        "title": "A project exploring speculative design",
+        "paragraphs": [
+          "É.V.A.S.I.O.N allowed me to explore design fiction as a critical thinking tool. By creating a coherent dystopian system, we questioned current logics of school sorting, quantification of individuals, and optimization of human resources.",
+          "This workshop was a first immersion into building complex narrative universes, where every design choice reinforces systemic critique. I learned to articulate concept, emotion, and interface to create an immersive experience that questions as much as it demonstrates.",
+          "This project is part of my journey in the Interactive UX Design Master's program at IIM Paris, where I learn to design experiences that question as much as they serve."
+        ]
+      }
+    },
+    "formation": {
+      "title": "About my education",
+      "description": "This project was created as part of the Interactive UX Design Master's program at IIM Paris, a program that teaches me to design innovative, critical, and human-centered digital experiences.",
+      "linkText": "Learn more about the program"
+    }
+  }
+}
