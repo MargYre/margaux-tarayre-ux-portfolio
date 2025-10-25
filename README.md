@@ -18,9 +18,9 @@ Frontend developer transitioning into UX/UI design. Passionate about creating us
 
 ## 📁 Projects Included
 
-- **Luxe & Threads** - E-commerce UI/UX design
-- **Campus Connect** - User research & mobile app design
-- **EduWatch** - Speculative design project
+- **Celeste's garden** - E-commerce figma design
+- **Campus Sortie** - User research & mobile app design
+- **Evasion** - fictive design thinking
 
 ## 🚀 Live Demo
 
