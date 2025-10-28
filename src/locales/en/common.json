@@ -7,7 +7,19 @@
     "view": "View"
   },
   "hero": {
-    "scrollToExplore": "Explore my work"
+    "title": "Margaux Tarayre",
+    "subtitle": "UX/UI Designer & Developer",
+    "description": "I create digital experiences that combine thoughtful design with technical execution.",
+    "scrollToExplore": "Explore my work",
+    "forAnyone": "For everyone",
+    "recruiter": "Recruiter",
+    "designDirector": "Design Director",
+    "productManager": "Product Manager",
+    "engineer": "Engineer",
+    "viewCV": "View CV",
+    "contact": "Get in touch",
+    "viewCaseStudy": "View case study",
+    "github": "GitHub"
   },
   "footer": {
     "copyright": "© 2025 Margaux Tarayre. All rights reserved.",

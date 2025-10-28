@@ -5,25 +5,21 @@ import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')
-  const { t, i18n } = useTranslation()
-
-  // Obtenir la langue courante (fr ou en)
-  const currentLang = i18n.language
+  const { t } = useTranslation()
 
   const handlePersonaClick = personaId => {
     setSelectedPersona(personaId)
   }
 
-  // Obtenir le message personnalisé selon la langue ET le persona
-  const currentMessage =
-    personaMessages[currentLang]?.[selectedPersona] ||
-    personaMessages.en[selectedPersona]
+  const currentMessage = personaMessages[selectedPersona]
 
-  // Traduire les labels des boutons
-  const translatedPersonas = personas.map(p => ({
-    id: p.id,
-    label: currentLang === 'fr' ? p.labelFr : p.labelEn,
-  }))
+  const translatedPersonas = [
+    { id: 'anyone', label: t('hero.forAnyone') },
+    { id: 'recruiter', label: t('hero.recruiter') },
+    { id: 'director', label: t('hero.designDirector') },
+    { id: 'pm', label: t('hero.productManager') },
+    { id: 'engineer', label: t('hero.engineer') },
+  ]
 
   return (
     <section className={styles.hero}>
@@ -41,7 +37,6 @@ const HeroSection = () => {
       <HeroContent
         message={currentMessage}
         selectedPersona={selectedPersona}
-        currentLang={currentLang}
         t={t}
       />
 
@@ -59,27 +54,69 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
   </button>
 )
 
-const HeroContent = ({ message, selectedPersona, currentLang, t }) => (
+const HeroContent = ({ message, selectedPersona, t }) => (
   <div className={styles.heroContent} key={selectedPersona}>
-    {/* Utiliser les messages personnalisés au lieu des traductions statiques */}
-    <h1 className={styles.title}>{message.title}</h1>
-    <h2 className={styles.subtitle}>{message.subtitle}</h2>
-    <p className={styles.description}>{message.description}</p>
+    <h1 className={styles.title}>{t('hero.title')}</h1>
+    <h2 className={styles.subtitle}>{t('hero.subtitle')}</h2>
+    <p className={styles.description}>{t('hero.description')}</p>
 
     <div className={styles.ctaGroup}>
+      {/* Bouton Projets - TOUJOURS visible */}
       <a href="#projects" className={styles.primaryCta}>
         {t('nav.projects')}
       </a>
 
-      {selectedPersona === 'engineer' && (
+      {/* RECRUTEUR : CV seulement (Contact retiré) */}
+      {selectedPersona === 'recruiter' && (
         <a
-          href="https://margaux-tarayre.netlify.app/"
+          href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.secondaryCta}
         >
-          {t('nav.devPortfolio')}
+          {t('hero.viewCV')}
         </a>
+      )}
+
+      {/* DIRECTEUR DESIGN : Case Study */}
+      {selectedPersona === 'director' && (
+        <a href="/projects/campus-connect" className={styles.secondaryCta}>
+          {t('hero.viewCaseStudy')}
+        </a>
+      )}
+
+      {/* PRODUCT MANAGER : CV */}
+      {selectedPersona === 'pm' && (
+        <a
+          href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.secondaryCta}
+        >
+          {t('hero.viewCV')}
+        </a>
+      )}
+
+      {/* DEVELOPPEUR : Portfolio Dev + GitHub */}
+      {selectedPersona === 'engineer' && (
+        <>
+          <a
+            href="https://margaux-tarayre.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondaryCta}
+          >
+            {t('nav.devPortfolio')}
+          </a>
+          <a
+            href="https://github.com/MargYre"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondaryCta}
+          >
+            {t('hero.github')}
+          </a>
+        </>
       )}
     </div>
   </div>
