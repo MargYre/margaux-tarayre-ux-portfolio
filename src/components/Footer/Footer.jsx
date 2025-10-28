@@ -9,7 +9,7 @@ const Footer = () => {
       <p className={styles.footerText}>{t('footer.copyright')}</p>
       <div className={styles.footerLinks}>
         <a
-          href="mailto:margaux.tarayre@example.com"
+          href="mailto:margaux.tarayre@gmail.com"
           className={styles.footerLink}
         >
           {t('footer.email')}
@@ -23,7 +23,7 @@ const Footer = () => {
           {t('footer.linkedin')}
         </a>
         <a
-          href="https://github.com/margaux-tarayre"
+          href="https://github.com/MargYre/margaux-tarayre-ux-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.footerLink}
