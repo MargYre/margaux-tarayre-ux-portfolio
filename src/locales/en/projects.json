@@ -25,7 +25,9 @@
       "description": "App facilitating student life with comprehensive testing protocol."
     },
     "evasion": {
+      "category": "Design Fiction",
       "title": "É.V.A.S.I.O.N",
+      "subtitle": "When children become the system's main resource",
       "description": "Dystopian government program testing atypical children"
     }
   }

@@ -61,7 +61,7 @@ const HeroContent = ({ message, selectedPersona, t }) => (
     <p className={styles.description}>{t('hero.description')}</p>
 
     <div className={styles.ctaGroup}>
-      {/* Bouton Projets - TOUJOURS visible */}
+      {/* Bouton Projets -CV TOUJOURS visible */}
       <a href="#projects" className={styles.primaryCta}>
         {t('nav.projects')}
       </a>

@@ -35,7 +35,7 @@ const ProjectCard = ({ project, t }) => {
   const projectKeyMap = {
     'celeste-garden': 'celesteGarden',
     'campus-connect': 'campusConnect',
-    eduwatch: 'eduwatch',
+    evasion: 'evasion',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
