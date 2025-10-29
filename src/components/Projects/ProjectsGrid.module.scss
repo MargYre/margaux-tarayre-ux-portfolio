@@ -43,28 +43,34 @@
   }
 }
 
+// ✅ CARTE ENTIÈREMENT CLIQUABLE
 .projectCard {
+  display: block;
   border: 2px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
   transition: all var(--transition-base);
   background-color: var(--color-bg);
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-text);
 
     .projectImage {
       transform: scale(1.02);
     }
   }
 
-  &:focus-within {
-    outline: 2px solid var(--color-accent);
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
     outline-offset: 2px;
   }
 }
 
+// ✅ IMAGE AVEC OVERLAY "VOIR"
 .projectImage {
   height: 240px;
   display: flex;
@@ -72,6 +78,13 @@
   justify-content: center;
   position: relative;
   transition: transform var(--transition-base);
+  background-color: var(--color-bg-secondary);
+
+  .projectPreviewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   .emoji {
     font-size: 5rem;
@@ -82,17 +95,45 @@
     }
   }
 
+  // ✅ BADGE MONOCHROME
   .categoryBadge {
     position: absolute;
     top: var(--spacing-sm);
     right: var(--spacing-sm);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 20px;
-    color: #ffffff;
+    background-color: var(--color-text);
+    color: var(--color-bg);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    z-index: 2;
+  }
+
+  // ✅ OVERLAY "VOIR" AU SURVOL
+  .hoverOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 1;
+
+    .viewLabel {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .hoverOverlayVisible {
+    opacity: 1;
   }
 }
 
@@ -129,12 +170,6 @@
       font-size: 0.875rem;
       color: var(--color-text-secondary);
       transition: all var(--transition-fast);
-
-      &:hover {
-        background-color: var(--color-accent);
-        color: var(--color-bg);
-        transform: scale(1.05);
-      }
     }
   }
 
@@ -142,162 +177,6 @@
     font-size: 1rem;
     line-height: 1.6;
     color: var(--color-text);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .highlights {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-sm);
-    background-color: var(--color-bg-secondary);
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-
-    .highlightsTitle {
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--spacing-sm);
-      color: var(--color-text);
-    }
-
-    .highlightsList {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .highlightItem {
-      font-size: 0.875rem;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--spacing-xs);
-      padding-left: var(--spacing-md);
-      position: relative;
-      line-height: 1.5;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--color-accent);
-        font-weight: bold;
-      }
-    }
-  }
-
-  .methodology {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-sm);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-bg);
-
-    .methodologyTitle {
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--spacing-sm);
-      color: var(--color-text);
-    }
-
-    .methodologyGrid {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-      font-size: 0.875rem;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
-
-      strong {
-        color: var(--color-text);
-        font-weight: 600;
-      }
-    }
-  }
-
-  .lore {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-sm);
-    background-color: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-
-    .loreTitle {
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--spacing-xs);
-      color: var(--color-text);
-    }
-
-    .loreText {
-      font-size: 0.875rem;
-      color: var(--color-text-secondary);
-      font-style: italic;
-      line-height: 1.6;
-    }
-  }
-
-  // ✅ BOUTON CORRIGÉ - Utilise var(--color-bg) au lieu de #ffffff
-  .viewButton {
-    display: block;
-    width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
-    background-color: var(--color-accent);
-    color: var(--color-bg); /* ✅ S'inverse automatiquement avec le thème */
-    border: 2px solid var(--color-accent);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background-color: var(--color-bg);
-      opacity: 0.1;
-      transform: translate(-50%, -50%);
-      transition:
-        width 0.6s,
-        height 0.6s;
-    }
-
-    &:hover,
-    &.viewButtonHovered {
-      background-color: transparent;
-      color: var(--color-accent);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-
-      &::before {
-        width: 300px;
-        height: 300px;
-      }
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 2px;
-    }
   }
 }
 

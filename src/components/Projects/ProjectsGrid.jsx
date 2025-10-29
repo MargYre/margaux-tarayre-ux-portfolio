@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { projects } from '../../data/projects/projectsData'
-import { hexToRgba } from '../../utils/colorHelpers'
 import styles from './ProjectsGrid.module.scss'
 
 const ProjectsGrid = () => {
@@ -35,80 +34,75 @@ const ProjectCard = ({ project, t }) => {
   const projectKeyMap = {
     'celeste-garden': 'celesteGarden',
     'campus-connect': 'campusConnect',
+    eduwatch: 'eduwatch',
     evasion: 'evasion',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
 
   return (
-    <article
+    <Link
+      to={`/projects/${project.slug}`}
       className={styles.projectCard}
-      data-project-card="true"
-      style={{
-        '--project-color': project.color,
-        borderColor: isHovered ? hexToRgba(project.color, 0.7) : undefined,
-      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      role="article"
-      aria-labelledby={`project-title-${project.id}`}
+      aria-label={`Voir le projet ${t(`projects.${projectKey}.title`)}`}
     >
       <ProjectVisual
         image={project.image}
         category={t(`projects.${projectKey}.category`)}
-        color={project.color}
         projectId={project.id}
+        isHovered={isHovered}
+        t={t}
       />
       <ProjectContent
         projectId={project.id}
         projectKey={projectKey}
         tags={project.tags}
-        color={project.color}
-        project={project}
         t={t}
+        isHovered={isHovered}
       />
-    </article>
+    </Link>
   )
 }
 
-const ProjectVisual = ({ image, category, color, projectId }) => (
-  <div
-    className={styles.projectImage}
-    style={{ backgroundColor: `${color}15` }}
-  >
+const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
+  <div className={styles.projectImage}>
     {projectId === 'celeste-garden' ? (
       <img
         src="/images/celeste/page1.png"
         alt="Celeste's Garden preview"
         className={styles.projectPreviewImage}
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
       />
     ) : projectId === 'campus-connect' ? (
       <img
         src="/images/campus-connect/screenshot1.png"
         alt="Campus Connect preview"
         className={styles.projectPreviewImage}
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
       />
     ) : projectId === 'evasion' ? (
       <img
         src="/images/evasion/interface-missions.png"
         alt="EVASION preview"
         className={styles.projectPreviewImage}
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
       />
     ) : (
       <span className={styles.emoji} role="img" aria-hidden="true">
         {image}
       </span>
     )}
-    <span className={styles.categoryBadge} style={{ backgroundColor: color }}>
-      {category}
-    </span>
+    <span className={styles.categoryBadge}>{category}</span>
+
+    {/* Overlay "Voir" au survol */}
+    <div
+      className={`${styles.hoverOverlay} ${isHovered ? styles.hoverOverlayVisible : ''}`}
+    >
+      <span className={styles.viewLabel}>{t('projects.view')}</span>
+    </div>
   </div>
 )
 
-const ProjectContent = ({ projectId, projectKey, tags, color, project, t }) => (
+const ProjectContent = ({ projectId, projectKey, tags, t, isHovered }) => (
   <div className={styles.projectContent}>
     <h3 id={`project-title-${projectId}`} className={styles.projectTitle}>
       {t(`projects.${projectKey}.title`)}
@@ -117,16 +111,9 @@ const ProjectContent = ({ projectId, projectKey, tags, color, project, t }) => (
       {t(`projects.${projectKey}.subtitle`)}
     </p>
     <Tags tags={tags} />
-    <p id={`project-desc-${projectId}`} className={styles.projectDescription}>
+    <p className={styles.projectDescription}>
       {t(`projects.${projectKey}.description`)}
     </p>
-    <ViewButton
-      color={color}
-      projectTitle={t(`projects.${projectKey}.title`)}
-      projectId={projectId}
-      project={project}
-      t={t}
-    />
   </div>
 )
 
@@ -139,22 +126,5 @@ const Tags = ({ tags }) => (
     ))}
   </div>
 )
-
-const ViewButton = ({ color, projectTitle, projectId, project, t }) => {
-  const [isHovered, setIsHovered] = useState(false)
-  return (
-    <Link
-      to={`/projects/${project.slug}`}
-      className={`${styles.viewButton} ${isHovered ? styles.viewButtonHovered : ''}`}
-      style={{ '--button-color': color }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      aria-label={`Voir le projet ${projectTitle}`}
-      aria-describedby={`project-desc-${projectId}`}
-    >
-      {t('projects.viewCaseStudy')}
-    </Link>
-  )
-}
 
 export default ProjectsGrid

@@ -24,6 +24,8 @@
       "category": "User Testing",
       "description": "App facilitating student life with comprehensive testing protocol."
     },
+    "view": "View",
+
     "evasion": {
       "category": "Design Fiction",
       "title": "É.V.A.S.I.O.N",
