@@ -10,10 +10,10 @@ const NotFound = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>404</h1>
         <p className={styles.message}>
-          {t('notFound.message', 'Oops! This page doesn\'t exist.')}
+          {t('notFound.message', "Oops! This page doesn't exist.")}
         </p>
         <Link to="/" className={styles.homeLink}>
-          {t('notFound.backHome', '← Back to Home')}
+          {t('notFound.backHome', 'Back to Home')}
         </Link>
       </div>
     </div>
