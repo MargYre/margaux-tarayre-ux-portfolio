@@ -52,7 +52,8 @@
   transition: all var(--transition-base);
   background-color: var(--color-bg);
   text-decoration: none;
-  cursor: pointer;
+  cursor: none; // Cache le curseur par défaut
+  position: relative;
 
   &:hover {
     transform: translateY(-4px);
@@ -68,6 +69,22 @@
     outline: 2px solid var(--color-text);
     outline-offset: 2px;
   }
+}
+
+// ✅ CURSEUR PERSONNALISÉ
+.customCursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  color: var(--color-text);
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
 // ✅ IMAGE AVEC OVERLAY "VOIR"

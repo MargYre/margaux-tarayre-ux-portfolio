@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { projects } from '../../data/projects/projectsData'
@@ -6,15 +6,44 @@ import styles from './ProjectsGrid.module.scss'
 
 const ProjectsGrid = () => {
   const { t } = useTranslation()
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
+  const [showCursor, setShowCursor] = useState(false)
+
+  useEffect(() => {
+    const handleMouseMove = e => {
+      setCursorPos({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   return (
     <section className={styles.section} id="projects">
       <SectionHeader t={t} />
       <div className={styles.grid}>
         {projects.map(project => (
-          <ProjectCard key={project.id} project={project} t={t} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            t={t}
+            onCursorChange={setShowCursor}
+          />
         ))}
       </div>
+
+      {/* Curseur personnalisé */}
+      {showCursor && (
+        <div
+          className={styles.customCursor}
+          style={{
+            left: `${cursorPos.x}px`,
+            top: `${cursorPos.y}px`,
+          }}
+        >
+          {t('projects.view')}
+        </div>
+      )}
     </section>
   )
 }
@@ -27,7 +56,7 @@ const SectionHeader = ({ t }) => (
   </header>
 )
 
-const ProjectCard = ({ project, t }) => {
+const ProjectCard = ({ project, t, onCursorChange }) => {
   const [isHovered, setIsHovered] = useState(false)
 
   // Mapper les IDs des projets aux clés de traduction
@@ -40,12 +69,22 @@ const ProjectCard = ({ project, t }) => {
 
   const projectKey = projectKeyMap[project.id] || project.id
 
+  const handleMouseEnter = () => {
+    setIsHovered(true)
+    onCursorChange(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+    onCursorChange(false)
+  }
+
   return (
     <Link
       to={`/projects/${project.slug}`}
       className={styles.projectCard}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       aria-label={`Voir le projet ${t(`projects.${projectKey}.title`)}`}
     >
       <ProjectVisual
