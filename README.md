@@ -24,4 +24,4 @@ Frontend developer transitioning into UX/UI design. Passionate about creating us
 
 ## 🚀 Live Demo
 
-https://margaux-tarayre-ux-portfolio.netlify.app/
+https://margaux-tarayre.fr/
