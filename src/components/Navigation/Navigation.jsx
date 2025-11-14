@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LanguageToggle from '../LanguageToggle/LanguageToggle'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
@@ -10,10 +11,23 @@ const Navigation = () => {
     <nav className={styles.nav}>
       <div className={styles.navContent}>
         <h1 className={styles.logo}>Margaux Tarayre</h1>
+
         <div className={styles.navLinks}>
-          <a href="#projects" className={styles.navLink}>
+          {/* lien permanent → toujours affiché */}
+          <Link to="/" className={styles.navLink}>
+            {t('nav.home')}
+          </Link>
+
+          {/* ton lien ABOUT → toujours affiché aussi */}
+          <Link to="/about" className={styles.navLink}>
+            {t('nav.about')}
+          </Link>
+
+          {/* anchor uniquement valable en home, mais ça n’empêche rien */}
+          <Link to="/#projects" className={styles.navLink}>
             {t('nav.projects')}
-          </a>
+          </Link>
+
           <a
             href="https://margaux-tarayre.netlify.app/"
             target="_blank"
@@ -22,6 +36,7 @@ const Navigation = () => {
           >
             {t('nav.devPortfolio')}
           </a>
+
           <LanguageToggle />
           <ThemeToggle />
         </div>

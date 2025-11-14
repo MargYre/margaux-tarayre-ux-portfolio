@@ -1,0 +1,37 @@
+.about {
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.ctaWrapper {
+  margin-top: 3rem;
+}
+
+.cta {
+  background: var(--accent-color);
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+}
