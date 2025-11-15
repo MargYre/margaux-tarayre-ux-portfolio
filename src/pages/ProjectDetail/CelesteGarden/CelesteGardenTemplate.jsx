@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../../components/Footer/Footer'
 import styles from './CelesteGardenTemplate.module.scss'
 
 const CelesteGardenTemplate = ({ project }) => {

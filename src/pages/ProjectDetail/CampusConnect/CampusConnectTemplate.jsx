@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import Footer from '../../components/Footer/Footer'
-import Carousel from '../../components/Carousel/Carousel'
-import Lightbox from '../../components/Lightbox/Lightbox'
+import Footer from '../../../components/Footer/Footer'
+import Carousel from '../../../components/Carousel/Carousel'
+import Lightbox from '../../../components/Lightbox/Lightbox'
 import styles from './CampusConnectTemplate.module.scss'
 
 const CampusConnectTemplate = ({ project }) => {

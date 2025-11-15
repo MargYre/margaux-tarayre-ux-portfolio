@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../../components/Footer/Footer'
 import styles from './EvasionTemplate.module.scss'
 
 const EvasionTemplate = ({ project }) => {

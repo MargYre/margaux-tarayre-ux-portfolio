@@ -1,8 +1,8 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { projects } from '../data/projects/projectsData'
-import CelesteGardenTemplate from './ProjectDetail/CelesteGardenTemplate'
-import CampusConnectTemplate from './ProjectDetail/CampusConnectTemplate'
-import EvasionTemplate from './ProjectDetail/EvasionTemplate'
+import CelesteGardenTemplate from './ProjectDetail/CelesteGarden/CelesteGardenTemplate'
+import CampusConnectTemplate from './ProjectDetail/CampusConnect/CampusConnectTemplate'
+import EvasionTemplate from './ProjectDetail/Evasion/EvasionTemplate'
 import FutureTemplate from './ProjectDetail/FutureTemplate'
 import styles from './ProjectDetail.module.scss'
 
