@@ -7,7 +7,7 @@
     "results": "Résultats & Impact",
     "learnings": "Enseignements Clés",
     "technologies": "Technologies Utilisées",
-    "backToProjects": "← Retour aux Projets",
+    "backToProjects": "Retour aux Projets",
     "viewLive": "Voir le Site Live",
     "viewPrototype": "Voir le Prototype",
     "year": "Année",
@@ -15,7 +15,7 @@
     "duration": "Durée",
     "client": "Client",
     "team": "Équipe",
-    
+
     "luxe-threads": {
       "overview": "Luxe & Threads est une plateforme e-commerce moderne conçue pour les passionnés de mode qui valorisent autant le style que l'expérience utilisateur. Le projet s'est concentré sur la création d'un parcours d'achat fluide de la navigation au paiement.",
       "challenge": "Les sites e-commerce de mode traditionnels souffrent souvent de taux d'abandon de panier élevés (moyenne de 70%) et d'expériences mobiles médiocres. Les utilisateurs se plaignaient d'interfaces encombrées et de processus de paiement compliqués.",
@@ -50,7 +50,7 @@
       ],
       "learnings": "L'enseignement majeur : les utilisateurs ne veulent pas d'animations sophistiquées—ils veulent de la clarté et de la rapidité. Chaque élément que nous avons retiré a amélioré le taux de conversion."
     },
-    
+
     "campus-connect": {
       "overview": "Campus Connect est une application mobile centrée sur l'étudiant, conçue spécifiquement pour les étudiants de la Sorbonne Jussieu. Basée sur une recherche utilisateur approfondie avec 15+ étudiants, l'app répond aux vrais problèmes de la vie universitaire.",
       "challenge": "Les étudiants de la Sorbonne Jussieu souffraient d'informations fragmentées sur plusieurs plateformes, de difficultés à trouver des groupes d'étude, et du manque d'actualités campus en temps réel. Les solutions existantes étaient soit trop complexes, soit ne répondaient pas aux besoins spécifiques.",
@@ -85,7 +85,7 @@
       ],
       "learnings": "L'enseignement le plus précieux est venu des tests avec de vrais étudiants dans de vrais environnements campus. Les fonctionnalités qui semblaient importantes en entretien étaient rarement utilisées en pratique, tandis que des fonctions simples comme l'accès rapide à l'emploi du temps sont devenues les plus valorisées."
     },
-    
+
     "eduwatch": {
       "overview": "EduWatch est un projet de design spéculatif qui explore le futur dystopique de la surveillance éducative. Présenté comme un pitch produit corporate, il provoque des discussions critiques sur la vie privée, le contrôle et l'éthique des EdTech.",
       "challenge": "Comment amener les gens à réfléchir de manière critique sur la technologie de surveillance dans l'éducation sans être moralisateur ? Comment le design peut-il être utilisé comme outil de commentaire social et de réflexion éthique ?",

@@ -1,12 +1,12 @@
 {
   "comingSoon": {
     "nav": {
-      "back": "← Home"
+      "back": "Home"
     },
     "hero": {
       "tag": "In Development",
       "status": "Case study in progress",
-      "backButton": "← Back to projects"
+      "backButton": "Back to projects"
     },
     "content": {
       "title": "This case study is coming soon",

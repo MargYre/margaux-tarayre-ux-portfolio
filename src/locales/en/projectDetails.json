@@ -7,7 +7,7 @@
     "results": "Results & Impact",
     "learnings": "Key Learnings",
     "technologies": "Technologies Used",
-    "backToProjects": "← Back to Projects",
+    "backToProjects": "Back to Projects",
     "viewLive": "View Live Site",
     "viewPrototype": "View Prototype",
     "year": "Year",
@@ -15,7 +15,7 @@
     "duration": "Duration",
     "client": "Client",
     "team": "Team",
-    
+
     "luxe-threads": {
       "overview": "Luxe & Threads is a modern e-commerce platform designed for fashion enthusiasts who value both style and user experience. The project focused on creating a seamless shopping journey from browsing to checkout.",
       "challenge": "Traditional fashion e-commerce sites often struggle with high cart abandonment rates (avg. 70%) and poor mobile experiences. Users complained about cluttered interfaces and complicated checkout processes.",
@@ -50,7 +50,7 @@
       ],
       "learnings": "The biggest insight was that users don't want fancy animations—they want clarity and speed. Every element we removed improved the conversion rate."
     },
-    
+
     "campus-connect": {
       "overview": "Campus Connect is a student-centered mobile application designed specifically for Sorbonne Jussieu students. Based on extensive user research with 15+ students, the app addresses real pain points in campus life.",
       "challenge": "Students at Sorbonne Jussieu struggled with fragmented information across multiple platforms, difficulty finding study groups, and lack of real-time campus updates. Existing solutions were either too complex or didn't address specific needs.",
@@ -85,7 +85,7 @@
       ],
       "learnings": "The most valuable insight came from testing with real students in real campus environments. Features that seemed important in interviews were rarely used in practice, while simple features like quick schedule access became the most valued."
     },
-    
+
     "eduwatch": {
       "overview": "EduWatch is a speculative design project that explores the dystopian future of educational surveillance. Presented as a corporate product pitch, it provokes critical discussions about privacy, control, and the ethics of EdTech.",
       "challenge": "How do we make people think critically about surveillance technology in education without being preachy? How can design be used as a tool for social commentary and ethical reflection?",
