@@ -22,7 +22,7 @@ export default function About() {
 
         <div className={styles.ctaWrapper}>
           <a
-            href="https://www.linkedin.com/in/TON-LINKEDIN/"
+            href="https://www.linkedin.com/in/margaux-tarayre/"
             target="_blank"
             className={styles.cta}
           >
