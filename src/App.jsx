@@ -25,6 +25,7 @@ function AppContent({ theme }) {
   // Scroll en haut à chaque changement de page
   useEffect(() => {
     if (location.hash) {
+      // Si on a un hash (#about, #projects, etc.), scroll vers l'élément
       const id = location.hash.replace('#', '')
       const el = document.getElementById(id)
 
@@ -33,6 +34,9 @@ function AppContent({ theme }) {
           el.scrollIntoView({ behavior: 'smooth' })
         }, 50)
       }
+    } else {
+      // Sinon, scroll en haut de la page
+      window.scrollTo(0, 0)
     }
   }, [location])
 
