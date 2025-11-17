@@ -2,11 +2,14 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer/Footer'
+import Carousel from '../../../components/Carousel/Carousel'
+import Lightbox from '../../../components/Lightbox/Lightbox'
 import styles from './EvasionTemplate.module.scss'
 
 const EvasionTemplate = ({ project }) => {
   const { t } = useTranslation()
-  const [currentImage, setCurrentImage] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
 
   // Images pour le carousel
   const images = [
@@ -17,12 +20,27 @@ const EvasionTemplate = ({ project }) => {
     '/images/evasion/moodboard.png',
   ]
 
-  const nextImage = () => {
-    setCurrentImage(prev => (prev + 1) % images.length)
+  // Ouvrir la lightbox
+  const handleImageClick = index => {
+    setLightboxIndex(index)
+    setLightboxOpen(true)
   }
 
-  const prevImage = () => {
-    setCurrentImage(prev => (prev - 1 + images.length) % images.length)
+  // Traductions pour le carousel
+  const carouselTranslations = {
+    prevButton: t('evasion.carousel.prevButton'),
+    nextButton: t('evasion.carousel.nextButton'),
+    goToImage: t('evasion.carousel.goToImage'),
+    loading: t('evasion.carousel.loading'),
+  }
+
+  // Traductions pour la lightbox
+  const lightboxTranslations = {
+    close: t('evasion.lightbox.close'),
+    previous: t('evasion.lightbox.previous'),
+    next: t('evasion.lightbox.next'),
+    zoomIn: t('evasion.lightbox.zoomIn'),
+    zoomOut: t('evasion.lightbox.zoomOut'),
   }
 
   return (
@@ -77,46 +95,13 @@ const EvasionTemplate = ({ project }) => {
 
             {/* Carousel à droite */}
             <div className={styles.heroCarousel}>
-              <div className={styles.carouselWrapper}>
-                <button
-                  onClick={prevImage}
-                  className={styles.carouselButton}
-                  aria-label="Image précédente"
-                >
-                  ←
-                </button>
-
-                <div className={styles.imageContainer}>
-                  <img
-                    src={images[currentImage]}
-                    alt={`EVASION - Écran ${currentImage + 1}`}
-                    className={styles.carouselImage}
-                  />
-                </div>
-
-                <button
-                  onClick={nextImage}
-                  className={styles.carouselButton}
-                  aria-label="Image suivante"
-                >
-                  →
-                </button>
-              </div>
-
-              <div className={styles.carouselDots}>
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`${styles.dot} ${index === currentImage ? styles.dotActive : ''}`}
-                    aria-label={`Aller à l'image ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <p className={styles.imageCaption}>
-                {currentImage + 1} / {images.length}
-              </p>
+              <Carousel
+                images={images}
+                onImageClick={handleImageClick}
+                translations={carouselTranslations}
+                altPrefix="ÉVASION"
+                showCaption={true}
+              />
             </div>
           </div>
         </div>
@@ -145,6 +130,16 @@ const EvasionTemplate = ({ project }) => {
 
       {/* Footer global */}
       <Footer />
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <Lightbox
+          images={images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+          translations={lightboxTranslations}
+        />
+      )}
     </div>
   )
 }

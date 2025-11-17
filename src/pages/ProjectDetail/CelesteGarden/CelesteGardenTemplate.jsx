@@ -2,11 +2,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Footer from '../../../components/Footer/Footer'
+import Carousel from '../../../components/Carousel/Carousel'
+import Lightbox from '../../../components/Lightbox/Lightbox'
 import styles from './CelesteGardenTemplate.module.scss'
 
 const CelesteGardenTemplate = ({ project }) => {
   const { t } = useTranslation()
-  const [currentImage, setCurrentImage] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
 
   const images = project.images || [
     '/images/celeste/page1.png',
@@ -15,12 +18,27 @@ const CelesteGardenTemplate = ({ project }) => {
     '/images/celeste/page4.png',
   ]
 
-  const nextImage = () => {
-    setCurrentImage(prev => (prev + 1) % images.length)
+  // Ouvrir la lightbox
+  const handleImageClick = index => {
+    setLightboxIndex(index)
+    setLightboxOpen(true)
   }
 
-  const prevImage = () => {
-    setCurrentImage(prev => (prev - 1 + images.length) % images.length)
+  // Traductions pour le carousel
+  const carouselTranslations = {
+    prevButton: t('celesteGarden.carousel.prevButton'),
+    nextButton: t('celesteGarden.carousel.nextButton'),
+    goToImage: t('celesteGarden.carousel.goToImage'),
+    loading: t('celesteGarden.carousel.loading'),
+  }
+
+  // Traductions pour la lightbox
+  const lightboxTranslations = {
+    close: t('celesteGarden.lightbox.close'),
+    previous: t('celesteGarden.lightbox.previous'),
+    next: t('celesteGarden.lightbox.next'),
+    zoomIn: t('celesteGarden.lightbox.zoomIn'),
+    zoomOut: t('celesteGarden.lightbox.zoomOut'),
   }
 
   return (
@@ -83,53 +101,13 @@ const CelesteGardenTemplate = ({ project }) => {
 
             {/* Carousel à droite */}
             <div className={styles.heroCarousel}>
-              <div className={styles.carouselWrapper}>
-                <button
-                  onClick={prevImage}
-                  className={styles.carouselButton}
-                  aria-label={t('celesteGarden.carousel.prevButton')}
-                >
-                  ←
-                </button>
-
-                <div className={styles.imageContainer}>
-                  <img
-                    src={images[currentImage]}
-                    alt={`${t('celesteGarden.carousel.imageAlt')} ${currentImage + 1}`}
-                    className={styles.carouselImage}
-                    onError={e => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--color-text-secondary);font-size:0.875rem;">${t('celesteGarden.carousel.loading')}</div>`
-                    }}
-                  />
-                </div>
-
-                <button
-                  onClick={nextImage}
-                  className={styles.carouselButton}
-                  aria-label={t('celesteGarden.carousel.nextButton')}
-                >
-                  →
-                </button>
-              </div>
-
-              <div className={styles.carouselDots}>
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`${styles.dot} ${index === currentImage ? styles.dotActive : ''}`}
-                    aria-label={`${t('celesteGarden.carousel.goToImage')} ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <p className={styles.imageCaption}>
-                {t('celesteGarden.carousel.caption', {
-                  current: currentImage + 1,
-                  total: images.length,
-                })}
-              </p>
+              <Carousel
+                images={images}
+                onImageClick={handleImageClick}
+                translations={carouselTranslations}
+                altPrefix="Celeste's Garden"
+                showCaption={true}
+              />
             </div>
           </div>
         </div>
@@ -229,6 +207,16 @@ const CelesteGardenTemplate = ({ project }) => {
 
       {/* Footer global */}
       <Footer />
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <Lightbox
+          images={images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+          translations={lightboxTranslations}
+        />
+      )}
     </div>
   )
 }
