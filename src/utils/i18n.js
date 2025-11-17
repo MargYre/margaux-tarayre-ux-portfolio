@@ -15,6 +15,8 @@ import frEvasion from '../locales/fr/evasion.json'
 import enEvasion from '../locales/en/evasion.json'
 import frComingSoon from '../locales/fr/coming-soon.json'
 import enComingSoon from '../locales/en/coming-soon.json'
+import frAbout from '../locales/fr/about.json'
+import enAbout from '../locales/en/about.json'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -27,6 +29,7 @@ i18n.use(initReactI18next).init({
         ...frCampusConnect,
         ...frEvasion,
         ...frComingSoon,
+        ...frAbout,
       },
     },
     en: {
@@ -38,6 +41,7 @@ i18n.use(initReactI18next).init({
         ...enCampusConnect,
         ...enEvasion,
         ...enComingSoon,
+        ...enAbout,
       },
     },
   },

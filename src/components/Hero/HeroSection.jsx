@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { personas, personaMessages } from './personas'
+import Button from '../Button/Button'
 import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handlePersonaClick = personaId => {
     setSelectedPersona(personaId)
   }
 
-  const currentMessage = personaMessages[selectedPersona]
+  const currentLang = i18n.language
+  const currentMessage =
+    personaMessages[currentLang]?.[selectedPersona] ||
+    personaMessages.fr[selectedPersona]
 
   const translatedPersonas = [
     { id: 'anyone', label: t('hero.forAnyone') },
@@ -56,66 +60,70 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
 
 const HeroContent = ({ message, selectedPersona, t }) => (
   <div className={styles.heroContent} key={selectedPersona}>
-    <h1 className={styles.title}>{t('hero.title')}</h1>
-    <h2 className={styles.subtitle}>{t('hero.subtitle')}</h2>
-    <p className={styles.description}>{t('hero.description')}</p>
+    <h1 className={styles.title}>{message?.title}</h1>
+    <h2 className={styles.subtitle}>{message?.subtitle}</h2>
+    <p className={styles.description}>{message?.description}</p>
 
     <div className={styles.ctaGroup}>
-      {/* Bouton Projets -CV TOUJOURS visible */}
-      <a href="#projects" className={styles.primaryCta}>
+      {/* Bouton Projets TOUJOURS visible */}
+      <Button variant="primary" href="#projects">
         {t('nav.projects')}
-      </a>
+      </Button>
 
-      {/* RECRUTEUR : CV seulement (Contact retiré) */}
+      {/* RECRUTEUR : CV seulement */}
       {selectedPersona === 'recruiter' && (
-        <a
+        <Button
+          variant="secondary"
           href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.secondaryCta}
+          ariaLabel={t('hero.viewCV')}
         >
           {t('hero.viewCV')}
-        </a>
+        </Button>
       )}
 
       {/* DIRECTEUR DESIGN : Case Study */}
       {selectedPersona === 'director' && (
-        <a href="/projects/campus-connect" className={styles.secondaryCta}>
+        <Button variant="secondary" href="/projects/campus-connect">
           {t('hero.viewCaseStudy')}
-        </a>
+        </Button>
       )}
 
       {/* PRODUCT MANAGER : CV */}
       {selectedPersona === 'pm' && (
-        <a
+        <Button
+          variant="secondary"
           href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.secondaryCta}
+          ariaLabel={t('hero.viewCV')}
         >
           {t('hero.viewCV')}
-        </a>
+        </Button>
       )}
 
       {/* DEVELOPPEUR : Portfolio Dev + GitHub */}
       {selectedPersona === 'engineer' && (
         <>
-          <a
+          <Button
+            variant="secondary"
             href="https://margaux-tarayre.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.secondaryCta}
+            ariaLabel={t('nav.devPortfolio')}
           >
             {t('nav.devPortfolio')}
-          </a>
-          <a
+          </Button>
+          <Button
+            variant="secondary"
             href="https://github.com/MargYre"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.secondaryCta}
+            ariaLabel={t('hero.github')}
           >
             {t('hero.github')}
-          </a>
+          </Button>
         </>
       )}
     </div>

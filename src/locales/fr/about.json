@@ -1,0 +1,70 @@
+{
+  "opening": {
+    "title": "Designer UX/UI avec plus de 2 ans d'expérience en développement front-end",
+    "description": "Je conçois des interfaces en comprenant les contraintes techniques qui les rendent réelles. Mon double parcours me permet de faire le pont entre design et développement."
+  },
+  "journey": {
+    "heading": "Parcours",
+    "step1": "2,5 ans en développement front-end chez Infotel, Arsene Innovation et La Centrale. React, accessibilité et contraintes de performance au quotidien.",
+    "step2": "Licence Pro Web & Mobile à la Sorbonne pour des fondations techniques solides. Découverte de ma vraie passion : la collaboration design-dev.",
+    "step3": "Mastère UX Design Interactif à l'IIM Paris pour formaliser cette expertise hybride. Je parle le langage des développeurs et conçois des systèmes viables en production."
+  },
+  "jobSearch": {
+    "title": "Je recherche une alternance",
+    "description": "24 mois • Rythme 1 semaine école / 3 semaines entreprise • À partir d'octobre 2025",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "skills": {
+    "heading": "Compétences",
+    "design": {
+      "title": "Design",
+      "tags": [
+        "Figma",
+        "Recherche utilisateur",
+        "Entretiens qualitatifs",
+        "Tests d'usabilité",
+        "Wireframing",
+        "Prototypage",
+        "Design systems",
+        "Atomic design",
+        "Accessibilité WCAG",
+        "Design thinking",
+        "Architecture de l'information"
+      ]
+    },
+    "development": {
+      "title": "Développement",
+      "tags": [
+        "React 18",
+        "JavaScript ES6+",
+        "HTML5/CSS3",
+        "SCSS",
+        "Responsive design",
+        "Performance web",
+        "Git/GitHub",
+        "Agile & Scrum",
+        "Composants réutilisables",
+        "SEO technique",
+        "Animations CSS"
+      ]
+    },
+    "intersection": {
+      "title": "Design × Dev",
+      "tags": [
+        "Design-to-dev handoff",
+        "Design Tokens",
+        "Documentation composants",
+        "Collaboration design-dev",
+        "Audit accessibilité",
+        "Optimisation interfaces",
+        "Design systems codés",
+        "Prototypage en code"
+      ]
+    }
+  },
+  "motivation": {
+    "heading": "Ce qui me motive",
+    "paragraph": "Le design ne doit jamais ignorer la réalité technique. Les interfaces les plus élégantes sont celles qui résolvent de vrais problèmes tout en respectant les contraintes du code. Ce qui m'anime : cette tension créative entre l'expérience utilisateur idéale, les bonnes pratiques d'accessibilité et la viabilité technique."
+  }
+}
