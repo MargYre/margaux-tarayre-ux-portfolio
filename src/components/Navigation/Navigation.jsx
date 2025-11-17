@@ -10,14 +10,11 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navContent}>
-        <h1 className={styles.logo}>Margaux Tarayre</h1>
+        <Link to="/" className={styles.logo}>
+          Margaux Tarayre
+        </Link>
 
         <div className={styles.navLinks}>
-          {/* lien permanent → toujours affiché */}
-          <Link to="/" className={styles.navLink}>
-            {t('nav.home')}
-          </Link>
-
           {/* ton lien ABOUT → toujours affiché aussi */}
           <Link to="/about" className={styles.navLink}>
             {t('nav.about')}
