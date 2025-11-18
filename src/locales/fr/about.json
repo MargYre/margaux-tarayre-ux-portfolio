@@ -1,7 +1,10 @@
 {
   "opening": {
     "title": "Designer UX/UI avec plus de 2 ans d'expérience en développement front-end",
-    "description": "Je conçois des interfaces en comprenant les contraintes techniques qui les rendent réelles. Mon double parcours me permet de faire le pont entre design et développement."
+    "description": "Je conçois des interfaces en comprenant les contraintes techniques qui les rendent réelles. Mon double parcours me permet de faire le pont entre design et développement.",
+    "motivation": "Ce qui m'anime : trouver la solution qui satisfait l'utilisateur, honore l'accessibilité et reste techniquement viable.",
+    "cvButton": "Télécharger mon CV",
+    "downloadCV": "Télécharger le CV de Margaux Tarayre"
   },
   "journey": {
     "heading": "Parcours",
@@ -10,10 +13,12 @@
     "step3": "Mastère UX Design Interactif à l'IIM Paris pour formaliser cette expertise hybride. Je parle le langage des développeurs et conçois des systèmes viables en production."
   },
   "jobSearch": {
-    "title": "Je recherche une alternance",
-    "description": "24 mois • Rythme 1 semaine école / 3 semaines entreprise • À partir d'octobre 2025",
-    "email": "Email",
-    "linkedin": "LinkedIn"
+    "title": "Disponible dès octobre 2025",
+    "description": "Je recherche une alternance de 24 mois • Rythme 1 semaine école / 3 semaines entreprise",
+    "emailButton": "Me contacter par email",
+    "emailLabel": "Envoyer un email à Margaux",
+    "linkedinButton": "Me contacter sur LinkedIn",
+    "linkedinLabel": "Contacter Margaux sur LinkedIn"
   },
   "skills": {
     "heading": "Compétences",
@@ -22,31 +27,23 @@
       "tags": [
         "Figma",
         "Recherche utilisateur",
-        "Entretiens qualitatifs",
         "Tests d'usabilité",
         "Wireframing",
         "Prototypage",
         "Design systems",
-        "Atomic design",
-        "Accessibilité WCAG",
-        "Design thinking",
-        "Architecture de l'information"
+        "Accessibilité WCAG"
       ]
     },
     "development": {
       "title": "Développement",
       "tags": [
-        "React 18",
-        "JavaScript ES6+",
-        "HTML5/CSS3",
+        "React",
+        "JavaScript",
+        "HTML/CSS",
         "SCSS",
         "Responsive design",
-        "Performance web",
         "Git/GitHub",
-        "Agile & Scrum",
-        "Composants réutilisables",
-        "SEO technique",
-        "Animations CSS"
+        "Agile"
       ]
     },
     "intersection": {
@@ -54,17 +51,10 @@
       "tags": [
         "Design-to-dev handoff",
         "Design Tokens",
-        "Documentation composants",
         "Collaboration design-dev",
         "Audit accessibilité",
-        "Optimisation interfaces",
-        "Design systems codés",
-        "Prototypage en code"
+        "Design systems codés"
       ]
     }
-  },
-  "motivation": {
-    "heading": "Ce qui me motive",
-    "paragraph": "Le design ne doit jamais ignorer la réalité technique. Les interfaces les plus élégantes sont celles qui résolvent de vrais problèmes tout en respectant les contraintes du code. Ce qui m'anime : cette tension créative entre l'expérience utilisateur idéale, les bonnes pratiques d'accessibilité et la viabilité technique."
   }
 }

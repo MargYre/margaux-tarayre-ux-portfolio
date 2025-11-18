@@ -1,7 +1,10 @@
 {
   "opening": {
     "title": "UX/UI Designer with over 2 years of front-end development experience",
-    "description": "I design interfaces by understanding the technical constraints that make them real. My dual background allows me to bridge design and development."
+    "description": "I design interfaces by understanding the technical constraints that make them real. My dual background allows me to bridge design and development.",
+    "motivation": "What drives me: finding solutions that satisfy users, honor accessibility, and remain technically viable.",
+    "cvButton": "Download my CV",
+    "downloadCV": "Download Margaux Tarayre's CV"
   },
   "journey": {
     "heading": "Journey",
@@ -10,10 +13,12 @@
     "step3": "Master's in Interactive UX Design at IIM Paris to formalize this hybrid expertise. I speak developers' language and design systems that work in production."
   },
   "jobSearch": {
-    "title": "Looking for a work-study program",
-    "description": "24 months • 1 week school / 3 weeks company rhythm • Starting October 2025",
-    "email": "Email",
-    "linkedin": "LinkedIn"
+    "title": "Available from October 2025",
+    "description": "Looking for a 24-month work-study program • 1 week school / 3 weeks company rhythm",
+    "emailButton": "Contact me by email",
+    "emailLabel": "Send an email to Margaux",
+    "linkedinButton": "Contact me on LinkedIn",
+    "linkedinLabel": "Contact Margaux on LinkedIn"
   },
   "skills": {
     "heading": "Skills",
@@ -22,31 +27,23 @@
       "tags": [
         "Figma",
         "User research",
-        "Qualitative interviews",
         "Usability testing",
         "Wireframing",
         "Prototyping",
         "Design systems",
-        "Atomic design",
-        "WCAG Accessibility",
-        "Design thinking",
-        "Information architecture"
+        "WCAG Accessibility"
       ]
     },
     "development": {
       "title": "Development",
       "tags": [
-        "React 18",
-        "JavaScript ES6+",
-        "HTML5/CSS3",
+        "React",
+        "JavaScript",
+        "HTML/CSS",
         "SCSS",
         "Responsive design",
-        "Web performance",
         "Git/GitHub",
-        "Agile & Scrum",
-        "Reusable components",
-        "Technical SEO",
-        "CSS animations"
+        "Agile"
       ]
     },
     "intersection": {
@@ -54,17 +51,10 @@
       "tags": [
         "Design-to-dev handoff",
         "Design Tokens",
-        "Component documentation",
         "Design-dev collaboration",
         "Accessibility audits",
-        "Interface optimization",
-        "Coded design systems",
-        "Code-based prototyping"
+        "Coded design systems"
       ]
     }
-  },
-  "motivation": {
-    "heading": "What drives me",
-    "paragraph": "Design should never ignore technical reality. The most elegant interfaces are those that solve real problems while respecting code constraints. What drives me: this creative tension between ideal user experience, accessibility best practices, and technical viability."
   }
 }

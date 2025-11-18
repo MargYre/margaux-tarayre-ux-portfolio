@@ -1,6 +1,7 @@
 import styles from './About.module.scss'
 import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer/Footer'
+import Button from '../../components/Button/Button'
 
 export default function About() {
   const { t } = useTranslation()
@@ -8,13 +9,53 @@ export default function About() {
   return (
     <section className={styles.about}>
       <div className={styles.container}>
-        {/* Hero - Simple text only */}
+        {/* Hero - Text + Motivation on left, CV button centered vertically on right */}
         <div className={styles.hero}>
-          <h1 className={styles.heroTitle}>{t('opening.title')}</h1>
-          <p className={styles.heroDescription}>{t('opening.description')}</p>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>{t('opening.title')}</h1>
+            <p className={styles.heroDescription}>{t('opening.description')}</p>
+            <p className={styles.heroMotivation}>{t('opening.motivation')}</p>
+          </div>
+          <div className={styles.heroSide}>
+            <Button
+              variant="secondary"
+              href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              ariaLabel={t('opening.downloadCV')}
+            >
+              {t('opening.cvButton')}
+            </Button>
+          </div>
         </div>
 
-        {/* Journey - Vertical timeline */}
+        {/* Job Search - Full width, impactful */}
+        <div className={styles.jobSearchSection}>
+          <div className={styles.jobSearchBox}>
+            <h2 className={styles.jobSearchTitle}>{t('jobSearch.title')}</h2>
+            <p className={styles.jobSearchText}>{t('jobSearch.description')}</p>
+            <div className={styles.jobSearchCtas}>
+              <Button
+                variant="primary"
+                href="mailto:margaux.tarayre@gmail.com"
+                ariaLabel={t('jobSearch.emailLabel')}
+              >
+                {t('jobSearch.emailButton')}
+              </Button>
+              <Button
+                variant="primary"
+                href="https://www.linkedin.com/in/margaux-tarayre/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ariaLabel={t('jobSearch.linkedinLabel')}
+              >
+                {t('jobSearch.linkedinButton')}
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Journey - Standalone timeline */}
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t('journey.heading')}</h2>
           <div className={styles.timeline}>
@@ -39,32 +80,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Job Search - Subtle and elegant */}
-        <div className={styles.jobSearch}>
-          <div className={styles.jobSearchBox}>
-            <h2 className={styles.jobSearchTitle}>{t('jobSearch.title')}</h2>
-            <p className={styles.jobSearchText}>{t('jobSearch.description')}</p>
-            <div className={styles.jobSearchLinks}>
-              <a
-                href="mailto:margaux.tarayre@gmail.com"
-                className={styles.jobSearchLink}
-              >
-                {t('jobSearch.email')}
-              </a>
-              <span className={styles.jobSearchSeparator}>•</span>
-              <a
-                href="https://www.linkedin.com/in/margaux-tarayre/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.jobSearchLink}
-              >
-                {t('jobSearch.linkedin')}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills - Cards with tags */}
+        {/* Skills - Cards with essential tags only */}
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t('skills.heading')}</h2>
 
@@ -115,13 +131,8 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        {/* What Drives Me */}
-        <div className={styles.motivation}>
-          <h2 className={styles.sectionTitle}>{t('motivation.heading')}</h2>
-          <p className={styles.motivationText}>{t('motivation.paragraph')}</p>
-        </div>
       </div>
+
       {/* Footer */}
       <Footer />
     </section>
