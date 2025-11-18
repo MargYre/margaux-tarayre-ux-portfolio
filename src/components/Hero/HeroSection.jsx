@@ -85,7 +85,7 @@ const HeroContent = ({ message, selectedPersona, t }) => (
 
       {/* DIRECTEUR DESIGN : Case Study */}
       {selectedPersona === 'director' && (
-        <Button variant="secondary" href="/projects/campus-connect">
+        <Button variant="secondary" to="/projects/campus-connect">
           {t('hero.viewCaseStudy')}
         </Button>
       )}
