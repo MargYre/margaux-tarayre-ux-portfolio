@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
+import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
 import styles from './CelesteGardenTemplate.module.scss'
 
 const CelesteGardenTemplate = ({ project }) => {
@@ -204,6 +205,8 @@ const CelesteGardenTemplate = ({ project }) => {
           </div>
         </div>
       </footer>
+      {/* Navigation entre projets */}
+      <ProjectNavigation currentProjectId="celeste-garden" />
 
       {/* Footer global */}
       <Footer />

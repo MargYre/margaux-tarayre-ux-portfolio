@@ -1,0 +1,97 @@
+.projectNav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none; /* Ne bloque pas les clics sur le contenu */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.navButton {
+  pointer-events: auto; /* Active les clics sur les boutons */
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+
+  transition: all 0.2s ease;
+
+  /* Effet hover subtil */
+  &:hover {
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary, rgba(0, 0, 0, 0.05));
+    transform: translateX(0);
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Focus accessible */
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* Animation des icônes */
+  svg {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+}
+
+/* Label texte (masqué sur mobile) */
+.navLabel {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+/* Variante : Position en bas pour mobile (optionnel) */
+@media (max-width: 768px) {
+  .projectNav {
+    top: auto;
+    bottom: 2rem;
+    transform: none;
+
+    /* Centrer les boutons en bas */
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .navButton {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}

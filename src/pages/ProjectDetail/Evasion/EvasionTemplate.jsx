@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
+import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
 import styles from './EvasionTemplate.module.scss'
 
 const EvasionTemplate = ({ project }) => {
@@ -127,7 +128,8 @@ const EvasionTemplate = ({ project }) => {
 
       {/* Formation Section - Avant Footer */}
       <FormationSection t={t} />
-
+      {/* Navigation entre projets */}
+      <ProjectNavigation currentProjectId="evasion" />
       {/* Footer global */}
       <Footer />
 

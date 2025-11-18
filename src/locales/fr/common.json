@@ -5,6 +5,12 @@
     "projects": "Projets",
     "devPortfolio": "Portfolio développeuse"
   },
+  "projectNav": {
+    "prev": "Précédent",
+    "next": "Suivant",
+    "previous": "Projet précédent",
+    "next": "Projet suivant"
+  },
   "cursor": {
     "view": "Voir"
   },

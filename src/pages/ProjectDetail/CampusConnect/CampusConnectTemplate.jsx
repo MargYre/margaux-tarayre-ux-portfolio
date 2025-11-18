@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
+import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
+
 import styles from './CampusConnectTemplate.module.scss'
 
 const CampusConnectTemplate = ({ project }) => {
@@ -118,6 +120,8 @@ const CampusConnectTemplate = ({ project }) => {
       {/* Testing (compact avec accordion) */}
       <TestingSection t={t} />
 
+      {/* Navigation entre projets */}
+      <ProjectNavigation currentProjectId="campus-connect" />
       {/* Lightbox */}
       {lightboxOpen && (
         <Lightbox
