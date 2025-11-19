@@ -3,6 +3,7 @@ import { projects } from '../data/projects/projectsData'
 import CelesteGardenTemplate from './ProjectDetail/CelesteGarden/CelesteGardenTemplate'
 import CampusConnectTemplate from './ProjectDetail/CampusConnect/CampusConnectTemplate'
 import EvasionTemplate from './ProjectDetail/Evasion/EvasionTemplate'
+import CocovoitTemplate from './ProjectDetail/Cocovoit/CocovoitTemplate'
 import FutureTemplate from './ProjectDetail/FutureTemplate'
 import styles from './ProjectDetail.module.scss'
 
@@ -29,6 +30,8 @@ const ProjectDetail = () => {
       case 'evasion':
         return <EvasionTemplate project={project} />
 
+      case 'cocovoit':
+        return <CocovoitTemplate project={project} />
       default:
         return <FutureTemplate project={project} />
     }

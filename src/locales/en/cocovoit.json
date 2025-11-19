@@ -1,0 +1,155 @@
+{
+  "cocovoit": {
+    "nav": {
+      "back": "← Back to projects"
+    },
+    "hero": {
+      "tag": "Product Management",
+      "title": "Cocovoit",
+      "subtitle": "Applying Agile & Scrum methodology to a rideshare app project",
+      "details": {
+        "duration": {
+          "label": "Duration",
+          "value": "1 week"
+        },
+        "context": {
+          "label": "Context",
+          "value": "IIM Paris - UX Master's"
+        },
+        "team": {
+          "label": "Team",
+          "value": "6 members + Scrum Master"
+        }
+      },
+      "cta": {
+        "figma": "View Figma mockups",
+        "prototype": "Test the prototype"
+      }
+    },
+    "sections": {
+      "overview": {
+        "number": "01",
+        "label": "Context",
+        "title": "A workshop to practice Agile",
+        "description": "This project involved designing a rideshare application while rigorously applying the Scrum framework. The learning objective: practice iterative sprints, prioritization, task breakdown, and team organization.",
+        "challenge": "The real challenge wasn't the app design, but mastering the Agile process: transforming a product vision into a structured backlog planned in sprints, collaborating with 5 other team members."
+      },
+      "methodology": {
+        "number": "02",
+        "label": "Methodology",
+        "title": "Agile process in 4 phases",
+        "intro": "Rigorous application of the Scrum framework with successive iterations and continuous prioritization.",
+        "showDetails": "View phase details",
+        "hideDetails": "Hide details",
+        "phases": [
+          {
+            "title": "Phase 1: Research & Discovery",
+            "items": [
+              "Creation of 3 personas representing typical users",
+              "Collective brainstorming session to identify needs",
+              "Affinity Mapping: organizing needs into 5 categories (Economic, Practical, Social, Alternative, Value)"
+            ]
+          },
+          {
+            "title": "Phase 2: Product Backlog & Prioritization",
+            "items": [
+              "Transforming needs into User Stories (standard Agile format)",
+              "Applying the MoSCoW method to prioritize features",
+              "Must Have: essential MVP features",
+              "Should Have / Could Have: progressive improvements",
+              "Won't Have: out of project scope"
+            ]
+          },
+          {
+            "title": "Phase 3: Sprint Planning",
+            "items": [
+              "Breaking down user stories into actionable technical tasks",
+              "Planning 3 sprints with strategic distribution",
+              "Task allocation among 6 team members",
+              "Example: User Story 'Real-time ride sharing' → Technical task 'Create sharing feature with contact selection'"
+            ]
+          },
+          {
+            "title": "Phase 4: Review & Iteration",
+            "items": [
+              "Sprint 1 Review: identifying improvements and adjustments",
+              "Backlog enrichment with new user stories",
+              "Added features: favorite addresses, time flexibility, identity verification, facial recognition"
+            ]
+          }
+        ]
+      },
+      "role": {
+        "number": "03",
+        "label": "My role",
+        "title": "Contribution to the Scrum team",
+        "intro": "Active participation in all phases of the Agile process.",
+        "contributions": [
+          {
+            "title": "Research & Ideation",
+            "description": "Participated in brainstorming and user needs categorization via Affinity Mapping"
+          },
+          {
+            "title": "User Stories Writing",
+            "description": "Transformed identified needs into user stories following standard Agile format"
+          },
+          {
+            "title": "MoSCoW Prioritization",
+            "description": "Contributed to collective feature prioritization with the team"
+          },
+          {
+            "title": "Technical Breakdown",
+            "description": "Broke down features into actionable tasks for sprints"
+          },
+          {
+            "title": "Scrum Collaboration",
+            "description": "Coordinated with Scrum Master for sprint planning and task distribution"
+          }
+        ]
+      },
+      "learnings": {
+        "number": "04",
+        "label": "Skills",
+        "title": "Demonstrated skills",
+        "intro": "This project allowed me to practice key Product Management and Agile project management skills.",
+        "showDetails": "View details",
+        "hideDetails": "Hide details",
+        "skills": [
+          {
+            "title": "Scrum Framework",
+            "description": "Practical understanding of the Scrum framework, its rituals (sprint planning, review) and roles (Product Owner, Scrum Master, team)"
+          },
+          {
+            "title": "MoSCoW Prioritization",
+            "description": "Ability to prioritize features based on user value and project constraints to maximize ROI"
+          },
+          {
+            "title": "User Stories & Backlog",
+            "description": "Writing actionable user stories and managing a structured product backlog"
+          },
+          {
+            "title": "Agile Teamwork",
+            "description": "Effective collaboration in a 6-person team with collective decision-making and compromises"
+          },
+          {
+            "title": "Product Thinking",
+            "description": "Balancing user value, technical feasibility, and time constraints"
+          }
+        ]
+      }
+    },
+    "carousel": {
+      "prevButton": "Previous image",
+      "nextButton": "Next image",
+      "goToImage": "Go to image",
+      "loading": "Loading..."
+    },
+    "lightbox": {
+      "close": "Close",
+      "previous": "Previous",
+      "next": "Next",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    }
+  }
+}

@@ -55,6 +55,13 @@ export const projects = [
     cover: '/images/evasion/cover.png',
     template: 'evasion',
   },
+  {
+    id: 'cocovoit',
+    slug: 'cocovoit',
+    year: 2024,
+    category: 'product-management',
+    featured: false,
+  },
 ]
 
 export const getProjectBySlug = slug => {

@@ -30,6 +30,12 @@
       "title": "É.V.A.S.I.O.N",
       "subtitle": "Quand les enfants deviennent la ressource principale du système",
       "description": "Programme gouvernemental dystopique testant les enfants atypiques"
+    },
+    "cocovoit": {
+      "category": "Product Management",
+      "title": "Cocovoit",
+      "subtitle": "Rideshare application",
+      "description": "Applying Agile & Scrum methodology to a mobile project"
     }
   }
 }

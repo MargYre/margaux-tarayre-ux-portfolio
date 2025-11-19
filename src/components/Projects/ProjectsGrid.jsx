@@ -156,14 +156,18 @@ const ProjectContent = ({ projectId, projectKey, tags, t, isHovered }) => (
   </div>
 )
 
-const Tags = ({ tags }) => (
-  <div className={styles.tags} role="list">
-    {tags.map((tag, index) => (
-      <span key={index} className={styles.tag} role="listitem">
-        {tag}
-      </span>
-    ))}
-  </div>
-)
+const Tags = ({ tags }) => {
+  if (!tags || tags.length === 0) return null
+
+  return (
+    <div className={styles.tags} role="list">
+      {tags.map((tag, index) => (
+        <span key={index} className={styles.tag} role="listitem">
+          {tag}
+        </span>
+      ))}
+    </div>
+  )
+}
 
 export default ProjectsGrid

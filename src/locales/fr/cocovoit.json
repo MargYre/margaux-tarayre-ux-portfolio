@@ -1,0 +1,155 @@
+{
+  "cocovoit": {
+    "nav": {
+      "back": "← Retour aux projets"
+    },
+    "hero": {
+      "tag": "Product Management",
+      "title": "Cocovoit",
+      "subtitle": "Application de la méthodologie Agile & Scrum sur un projet de covoiturage",
+      "details": {
+        "duration": {
+          "label": "Durée",
+          "value": "1 semaine"
+        },
+        "context": {
+          "label": "Contexte",
+          "value": "IIM Paris - Mastère UX"
+        },
+        "team": {
+          "label": "Équipe",
+          "value": "6 membres + Scrum Master"
+        }
+      },
+      "cta": {
+        "figma": "Voir les maquettes Figma",
+        "prototype": "Tester le prototype"
+      }
+    },
+    "sections": {
+      "overview": {
+        "number": "01",
+        "label": "Contexte",
+        "title": "Un workshop pour pratiquer Agile",
+        "description": "Ce projet consistait à concevoir une application de covoiturage en appliquant rigoureusement le framework Scrum. L'objectif pédagogique : mettre en pratique les concepts de sprints itératifs, priorisation, décomposition en tâches et organisation d'équipe.",
+        "challenge": "Le véritable enjeu n'était pas le design de l'application, mais la maîtrise du processus Agile : passer d'une vision produit à un backlog structuré et planifié en sprints, en collaboration avec 5 autres membres de l'équipe."
+      },
+      "methodology": {
+        "number": "02",
+        "label": "Méthodologie",
+        "title": "Processus Agile en 4 phases",
+        "intro": "Application rigoureuse du framework Scrum avec itérations successives et priorisation continue.",
+        "showDetails": "Voir le détail des phases",
+        "hideDetails": "Masquer les détails",
+        "phases": [
+          {
+            "title": "Phase 1 : Research & Discovery",
+            "items": [
+              "Création de 3 personas représentant les utilisateurs types",
+              "Session de brainstorming collectif pour identifier les besoins",
+              "Affinity Mapping : organisation des besoins en 5 catégories (Économique, Pratique, Sociable, Alternative, Valeur)"
+            ]
+          },
+          {
+            "title": "Phase 2 : Product Backlog & Priorisation",
+            "items": [
+              "Transformation des besoins en User Stories (format Agile standard)",
+              "Application de la méthode MoSCoW pour prioriser les fonctionnalités",
+              "Must Have : fonctionnalités essentielles au MVP",
+              "Should Have / Could Have : améliorations progressives",
+              "Won't Have : hors scope du projet"
+            ]
+          },
+          {
+            "title": "Phase 3 : Sprint Planning",
+            "items": [
+              "Décomposition des user stories en tâches techniques actionnables",
+              "Planification de 3 sprints avec répartition stratégique",
+              "Répartition des tâches entre les 6 membres de l'équipe",
+              "Exemple : User Story 'Partage de trajet en temps réel' → Tâche technique 'Créer une fonctionnalité de partage avec sélection de contacts'"
+            ]
+          },
+          {
+            "title": "Phase 4 : Review & Itération",
+            "items": [
+              "Review Sprint 1 : identification d'améliorations et ajustements",
+              "Enrichissement du backlog avec nouvelles user stories",
+              "Ajout de fonctionnalités : adresses favorites, flexibilité horaire, vérification d'identité, reconnaissance faciale"
+            ]
+          }
+        ]
+      },
+      "role": {
+        "number": "03",
+        "label": "Mon rôle",
+        "title": "Contribution à l'équipe Scrum",
+        "intro": "Participation active à toutes les phases du processus Agile.",
+        "contributions": [
+          {
+            "title": "Research & Idéation",
+            "description": "Participation au brainstorming et à la catégorisation des besoins utilisateur via Affinity Mapping"
+          },
+          {
+            "title": "Rédaction de User Stories",
+            "description": "Transformation des besoins identifiés en user stories selon le format Agile standard"
+          },
+          {
+            "title": "Priorisation MoSCoW",
+            "description": "Contribution à la priorisation collective des fonctionnalités en équipe"
+          },
+          {
+            "title": "Décomposition technique",
+            "description": "Décomposition des fonctionnalités en tâches actionnables pour les sprints"
+          },
+          {
+            "title": "Collaboration Scrum",
+            "description": "Coordination avec le Scrum Master pour la planification des sprints et la répartition des tâches"
+          }
+        ]
+      },
+      "learnings": {
+        "number": "04",
+        "label": "Compétences",
+        "title": "Compétences démontrées",
+        "intro": "Ce projet m'a permis de mettre en pratique les compétences clés du Product Management et de la gestion de projet Agile.",
+        "showDetails": "Voir les détails",
+        "hideDetails": "Masquer les détails",
+        "skills": [
+          {
+            "title": "Framework Scrum",
+            "description": "Compréhension pratique du framework Scrum, de ses rituels (sprint planning, review) et de ses rôles (Product Owner, Scrum Master, équipe)"
+          },
+          {
+            "title": "Priorisation MoSCoW",
+            "description": "Capacité à prioriser les fonctionnalités selon la valeur utilisateur et les contraintes projet pour maximiser le ROI"
+          },
+          {
+            "title": "User Stories & Backlog",
+            "description": "Rédaction de user stories actionnables et gestion d'un product backlog structuré"
+          },
+          {
+            "title": "Travail en équipe Agile",
+            "description": "Collaboration efficace dans une équipe de 6 personnes avec prise de décision collective et compromis"
+          },
+          {
+            "title": "Product Thinking",
+            "description": "Équilibre entre valeur utilisateur, faisabilité technique et contraintes de temps"
+          }
+        ]
+      }
+    },
+    "carousel": {
+      "prevButton": "Image précédente",
+      "nextButton": "Image suivante",
+      "goToImage": "Aller à l'image",
+      "loading": "Chargement..."
+    },
+    "lightbox": {
+      "close": "Fermer",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "zoomIn": "Zoomer",
+      "zoomOut": "Dézoomer"
+    }
+  }
+}

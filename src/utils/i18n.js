@@ -17,6 +17,8 @@ import frComingSoon from '../locales/fr/coming-soon.json'
 import enComingSoon from '../locales/en/coming-soon.json'
 import frAbout from '../locales/fr/about.json'
 import enAbout from '../locales/en/about.json'
+import frCocovoit from '../locales/fr/cocovoit.json'
+import enCocovoit from '../locales/en/cocovoit.json'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -28,6 +30,7 @@ i18n.use(initReactI18next).init({
         ...frCelesteGarden,
         ...frCampusConnect,
         ...frEvasion,
+        ...frCocovoit,
         ...frComingSoon,
         ...frAbout,
       },
@@ -40,6 +43,7 @@ i18n.use(initReactI18next).init({
         ...enCelesteGarden,
         ...enCampusConnect,
         ...enEvasion,
+        ...enCocovoit,
         ...enComingSoon,
         ...enAbout,
       },
