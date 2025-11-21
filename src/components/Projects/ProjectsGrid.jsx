@@ -125,6 +125,12 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
         alt="EVASION preview"
         className={styles.projectPreviewImage}
       />
+    ) : projectId === 'cocovoit' ? (
+      <img
+        src="/images/cocovoit/agile-methodology.webp"
+        alt="Campus Connect preview"
+        className={styles.projectPreviewImage}
+      />
     ) : (
       <span className={styles.emoji} role="img" aria-hidden="true">
         {image}
