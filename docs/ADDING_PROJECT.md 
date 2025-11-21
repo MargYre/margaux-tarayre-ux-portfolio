@@ -1,0 +1,439 @@
+# Guide : Ajouter un nouveau projet au portfolio
+
+Ce guide décrit étape par étape comment ajouter un nouveau projet à ce portfolio React.
+
+---
+
+## 📋 Checklist rapide
+
+- [ ] 1. Créer les traductions (FR + EN)
+- [ ] 2. Créer le template React + SCSS
+- [ ] 3. Ajouter au fichier `projectsData.js`
+- [ ] 4. Ajouter aux traductions `projects.json` (FR + EN)
+- [ ] 5. Mettre à jour `ProjectDetail.jsx`
+- [ ] 6. Mettre à jour `ProjectNavigation.jsx`
+- [ ] 7. Mettre à jour `i18n.js`
+- [ ] 8. Ajouter les images
+- [ ] 9. Tester
+
+---
+
+## 🚀 Étapes détaillées
+
+### 1. Créer les traductions du projet
+
+**Fichiers à créer :**
+- `src/locales/fr/[nom-projet].json`
+- `src/locales/en/[nom-projet].json`
+
+**Template de traduction :**
+
+```json
+{
+  "[nomProjet]": {
+    "nav": {
+      "back": "← Retour aux projets"
+    },
+    "hero": {
+      "tag": "Catégorie",
+      "title": "Titre du projet",
+      "subtitle": "Sous-titre descriptif",
+      "details": {
+        "duration": {
+          "label": "Durée",
+          "value": "X semaines"
+        },
+        "context": {
+          "label": "Contexte",
+          "value": "École/Entreprise"
+        },
+        "team": {
+          "label": "Équipe",
+          "value": "X personnes"
+        }
+      },
+      "link": "Voir sur Figma →"
+    },
+    "sections": {
+      "overview": {
+        "number": "01",
+        "label": "Vue d'ensemble",
+        "title": "Titre de la section",
+        "description": "Description..."
+      }
+      // Ajoute d'autres sections selon le template
+    },
+    "carousel": {
+      "prevButton": "Image précédente",
+      "nextButton": "Image suivante",
+      "goToImage": "Aller à l'image",
+      "loading": "Chargement..."
+    },
+    "lightbox": {
+      "close": "Fermer",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "zoomIn": "Zoomer",
+      "zoomOut": "Dézoomer"
+    }
+  }
+}
+```
+
+---
+
+### 2. Créer le template React
+
+**Créer le dossier :**
+```bash
+mkdir -p src/pages/ProjectDetail/[NomProjet]
+```
+
+**Fichiers à créer :**
+- `src/pages/ProjectDetail/[NomProjet]/[NomProjet]Template.jsx`
+- `src/pages/ProjectDetail/[NomProjet]/[NomProjet]Template.module.scss`
+
+**Template de base (copier depuis un projet existant) :**
+
+```jsx
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import Footer from '../../../components/Footer/Footer'
+import Carousel from '../../../components/Carousel/Carousel'
+import Lightbox from '../../../components/Lightbox/Lightbox'
+import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
+import styles from './[NomProjet]Template.module.scss'
+
+const [NomProjet]Template = ({ project }) => {
+  const { t } = useTranslation()
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+
+  const images = [
+    '/images/[nom-projet]/image1.png',
+    '/images/[nom-projet]/image2.png',
+  ]
+
+  const handleImageClick = index => {
+    setLightboxIndex(index)
+    setLightboxOpen(true)
+  }
+
+  // Traductions carousel/lightbox
+  const carouselTranslations = {
+    prevButton: t('[nomProjet].carousel.prevButton'),
+    nextButton: t('[nomProjet].carousel.nextButton'),
+    goToImage: t('[nomProjet].carousel.goToImage'),
+    loading: t('[nomProjet].carousel.loading'),
+  }
+
+  const lightboxTranslations = {
+    close: t('[nomProjet].lightbox.close'),
+    previous: t('[nomProjet].lightbox.previous'),
+    next: t('[nomProjet].lightbox.next'),
+    zoomIn: t('[nomProjet].lightbox.zoomIn'),
+    zoomOut: t('[nomProjet].lightbox.zoomOut'),
+  }
+
+  return (
+    <div className={styles.template}>
+      {/* Lien retour */}
+      <div className={styles.backLinkWrapper}>
+        <Link to="/" className={styles.backLink}>
+          {t('[nomProjet].nav.back')}
+        </Link>
+      </div>
+
+      {/* Hero */}
+      <header className={styles.hero}>
+        {/* Ton contenu hero */}
+      </header>
+
+      {/* Sections du projet */}
+      {/* ... */}
+
+      {/* Navigation entre projets */}
+      <ProjectNavigation currentProjectId="[nom-projet]" />
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <Lightbox
+          images={images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+          translations={lightboxTranslations}
+        />
+      )}
+
+      <Footer />
+    </div>
+  )
+}
+
+export default [NomProjet]Template
+```
+
+**Pour le SCSS :** Copie le fichier d'un autre projet et adapte si nécessaire.
+
+---
+
+### 3. Ajouter dans `projectsData.js`
+
+**Fichier :** `src/data/projects/projectsData.js`
+
+```js
+export const projects = [
+  // ... projets existants
+  {
+    id: 'nom-projet',           // ID unique (kebab-case)
+    slug: 'nom-projet',         // URL slug (même que l'ID)
+    year: 2024,                 // Année du projet
+    category: 'categorie',      // Catégorie
+    featured: true,             // Afficher sur la home ?
+    tags: ['Tag1', 'Tag2'],     // Tags à afficher
+    image: '🎨',                // Emoji ou chemin image (optionnel)
+    images: [                   // Images du carousel
+      '/images/nom-projet/image1.png',
+      '/images/nom-projet/image2.png',
+    ],
+  }
+]
+```
+
+---
+
+### 4. Ajouter dans `projects.json`
+
+**Fichiers :** 
+- `src/locales/fr/projects.json`
+- `src/locales/en/projects.json`
+
+**Ajouter la section du projet :**
+
+```json
+{
+  "projects": {
+    // ... autres projets
+    "nomProjet": {
+      "category": "Catégorie",
+      "title": "Titre",
+      "subtitle": "Sous-titre",
+      "description": "Description courte pour la home"
+    }
+  }
+}
+```
+
+---
+
+### 5. Mettre à jour `ProjectDetail.jsx`
+
+**Fichier :** `src/pages/ProjectDetail.jsx`
+
+**Ajouter l'import :**
+```jsx
+import [NomProjet]Template from './ProjectDetail/[NomProjet]/[NomProjet]Template'
+```
+
+**Ajouter le case dans le switch :**
+```jsx
+const renderTemplate = () => {
+  switch (project.id) {
+    // ... autres cases
+    case 'nom-projet':
+      return <[NomProjet]Template project={project} />
+    default:
+      return <FutureTemplate project={project} />
+  }
+}
+```
+
+---
+
+### 6. Mettre à jour `ProjectNavigation.jsx`
+
+**Fichier :** `src/components/ProjectNavigation/ProjectNavigation.jsx`
+
+**Ajouter le projet dans le tableau :**
+```jsx
+const projects = [
+  { id: 'celeste-garden', route: '/projects/celeste-garden' },
+  { id: 'campus-connect', route: '/projects/campus-connect' },
+  { id: 'evasion', route: '/projects/evasion' },
+  { id: 'cocovoit', route: '/projects/cocovoit' },
+  { id: 'nom-projet', route: '/projects/nom-projet' },  // ← Nouveau
+]
+```
+
+**💡 Ordre = ordre de navigation circulaire**
+
+---
+
+### 7. Mettre à jour `i18n.js`
+
+**Fichier :** `src/utils/i18n.js`
+
+**Ajouter les imports :**
+```js
+import fr[NomProjet] from '../locales/fr/[nom-projet].json'
+import en[NomProjet] from '../locales/en/[nom-projet].json'
+```
+
+**Ajouter dans les ressources :**
+```js
+i18n.use(initReactI18next).init({
+  resources: {
+    fr: {
+      translation: {
+        ...frCommon,
+        ...frProjects,
+        ...fr[NomProjet],  // ← Ajoute ici
+        // ... autres
+      },
+    },
+    en: {
+      translation: {
+        ...enCommon,
+        ...enProjects,
+        ...en[NomProjet],  // ← Ajoute ici
+        // ... autres
+      },
+    },
+  },
+  // ...
+})
+```
+
+---
+
+### 8. Ajouter les images
+
+**Créer le dossier :**
+```bash
+mkdir -p public/images/[nom-projet]
+```
+
+**Ajouter les images :**
+- `public/images/[nom-projet]/image1.png`
+- `public/images/[nom-projet]/image2.png`
+- etc.
+
+**💡 Si pas encore d'images :** Utilise des placeholders temporaires
+
+---
+
+### 9. Ajouter dans `ProjectsGrid.jsx`
+
+**Fichier :** `src/components/Projects/ProjectsGrid.jsx`
+
+**Ajouter dans le `projectKeyMap` (ligne ~64) :**
+```jsx
+const projectKeyMap = {
+  'celeste-garden': 'celesteGarden',
+  'campus-connect': 'campusConnect',
+  'evasion': 'evasion',
+  'cocovoit': 'cocovoit',
+  'nom-projet': 'nomProjet',  // ← Ajoute (camelCase)
+}
+```
+
+**Optionnel : Ajouter une image custom dans `ProjectVisual` :**
+```jsx
+const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
+  <div className={styles.projectImage}>
+    {projectId === 'nom-projet' ? (
+      <img
+        src="/images/nom-projet/cover.png"
+        alt="Nom Projet preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'celeste-garden' ? (
+      // ... autres projets
+    )}
+  </div>
+)
+```
+
+---
+
+### 10. Tester
+
+**Lancer le dev server :**
+```bash
+npm run dev
+```
+
+**Vérifier :**
+- ✅ Le projet apparaît sur la home page
+- ✅ Le clic ouvre la bonne page détaillée
+- ✅ La navigation entre projets fonctionne (flèches)
+- ✅ Le changement de langue fonctionne (FR/EN)
+- ✅ Les images s'affichent (ou placeholders)
+
+---
+
+## 🐛 Troubleshooting
+
+### Erreur : "Cannot read properties of undefined"
+→ Vérifie que tu as bien ajouté le projet dans `projects.json` (FR + EN)
+
+### Erreur : "Cannot find module"
+→ Vérifie les imports dans `i18n.js` et `ProjectDetail.jsx`
+
+### Le projet n'apparaît pas sur la home
+→ Vérifie `featured: true` dans `projectsData.js`
+
+### La navigation ne fonctionne pas
+→ Vérifie que l'ID est bien ajouté dans `ProjectNavigation.jsx`
+
+### Les traductions ne marchent pas
+→ Vérifie que les clés dans le JSON correspondent aux appels `t('...')`
+
+---
+
+## 📚 Fichiers à modifier (résumé)
+
+| Fichier | Action |
+|---------|--------|
+| `src/locales/fr/[nom-projet].json` | Créer |
+| `src/locales/en/[nom-projet].json` | Créer |
+| `src/pages/ProjectDetail/[NomProjet]/` | Créer dossier |
+| `src/pages/ProjectDetail/[NomProjet]/[NomProjet]Template.jsx` | Créer |
+| `src/pages/ProjectDetail/[NomProjet]/[NomProjet]Template.module.scss` | Créer |
+| `src/data/projects/projectsData.js` | Ajouter projet |
+| `src/locales/fr/projects.json` | Ajouter section |
+| `src/locales/en/projects.json` | Ajouter section |
+| `src/pages/ProjectDetail.jsx` | Ajouter import + case |
+| `src/components/ProjectNavigation/ProjectNavigation.jsx` | Ajouter projet |
+| `src/components/Projects/ProjectsGrid.jsx` | Ajouter mapping |
+| `src/utils/i18n.js` | Ajouter imports + merge |
+| `public/images/[nom-projet]/` | Créer + ajouter images |
+
+---
+
+## 💡 Conseils
+
+- **Copie un projet existant** comme base (ex: CampusConnect)
+- **Teste au fur et à mesure** (ne fais pas tout d'un coup)
+- **Commit régulièrement** (un commit par étape)
+- **Utilise des placeholders** pour les images si pas encore prêtes
+
+---
+
+## 📝 Template de commit
+
+```bash
+git add .
+git commit -m "feat: add [Nom Projet] project
+
+- Create [NomProjet]Template component
+- Add FR/EN translations
+- Update project navigation
+- Add to projectsData and projects.json
+- [Images: placeholders / final images included]"
+```
+
+---
+
+**Bonne chance ! 🚀**
