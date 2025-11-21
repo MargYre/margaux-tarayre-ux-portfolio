@@ -14,7 +14,7 @@ const CocovoitTemplate = ({ project }) => {
 
   // Images placeholders (à remplacer plus tard)
   const images = [
-    '/images/cocovoit/placeholder1.png',
+    '/images/cocovoit/agile-methodology.webp',
     '/images/cocovoit/placeholder2.png',
     '/images/cocovoit/placeholder3.png',
   ]
