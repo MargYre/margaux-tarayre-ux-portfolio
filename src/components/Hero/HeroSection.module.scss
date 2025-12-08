@@ -1,5 +1,12 @@
 .hero {
+  /* CORRECTION 1: Utiliser 100dvh au lieu de 100vh pour Windows */
   min-height: 100vh;
+  min-height: 100dvh; /* Nouvelle unité dynamique qui s'adapte mieux */
+
+  /* CORRECTION 2: Padding-top pour compenser la navigation sticky */
+  padding-top: calc(var(--nav-height, 5rem) + 2rem);
+  padding-bottom: var(--spacing-xl);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,12 +14,18 @@
   position: relative;
   background-color: var(--color-bg-secondary);
 
+  /* CORRECTION 3: Isolation pour créer un nouveau contexte de stacking */
+  isolation: isolate;
+
   .personaNav {
     display: flex;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-2xl);
     flex-wrap: wrap;
     justify-content: center;
+    /* CORRECTION 4: Empêcher le débordement sur petits écrans */
+    max-width: 100%;
+    padding: 0 var(--spacing-sm);
   }
 
   .personaButton {
@@ -25,8 +38,10 @@
     transition: all var(--transition-base);
     color: var(--color-text-secondary);
     cursor: pointer;
+    /* CORRECTION 5: Position relative pour z-index */
+    position: relative;
+    z-index: 1;
 
-    // Hover avec imbrication
     &:hover {
       border-color: var(--color-accent);
       color: var(--color-text);
@@ -43,25 +58,32 @@
     text-align: center;
     max-width: 700px;
     animation: fadeIn 0.5s ease;
+    /* CORRECTION 6: S'assurer que le contenu ne déborde pas */
+    width: 100%;
+    padding: 0 var(--spacing-md);
   }
 
   .title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    /* CORRECTION 7: Limiter la taille max pour éviter le débordement */
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.02em;
     color: var(--color-text);
+    line-height: 1.1;
   }
 
   .subtitle {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    /* CORRECTION 8: Réduire légèrement pour Windows scaling */
+    font-size: clamp(1.125rem, 2.5vw, 1.75rem);
     font-weight: 400;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-md);
+    line-height: 1.3;
   }
 
   .description {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.6;
     color: var(--color-text);
     margin-bottom: var(--spacing-xl);
@@ -72,6 +94,9 @@
     gap: var(--spacing-sm);
     justify-content: center;
     flex-wrap: wrap;
+    /* CORRECTION 9: Z-index élevé pour être au-dessus */
+    position: relative;
+    z-index: 50;
   }
 
   .primaryCta {
@@ -113,6 +138,8 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-xs);
+    /* CORRECTION 10: S'assurer qu'il ne chevauche pas le contenu */
+    z-index: 1;
   }
 
   .scrollText {
@@ -130,7 +157,42 @@
   }
 }
 
-/* Animations - restent globales */
+/* CORRECTION 11: Media query spécifique pour Windows DPI élevé */
+@media (min-resolution: 120dpi) {
+  .hero {
+    /* Réduire légèrement les espacements sur Windows */
+    padding-top: calc(var(--nav-height, 4.5rem) + 1.5rem);
+
+    .title {
+      font-size: clamp(1.75rem, 3.5vw, 3rem);
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .personaNav {
+      margin-bottom: var(--spacing-xl);
+    }
+  }
+}
+
+/* CORRECTION 12: Media query pour scaling 150% */
+@media (min-resolution: 144dpi) {
+  .hero {
+    padding-top: calc(var(--nav-height, 4rem) + 1rem);
+
+    .title {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .subtitle {
+      font-size: clamp(0.95rem, 1.75vw, 1.35rem);
+    }
+  }
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -151,5 +213,23 @@
   50% {
     transform: scaleY(0.5);
     opacity: 0.5;
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--nav-height, 4rem) + 1rem);
+
+    .heroContent {
+      padding: 0 var(--spacing-sm);
+    }
+
+    .ctaGroup {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      max-width: 300px;
+    }
   }
 }

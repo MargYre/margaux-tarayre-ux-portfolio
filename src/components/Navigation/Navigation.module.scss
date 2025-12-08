@@ -1,9 +1,29 @@
 .nav {
-  position: sticky;
+  /* CORRECTION 1: Position fixed au lieu de sticky pour être toujours au-dessus */
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  /* CORRECTION 2: Z-index très élevé pour rester au-dessus de TOUT */
+  z-index: 9999;
+
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
+
+  /* CORRECTION 3: Backdrop filter pour l'effet de transparence */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  /* CORRECTION 4: Accélération hardware pour de meilleures performances */
+  will-change: transform;
+  transform: translateZ(0);
+
+  /* CORRECTION 5: Transition fluide */
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .navContent {
@@ -13,6 +33,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* CORRECTION 6: Hauteur explicite pour la variable --nav-height */
+  min-height: 4rem;
 }
 
 .logo {
@@ -21,6 +44,9 @@
   color: var(--color-text);
   margin: 0;
   transition: color var(--transition-fast);
+  /* CORRECTION 7: Position relative pour z-index */
+  position: relative;
+  z-index: 1;
 
   &:hover {
     color: var(--color-accent);
@@ -31,6 +57,9 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  /* CORRECTION 8: Position relative pour z-index */
+  position: relative;
+  z-index: 1;
 }
 
 .navLink {
@@ -39,6 +68,12 @@
   font-weight: 500;
   font-size: 1rem;
   transition: color var(--transition-fast);
+  /* CORRECTION 9: Position relative + pointer-events pour être cliquable */
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  /* CORRECTION 10: White-space pour éviter les coupures */
+  white-space: nowrap;
 
   &:hover {
     color: var(--color-accent);
@@ -48,30 +83,96 @@
 .navLinkHighlight {
   padding: var(--spacing-xs) var(--spacing-md);
   background-color: var(--color-accent);
-  color: var(--color-bg); /* ✅ Utilise la couleur de fond inverse */
+  color: var(--color-bg);
   text-decoration: none;
   font-weight: 600;
   border-radius: 6px;
   transition: all var(--transition-fast);
   border: 2px solid var(--color-accent);
+  /* CORRECTION 11: Display inline-block pour meilleur rendu */
+  display: inline-block;
+  /* CORRECTION 12: Position relative + z-index élevé */
+  position: relative;
+  z-index: 100;
+  pointer-events: auto;
+  white-space: nowrap;
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     background-color: transparent;
-    color: var(--color-accent); /* Au hover, inverse les couleurs */
+    color: var(--color-accent);
   }
 }
 
-// Responsive
+/* CORRECTION 13: Media query pour Windows DPI élevé */
+@media (min-resolution: 120dpi) {
+  .navContent {
+    padding: calc(var(--spacing-md) * 0.9) var(--spacing-lg);
+    min-height: 3.75rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .navLink {
+    font-size: 0.9375rem;
+  }
+
+  .navLinks {
+    gap: calc(var(--spacing-md) * 0.85);
+  }
+}
+
+/* CORRECTION 14: Media query pour scaling 150% */
+@media (min-resolution: 144dpi) {
+  .navContent {
+    padding: calc(var(--spacing-md) * 0.8) var(--spacing-md);
+    min-height: 3.5rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.875rem;
+  }
+
+  .navLinks {
+    gap: var(--spacing-sm);
+  }
+
+  .navLinkHighlight {
+    padding: calc(var(--spacing-xs) * 0.85) var(--spacing-sm);
+  }
+}
+
+/* Responsive mobile */
 @media (max-width: 768px) {
   .navContent {
     flex-direction: column;
     gap: var(--spacing-md);
+    padding: var(--spacing-sm);
   }
 
   .navLinks {
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    gap: var(--spacing-sm);
+  }
+
+  .navLink,
+  .navLinkHighlight {
+    font-size: 0.875rem;
+  }
+}
+
+/* CORRECTION 15: Fallback pour navigateurs sans backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .nav {
+    background-color: var(--color-bg);
   }
 }

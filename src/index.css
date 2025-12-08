@@ -26,6 +26,9 @@
   --color-nav-bg: rgba(255, 255, 255, 0.95);
   --color-hover-bg: #f5f5f5;
 
+  /* CORRECTION: Variable pour la hauteur de navigation */
+  --nav-height: 5rem;
+
   /* Espacements - Système 8px */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -62,10 +65,52 @@ html.dark {
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* CORRECTION: Media queries DPI pour Windows */
+@media (min-resolution: 120dpi) {
+  :root {
+    --nav-height: 4.5rem;
+    /* Réduire légèrement les espacements sur Windows avec scaling 125% */
+    --spacing-xs: 0.45rem;
+    --spacing-sm: 0.9rem;
+    --spacing-md: 1.35rem;
+    --spacing-lg: 1.8rem;
+    --spacing-xl: 2.7rem;
+    --spacing-2xl: 3.6rem;
+  }
+}
+
+@media (min-resolution: 144dpi) {
+  :root {
+    --nav-height: 4rem;
+    /* Réduire encore plus pour scaling 150% */
+    --spacing-xs: 0.4rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.2rem;
+    --spacing-lg: 1.6rem;
+    --spacing-xl: 2.4rem;
+    --spacing-2xl: 3.2rem;
+  }
+}
+
 /* Base HTML */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* CORRECTION: Scroll padding pour compenser la nav fixe */
+  scroll-padding-top: var(--nav-height);
+}
+
+/* CORRECTION: Adapter le font-size selon le DPI Windows */
+@media (min-resolution: 120dpi) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-resolution: 144dpi) {
+  html {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -73,15 +118,15 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
-  /* CORRECTION: Meilleur rendu des polices cross-platform */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  /* CORRECTION: Supprimer le cursor: none global qui cause des problèmes */
+  /* CORRECTION: Padding-top pour la navigation fixe */
+  padding-top: var(--nav-height);
 }
 
-/* CORRECTION: Appliquer cursor: none seulement aux éléments interactifs si besoin du curseur custom */
+/* CORRECTION: Appliquer cursor: none seulement aux éléments interactifs si besoin */
 .custom-cursor-area * {
   cursor: none !important;
 }
@@ -89,8 +134,8 @@ body {
 /* CORRECTION: Transitions ciblées au lieu de globales */
 a,
 button,
-.nav,
-.footer,
+nav,
+footer,
 [class*='Link'],
 [class*='Button'] {
   transition:
@@ -146,6 +191,8 @@ img {
 /* Conteneur principal */
 main {
   min-height: 100vh;
+  /* CORRECTION: S'assurer qu'il n'y a pas de margin-top qui chevauche */
+  position: relative;
 }
 
 /* Animations globales */
@@ -176,6 +223,10 @@ main {
   html {
     font-size: 14px;
   }
+
+  body {
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
 }
 
 /* Accessibilité */
@@ -194,13 +245,9 @@ main {
   footer {
     display: none;
   }
-}
 
-/* CORRECTION: Support amélioré pour Windows */
-@supports (-ms-ime-align: auto) {
-  /* Styles spécifiques Edge/IE si nécessaire */
   body {
-    font-feature-settings: normal;
+    padding-top: 0;
   }
 }
 
@@ -209,4 +256,11 @@ main {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* CORRECTION: Support amélioré pour anciens navigateurs */
+@supports not (scroll-padding-top: 5rem) {
+  html {
+    scroll-padding-top: 80px;
+  }
 }
