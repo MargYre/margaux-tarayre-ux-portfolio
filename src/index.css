@@ -19,7 +19,7 @@
   --color-bg-secondary: #fafafa;
   --color-border: #e0e0e0;
   --color-accent: #000000;
-  --color-accent-rgb: 0, 0, 0; /* Pour les rgba() */
+  --color-accent-rgb: 0, 0, 0;
 
   /* Couleurs spécifiques */
   --color-card-bg: #ffffff;
@@ -47,7 +47,6 @@
 
 /* Dark Theme - S'applique quand <html class="dark"> */
 html.dark {
-  /* Couleurs - Dark Theme */
   --color-text: #e0e0e0;
   --color-text-secondary: #a0a0a0;
   --color-bg: #0a0a0a;
@@ -55,53 +54,12 @@ html.dark {
   --color-border: #2a2a2a;
   --color-accent: #ffffff;
   --color-accent-rgb: 255, 255, 255;
-
-  /* Couleurs spécifiques dark */
   --color-card-bg: #1a1a1a;
   --color-nav-bg: rgba(10, 10, 10, 0.95);
   --color-hover-bg: #2a2a2a;
-
-  /* Ombres adaptées au dark */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Transition fluide entre thèmes */
-* {
-  transition:
-    background-color var(--transition-base),
-    color var(--transition-base),
-    border-color var(--transition-base);
-}
-
-/* Variables CSS - Design System Foundation */
-:root {
-  /* Typographie */
-  --font-sans:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
-
-  /* Couleurs */
-  --color-text: #1a1a1a;
-  --color-text-secondary: #666;
-  --color-bg: #ffffff;
-  --color-bg-secondary: #fafafa;
-  --color-border: #e0e0e0;
-  --color-accent: #000000;
-
-  /* Espacements - Système 8px */
-  --spacing-xs: 0.5rem; /* 8px */
-  --spacing-sm: 1rem; /* 16px */
-  --spacing-md: 1.5rem; /* 24px */
-  --spacing-lg: 2rem; /* 32px */
-  --spacing-xl: 3rem; /* 48px */
-  --spacing-2xl: 4rem; /* 64px */
-
-  /* Animations */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.3s ease;
-  --transition-slow: 0.5s ease;
 }
 
 /* Base HTML */
@@ -115,14 +73,32 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
+  /* CORRECTION: Meilleur rendu des polices cross-platform */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  /* CORRECTION: Supprimer le cursor: none global qui cause des problèmes */
 }
 
-/* Cache le curseur système pour notre curseur custom */
-body * {
+/* CORRECTION: Appliquer cursor: none seulement aux éléments interactifs si besoin du curseur custom */
+.custom-cursor-area * {
   cursor: none !important;
+}
+
+/* CORRECTION: Transitions ciblées au lieu de globales */
+a,
+button,
+.nav,
+.footer,
+[class*='Link'],
+[class*='Button'] {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    opacity var(--transition-base),
+    transform var(--transition-base);
 }
 
 /* Typographie responsive */
@@ -145,7 +121,6 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all var(--transition-base);
 }
 
 a:hover {
@@ -158,8 +133,7 @@ button {
   font-size: inherit;
   border: none;
   background: none;
-  cursor: none;
-  transition: all var(--transition-base);
+  cursor: pointer;
 }
 
 /* Images responsive */
@@ -199,7 +173,7 @@ main {
 
 /* Responsive */
 @media (max-width: 768px) {
-  :root {
+  html {
     font-size: 14px;
   }
 }
@@ -220,4 +194,19 @@ main {
   footer {
     display: none;
   }
+}
+
+/* CORRECTION: Support amélioré pour Windows */
+@supports (-ms-ime-align: auto) {
+  /* Styles spécifiques Edge/IE si nécessaire */
+  body {
+    font-feature-settings: normal;
+  }
+}
+
+/* CORRECTION: Prévenir les problèmes de rendu sur Windows */
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
