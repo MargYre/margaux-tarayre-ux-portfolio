@@ -42,7 +42,7 @@
     position: relative;
     z-index: 1;
 
-    &:hover {
+    &:hover:not(.personaButtonActive) {
       border-color: var(--color-accent);
       color: var(--color-text);
     }
