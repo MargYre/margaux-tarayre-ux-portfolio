@@ -58,7 +58,7 @@ const CelesteGardenTemplate = ({ project }) => {
           <div className={styles.heroGrid}>
             {/* Texte à gauche */}
             <div className={styles.heroText}>
-              <div className={styles.heroMeta}>
+              <div className={styles.heroTag}>
                 <span className={styles.tag}>
                   {t('celesteGarden.hero.tag')}
                 </span>
@@ -69,7 +69,7 @@ const CelesteGardenTemplate = ({ project }) => {
                 {t('celesteGarden.hero.title')}
               </h1>
 
-              <p className={styles.heroLead}>
+              <p className={styles.heroSubtitle}>
                 {t('celesteGarden.hero.subtitle')}
               </p>
 

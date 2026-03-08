@@ -37,7 +37,7 @@
 // Design éditorial compact pour Celeste's Garden
 
 .template {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-primary);
   min-height: 100vh;
 }
 
@@ -120,7 +120,7 @@
   gap: 1.5rem;
 }
 
-.heroMeta {
+.heroTag {
   display: flex;
   gap: 1rem;
   font-size: 0.813rem;
@@ -139,7 +139,7 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -147,8 +147,8 @@
   margin: 0;
 }
 
-.heroLead {
-  font-size: clamp(1.063rem, 2vw, 1.25rem);
+.heroSubtitle {
+  font-size: 1.125rem;
   line-height: 1.6;
   color: var(--color-text-secondary);
   max-width: 600px;
@@ -340,7 +340,7 @@
 }
 
 .sectionTitle {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
