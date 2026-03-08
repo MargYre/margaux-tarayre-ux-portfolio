@@ -34,5 +34,15 @@
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "formationSorbonne": {
+    "title": "About the program",
+    "description": "This project was completed as part of my <1>Professional Bachelor's in Web Development</1> at Sorbonne Université. This program gave me strong foundations in front-end development and introduced me to UX principles.",
+    "linkText": "Professional Bachelor's in Web Development"
+  },
+  "formationIIM": {
+    "title": "About the program",
+    "description": "This project was completed as part of my <1>Master's in UX & UI Design</1> at IIM Digital School. This specialized program allowed me to deepen my skills in user research, interface design, and design thinking.",
+    "linkText": "Master's in UX & UI Design"
   }
 }

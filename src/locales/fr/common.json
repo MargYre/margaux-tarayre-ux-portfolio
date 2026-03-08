@@ -34,5 +34,15 @@
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "formationSorbonne": {
+    "title": "À propos de la formation",
+    "description": "Ce projet a été réalisé dans le cadre de ma <1>Licence Professionnelle Développement Web</1> à Sorbonne Université. Cette formation m'a permis d'acquérir des bases solides en développement front-end et de découvrir les enjeux de l'expérience utilisateur.",
+    "linkText": "Licence Professionnelle Développement Web"
+  },
+  "formationIIM": {
+    "title": "À propos de la formation",
+    "description": "Ce projet a été réalisé dans le cadre de mon <1>Mastère UX & UI Design</1> à l'IIM Digital School. Cette formation spécialisée m'a permis d'approfondir la recherche utilisateur, la conception d'interfaces et le design thinking.",
+    "linkText": "Mastère UX & UI Design"
   }
 }
