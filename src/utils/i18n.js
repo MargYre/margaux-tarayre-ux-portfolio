@@ -19,6 +19,8 @@ import frAbout from '../locales/fr/about.json'
 import enAbout from '../locales/en/about.json'
 import frCocovoit from '../locales/fr/cocovoit.json'
 import enCocovoit from '../locales/en/cocovoit.json'
+import frEnfantsEcrans from '../locales/fr/enfants-ecrans.json'
+import enEnfantsEcrans from '../locales/en/enfants-ecrans.json'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -31,6 +33,7 @@ i18n.use(initReactI18next).init({
         ...frCampusConnect,
         ...frEvasion,
         ...frCocovoit,
+        ...frEnfantsEcrans,
         ...frComingSoon,
         ...frAbout,
       },
@@ -44,6 +47,7 @@ i18n.use(initReactI18next).init({
         ...enCampusConnect,
         ...enEvasion,
         ...enCocovoit,
+        ...enEnfantsEcrans,
         ...enComingSoon,
         ...enAbout,
       },

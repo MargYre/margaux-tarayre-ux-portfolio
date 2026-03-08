@@ -15,6 +15,7 @@ const ProjectNavigation = ({ currentProjectId }) => {
     { id: 'campus-connect', route: '/projects/campus-connect' },
     { id: 'evasion', route: '/projects/evasion' },
     { id: 'cocovoit', route: '/projects/cocovoit' },
+    { id: 'enfants-ecrans', route: '/projects/enfants-ecrans' },
   ]
 
   // Trouver l'index du projet actuel

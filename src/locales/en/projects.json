@@ -31,6 +31,18 @@
       "title": "É.V.A.S.I.O.N",
       "subtitle": "When children become the system's main resource",
       "description": "Dystopian government program testing atypical children"
+    },
+    "cocovoit": {
+      "category": "Product Management",
+      "title": "Cocovoit",
+      "subtitle": "Rideshare application",
+      "description": "Applying Agile & Scrum methodology to a mobile project"
+    },
+    "enfantsEcrans": {
+      "category": "UX Research",
+      "title": "Luma",
+      "subtitle": "Children and screens",
+      "description": "UX research project on 0-6 year olds and screens, collaborative workshops, Nova solution."
     }
   }
 }

@@ -1,0 +1,197 @@
+{
+  "enfantsEcrans": {
+    "nav": {
+      "back": "← Home",
+      "title": "Children and screens"
+    },
+    "hero": {
+      "tag": "UX Research & Workshop",
+      "title": "Luma",
+      "context": "Children and screens",
+      "subtitle": "How can we use screens — often seen as the enemy of early childhood — as an ally to counter their own harmful effects?",
+      "link": "View the presentation",
+      "details": {
+        "duration": {
+          "label": "Duration",
+          "value": "2 weeks"
+        },
+        "school": {
+          "label": "School",
+          "value": "IIM Digital School"
+        },
+        "team": {
+          "label": "Team",
+          "value": "Yassine, Maroua, Luce, Margaux"
+        },
+        "year": {
+          "label": "Year",
+          "value": "2025"
+        }
+      }
+    },
+    "sections": {
+      "exploration": {
+        "number": "01",
+        "label": "EXPLORATION",
+        "title": "Starting from the field: social listening",
+        "intro": "Before any hypothesis, we listened to parents on forums and social media to identify their real issues without recruitment bias.",
+        "method": {
+          "badge": "Social Listening",
+          "description": "Listening to conversations on forums and social media to identify parents' real concerns."
+        },
+        "themes": [
+          "Excessive screen time",
+          "Parents' feeling of helplessness",
+          "Lack of support and concrete solutions",
+          "Socio-economic context (screens as a low-cost solution)",
+          "Addiction and compulsive behaviour in children"
+        ],
+        "voteParagraph": "The team voted with dot stickers to prioritise the most relevant themes to explore further.",
+        "stats": [
+          { "value": "54%", "label": "of 5 year olds use digital screens (INSEE)" },
+          { "value": "3h22", "label": "average daily screen time for 3-6 year olds" },
+          { "value": "38%", "label": "of usage trajectories firmly set by age 2" }
+        ]
+      },
+      "framing": {
+        "number": "02",
+        "label": "FRAMING",
+        "title": "Exploring causes with the 5 whys",
+        "intro": "For each prioritised theme, we used the 5 whys method to get to root causes. Example: Why do children spend too much time on screens?",
+        "method5why": {
+          "badge": "5 whys",
+          "steps": [
+            "Children spend too much time on screens",
+            "Because it's a cheap, addictive form of entertainment",
+            "Because a child stays quiet in front of a screen (easy option for parents)",
+            "Because households are connected and leaving the child in front of the TV signs them up for content",
+            "Because parents lack time and resources",
+            "Because society values economic productivity over family time"
+          ]
+        },
+        "causes": [
+          "Lack of regulation in use",
+          "Addiction",
+          "Social / societal pressure",
+          "Spread / ease of access to screens",
+          "Parents are too busy",
+          "Emerging categories (other minor causes)"
+        ],
+        "profiles": [
+          {
+            "title": "The thriving child",
+            "traits": [
+              "Socially at ease",
+              "Communicates easily",
+              "Positive family context"
+            ]
+          },
+          {
+            "title": "The struggling child",
+            "traits": [
+              "Difficulty managing emotions",
+              "Marked magical thinking",
+              "Limited parental support",
+              "Difficulty building connections"
+            ]
+          }
+        ],
+        "commonPoint": "Common to both profiles: magical thinking and screen exposure."
+      },
+      "ideation": {
+        "number": "03",
+        "label": "IDEATION",
+        "title": "Generate and select solutions",
+        "intro": "After framing, we ran an inspiration round table before generating ideas as a team.",
+        "tourDeTable": {
+          "badge": "Round table / Inspiration",
+          "text": "Each member shared inspiring references. Examples: Duolingo for gamification, interactive cartoons as an engaging format for children."
+        },
+        "ideas": [
+          {
+            "title": "Interactive cartoon",
+            "description": "Video content where the child interacts physically (jumping, blowing, shouting) with the story",
+            "tag": "Selected ✓"
+          },
+          {
+            "title": "App for parents",
+            "description": "A collaborative app to create personalised activities based on the child's interests. Parents commit to making at least one activity available per month",
+            "tag": "Dropped"
+          },
+          {
+            "title": "Awareness app",
+            "description": "An app for parents to understand the effects of screens and adapt their behaviour",
+            "tag": "Dropped"
+          }
+        ],
+        "vote": {
+          "badge": "Dot voting",
+          "text": "The team voted for the interactive cartoon, seen as more direct, more engaging for the child and more innovative."
+        }
+      },
+      "workshop": {
+        "number": "04",
+        "label": "DESIGN WORKSHOP",
+        "title": "Define the product in 45-60 minutes",
+        "intro": "Once the solution was chosen, we ran a structured workshop to define the product scope and identify potential barriers.",
+        "speedboat": {
+          "badge": "Speedboat",
+          "description": "The Speedboat helped us identify the project's driving forces (winds) and barriers (anchors). This helped the team anticipate obstacles before designing."
+        },
+        "storyboard": {
+          "badge": "Storyboard",
+          "description": "We then storyboarded an example of interaction between Nova the star and a child, to make the user experience concrete before any mock-up."
+        },
+        "affinityMapping": {
+          "badge": "Affinity Mapping",
+          "description": "Generated ideas were grouped by theme to structure the product's features and objectives."
+        },
+        "myRole": "I contributed to all phases of the project. I took part in social listening, desk research, facilitating part of the workshops and creating personas. I notably took charge of Persona 3 — Margaux, an overwhelmed mother — and took part in storylining the final solution with Nova."
+      },
+      "solution": {
+        "number": "05",
+        "label": "SOLUTION",
+        "title": "Nova — The interactive cartoon",
+        "intro": "Our final solution: an interactive cartoon for 3-6 year olds. Nova, a little star, guides the child through adventures where they must interact physically — jumping, blowing, shouting — turning passive screen time into an active, sensory and educational experience.",
+        "approachTags": ["Simple", "Caring", "Does not change their habits"],
+        "objectives": [
+          { "emoji": "🎨", "label": "Sensory & cognitive" },
+          { "emoji": "🤝", "label": "Social" },
+          { "emoji": "🧠", "label": "Learning" },
+          { "emoji": "🕹️", "label": "Motor & interactive" },
+          { "emoji": "✨", "label": "Emotional" },
+          { "emoji": "⭐", "label": "Narrative" }
+        ],
+        "exampleSteps": [
+          {
+            "scenario": "Nova arrives in a galaxy with colourful planets and meets Orion, a wise old comet.",
+            "interaction": "Learning colours"
+          },
+          {
+            "scenario": "Nova shows where she hurt herself after falling. To heal, the child must help.",
+            "interaction": "The child blows very hard to soothe the pain"
+          },
+          {
+            "scenario": "Mean meteors are approaching. Nova asks the child to jump on her back.",
+            "interaction": "The child jumps as high as they can"
+          }
+        ],
+        "interactionLabel": "Interaction",
+        "stepLabel": "Step"
+      }
+    },
+    "carousel": {
+      "prevButton": "Previous image",
+      "nextButton": "Next image",
+      "goToImage": "Go to image",
+      "loading": "Loading..."
+    },
+    "lightbox": {
+      "close": "Close",
+      "previous": "Previous",
+      "next": "Next",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    }
+  }
+}

@@ -65,6 +65,8 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
     'campus-connect': 'campusConnect',
     eduwatch: 'eduwatch',
     evasion: 'evasion',
+    'cocovoit': 'cocovoit',
+    'enfants-ecrans': 'enfantsEcrans',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
@@ -123,6 +125,12 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
       <img
         src="/images/evasion/interface-missions.png"
         alt="EVASION preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'enfants-ecrans' ? (
+      <img
+        src="/images/luma/luma.png"
+        alt="Luma preview"
         className={styles.projectPreviewImage}
       />
     ) : projectId === 'cocovoit' ? (

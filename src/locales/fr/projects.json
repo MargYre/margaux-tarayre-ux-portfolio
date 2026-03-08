@@ -36,6 +36,12 @@
       "title": "Cocovoit",
       "subtitle": "Rideshare application",
       "description": "Applying Agile & Scrum methodology to a mobile project"
+    },
+    "enfantsEcrans": {
+      "category": "UX Research",
+      "title": "Luma",
+      "subtitle": "Les enfants et les écrans",
+      "description": "Projet de recherche UX sur les 0-6 ans et les écrans, ateliers collaboratifs, solution Nova."
     }
   }
 }

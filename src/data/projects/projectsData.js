@@ -62,6 +62,18 @@ export const projects = [
     category: 'product-management',
     featured: false,
   },
+  {
+    id: 'enfants-ecrans',
+    slug: 'enfants-ecrans',
+    name: 'Luma',
+    year: 2025,
+    category: 'ux-research',
+    tags: ['UX Research', 'Workshop', 'Social Listening'],
+    image: '📱',
+    client: 'IIM Digital School',
+    team: ['Yassine', 'Maroua', 'Luce', 'Margaux'],
+    images: [],
+  },
 ]
 
 export const getProjectBySlug = slug => {

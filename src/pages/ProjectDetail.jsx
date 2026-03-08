@@ -4,6 +4,7 @@ import CelesteGardenTemplate from './ProjectDetail/CelesteGarden/CelesteGardenTe
 import CampusConnectTemplate from './ProjectDetail/CampusConnect/CampusConnectTemplate'
 import EvasionTemplate from './ProjectDetail/Evasion/EvasionTemplate'
 import CocovoitTemplate from './ProjectDetail/Cocovoit/CocovoitTemplate'
+import EnfantsEcransTemplate from './ProjectDetail/EnfantsEcrans/EnfantsEcransTemplate'
 import FutureTemplate from './ProjectDetail/FutureTemplate'
 import styles from './ProjectDetail.module.scss'
 
@@ -32,6 +33,10 @@ const ProjectDetail = () => {
 
       case 'cocovoit':
         return <CocovoitTemplate project={project} />
+
+      case 'enfants-ecrans':
+        return <EnfantsEcransTemplate project={project} />
+
       default:
         return <FutureTemplate project={project} />
     }

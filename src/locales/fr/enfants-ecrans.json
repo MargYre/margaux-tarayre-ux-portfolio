@@ -1,0 +1,197 @@
+{
+  "enfantsEcrans": {
+    "nav": {
+      "back": "← Accueil",
+      "title": "Les enfants et les écrans"
+    },
+    "hero": {
+      "tag": "UX Research & Workshop",
+      "title": "Luma",
+      "context": "Les enfants et les écrans",
+      "subtitle": "Comment utiliser les écrans — désignés comme ennemis de la petite enfance — comme un allié pour lutter contre leurs propres effets néfastes ?",
+      "link": "Voir la présentation",
+      "details": {
+        "duration": {
+          "label": "Durée",
+          "value": "2 semaines"
+        },
+        "school": {
+          "label": "École",
+          "value": "IIM Digital School"
+        },
+        "team": {
+          "label": "Équipe",
+          "value": "Yassine, Maroua, Luce, Margaux"
+        },
+        "year": {
+          "label": "Année",
+          "value": "2025"
+        }
+      }
+    },
+    "sections": {
+      "exploration": {
+        "number": "01",
+        "label": "EXPLORATION",
+        "title": "Partir du terrain : le social listening",
+        "intro": "Avant toute hypothèse, nous avons écouté les parents sur les forums et réseaux sociaux pour identifier leurs problématiques réelles sans biais de recrutement.",
+        "method": {
+          "badge": "Social Listening",
+          "description": "Écoute des conversations sur les forums et réseaux sociaux pour identifier les problématiques réelles des parents."
+        },
+        "themes": [
+          "Temps d'écran excessif",
+          "Sentiment d'impuissance des parents",
+          "Manque d'accompagnement et de solutions concrètes",
+          "Contexte socio-économique (l'écran comme solution peu coûteuse)",
+          "Addiction et comportements compulsifs chez les enfants"
+        ],
+        "voteParagraph": "L'équipe a voté par gommettes pour prioriser les thèmes les plus pertinents à approfondir.",
+        "stats": [
+          { "value": "54%", "label": "des enfants de 5 ans utilisent des écrans numériques (INSEE)" },
+          { "value": "3h22", "label": "de temps d'écran quotidien moyen pour les 3-6 ans" },
+          { "value": "38%", "label": "des trajectoires d'utilisation durablement ancrées dès 2 ans" }
+        ]
+      },
+      "framing": {
+        "number": "02",
+        "label": "CADRAGE",
+        "title": "Explorer les causes avec les 5 pourquoi",
+        "intro": "Pour chaque thème priorisé, nous avons utilisé la méthode des 5 pourquoi pour remonter aux causes profondes. Exemple : Pourquoi les enfants passent-ils trop de temps sur les écrans ?",
+        "method5why": {
+          "badge": "5 pourquoi",
+          "steps": [
+            "Les enfants passent trop de temps sur les écrans",
+            "Parce que c'est un divertissement addictif peu coûteux",
+            "Parce qu'un enfant reste sage devant un écran (option facile pour les parents)",
+            "Parce que les foyers sont connectés et que laisser l'enfant devant la télé l'inscrit à des cours",
+            "Parce que les parents manquent de temps et de ressources",
+            "Parce que la société valorise la productivité économique au détriment du temps familial"
+          ]
+        },
+        "causes": [
+          "Absence de régulation dans l'utilisation",
+          "Addiction",
+          "Contrainte sociale / société",
+          "Diffusion / facilité d'accès aux écrans",
+          "Les parents sont trop occupés",
+          "Catégories émergentes (autres causes mineures)"
+        ],
+        "profiles": [
+          {
+            "title": "L'Enfant épanoui",
+            "traits": [
+              "Socialement à l'aise",
+              "Communique facilement",
+              "Contexte familial positif"
+            ]
+          },
+          {
+            "title": "L'Enfant en détresse",
+            "traits": [
+              "Difficulté à gérer ses émotions",
+              "Pensée magique marquée",
+              "Accompagnement parental limité",
+              "Difficulté à créer du lien"
+            ]
+          }
+        ],
+        "commonPoint": "Point commun aux deux profils : pensée magique et exposition aux écrans."
+      },
+      "ideation": {
+        "number": "03",
+        "label": "IDÉATION",
+        "title": "Générer et sélectionner des solutions",
+        "intro": "Après le cadrage, nous avons organisé un tour de table d'inspiration avant de générer des idées en équipe.",
+        "tourDeTable": {
+          "badge": "Tour de table / Inspiration",
+          "text": "Chaque membre a partagé des références inspirantes. Exemples cités : Duolingo pour la gamification, les dessins animés interactifs comme format engageant pour les enfants."
+        },
+        "ideas": [
+          {
+            "title": "Dessin animé interactif",
+            "description": "Un contenu vidéo où l'enfant interagit physiquement (sauter, souffler, crier) avec l'histoire",
+            "tag": "Retenue ✓"
+          },
+          {
+            "title": "Application pour les parents",
+            "description": "Une app collaborative pour créer des activités personnalisées selon les centres d'intérêt de l'enfant. Les parents s'engagent à rendre disponible au moins une activité par mois",
+            "tag": "Écartée"
+          },
+          {
+            "title": "Application de sensibilisation",
+            "description": "Une app destinée aux parents pour comprendre les effets des écrans et adapter leur comportement",
+            "tag": "Écartée"
+          }
+        ],
+        "vote": {
+          "badge": "Vote par gommettes",
+          "text": "L'équipe a voté pour le dessin animé interactif, jugé plus direct, plus engageant pour l'enfant et plus innovant."
+        }
+      },
+      "workshop": {
+        "number": "04",
+        "label": "ATELIER DE CONCEPTION",
+        "title": "Définir le produit en 45-60 minutes",
+        "intro": "Une fois la solution choisie, nous avons organisé un atelier structuré pour définir les contours du produit et identifier les freins potentiels.",
+        "speedboat": {
+          "badge": "Speedboat",
+          "description": "Le Speedboat nous a permis d'identifier les forces motrices du projet (les vents) et les freins (les ancres). Cela a aidé l'équipe à anticiper les obstacles avant de concevoir."
+        },
+        "storyboard": {
+          "badge": "Storyboard",
+          "description": "Nous avons ensuite storyboardé un exemple d'interaction entre Nova l'étoile et un enfant, pour matérialiser concrètement l'expérience utilisateur avant toute maquette."
+        },
+        "affinityMapping": {
+          "badge": "Affinity Mapping",
+          "description": "Les idées générées ont été regroupées par thèmes pour structurer les fonctionnalités et objectifs du produit."
+        },
+        "myRole": "J'ai contribué à toutes les phases du projet. J'ai participé au social listening, à la recherche documentaire, à l'animation d'une partie des ateliers et à la création des personas. J'ai notamment pris en charge le Persona 3 — Margaux, une mère dépassée — et participé à la scénarisation de la solution finale avec Nova."
+      },
+      "solution": {
+        "number": "05",
+        "label": "SOLUTION",
+        "title": "Nova — Le dessin animé interactif",
+        "intro": "Notre solution finale : un dessin animé interactif destiné aux enfants de 3 à 6 ans. Nova, une petite étoile, guide l'enfant dans des aventures où il doit interagir physiquement — sauter, souffler, crier — transformant le temps d'écran passif en expérience active, sensorielle et éducative.",
+        "approachTags": ["Simple", "Bienveillante", "Qui ne change pas leurs habitudes"],
+        "objectives": [
+          { "emoji": "🎨", "label": "Sensoriels & cognitifs" },
+          { "emoji": "🤝", "label": "Sociaux" },
+          { "emoji": "🧠", "label": "Apprentissage" },
+          { "emoji": "🕹️", "label": "Moteurs & interactifs" },
+          { "emoji": "✨", "label": "Émotionnels" },
+          { "emoji": "⭐", "label": "Narratifs" }
+        ],
+        "exampleSteps": [
+          {
+            "scenario": "Nova arrive dans une galaxie avec des planètes colorées et rencontre Orion, un vieux comète sage.",
+            "interaction": "Apprentissage des couleurs"
+          },
+          {
+            "scenario": "Nova montre là où elle s'est fait mal en tombant. Pour guérir, l'enfant doit l'aider.",
+            "interaction": "L'enfant souffle très fort pour calmer la douleur"
+          },
+          {
+            "scenario": "Des météorites méchantes se rapprochent. Nova demande à l'enfant de sauter sur son dos.",
+            "interaction": "L'enfant saute le plus haut possible"
+          }
+        ],
+        "interactionLabel": "Interaction",
+        "stepLabel": "Étape"
+      }
+    },
+    "carousel": {
+      "prevButton": "Image précédente",
+      "nextButton": "Image suivante",
+      "goToImage": "Aller à l'image",
+      "loading": "Chargement..."
+    },
+    "lightbox": {
+      "close": "Fermer",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "zoomIn": "Zoomer",
+      "zoomOut": "Dézoomer"
+    }
+  }
+}
