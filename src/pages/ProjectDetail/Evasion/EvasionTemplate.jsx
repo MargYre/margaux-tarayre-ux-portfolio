@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
 import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
+import FormationIIM from '../../../components/FormationIIM/FormationIIM'
 import styles from './EvasionTemplate.module.scss'
 
 const EvasionTemplate = ({ project }) => {
@@ -126,8 +127,8 @@ const EvasionTemplate = ({ project }) => {
       {/* Reflection */}
       <ReflectionSection t={t} />
 
-      {/* Formation Section - Avant Footer */}
-      <FormationSection t={t} />
+      {/* Bloc formation */}
+      <FormationIIM />
       {/* Navigation entre projets */}
       <ProjectNavigation currentProjectId="evasion" />
       {/* Footer global */}
@@ -485,28 +486,5 @@ const ReflectionSection = ({ t }) => {
     </section>
   )
 }
-
-const FormationSection = ({ t }) => (
-  <section className={styles.formationSection}>
-    <div className={styles.formationContainer}>
-      <div className={styles.formationContent}>
-        <h3 className={styles.formationTitle}>
-          {t('evasion.formation.title')}
-        </h3>
-        <p className={styles.formationDescription}>
-          {t('evasion.formation.description')}
-        </p>
-        <a
-          href="https://www.iim.fr/cursus/mastere-ux-design-interactif/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.formationLink}
-        >
-          {t('evasion.formation.linkText')}
-        </a>
-      </div>
-    </div>
-  </section>
-)
 
 export default EvasionTemplate

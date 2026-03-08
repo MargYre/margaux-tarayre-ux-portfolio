@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
 import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
+import FormationIIM from '../../../components/FormationIIM/FormationIIM'
 import styles from './CocovoitTemplate.module.scss'
 
 const CocovoitTemplate = ({ project }) => {
@@ -127,6 +128,9 @@ const CocovoitTemplate = ({ project }) => {
 
       {/* Compétences démontrées */}
       <LearningsSection t={t} />
+
+      {/* Bloc formation */}
+      <FormationIIM />
 
       {/* Navigation entre projets */}
       <ProjectNavigation currentProjectId="cocovoit" />

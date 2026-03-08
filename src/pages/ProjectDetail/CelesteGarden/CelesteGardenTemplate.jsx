@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
 import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
+import FormationSorbonne from '../../../components/FormationSorbonne/FormationSorbonne'
 import styles from './CelesteGardenTemplate.module.scss'
 
 const CelesteGardenTemplate = ({ project }) => {
@@ -176,35 +177,8 @@ const CelesteGardenTemplate = ({ project }) => {
         </div>
       </section>
 
-      {/* Footer spécifique au projet */}
-      <footer className={styles.footer}>
-        <div className={styles.footerContainer}>
-          <div className={styles.footerGrid}>
-            <div>
-              <h3 className={styles.footerTitle}>
-                {t('celesteGarden.projectFooter.title')}
-              </h3>
-              <p className={styles.footerPara}>
-                {t('celesteGarden.projectFooter.description')}
-              </p>
-              <a
-                href="https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/licences-professionnelles-l3/licence-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.footerLink}
-              >
-                {t('celesteGarden.projectFooter.link')}
-              </a>
-            </div>
-
-            <div className={styles.footerNav}>
-              <Link to="/" className={styles.footerButton}>
-                {t('celesteGarden.projectFooter.backButton')}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* Bloc formation */}
+      <FormationSorbonne />
       {/* Navigation entre projets */}
       <ProjectNavigation currentProjectId="celeste-garden" />
 
