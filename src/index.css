@@ -18,8 +18,10 @@
   --color-bg: #ffffff;
   --color-bg-secondary: #fafafa;
   --color-border: #e0e0e0;
-  --color-accent: #000000;
-  --color-accent-rgb: 0, 0, 0;
+  /* Accent mauve désaturé (règle 60-30-10, ~10% surface). Utilisé sur les CTA principaux. */
+  --color-accent: #6d5d8a;
+  --color-accent-dark: #5a4c73;
+  --color-accent-rgb: 109, 93, 138;
 
   /* Couleurs spécifiques */
   --color-card-bg: #ffffff;
@@ -55,8 +57,10 @@ html.dark {
   --color-bg: #0a0a0a;
   --color-bg-secondary: #1a1a1a;
   --color-border: #2a2a2a;
-  --color-accent: #ffffff;
-  --color-accent-rgb: 255, 255, 255;
+  /* Accent mauve désaturé (mode sombre). */
+  --color-accent: #b8a9d4;
+  --color-accent-dark: #a090bf;
+  --color-accent-rgb: 184, 169, 212;
   --color-card-bg: #1a1a1a;
   --color-nav-bg: rgba(10, 10, 10, 0.95);
   --color-hover-bg: #2a2a2a;

@@ -28,6 +28,11 @@
   }
 }
 
+/* Mode sombre : contraste WCAG AA sur accent #B8A9D4 */
+:global(html.dark) .primary {
+  color: #1a1a1a;
+}
+
 .secondary {
   background-color: transparent;
   color: var(--color-accent);
@@ -41,4 +46,8 @@
   &:active {
     transform: scale(0.98);
   }
+}
+
+:global(html.dark) .secondary:hover {
+  color: #1a1a1a;
 }

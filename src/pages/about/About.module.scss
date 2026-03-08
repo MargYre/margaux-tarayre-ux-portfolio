@@ -54,6 +54,27 @@
   align-items: center;
 }
 
+/* CTA principal : bouton « Télécharger mon CV » — accent mauve (règle 60-30-10) */
+.heroSide a[href*='.pdf'] {
+  background-color: var(--color-accent) !important;
+  color: #ffffff !important;
+  border-color: var(--color-accent) !important;
+
+  &:hover {
+    background-color: var(--color-accent-dark) !important;
+    border-color: var(--color-accent-dark) !important;
+    color: #ffffff !important;
+  }
+}
+
+:global(html.dark) .heroSide a[href*='.pdf'] {
+  color: #1a1a1a !important;
+
+  &:hover {
+    color: #1a1a1a !important;
+  }
+}
+
 /* Job Search - Full width, impactful with gradient */
 .jobSearchSection {
   margin-bottom: 5rem;
@@ -92,6 +113,15 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+/* Boutons email et LinkedIn : même comportement que les autres CTA accent */
+.jobSearchCtas a {
+  color: #ffffff;
+}
+
+:global(html.dark) .jobSearchCtas a {
+  color: #1a1a1a;
 }
 
 /* Section */
