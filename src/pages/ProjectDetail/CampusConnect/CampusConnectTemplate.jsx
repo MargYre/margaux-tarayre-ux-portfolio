@@ -15,9 +15,9 @@ const CampusConnectTemplate = ({ project }) => {
 
   // Images pour le carousel
   const images = [
-    '/images/campus-connect/screenshot1.png',
-    '/images/campus-connect/screenshot2.png',
-    '/images/campus-connect/persona.png',
+    '/images/campus-connect/screenshot1.webp',
+    '/images/campus-connect/screenshot2.webp',
+    '/images/campus-connect/persona.webp',
   ]
 
   // Ouvrir la lightbox

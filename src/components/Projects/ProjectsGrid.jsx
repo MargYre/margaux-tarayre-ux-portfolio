@@ -117,7 +117,7 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
       />
     ) : projectId === 'campus-connect' ? (
       <img
-        src="/images/campus-connect/screenshot1.png"
+        src="/images/campus-connect/screenshot1.webp"
         alt="Campus Connect preview"
         className={styles.projectPreviewImage}
       />

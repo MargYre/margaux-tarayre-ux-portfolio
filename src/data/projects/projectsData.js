@@ -1,4 +1,4 @@
-export const projects = [
+const projectsList = [
   {
     id: 'celeste-garden',
     slug: 'celeste-garden',
@@ -75,6 +75,11 @@ export const projects = [
     images: [],
   },
 ]
+
+// Tri par année décroissante (les plus récents en premier)
+export const projects = [...projectsList].sort(
+  (a, b) => (b.year || 0) - (a.year || 0)
+)
 
 export const getProjectBySlug = slug => {
   return projects.find(project => project.slug === slug)
