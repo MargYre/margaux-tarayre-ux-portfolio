@@ -17,6 +17,15 @@
         },
         "year": { "label": "Year", "value": "2026" }
       }
+    },
+    "context": {
+      "title": "Context & Challenge",
+      "project": "Project: redesign of the construction creation flow for ChantierPro (construction SaaS). The goal was to simplify a complex workflow while maintaining industry habits.",
+      "methodology": "Methodology: 4-day design challenge, using AI assistance for strategic analysis and efficiency.",
+      "objectives": [
+        "Identify friction points in the current journey",
+        "Deliver a high-fidelity prototype ready for testing"
+      ]
     }
   }
 }

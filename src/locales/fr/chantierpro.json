@@ -23,6 +23,15 @@
           "value": "2026"
         }
       }
+    },
+    "context": {
+      "title": "Contexte & Enjeux",
+      "project": "Projet : refonte du flux de création de chantier pour ChantierPro (SaaS BTP). L’objectif est de simplifier un workflow complexe tout en respectant les habitudes du secteur.",
+      "methodology": "Méthodologie : design challenge réalisé en 4 jours, avec assistance IA pour l’analyse stratégique et l’efficacité du travail.",
+      "objectives": [
+        "Identifier les points de friction clés dans le parcours actuel",
+        "Livrer un prototype haute fidélité prêt à tester"
+      ]
     }
   }
 }

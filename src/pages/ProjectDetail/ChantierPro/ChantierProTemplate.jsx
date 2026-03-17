@@ -6,6 +6,9 @@ const ChantierProTemplate = ({ project }) => {
   const { t } = useTranslation()
   const prototypeUrl =
     project?.prototype || project?.link || t('chantierpro.hero.prototypeUrl')
+  const contextObjectives = t('chantierpro.context.objectives', {
+    returnObjects: true,
+  })
 
   return (
     <div className={styles.template}>
@@ -74,6 +77,27 @@ const ChantierProTemplate = ({ project }) => {
             </div>
           </div>
         </header>
+
+        <section className={styles.contextSection}>
+          <h2 className={styles.contextTitle}>
+            {t('chantierpro.context.title')}
+          </h2>
+          <p className={styles.contextProject}>
+            {t('chantierpro.context.project')}
+          </p>
+          <p className={styles.contextMethodology}>
+            {t('chantierpro.context.methodology')}
+          </p>
+          {Array.isArray(contextObjectives) && (
+            <ul className={styles.contextObjectives}>
+              {contextObjectives.map((item, index) => (
+                <li key={index} className={styles.contextObjectiveItem}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
 
         <main className={styles.content} />
       </div>
