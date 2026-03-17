@@ -1,14 +1,33 @@
 const projectsList = [
   {
+    id: 'chantier-pro',
+    slug: 'chantier-pro',
+    year: 2026,
+    category: 'product-design',
+    featured: true,
+    tags: ['Figma', 'Perplexity', 'Synthetic Users'],
+    image: {
+      src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
+      alt: 'Chantier Pro – vue desktop équipe',
+    },
+    images: [
+      {
+        src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
+        alt: 'Chantier Pro – vue desktop équipe',
+      },
+    ],
+  },
+  {
     id: 'celeste-garden',
     slug: 'celeste-garden',
     tags: ['Figma', 'Design System', 'Mobile'],
-    color: '#10b981', // Vert nature
-    image: '🌱', // ← Emoji corrigé
+    color: '#10b981',
+    image: {
+      src: '/images/celeste/page1.png',
+      alt: 'Celeste Garden – aperçu page 1',
+    },
     hasMethodology: false,
     hasLore: false,
-
-    // Métadonnées
     year: 2025,
     client: 'Exercice académique',
     role: 'UI/UX Designer',
@@ -16,13 +35,11 @@ const projectsList = [
     team: ['Solo'],
     link: null,
     prototype: null,
-
-    // Images pour le carousel
     images: [
-      '/images/celeste/page1.png',
-      '/images/celeste/page2.png',
-      '/images/celeste/page3.png',
-      '/images/celeste/page4.png',
+      { src: '/images/celeste/page1.png', alt: 'Celeste Garden – page 1' },
+      { src: '/images/celeste/page2.png', alt: 'Celeste Garden – page 2' },
+      { src: '/images/celeste/page3.png', alt: 'Celeste Garden – page 3' },
+      { src: '/images/celeste/page4.png', alt: 'Celeste Garden – page 4' },
     ],
   },
   {
@@ -30,7 +47,7 @@ const projectsList = [
     slug: 'campus-connect',
     tags: ['User Testing', 'Figma', 'Mobile Design'],
     color: '#3b82f6',
-    image: 'sr',
+    image: null,
     hasMethodology: true,
     hasLore: false,
     year: 2025,
@@ -49,10 +66,12 @@ const projectsList = [
     descriptionKey: 'projects.evasion.description',
     year: 2025,
     category: 'design-fiction',
-    color: '#1a1a1a', // Noir
-    image: '🎭', // Emoji masque
-    tags: ['Design Fiction', 'UX Research', 'Narrative Design'], // ← AJOUTER ÇA
-    cover: '/images/evasion/cover.png',
+    color: '#1a1a1a',
+    image: {
+      src: '/images/evasion/cover.png',
+      alt: 'Evasion – couverture',
+    },
+    tags: ['Design Fiction', 'UX Research', 'Narrative Design'],
     template: 'evasion',
   },
   {
@@ -61,6 +80,8 @@ const projectsList = [
     year: 2024,
     category: 'product-management',
     featured: false,
+    image: null,
+    images: [],
   },
   {
     id: 'enfants-ecrans',
@@ -69,14 +90,12 @@ const projectsList = [
     year: 2025,
     category: 'ux-research',
     tags: ['UX Research', 'Workshop', 'Social Listening'],
-    image: '📱',
+    image: null,
     client: 'IIM Digital School',
     team: ['Yassine', 'Maroua', 'Luce', 'Margaux'],
     images: [],
   },
 ]
-
-// Tri par année décroissante (les plus récents en premier)
 export const projects = [...projectsList].sort(
   (a, b) => (b.year || 0) - (a.year || 0)
 )

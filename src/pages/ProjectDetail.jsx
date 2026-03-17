@@ -2,6 +2,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import { projects } from '../data/projects/projectsData'
 import CelesteGardenTemplate from './ProjectDetail/CelesteGarden/CelesteGardenTemplate'
 import CampusConnectTemplate from './ProjectDetail/CampusConnect/CampusConnectTemplate'
+import ChantierProTemplate from './ProjectDetail/ChantierPro/ChantierProTemplate'
 import EvasionTemplate from './ProjectDetail/Evasion/EvasionTemplate'
 import CocovoitTemplate from './ProjectDetail/Cocovoit/CocovoitTemplate'
 import EnfantsEcransTemplate from './ProjectDetail/EnfantsEcrans/EnfantsEcransTemplate'
@@ -22,6 +23,9 @@ const ProjectDetail = () => {
   // Sélectionner le bon template
   const renderTemplate = () => {
     switch (project.id) {
+      case 'chantier-pro':
+        return <ChantierProTemplate project={project} />
+
       case 'celeste-garden':
         return <CelesteGardenTemplate project={project} />
 

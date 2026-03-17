@@ -67,6 +67,7 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
     evasion: 'evasion',
     'cocovoit': 'cocovoit',
     'enfants-ecrans': 'enfantsEcrans',
+    'chantier-pro': 'chantierPro',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
@@ -109,7 +110,13 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
 
 const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
   <div className={styles.projectImage}>
-    {projectId === 'celeste-garden' ? (
+    {projectId === 'chantier-pro' ? (
+      <img
+        src="/images/chantierPro/chantierPro-desktop-quipe.webp"
+        alt="ChantierPro preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'celeste-garden' ? (
       <img
         src="/images/celeste/page1.png"
         alt="Celeste's Garden preview"

@@ -42,6 +42,13 @@
       "title": "Luma",
       "subtitle": "Les enfants et les écrans",
       "description": "Projet de recherche UX sur les 0-6 ans et les écrans, ateliers collaboratifs, solution Nova."
+    },
+
+    "chantierPro": {
+      "category": "Product Design",
+      "title": "ChantierPro",
+      "subtitle": "Refonte du parcours de création de chantier",
+      "description": "Projet personnel orienté produit, explorant l'usage de Figma, Perplexity et Synthetic Users pour optimiser la création de chantier."
     }
   }
 }

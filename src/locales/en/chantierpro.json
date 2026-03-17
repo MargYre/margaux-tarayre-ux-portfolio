@@ -1,0 +1,22 @@
+{
+  "chantierpro": {
+    "nav": {
+      "back": "← Home"
+    },
+    "hero": {
+      "tag": "Product Design • Personal project",
+      "title": "Redesigning the construction project creation journey",
+      "subtitle": "Optimising on-site data capture to reduce drop-off.",
+      "cta": "View the Figma prototype",
+      "prototypeUrl": "https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193",
+      "meta": {
+        "role": { "label": "Role", "value": "Product Designer (Solo)" },
+        "tools": {
+          "label": "Tools & Methods",
+          "value": "Figma, Perplexity, Synthetic Users"
+        },
+        "year": { "label": "Year", "value": "2026" }
+      }
+    }
+  }
+}

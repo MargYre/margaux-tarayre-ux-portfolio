@@ -1,0 +1,28 @@
+{
+  "chantierpro": {
+    "nav": {
+      "back": "← Accueil"
+    },
+    "hero": {
+      "tag": "Product Design • Projet Personnel",
+      "title": "Refonte du parcours de création de chantier",
+      "subtitle": "Optimiser la saisie de données en conditions de terrain pour réduire le taux d'abandon.",
+      "cta": "Voir le prototype Figma",
+      "prototypeUrl": "https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193",
+      "meta": {
+        "role": {
+          "label": "Rôle",
+          "value": "Product Designer (Solo)"
+        },
+        "tools": {
+          "label": "Outils & Méthodes",
+          "value": "Figma, Perplexity, Synthetic Users"
+        },
+        "year": {
+          "label": "Année",
+          "value": "2026"
+        }
+      }
+    }
+  }
+}
