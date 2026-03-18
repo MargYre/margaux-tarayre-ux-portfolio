@@ -4,28 +4,58 @@
       "back": "← Home"
     },
     "hero": {
-      "tag": "Product Design • Personal project",
-      "title": "Redesigning the construction project creation journey",
-      "subtitle": "Optimising on-site data capture to reduce drop-off.",
-      "cta": "View the Figma prototype",
+      "tag": "Product Design • Personal Project",
+      "title": "Construction Project Creation Redesign",
+      "subtitle": "Optimizing on-site data capture to reduce drop-off rates.",
+      "cta": "View Figma Prototype",
       "prototypeUrl": "https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193",
       "meta": {
-        "role": { "label": "Role", "value": "Product Designer (Solo)" },
+        "role": {
+          "label": "Role",
+          "value": "Product Designer (Solo)"
+        },
         "tools": {
           "label": "Tools & Methods",
           "value": "Figma, Perplexity, Synthetic Users"
         },
-        "year": { "label": "Year", "value": "2026" }
+        "year": {
+          "label": "Year",
+          "value": "2026"
+        }
       }
     },
     "context": {
-      "title": "Context & Challenge",
-      "project": "Project: redesign of the construction creation flow for ChantierPro (construction SaaS). The goal was to simplify a complex workflow while maintaining industry habits.",
-      "methodology": "Methodology: 4-day design challenge, using AI assistance for strategic analysis and efficiency.",
+      "title": "Context & Challenges",
+      "project": "Project: redesign of the construction creation flow for ChantierPro (Construction SaaS). The goal was to simplify a complex workflow while respecting industry habits.",
+      "methodology": "Methodology: 4-day design challenge, using AI assistance for strategic analysis and workflow efficiency.",
       "objectives": [
-        "Identify friction points in the current journey",
+        "Identify key friction points in the current journey",
         "Deliver a high-fidelity prototype ready for testing"
       ]
+    },
+    "discovery": {
+      "title": "Step 01: Discovery & Strategy",
+      "intro": "To prepare the design phase, I combined market research and Synthetic User interviews to align field needs with business stakes.",
+      "market": {
+        "title": "Secondary Research (Perplexity)",
+        "points": [
+          "10% of project budgets lost due to organizational defects.",
+          "12 to 16 hours per week spent on admin tasks.",
+          "60% to 80% drop-off on overly complex forms."
+        ]
+      },
+      "insightsTitle": "Key insights",
+      "personas": {
+        "title": "Synthetic Users (simulated interviews)",
+        "gaspard": "Gaspard — Unstable connection on site, prefers entering data calmly in the evening or at the office.",
+        "nadia": "Nadia — Uses her phone one-handed with gloves; needs a simple, guided interface."
+      },
+      "insights": {
+        "business": "Stopping financial loss: around 10% of a project’s budget is lost due to poor organization.",
+        "user": "Simplify to retain: 60% to 80% of users drop off when the form becomes too long or complex."
+      },
+      "cta": "View Full Framing Note",
+      "pdfUrl": "/images/chantierPro/note-cadrage-chantierpro.pdf"
     }
   }
 }

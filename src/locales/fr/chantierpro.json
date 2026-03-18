@@ -32,6 +32,30 @@
         "Identifier les points de friction clés dans le parcours actuel",
         "Livrer un prototype haute fidélité prêt à tester"
       ]
+    },
+    "discovery": {
+      "title": "Étape 01 : Discovery & Stratégie",
+      "intro": "Pour préparer la phase de design, j’ai combiné recherche de marché et interviews Synthetic Users afin d’aligner besoins terrain et enjeux business.",
+      "market": {
+        "title": "Recherche secondaire (Perplexity)",
+        "points": [
+          "10% du budget perdu à cause de défauts d’organisation.",
+          "12 à 16h par semaine consacrées à l’administratif.",
+          "60% à 80% d’abandon sur les formulaires complexes."
+        ]
+      },
+      "personas": {
+        "title": "Synthetic Users (interviews simulées)",
+        "gaspard": "Gaspard — Connexion instable sur chantier, préfère saisir les données au calme, le soir ou au bureau.",
+        "nadia": "Nadia — Utilise son téléphone d’une seule main avec des gants, a besoin d’une interface simple et guidée."
+      },
+      "insightsTitle": "Insights clés",
+      "insights": {
+        "business": "Arrêter la perte financière : environ 10% du budget d’un chantier est perdu à cause d’un manque d’organisation.",
+        "user": "Simplifier pour fidéliser : 60% à 80% des utilisateurs abandonnent dès que le formulaire devient trop long ou complexe."
+      },
+      "cta": "Consulter la note de cadrage complète",
+      "pdfUrl": "/images/chantierPro/note-cadrage-chantierpro.pdf"
     }
   }
 }
