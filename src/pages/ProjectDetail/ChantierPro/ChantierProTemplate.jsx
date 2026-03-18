@@ -22,6 +22,8 @@ const ChantierProTemplate = ({ project }) => {
   const personaNicolasSrc = '/images/chantierPro/03-Persona-Nicolas.png'
   const journeyMapSrc = '/images/chantierPro/04-journey-map.png'
   const groupedInsightSrc = '/images/chantierPro/06-Grouped Insight.webp'
+  const oldFlowSrc = '/images/chantierPro/07-Flow chart.jpg'
+  const newFlowSrc = '/images/chantierPro/08-UserFlow Mobile.webp'
 
   const handleImageClick = src => {
     setSelectedImage(src)
@@ -306,6 +308,47 @@ const ChantierProTemplate = ({ project }) => {
               />
               <p className={styles.processCaption}>
                 {t('chantierpro.synthesis.affinityCaption')}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.userFlowSection}>
+          <h2 className={styles.processSectionTitle}>
+            {t('chantierpro.userFlow.title')}
+          </h2>
+          <p className={styles.processSectionIntro}>
+            {t('chantierpro.userFlow.intro')}
+          </p>
+          <div className={styles.userFlowGrid}>
+            <div className={styles.userFlowCol}>
+              <h3 className={styles.processSubTitle}>
+                {t('chantierpro.userFlow.old.title')}
+              </h3>
+              <img
+                src={oldFlowSrc}
+                alt=""
+                className={styles.processImage}
+                loading="lazy"
+                onClick={() => handleImageClick(oldFlowSrc)}
+              />
+              <p className={styles.processCaption}>
+                {t('chantierpro.userFlow.old.legend')}
+              </p>
+            </div>
+            <div className={styles.userFlowCol}>
+              <h3 className={styles.processSubTitle}>
+                {t('chantierpro.userFlow.new.title')}
+              </h3>
+              <img
+                src={newFlowSrc}
+                alt=""
+                className={styles.processImage}
+                loading="lazy"
+                onClick={() => handleImageClick(newFlowSrc)}
+              />
+              <p className={styles.processCaption}>
+                {t('chantierpro.userFlow.new.legend')}
               </p>
             </div>
           </div>

@@ -89,6 +89,18 @@
           "body": "Move away from office-style project management vocabulary: simplify wording and UI so field teams truly adopt the tool."
         }
       ]
+    },
+    "userFlow": {
+      "title": "Step 04: Flow Architecture Redesign",
+      "intro": "The main challenge was transforming a rigid linear journey into an adaptive experience suited for field conditions.",
+      "old": {
+        "title": "Initial Flow (Audit)",
+        "legend": "A complex journey where every step is mandatory, increasing drop-off risks in low-connectivity areas."
+      },
+      "new": {
+        "title": "Optimized Flow (Solution)",
+        "legend": "Agile workflow featuring offline-first mode, voice input, and OCR automation to reduce entry time by 5x."
+      }
     }
   }
 }

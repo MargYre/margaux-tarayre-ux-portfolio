@@ -89,6 +89,18 @@
           "body": "S’éloigner du vocabulaire de gestion de projet de bureau : simplifier les termes et l’interface pour que les équipes terrain s’approprient vraiment l’outil."
         }
       ]
+    },
+    "userFlow": {
+      "title": "Étape 04 : Refonte de l'Architecture du Flux",
+      "intro": "L'enjeu majeur était de transformer un parcours linéaire rigide en une expérience adaptative aux conditions de terrain.",
+      "old": {
+        "title": "Flux Initial (Audit)",
+        "legend": "Un parcours complexe où chaque étape est bloquante, augmentant le risque d'abandon en cas de faible réseau."
+      },
+      "new": {
+        "title": "Flux Optimisé (Solution)",
+        "legend": "Parcours agile incluant le mode offline, la saisie vocale et l'automatisation OCR pour diviser le temps de saisie par 5."
+      }
     }
   }
 }
