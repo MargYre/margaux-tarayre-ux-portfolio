@@ -20,8 +20,7 @@ const Navigation = () => {
             {t('nav.about')}
           </Link>
 
-          {/* anchor uniquement valable en home, mais ça n’empêche rien */}
-          <Link to="/#projects" className={styles.navLink}>
+          <Link to="/projects" className={styles.navLink}>
             {t('nav.projects')}
           </Link>
 

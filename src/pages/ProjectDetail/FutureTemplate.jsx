@@ -140,7 +140,7 @@ const FutureTemplate = ({ project }) => {
             {t('comingSoon.content.cta.description')}
           </p>
           <div className={styles.ctaButtons}>
-            <Link to="/#projects" className={styles.primaryButton}>
+            <Link to="/projects" className={styles.primaryButton}>
               {t('comingSoon.content.cta.viewProjects')}
             </Link>
             <a

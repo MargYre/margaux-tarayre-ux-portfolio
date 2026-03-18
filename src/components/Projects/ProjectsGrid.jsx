@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { projects } from '../../data/projects/projectsData'
 import styles from './ProjectsGrid.module.scss'
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({ limit }) => {
   const { t } = useTranslation()
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const [showCursor, setShowCursor] = useState(false)
@@ -18,11 +18,14 @@ const ProjectsGrid = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
+  const projectsToRender =
+    typeof limit === 'number' && Number.isFinite(limit) ? projects.slice(0, limit) : projects
+
   return (
     <section className={styles.section} id="projects">
       <SectionHeader t={t} />
       <div className={styles.grid}>
-        {projects.map(project => (
+        {projectsToRender.map(project => (
           <ProjectCard
             key={project.id}
             project={project}
