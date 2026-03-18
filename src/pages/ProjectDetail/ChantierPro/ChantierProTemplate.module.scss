@@ -320,8 +320,7 @@
 
 /* Discovery & Strategy section */
 .discoverySection {
-  margin-top: 4rem;
-  padding: 4rem 0;
+  margin-top: 3rem;
   border-top: 1px solid var(--color-border);
 }
 
@@ -490,6 +489,112 @@
   color: var(--color-text-secondary);
 }
 
+/* Empathy — Persona & Journey */
+.empathySection {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.processSectionTitle {
+  margin: 0 0 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.processSectionIntro {
+  margin: 0 0 4rem;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+
+  @media (max-width: 900px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.processSubTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.processImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+}
+
+.processCaption {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.empathyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.empathyCol {
+  min-width: 0;
+}
+
+/* Synthesis — Affinity & opportunities */
+.synthesisSection {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.synthesisGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.synthesisText {
+  min-width: 0;
+}
+
+.synthesisList {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.synthesisListItem {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-primary);
+}
+
+.synthesisVisual {
+  min-width: 0;
+}
+
 /* Image modal / lightbox */
 .modalOverlay {
   position: fixed;
@@ -500,32 +605,48 @@
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
   z-index: 60;
+  overflow: auto;
+  cursor: pointer;
 }
 
 .modalContent {
   position: relative;
-  max-width: min(960px, 90vw);
-  max-height: 90vh;
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--color-bg-primary);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
   padding: 0.75rem;
+}
+
+.modalContentZoomed {
+  overflow: auto;
 }
 
 .modalImage {
   display: block;
-  max-width: 100%;
-  max-height: 80vh;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
+  cursor: zoom-in;
+}
+
+.modalImageZoomed {
+  cursor: zoom-out;
+  transform: scale(1.7);
+  transform-origin: top left;
 }
 
 .modalClose {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.55rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   border: none;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   width: 28px;
   height: 28px;
@@ -535,4 +656,7 @@
   justify-content: center;
   font-size: 1.1rem;
   cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.6);
 }

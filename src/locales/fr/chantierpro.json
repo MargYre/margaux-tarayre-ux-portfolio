@@ -56,6 +56,39 @@
       },
       "cta": "Consulter la note de cadrage complète",
       "pdfUrl": "/images/chantierPro/note-cadrage-chantierpro.pdf"
+    },
+    "empathy": {
+      "title": "Étape 02 : Empathy",
+      "intro": "À partir des données terrain, j’ai consolidé un persona principal et un parcours utilisateur pour cadrer les opportunités de design sur le chantier.",
+      "persona": {
+        "title": "Persona — Nicolas B.",
+        "caption": "Chef de chantier, référent terrain pour la création et le suivi des chantiers."
+      },
+      "journey": {
+        "title": "Parcours utilisateur (Journey Map)",
+        "caption": "Vue d’ensemble des étapes, points de friction et moments clés du flux actuel."
+      }
+    },
+    "synthesis": {
+      "title": "Étape 03 : Synthèse",
+      "intro": "Regroupement des insights (affinity mapping) pour transformer les constats en leviers produit concrets.",
+      "affinityTitle": "Carte d’affinités — insights regroupés",
+      "affinityCaption": "Synthèse visuelle des thèmes récurrents issus de la recherche.",
+      "opportunitiesTitle": "Opportunités de design",
+      "points": [
+        {
+          "title": "Ergonomie terrain",
+          "body": "Basculer vers la voix et le tactile : gants épais, poussière de béton et bruit de chantier rendent la saisie classique peu réaliste."
+        },
+        {
+          "title": "Fiabilité",
+          "body": "Mode « offline-first » indispensable : la connexion sur site est souvent instable ou absente (zones blanches)."
+        },
+        {
+          "title": "Barrières d’adoption",
+          "body": "S’éloigner du vocabulaire de gestion de projet de bureau : simplifier les termes et l’interface pour que les équipes terrain s’approprient vraiment l’outil."
+        }
+      ]
     }
   }
 }

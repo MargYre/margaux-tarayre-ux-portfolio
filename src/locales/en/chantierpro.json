@@ -56,6 +56,39 @@
       },
       "cta": "View Full Framing Note",
       "pdfUrl": "/images/chantierPro/note-cadrage-chantierpro.pdf"
+    },
+    "empathy": {
+      "title": "Step 02: Empathy",
+      "intro": "Building on field data, I consolidated a primary persona and a user journey map to frame design opportunities on site.",
+      "persona": {
+        "title": "Persona — Nicolas B.",
+        "caption": "Site manager, key field contact for creating and tracking projects."
+      },
+      "journey": {
+        "title": "User journey map",
+        "caption": "End-to-end view of steps, friction points, and critical moments in the current flow."
+      }
+    },
+    "synthesis": {
+      "title": "Step 03: Synthesis",
+      "intro": "Clustering insights through affinity mapping to turn findings into actionable product levers.",
+      "affinityTitle": "Affinity map — grouped insights",
+      "affinityCaption": "Visual synthesis of recurring themes from research.",
+      "opportunitiesTitle": "Design opportunities",
+      "points": [
+        {
+          "title": "Field ergonomics",
+          "body": "Shift toward voice and tactile input: thick gloves, concrete dust and site noise make classic typing unrealistic."
+        },
+        {
+          "title": "Reliability",
+          "body": "Mandatory offline-first mode: connectivity on site is often unstable or unavailable (white zones)."
+        },
+        {
+          "title": "Adoption barriers",
+          "body": "Move away from office-style project management vocabulary: simplify wording and UI so field teams truly adopt the tool."
+        }
+      ]
     }
   }
 }
