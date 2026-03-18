@@ -1,14 +1,13 @@
 /* ChantierPro — storytelling header (professional, UX-driven) */
 
 .template {
-  min-height: 100vh;
   background: var(--color-bg-primary);
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 1rem;
 
   @media (max-width: 768px) {
     padding: 2rem 1.25rem 3rem;
@@ -617,6 +616,119 @@
   min-width: 0;
 }
 
+/* Design — Wireframes & High-Fidelity UI */
+.designSection {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.designGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.designCol {
+  min-width: 0;
+}
+
+.designGridWireframes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.designWireframesText {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+}
+
+.wireframesImage {
+  width: 100%;
+  height: auto;
+  max-height: min(500px, 60vh);
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+}
+
+.finalFeaturesList {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.finalFeaturesItem {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-primary);
+}
+
+.finalCtaSection {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 3rem 2rem 3.5rem;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.4)),
+    url('/images/chantierPro/chantierPro-desktop-quipe.webp') center/cover
+      no-repeat;
+}
+
+.finalCtaContent {
+  max-width: 520px;
+}
+
+.finalCtaTitle {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.finalCtaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+
+  &:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
+}
+
 /* Image modal / lightbox */
 .modalOverlay {
   position: fixed;
@@ -637,7 +749,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
   background: transparent;
   padding: 0.75rem;
 }
@@ -679,6 +790,7 @@
   font-size: 1.1rem;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35),
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.35),
     0 8px 24px rgba(0, 0, 0, 0.6);
 }

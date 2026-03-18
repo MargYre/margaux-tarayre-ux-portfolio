@@ -10,18 +10,12 @@
       "cta": "Voir le prototype Figma",
       "prototypeUrl": "https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193",
       "meta": {
-        "role": {
-          "label": "Rôle",
-          "value": "Product Designer (Solo)"
-        },
+        "role": { "label": "Rôle", "value": "Product Designer (Solo)" },
         "tools": {
           "label": "Outils & Méthodes",
           "value": "Figma, Perplexity, Synthetic Users"
         },
-        "year": {
-          "label": "Année",
-          "value": "2026"
-        }
+        "year": { "label": "Année", "value": "2026" }
       }
     },
     "context": {
@@ -100,6 +94,24 @@
       "new": {
         "title": "Flux Optimisé (Solution)",
         "legend": "Parcours agile incluant le mode offline, la saisie vocale et l'automatisation OCR pour diviser le temps de saisie par 5."
+      }
+    },
+    "design": {
+      "wireframes": {
+        "title": "Étape 05 : Wireframing & Low-Fid",
+        "intro": "Validation de la hiérarchie de l’information et des zones d’interaction pour un usage avec gants, avec composants XL et navigation simplifiée.",
+        "caption": "Contraste élevé & composants XL pour une utilisation avec gants."
+      },
+      "finalUi": {
+        "title": "Étape 06 : UI Haute Fidélité & Prototype",
+        "intro": "Design d'une interface à haut contraste avec un \"Mode Outdoor\" spécifique pour contrer l'éblouissement solaire sur les chantiers.",
+        "features": [
+          "Mode Outdoor (contraste inversé)",
+          "Saisie vocale & scan OCR intégrés",
+          "Dashboard Desktop pour le suivi au bureau"
+        ],
+        "ctaTitle": "Expérimenter la solution",
+        "cta": "Tester le prototype interactif"
       }
     }
   }

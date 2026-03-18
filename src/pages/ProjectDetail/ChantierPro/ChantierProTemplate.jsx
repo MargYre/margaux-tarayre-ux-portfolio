@@ -18,6 +18,9 @@ const ChantierProTemplate = ({ project }) => {
   const synthesisPoints = t('chantierpro.synthesis.points', {
     returnObjects: true,
   })
+  const finalUiFeatures = t('chantierpro.design.finalUi.features', {
+    returnObjects: true,
+  })
 
   const personaNicolasSrc = '/images/chantierPro/03-Persona-Nicolas.png'
   const journeyMapSrc = '/images/chantierPro/04-journey-map.png'
@@ -354,7 +357,79 @@ const ChantierProTemplate = ({ project }) => {
           </div>
         </section>
 
-        <main className={styles.content} />
+        <section className={styles.designSection}>
+          <h2 className={styles.processSectionTitle}>
+            {t('chantierpro.design.wireframes.title')}
+          </h2>
+          <div className={styles.designGridWireframes}>
+            <div className={styles.designCol}>
+              <p className={styles.designWireframesText}>
+                {t('chantierpro.design.wireframes.intro')}{' '}
+                {t('chantierpro.design.wireframes.caption')}
+              </p>
+            </div>
+            <div className={styles.designCol}>
+              <img
+                src="/images/chantierPro/08-wireframe.webp"
+                alt=""
+                className={styles.wireframesImage}
+                loading="lazy"
+                onClick={() =>
+                  handleImageClick('/images/chantierPro/08-wireframe.webp')
+                }
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.designSection}>
+          <h2 className={styles.processSectionTitle}>
+            {t('chantierpro.design.finalUi.title')}
+          </h2>
+          <p className={styles.processSectionIntro}>
+            {t('chantierpro.design.finalUi.intro')}
+          </p>
+          <div className={styles.designGrid}>
+            <div className={styles.designCol}>
+              {Array.isArray(finalUiFeatures) && (
+                <ul className={styles.finalFeaturesList}>
+                  {finalUiFeatures.map((item, index) => (
+                    <li key={index} className={styles.finalFeaturesItem}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <div className={styles.designCol}>
+              <img
+                src="/images/chantierPro/09-maquettes.webp"
+                alt=""
+                className={styles.processImage}
+                loading="lazy"
+                onClick={() =>
+                  handleImageClick('/images/chantierPro/09-maquettes.webp')
+                }
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.finalCtaSection}>
+          <div className={styles.finalCtaContent}>
+            <h2 className={styles.finalCtaTitle}>
+              {t('chantierpro.design.finalUi.ctaTitle')}
+            </h2>
+            <a
+              href={prototypeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.finalCtaButton}
+            >
+              {t('chantierpro.design.finalUi.cta')}
+            </a>
+          </div>
+        </section>
       </div>
 
       {selectedImage && (

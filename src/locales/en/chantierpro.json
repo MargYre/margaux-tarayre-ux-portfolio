@@ -101,6 +101,24 @@
         "title": "Optimized Flow (Solution)",
         "legend": "Agile workflow featuring offline-first mode, voice input, and OCR automation to reduce entry time by 5x."
       }
+    },
+    "design": {
+      "wireframes": {
+        "title": "Step 05: Wireframing & Low-Fidelity",
+        "intro": "Validation of information hierarchy and interaction zones designed for gloved usage, featuring XL components and simplified navigation.",
+        "caption": "High contrast & XL components for gloved usage."
+      },
+      "finalUi": {
+        "title": "Step 06: High-Fidelity UI & Prototype",
+        "intro": "Design of a high-contrast interface with a dedicated \"Outdoor Mode\" to counter sun glare on construction sites.",
+        "features": [
+          "Outdoor Mode (inverted contrast)",
+          "Integrated voice input & OCR scanning",
+          "Desktop dashboard for back-office tracking"
+        ],
+        "ctaTitle": "Experience the Solution",
+        "cta": "Open the interactive prototype"
+      }
     }
   }
 }
