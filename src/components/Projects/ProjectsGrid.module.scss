@@ -52,7 +52,7 @@
   transition: all var(--transition-base);
   background-color: var(--color-bg);
   text-decoration: none;
-  cursor: none; // Cache le curseur par défaut
+  cursor: pointer;
   position: relative;
 
   &:hover {

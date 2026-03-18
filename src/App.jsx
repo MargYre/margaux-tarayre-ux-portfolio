@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useTheme } from './contexts/ThemeContext'
-import CustomCursor from './components/Cursor/CustomCursor'
 import Navigation from './components/Navigation/Navigation'
 import Home from './pages/Home'
 import About from './pages/about/About'
@@ -42,7 +41,6 @@ function AppContent({ theme }) {
 
   return (
     <div className="app" data-theme={theme}>
-      <CustomCursor />
       <Navigation />
 
       <main>
