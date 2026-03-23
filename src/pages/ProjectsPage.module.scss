@@ -22,28 +22,26 @@
   appearance: none;
   border: 1px solid var(--color-border);
   background-color: transparent;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+  opacity: 0.6;
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   font: inherit;
   font-size: 0.9rem;
   line-height: 1;
   cursor: pointer;
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    border-color var(--transition-fast),
-    opacity var(--transition-fast);
+  transition: all 0.2s ease;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.85;
     border-color: var(--color-text-primary);
   }
 }
 
 .filterButtonActive {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  border-color: var(--color-text-primary);
+  opacity: 1;
 }
 
