@@ -13,8 +13,15 @@ const Home = () => {
       <HeroSection />
       <ProjectsGrid limit={3} />
       <div className={styles.viewAllWrapper}>
-        <Button variant="primary" href="/projects" className={styles.seeAllButton}>
-          {t('home.projects.seeAll')}
+        <Button
+          variant="primary"
+          href="/projects"
+          className={styles.seeAllButton}
+        >
+          <span>{t('home.projects.seeAll')}</span>
+          <span className={styles.seeAllArrow} aria-hidden="true">
+            {' '}
+          </span>
         </Button>
       </div>
       <Footer />

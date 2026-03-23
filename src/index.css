@@ -15,6 +15,7 @@
   /* Couleurs - Light Theme (défaut) */
   --color-text: #1a1a1a;
   --color-text-primary: var(--color-text);
+  --color-text-primary-rgb: 26, 26, 26;
   --color-text-secondary: #666;
   --color-bg: #ffffff;
   --color-bg-primary: var(--color-bg);
@@ -58,6 +59,7 @@
 html.dark {
   --color-text: #e0e0e0;
   --color-text-primary: var(--color-text);
+  --color-text-primary-rgb: 224, 224, 224;
   --color-text-secondary: #a0a0a0;
   --color-bg: #0a0a0a;
   --color-bg-primary: var(--color-bg);
@@ -197,8 +199,14 @@ img {
 }
 
 /* Conteneur principal */
-main {
+.app {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+main {
+  flex: 1;
   /* CORRECTION: S'assurer qu'il n'y a pas de margin-top qui chevauche */
   position: relative;
 }

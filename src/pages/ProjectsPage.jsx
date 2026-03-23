@@ -39,7 +39,9 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <ProjectsGrid projects={filteredProjects} showHeader={false} />
+      <div className={styles.projectsContent}>
+        <ProjectsGrid projects={filteredProjects} showHeader={false} />
+      </div>
       <Footer />
     </>
   )
