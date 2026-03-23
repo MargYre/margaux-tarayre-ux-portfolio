@@ -1,0 +1,49 @@
+.filtersSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: calc(var(--spacing-xl) + 1rem) var(--spacing-lg) var(--spacing-sm);
+}
+
+.pageTitle {
+  margin: 0 0 var(--spacing-sm);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--color-text);
+  text-align: left;
+}
+
+.filtersWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: flex-start;
+}
+
+.filterButton {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    opacity var(--transition-fast);
+
+  &:hover {
+    opacity: 0.8;
+    border-color: var(--color-text-primary);
+  }
+}
+
+.filterButtonActive {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+

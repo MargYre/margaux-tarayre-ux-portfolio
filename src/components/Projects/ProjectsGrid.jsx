@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { projects } from '../../data/projects/projectsData'
+import { projects as defaultProjects } from '../../data/projects/projectsData'
 import styles from './ProjectsGrid.module.scss'
 
-const ProjectsGrid = ({ limit }) => {
+const ProjectsGrid = ({ limit, projects = defaultProjects, showHeader = true }) => {
   const { t } = useTranslation()
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const [showCursor, setShowCursor] = useState(false)
@@ -24,8 +24,11 @@ const ProjectsGrid = ({ limit }) => {
       : projects
 
   return (
-    <section className={styles.section} id="projects">
-      <SectionHeader t={t} />
+    <section
+      className={`${styles.section} ${!showHeader ? styles.sectionNoHeader : ''}`}
+      id="projects"
+    >
+      {showHeader && <SectionHeader t={t} />}
       <div className={styles.grid}>
         {projectsToRender.map(project => (
           <ProjectCard

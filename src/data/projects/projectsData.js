@@ -6,6 +6,7 @@ const projectsList = [
     category: 'product-design',
     featured: true,
     tags: ['Figma', 'Perplexity', 'Synthetic Users'],
+    filterTags: ['UX Research', 'UI Design', 'AI'],
     image: {
       src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
       alt: 'Chantier Pro – vue desktop équipe',
@@ -21,6 +22,7 @@ const projectsList = [
     id: 'celeste-garden',
     slug: 'celeste-garden',
     tags: ['Figma', 'Design System', 'Mobile'],
+    filterTags: ['UI Design'],
     color: '#10b981',
     image: {
       src: '/images/celeste/page1.png',
@@ -46,6 +48,7 @@ const projectsList = [
     id: 'campus-connect',
     slug: 'campus-connect',
     tags: ['User Testing', 'Figma', 'Mobile Design'],
+    filterTags: ['UX Research', 'UI Design'],
     color: '#3b82f6',
     image: null,
     hasMethodology: true,
@@ -72,6 +75,7 @@ const projectsList = [
       alt: 'Evasion – couverture',
     },
     tags: ['Design Fiction', 'UX Research', 'Narrative Design'],
+    filterTags: ['Design Fiction'],
     template: 'evasion',
   },
   {
@@ -80,6 +84,7 @@ const projectsList = [
     year: 2024,
     category: 'product-management',
     featured: false,
+    filterTags: ['Project Methodology'],
     image: null,
     images: [],
   },
@@ -90,6 +95,7 @@ const projectsList = [
     year: 2025,
     category: 'ux-research',
     tags: ['UX Research', 'Workshop', 'Social Listening'],
+    filterTags: ['UX Research'],
     image: null,
     client: 'IIM Digital School',
     team: ['Yassine', 'Maroua', 'Luce', 'Margaux'],

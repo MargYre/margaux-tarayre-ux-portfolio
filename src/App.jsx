@@ -5,7 +5,7 @@ import Navigation from './components/Navigation/Navigation'
 import Home from './pages/Home'
 import About from './pages/about/About'
 import ProjectDetail from './pages/ProjectDetail'
-import Projects from './pages/Projects'
+import ProjectsPage from './pages/ProjectsPage'
 import NotFound from './pages/NotFound'
 import './App.module.scss'
 
@@ -48,7 +48,7 @@ function AppContent({ theme }) {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />

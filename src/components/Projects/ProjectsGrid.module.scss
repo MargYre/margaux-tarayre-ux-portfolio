@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.sectionNoHeader {
+  padding-top: var(--spacing-sm);
+}
+
 .header {
   text-align: center;
   margin-bottom: var(--spacing-2xl);
