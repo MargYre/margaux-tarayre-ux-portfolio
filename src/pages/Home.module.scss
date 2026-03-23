@@ -1,0 +1,16 @@
+.viewAllWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  width: 100%;
+}
+
+.seeAllButton {
+  padding: 1rem 3rem !important;
+  font-size: 1.05rem !important;
+  background-color: var(--color-text-primary) !important;
+  color: var(--color-bg-primary) !important;
+  border: 1px solid var(--color-text-primary) !important;
+}
+

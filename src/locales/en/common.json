@@ -29,6 +29,11 @@
     "viewCaseStudy": "View case study",
     "github": "GitHub"
   },
+  "home": {
+    "projects": {
+      "seeAll": "See all projects"
+    }
+  },
   "footer": {
     "copyright": "© 2025 Margaux Tarayre. All rights reserved.",
     "email": "Email",
