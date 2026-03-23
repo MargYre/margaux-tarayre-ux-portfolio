@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { projects } from '../data/projects/projectsData'
 import ProjectsGrid from '../components/Projects/ProjectsGrid'
@@ -10,8 +10,14 @@ const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState('All')
   const availableFilters = useMemo(
     () => ['All', ...new Set(projects.flatMap(project => project.filterTags || []))],
-    []
+    [projects]
   )
+
+  useEffect(() => {
+    if (!availableFilters.includes(activeFilter)) {
+      setActiveFilter('All')
+    }
+  }, [availableFilters, activeFilter])
 
   const filteredProjects =
     activeFilter === 'All'
@@ -42,7 +48,9 @@ const ProjectsPage = () => {
       <div className={styles.projectsContent}>
         <ProjectsGrid projects={filteredProjects} showHeader={false} />
       </div>
-      <Footer />
+      <div className={styles.footerSpacing}>
+        <Footer />
+      </div>
     </>
   )
 }
