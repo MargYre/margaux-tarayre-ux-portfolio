@@ -19,7 +19,9 @@ const ProjectsGrid = ({ limit }) => {
   }, [])
 
   const projectsToRender =
-    typeof limit === 'number' && Number.isFinite(limit) ? projects.slice(0, limit) : projects
+    typeof limit === 'number' && Number.isFinite(limit)
+      ? projects.slice(0, limit)
+      : projects
 
   return (
     <section className={styles.section} id="projects">
@@ -34,19 +36,6 @@ const ProjectsGrid = ({ limit }) => {
           />
         ))}
       </div>
-
-      {/* Curseur personnalisé */}
-      {showCursor && (
-        <div
-          className={styles.customCursor}
-          style={{
-            left: `${cursorPos.x}px`,
-            top: `${cursorPos.y}px`,
-          }}
-        >
-          {t('projects.view')}
-        </div>
-      )}
     </section>
   )
 }
@@ -68,7 +57,7 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
     'campus-connect': 'campusConnect',
     eduwatch: 'eduwatch',
     evasion: 'evasion',
-    'cocovoit': 'cocovoit',
+    cocovoit: 'cocovoit',
     'enfants-ecrans': 'enfantsEcrans',
     'chantier-pro': 'chantierPro',
   }
