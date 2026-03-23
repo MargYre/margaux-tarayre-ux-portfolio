@@ -6,7 +6,7 @@ const projectsList = [
     category: 'product-design',
     featured: true,
     tags: ['Figma', 'Perplexity', 'Synthetic Users'],
-    filterTags: ['UX Research', 'UI Design', 'AI'],
+    filterTags: ['UX Research', 'UI Design', 'IA Tools'],
     image: {
       src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
       alt: 'Chantier Pro – vue desktop équipe',
