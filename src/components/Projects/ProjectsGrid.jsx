@@ -56,14 +56,9 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
 
   // Mapper les IDs des projets aux clés de traduction
   const projectKeyMap = {
-    'celeste-garden': 'celesteGarden',
-    'campus-connect': 'campusConnect',
-    eduwatch: 'eduwatch',
-    evasion: 'evasion',
-    cocovoit: 'cocovoit',
-    'enfants-ecrans': 'enfantsEcrans',
-    edify: 'edify',
     'good-morning': 'goodMorning',
+    edify: 'edify',
+    'campus-connect': 'campusConnect',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
@@ -112,42 +107,15 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
         alt="Edify preview"
         className={styles.projectPreviewImage}
       />
-    ) : projectId === 'celeste-garden' ? (
-      <img
-        src="/images/celeste/page1.png"
-        alt="Celeste's Garden preview"
-        className={styles.projectPreviewImage}
-      />
     ) : projectId === 'campus-connect' ? (
       <img
         src="/images/campus-connect/screenshot1.webp"
         alt="Campus Connect preview"
         className={styles.projectPreviewImage}
       />
-    ) : projectId === 'evasion' ? (
-      <img
-        src="/images/evasion/interface-missions.png"
-        alt="EVASION preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : projectId === 'enfants-ecrans' ? (
-      <img
-        src="/images/luma/luma.png"
-        alt="Luma preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : projectId === 'cocovoit' ? (
-      <img
-        src="/images/cocovoit/agile-methodology.webp"
-        alt="Campus Connect preview"
-        className={styles.projectPreviewImage}
-      />
     ) : projectId === 'good-morning' ? (
       <img
-        src={encodeURI(
-          image?.src ||
-            '/images/good-morning/04-Charte Graphique.png'
-        )}
+        src={image?.src ?? '/images/good-morning/03-Tests_graphique.png'}
         alt="Good Morning preview"
         className={styles.projectPreviewImage}
       />

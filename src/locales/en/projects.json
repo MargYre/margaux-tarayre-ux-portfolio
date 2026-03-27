@@ -11,13 +11,6 @@
     "theLore": "The Lore",
     "viewCaseStudy": "View case study",
 
-    "celesteGarden": {
-      "title": "Celeste's Garden",
-      "subtitle": "E-commerce clothing website",
-      "category": "UX Design",
-      "description": "My first mockups of an online retail site, created on Figma as part of my training."
-    },
-
     "campusConnect": {
       "title": "Campus Connect",
       "subtitle": "Student application",
@@ -25,25 +18,6 @@
       "description": "App facilitating student life with comprehensive testing protocol."
     },
     "view": "View",
-
-    "evasion": {
-      "category": "Design Fiction",
-      "title": "É.V.A.S.I.O.N",
-      "subtitle": "When children become the system's main resource",
-      "description": "Dystopian government program testing atypical children"
-    },
-    "cocovoit": {
-      "category": "Product Management",
-      "title": "Cocovoit",
-      "subtitle": "Rideshare application",
-      "description": "Applying Agile & Scrum methodology to a mobile project"
-    },
-    "enfantsEcrans": {
-      "category": "UX Research",
-      "title": "Luma",
-      "subtitle": "Children and screens",
-      "description": "UX research project on 0-6 year olds and screens, collaborative workshops, Nova solution."
-    },
 
     "edify": {
       "category": "Product Design",

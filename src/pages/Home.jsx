@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <ProjectsGrid limit={4} />
+      <ProjectsGrid limit={3} />
       <div className={styles.viewAllWrapper}>
         <Button
           variant="primary"

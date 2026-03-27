@@ -6,13 +6,17 @@ import Lightbox from '../../../components/Lightbox/Lightbox'
 import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
 import styles from './GoodMorningTemplate.module.scss'
 
-/** Chemins avec espaces : encodeURI sur l'URL complète */
-const IMG = {
-  arborescence: '/images/good-morning/01-Arborescence.png',
-  wireframe: '/images/good-morning/02-Wireframe.png',
-  testsGraphique: encodeURI('/images/good-morning/03-Tests graphique.png'),
-  charte: encodeURI('/images/good-morning/04-Charte Graphique.png'),
-}
+const IMG_ARCHITECTURE = '/images/good-morning/01-Arborescence.png'
+const IMG_WIREFRAMES = '/images/good-morning/02-Wireframe.png'
+const IMG_DA = '/images/good-morning/03-Tests_graphique.png'
+const IMG_DESIGN_SYSTEM = '/images/good-morning/04-Charte%20Graphique.png'
+
+const DELIVERABLES = [
+  { key: 'architecture', src: IMG_ARCHITECTURE },
+  { key: 'wireframes', src: IMG_WIREFRAMES },
+  { key: 'da', src: IMG_DA },
+  { key: 'designSystem', src: IMG_DESIGN_SYSTEM },
+]
 
 const GoodMorningTemplate = ({ project }) => {
   const { t } = useTranslation()
@@ -20,12 +24,7 @@ const GoodMorningTemplate = ({ project }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxIndex, setLightboxIndex] = useState(0)
 
-  const lightboxImages = [
-    IMG.arborescence,
-    IMG.wireframe,
-    IMG.testsGraphique,
-    IMG.charte,
-  ]
+  const lightboxImages = DELIVERABLES.map(d => d.src)
 
   const openLightbox = index => {
     setLightboxIndex(index)
@@ -33,102 +32,83 @@ const GoodMorningTemplate = ({ project }) => {
   }
 
   const lightboxTranslations = {
-    close: t('goodMorning.lightbox.close'),
-    previous: t('goodMorning.lightbox.previous'),
-    next: t('goodMorning.lightbox.next'),
-    zoomIn: t('goodMorning.lightbox.zoomIn'),
-    zoomOut: t('goodMorning.lightbox.zoomOut'),
+    close: t('goodmorning.lightbox.close'),
+    previous: t('goodmorning.lightbox.previous'),
+    next: t('goodmorning.lightbox.next'),
+    zoomIn: t('goodmorning.lightbox.zoomIn'),
+    zoomOut: t('goodmorning.lightbox.zoomOut'),
   }
 
   return (
     <div className={styles.template}>
-      <div className={styles.inner}>
-        <div className={styles.backLinkWrapper}>
-          <Link to="/" className={styles.backLink}>
-            {t('goodMorning.nav.back')}
-          </Link>
-        </div>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <div className={styles.headerGrid}>
+            <div className={styles.headerContent}>
+              <div className={styles.backLinkWrapper}>
+                <Link to="/" className={styles.backLink}>
+                  {t('goodmorning.nav.back')}
+                </Link>
+              </div>
 
-        <header className={styles.hero}>
-          <span className={styles.heroTag}>{t('goodMorning.hero.tag')}</span>
-          <h1 className={styles.heroTitle}>{t('goodMorning.hero.title')}</h1>
-          <p className={styles.heroSubtitle}>{t('goodMorning.hero.subtitle')}</p>
-          <a
-            className={styles.cta}
-            href={prototypeUrl || '#'}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t('goodMorning.hero.cta')}
-          </a>
+              <span className={styles.tag}>{t('goodmorning.hero.tag')}</span>
+              <h1 className={styles.title}>{t('goodmorning.hero.title')}</h1>
+              <p className={styles.subtitle}>{t('goodmorning.hero.subtitle')}</p>
+
+              <a
+                className={styles.cta}
+                href={prototypeUrl || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('goodmorning.hero.cta')}
+              </a>
+            </div>
+          </div>
         </header>
 
-        <section className={styles.section} aria-labelledby="gm-arch">
-          <h2 id="gm-arch" className={styles.sectionTitle}>
-            {t('goodMorning.sections.architecture.title')}
-          </h2>
-          <p className={styles.sectionBody}>
-            {t('goodMorning.sections.architecture.body')}
-          </p>
-          <div className={styles.imageGrid}>
-            <figure className={styles.figure}>
-              <img
-                src={IMG.arborescence}
-                alt=""
-                className={styles.image}
-                loading="lazy"
-                onClick={() => openLightbox(0)}
-              />
-            </figure>
-            <figure className={styles.figure}>
-              <img
-                src={IMG.wireframe}
-                alt=""
-                className={styles.image}
-                loading="lazy"
-                onClick={() => openLightbox(1)}
-              />
-            </figure>
-          </div>
-        </section>
+        <div className={styles.content}>
+          {DELIVERABLES.map((section, index) => (
+            <section
+              key={section.key}
+              className={styles.deliverableSection}
+              aria-labelledby={`gm-${section.key}`}
+            >
+              <h2
+                id={`gm-${section.key}`}
+                className={styles.deliverableTitle}
+              >
+                {t(`goodmorning.sections.${section.key}.title`)}
+              </h2>
+              <p className={styles.deliverableDescription}>
+                {t(`goodmorning.sections.${section.key}.description`)}
+              </p>
+              <figure className={styles.deliverableFigure}>
+                <img
+                  src={section.src}
+                  alt=""
+                  className={styles.deliverableImage}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  onClick={() => openLightbox(index)}
+                />
+              </figure>
+            </section>
+          ))}
+        </div>
 
-        <section className={styles.section} aria-labelledby="gm-da">
-          <h2 id="gm-da" className={styles.sectionTitle}>
-            {t('goodMorning.sections.artDirection.title')}
-          </h2>
-          <p className={styles.sectionBody}>
-            {t('goodMorning.sections.artDirection.body')}
-          </p>
-          <div className={styles.singleImageWrap}>
-            <figure className={styles.figure}>
-              <img
-                src={IMG.testsGraphique}
-                alt=""
-                className={styles.image}
-                loading="lazy"
-                onClick={() => openLightbox(2)}
-              />
-            </figure>
-          </div>
-        </section>
-
-        <section className={styles.section} aria-labelledby="gm-ds">
-          <h2 id="gm-ds" className={styles.sectionTitle}>
-            {t('goodMorning.sections.designSystem.title')}
-          </h2>
-          <p className={styles.sectionBody}>
-            {t('goodMorning.sections.designSystem.body')}
-          </p>
-          <div className={styles.singleImageWrap}>
-            <figure className={styles.figure}>
-              <img
-                src={IMG.charte}
-                alt=""
-                className={styles.image}
-                loading="lazy"
-                onClick={() => openLightbox(3)}
-              />
-            </figure>
+        <section className={styles.finalCtaSection}>
+          <div className={styles.finalCtaContent}>
+            <h2 className={styles.finalCtaTitle}>
+              {t('goodmorning.cta.title')}
+            </h2>
+            <a
+              href={prototypeUrl || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.finalCtaButton}
+            >
+              {t('goodmorning.cta.button')}
+            </a>
           </div>
         </section>
       </div>

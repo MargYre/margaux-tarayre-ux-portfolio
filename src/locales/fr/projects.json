@@ -11,13 +11,6 @@
     "theLore": "Le Lore",
     "viewCaseStudy": "Voir l'étude de cas",
 
-    "celesteGarden": {
-      "title": "Celeste's Garden",
-      "subtitle": "Site e-commerce de vêtements",
-      "category": "UX Design",
-      "description": "Mes premières maquettes d'un site de vente en ligne, réalisées sur Figma dans le cadre de ma formation."
-    },
-
     "campusConnect": {
       "title": "Campus Connect",
       "subtitle": "Application étudiante",
@@ -25,24 +18,6 @@
       "description": "Application facilitant la vie étudiante avec protocole de test complet."
     },
     "view": "Voir",
-    "evasion": {
-      "category": "Design Fiction",
-      "title": "É.V.A.S.I.O.N",
-      "subtitle": "Quand les enfants deviennent la ressource principale du système",
-      "description": "Programme gouvernemental dystopique testant les enfants atypiques"
-    },
-    "cocovoit": {
-      "category": "Product Management",
-      "title": "Cocovoit",
-      "subtitle": "Rideshare application",
-      "description": "Applying Agile & Scrum methodology to a mobile project"
-    },
-    "enfantsEcrans": {
-      "category": "UX Research",
-      "title": "Luma",
-      "subtitle": "Les enfants et les écrans",
-      "description": "Projet de recherche UX sur les 0-6 ans et les écrans, ateliers collaboratifs, solution Nova."
-    },
 
     "edify": {
       "category": "Product Design",

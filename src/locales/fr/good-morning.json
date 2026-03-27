@@ -1,5 +1,5 @@
 {
-  "goodMorning": {
+  "goodmorning": {
     "nav": {
       "back": "← Accueil"
     },
@@ -16,18 +16,26 @@
       "zoomIn": "Zoomer",
       "zoomOut": "Dézoomer"
     },
+    "cta": {
+      "title": "Voir le prototype interactif sur Figma",
+      "button": "Ouvrir le prototype"
+    },
     "sections": {
       "architecture": {
-        "title": "UX",
-        "body": "Définition d'une arborescence logique et de wireframes low-fi pour valider l'ergonomie avant la DA."
+        "title": "Architecture d'information",
+        "description": "Structuration des niveaux de navigation et des contenus pour clarifier le parcours d'hydratation. Définition du parcours utilisateur et de l'arborescence des écrans."
       },
-      "artDirection": {
-        "title": "DA",
-        "body": "Recherche d'une identité visuelle forte, minimaliste et contrastée."
+      "wireframes": {
+        "title": "Structure & ergonomie",
+        "description": "Wireframes low-fi pour poser la hiérarchie visuelle, les zones d'action et le rythme de lecture. Première validation des flux et de la lisibilité avant les tests graphiques."
+      },
+      "da": {
+        "title": "Direction artistique",
+        "description": "Exploration de directions esthétiques fortes, minimalistes et contrastées pour cadrer la DA. Tests graphiques et pistes d'identité pour choisir une direction cohérente avec le produit."
       },
       "designSystem": {
-        "title": "UI",
-        "body": "Établissement d'une charte graphique rigoureuse pour garantir la cohérence du produit final."
+        "title": "Système design & charte",
+        "description": "Formalisation des règles typographiques, couleurs et composants pour assurer la cohérence du livrable. Charte graphique et socle UI pour industrialiser les écrans finaux."
       }
     }
   }

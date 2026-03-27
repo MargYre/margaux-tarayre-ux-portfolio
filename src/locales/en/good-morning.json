@@ -1,5 +1,5 @@
 {
-  "goodMorning": {
+  "goodmorning": {
     "nav": {
       "back": "← Home"
     },
@@ -16,18 +16,26 @@
       "zoomIn": "Zoom in",
       "zoomOut": "Zoom out"
     },
+    "cta": {
+      "title": "View the interactive prototype on Figma",
+      "button": "Open prototype"
+    },
     "sections": {
       "architecture": {
-        "title": "UX",
-        "body": "Defining a logical information architecture and low-fi wireframes to validate ergonomics before visual design."
+        "title": "Information architecture",
+        "description": "Structuring navigation levels and content to clarify the hydration journey. User journey definition and screen tree."
       },
-      "artDirection": {
-        "title": "DA",
-        "body": "Exploring a strong, minimalist, high-contrast visual identity."
+      "wireframes": {
+        "title": "Structure & ergonomics",
+        "description": "Low-fi wireframes to establish visual hierarchy, action areas, and reading rhythm. Early validation of flows and readability before graphic exploration."
+      },
+      "da": {
+        "title": "Art direction",
+        "description": "Exploring bold, minimalist, high-contrast directions to frame the art direction. Graphic tests and identity directions aligned with the product vision."
       },
       "designSystem": {
-        "title": "UI",
-        "body": "Establishing a rigorous graphic charter to ensure consistency in the final product."
+        "title": "Design system & guidelines",
+        "description": "Formalizing typography, color, and component rules for a consistent deliverable. Graphic charter and UI foundation to scale final screens."
       }
     }
   }

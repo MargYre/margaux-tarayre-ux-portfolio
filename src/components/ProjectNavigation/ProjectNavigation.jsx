@@ -11,13 +11,9 @@ const ProjectNavigation = ({ currentProjectId }) => {
 
   // Liste des projets dans l'ordre (VÉRIFIE que ces IDs correspondent exactement)
   const projects = [
-    { id: 'edify', route: '/projects/edify' },
-    { id: 'celeste-garden', route: '/projects/celeste-garden' },
-    { id: 'campus-connect', route: '/projects/campus-connect' },
-    { id: 'evasion', route: '/projects/evasion' },
-    { id: 'cocovoit', route: '/projects/cocovoit' },
-    { id: 'enfants-ecrans', route: '/projects/enfants-ecrans' },
     { id: 'good-morning', route: '/projects/good-morning' },
+    { id: 'edify', route: '/projects/edify' },
+    { id: 'campus-connect', route: '/projects/campus-connect' },
   ]
 
   // Trouver l'index du projet actuel

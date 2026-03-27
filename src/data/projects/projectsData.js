@@ -1,5 +1,23 @@
 const projectsList = [
   {
+    id: 'good-morning',
+    slug: 'good-morning',
+    title: 'Good Morning',
+    thumbnail: '/images/good-morning/03-Tests_graphique.png',
+    prototype:
+      'https://www.figma.com/proto/FaktydYm0fH5gS7nHkQq92/Good-Morning?node-id=27-538&p=f&t=9ROPo5N0XLNgBpFM-0&scaling=scale-down&content-scaling=fixed&page-id=27%3A507&starting-point-node-id=27%3A509',
+    year: 2026,
+    category: 'product-design',
+    featured: true,
+    tags: ['Figma', 'Product Design', 'UI'],
+    filterTags: ['UI Design'],
+    image: {
+      src: '/images/good-morning/03-Tests_graphique.png',
+      alt: 'Good Morning — test graphique',
+    },
+    images: [],
+  },
+  {
     id: 'edify',
     slug: 'edify',
     prototype:
@@ -21,32 +39,6 @@ const projectsList = [
     ],
   },
   {
-    id: 'celeste-garden',
-    slug: 'celeste-garden',
-    tags: ['Figma', 'Design System', 'Mobile'],
-    filterTags: ['UI Design'],
-    color: '#10b981',
-    image: {
-      src: '/images/celeste/page1.png',
-      alt: 'Celeste Garden – aperçu page 1',
-    },
-    hasMethodology: false,
-    hasLore: false,
-    year: 2025,
-    client: 'Exercice académique',
-    role: 'UI/UX Designer',
-    duration: 'Licence Pro Design',
-    team: ['Solo'],
-    link: null,
-    prototype: null,
-    images: [
-      { src: '/images/celeste/page1.png', alt: 'Celeste Garden – page 1' },
-      { src: '/images/celeste/page2.png', alt: 'Celeste Garden – page 2' },
-      { src: '/images/celeste/page3.png', alt: 'Celeste Garden – page 3' },
-      { src: '/images/celeste/page4.png', alt: 'Celeste Garden – page 4' },
-    ],
-  },
-  {
     id: 'campus-connect',
     slug: 'campus-connect',
     tags: ['User Testing', 'Figma', 'Mobile Design'],
@@ -64,67 +56,10 @@ const projectsList = [
     prototype: null,
     images: [],
   },
-  {
-    id: 'evasion',
-    slug: 'evasion',
-    titleKey: 'projects.evasion.title',
-    descriptionKey: 'projects.evasion.description',
-    year: 2025,
-    category: 'design-fiction',
-    color: '#1a1a1a',
-    image: {
-      src: '/images/evasion/cover.png',
-      alt: 'Evasion – couverture',
-    },
-    tags: ['Design Fiction', 'UX Research', 'Narrative Design'],
-    filterTags: ['Design Fiction'],
-    template: 'evasion',
-  },
-  {
-    id: 'cocovoit',
-    slug: 'cocovoit',
-    year: 2024,
-    category: 'product-management',
-    featured: false,
-    filterTags: ['Project Methodology'],
-    image: null,
-    images: [],
-  },
-  {
-    id: 'enfants-ecrans',
-    slug: 'enfants-ecrans',
-    name: 'Luma',
-    year: 2025,
-    category: 'ux-research',
-    tags: ['UX Research', 'Workshop', 'Social Listening'],
-    filterTags: ['UX Research'],
-    image: null,
-    client: 'IIM Digital School',
-    team: ['Yassine', 'Maroua', 'Luce', 'Margaux'],
-    images: [],
-  },
-  {
-    id: 'good-morning',
-    slug: 'good-morning',
-    title: 'Good Morning',
-    thumbnail: '/images/good-morning/04-Charte Graphique.png',
-    prototype:
-      'https://www.figma.com/proto/FaktydYm0fH5gS7nHkQq92/Good-Morning?node-id=27-538&p=f&t=9ROPo5N0XLNgBpFM-0&scaling=scale-down&content-scaling=fixed&page-id=27%3A507&starting-point-node-id=27%3A509',
-    year: 2026,
-    category: 'product-design',
-    featured: true,
-    tags: ['Figma', 'Product Design', 'UI'],
-    filterTags: ['UI Design'],
-    image: {
-      src: '/images/good-morning/04-Charte Graphique.png',
-      alt: 'Good Morning — charte graphique',
-    },
-    images: [],
-  },
 ]
-export const projects = [...projectsList].sort(
-  (a, b) => (b.year || 0) - (a.year || 0)
-)
+
+/** Ordre figé : Good Morning → Edify → Campus Connect (plus récent → plus ancien) */
+export const projects = [...projectsList]
 
 export const getProjectBySlug = slug => {
   return projects.find(project => project.slug === slug)
