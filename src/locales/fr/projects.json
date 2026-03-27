@@ -44,11 +44,11 @@
       "description": "Projet de recherche UX sur les 0-6 ans et les écrans, ateliers collaboratifs, solution Nova."
     },
 
-    "chantierPro": {
+    "edify": {
       "category": "Product Design",
-      "title": "ChantierPro",
-      "subtitle": "Refonte du parcours de création de chantier",
-      "description": "Projet personnel orienté produit, explorant l'usage de Figma, Perplexity et Synthetic Users pour optimiser la création de chantier."
+      "title": "Edify",
+      "subtitle": "Refonte du parcours création de chantier",
+      "description": "Projet personnel de recherche UX/UI, explorant l'usage de Figma, Perplexity et Synthetic Users pour optimiser la création d'un projet terrain."
     }
   }
 }

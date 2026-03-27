@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import Lightbox from '../../../components/Lightbox/Lightbox'
 import styles from './ChantierProTemplate.module.scss'
 
 const ChantierProTemplate = ({ project }) => {
   const { t } = useTranslation()
-  const [selectedImage, setSelectedImage] = useState(null)
-  const [isZoomed, setIsZoomed] = useState(false)
-  const prototypeUrl =
-    project?.prototype || project?.link || t('chantierpro.hero.prototypeUrl')
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+  const prototypeUrl = project?.prototype ?? ''
   const contextObjectives = t('chantierpro.context.objectives', {
     returnObjects: true,
   })
@@ -22,50 +22,65 @@ const ChantierProTemplate = ({ project }) => {
     returnObjects: true,
   })
 
-  const personaNicolasSrc = '/images/chantierPro/03-Persona-Nicolas.png'
-  const journeyMapSrc = '/images/chantierPro/04-journey-map.png'
-  const groupedInsightSrc = '/images/chantierPro/06-Grouped Insight.webp'
-  const oldFlowSrc = '/images/chantierPro/07-Flow chart.jpg'
-  const newFlowSrc = '/images/chantierPro/08-UserFlow Mobile.webp'
+  const personaNicolasSrc = '/images/edify/03-Persona-Nicolas.png'
+  const journeyMapSrc = '/images/edify/04-journey-map.png'
+  const groupedInsightSrc = '/images/edify/06-Grouped Insight.webp'
+  const oldFlowSrc = '/images/edify/07-Flow chart.jpg'
+  const newFlowSrc = '/images/edify/08-UserFlow Mobile.webp'
 
-  const handleImageClick = src => {
-    setSelectedImage(src)
-    setIsZoomed(false)
-  }
+  const allLightboxImages = [
+    '/images/edify/01-synteticUsers.webp',
+    '/images/edify/02-gaspard-synteticUsers.webp',
+    personaNicolasSrc,
+    journeyMapSrc,
+    groupedInsightSrc,
+    oldFlowSrc,
+    newFlowSrc,
+    '/images/edify/08-wireframe.webp',
+    '/images/edify/09-maquettes.webp',
+  ]
 
-  const handleCloseModal = () => {
-    setSelectedImage(null)
-    setIsZoomed(false)
+  const handleImageClick = imageOrIndex => {
+    const index =
+      typeof imageOrIndex === 'number'
+        ? imageOrIndex
+        : allLightboxImages.indexOf(imageOrIndex)
+
+    if (index < 0) return
+    setLightboxIndex(index)
+    setLightboxOpen(true)
   }
 
   useEffect(() => {
-    if (!selectedImage) {
-      return
-    }
+    const previousTitle = document.title
+    const metaDescription =
+      document.querySelector('meta[name="description"]') ||
+      (() => {
+        const meta = document.createElement('meta')
+        meta.name = 'description'
+        document.head.appendChild(meta)
+        return meta
+      })()
+    const previousDescription = metaDescription.getAttribute('content') || ''
 
-    const originalOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    const handleKeyDown = event => {
-      if (event.key === 'Escape') {
-        handleCloseModal()
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
+    document.title = 'Edify - Etude de cas UX/UI personnelle'
+    metaDescription.setAttribute(
+      'content',
+      'Edify, projet personnel de recherche UX/UI: refonte du parcours de creation avec approche terrain et prototype interactif.'
+    )
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = originalOverflow || 'unset'
+      document.title = previousTitle
+      metaDescription.setAttribute('content', previousDescription)
     }
-  }, [selectedImage])
+  }, [])
 
   return (
     <div className={styles.template}>
       <div className={styles.container}>
         <header className={styles.header}>
           <div className={styles.headerGrid}>
-            <div className={styles.headerLeft}>
+            <div className={styles.headerContent}>
               <div className={styles.backLinkWrapper}>
                 <Link to="/" className={styles.backLink}>
                   {t('chantierpro.nav.back')}
@@ -109,21 +124,12 @@ const ChantierProTemplate = ({ project }) => {
 
               <a
                 className={styles.cta}
-                href={prototypeUrl}
+                href={prototypeUrl || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {t('chantierpro.hero.cta')}
               </a>
-            </div>
-
-            <div className={styles.headerRight}>
-              <img
-                className={styles.heroImage}
-                src="/images/chantierPro/chantierPro-desktop-quipe.webp"
-                alt="ChantierPro desktop overview"
-                loading="lazy"
-              />
             </div>
           </div>
         </header>
@@ -212,22 +218,22 @@ const ChantierProTemplate = ({ project }) => {
 
             <div className={styles.discoveryImages}>
               <img
-                src="/images/chantierPro/01-synteticUsers.webp"
-                alt="Personas Synthetic Users pour ChantierPro"
+                src="/images/edify/01-synteticUsers.webp"
+                alt="Personas Synthetic Users pour Edify"
                 className={styles.discoveryImage}
                 loading="lazy"
                 onClick={() =>
-                  handleImageClick('/images/chantierPro/01-synteticUsers.webp')
+                  handleImageClick('/images/edify/01-synteticUsers.webp')
                 }
               />
               <img
-                src="/images/chantierPro/02-gaspard-synteticUsers.webp"
-                alt="Interview Synthetic Users de Gaspard pour ChantierPro"
+                src="/images/edify/02-gaspard-synteticUsers.webp"
+                alt="Interview Synthetic Users de Gaspard pour Edify"
                 className={styles.discoveryImage}
                 loading="lazy"
                 onClick={() =>
                   handleImageClick(
-                    '/images/chantierPro/02-gaspard-synteticUsers.webp'
+                    '/images/edify/02-gaspard-synteticUsers.webp'
                   )
                 }
               />
@@ -370,12 +376,12 @@ const ChantierProTemplate = ({ project }) => {
             </div>
             <div className={styles.designCol}>
               <img
-                src="/images/chantierPro/08-wireframe.webp"
+                src="/images/edify/08-wireframe.webp"
                 alt=""
                 className={styles.wireframesImage}
                 loading="lazy"
                 onClick={() =>
-                  handleImageClick('/images/chantierPro/08-wireframe.webp')
+                  handleImageClick('/images/edify/08-wireframe.webp')
                 }
               />
             </div>
@@ -403,12 +409,12 @@ const ChantierProTemplate = ({ project }) => {
             </div>
             <div className={styles.designCol}>
               <img
-                src="/images/chantierPro/09-maquettes.webp"
+                src="/images/edify/09-maquettes.webp"
                 alt=""
                 className={styles.processImage}
                 loading="lazy"
                 onClick={() =>
-                  handleImageClick('/images/chantierPro/09-maquettes.webp')
+                  handleImageClick('/images/edify/09-maquettes.webp')
                 }
               />
             </div>
@@ -421,7 +427,7 @@ const ChantierProTemplate = ({ project }) => {
               {t('chantierpro.design.finalUi.ctaTitle')}
             </h2>
             <a
-              href={prototypeUrl}
+              href={prototypeUrl || '#'}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.finalCtaButton}
@@ -432,34 +438,19 @@ const ChantierProTemplate = ({ project }) => {
         </section>
       </div>
 
-      {selectedImage && (
-        <div className={styles.modalOverlay} onClick={handleCloseModal}>
-          <div
-            className={`${styles.modalContent} ${
-              isZoomed ? styles.modalContentZoomed : ''
-            }`}
-          >
-            <button
-              type="button"
-              className={styles.modalClose}
-              onClick={handleCloseModal}
-            >
-              ×
-            </button>
-            <img
-              src={selectedImage}
-              alt=""
-              className={`${styles.modalImage} ${
-                isZoomed ? styles.modalImageZoomed : ''
-              }`}
-              loading="lazy"
-              onClick={event => {
-                event.stopPropagation()
-                setIsZoomed(prev => !prev)
-              }}
-            />
-          </div>
-        </div>
+      {lightboxOpen && (
+        <Lightbox
+          images={allLightboxImages}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+          translations={{
+            close: 'Fermer',
+            previous: 'Image precedente',
+            next: 'Image suivante',
+            zoomIn: 'Zoomer',
+            zoomOut: 'Dezoomer',
+          }}
+        />
       )}
     </div>
   )

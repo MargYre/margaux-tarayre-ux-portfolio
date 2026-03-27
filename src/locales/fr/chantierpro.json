@@ -5,10 +5,9 @@
     },
     "hero": {
       "tag": "Product Design • Projet Personnel",
-      "title": "Refonte du parcours de création de chantier",
-      "subtitle": "Optimiser la saisie de données en conditions de terrain pour réduire le taux d'abandon.",
+      "title": "Refonte du parcours création de chantier",
+      "subtitle": "Optimisation de l'expérience utilisateur pour réduire le taux d'abandon en conditions terrain.",
       "cta": "Voir le prototype Figma",
-      "prototypeUrl": "https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193",
       "meta": {
         "role": { "label": "Rôle", "value": "Product Designer (Solo)" },
         "tools": {
@@ -20,8 +19,8 @@
     },
     "context": {
       "title": "Contexte & Enjeux",
-      "project": "Projet : refonte du flux de création de chantier pour ChantierPro (SaaS BTP). L’objectif est de simplifier un workflow complexe tout en respectant les habitudes du secteur.",
-      "methodology": "Méthodologie : design challenge réalisé en 4 jours, avec assistance IA pour l’analyse stratégique et l’efficacité du travail.",
+      "project": "Projet : refonte du flux de creation de projet pour Edify, une etude de cas personnelle orientee SaaS terrain. L'objectif est de simplifier un workflow complexe tout en respectant les habitudes du secteur.",
+      "methodology": "Methodologie : etude de cas en autonomie, avec assistance IA pour l'analyse strategique et l'efficacite du travail.",
       "objectives": [
         "Identifier les points de friction clés dans le parcours actuel",
         "Livrer un prototype haute fidélité prêt à tester"
@@ -40,23 +39,23 @@
       },
       "personas": {
         "title": "Synthetic Users (interviews simulées)",
-        "gaspard": "Gaspard — Connexion instable sur chantier, préfère saisir les données au calme, le soir ou au bureau.",
+        "gaspard": "Gaspard — Connexion instable sur le terrain, préfère saisir les données au calme, le soir ou au bureau.",
         "nadia": "Nadia — Utilise son téléphone d’une seule main avec des gants, a besoin d’une interface simple et guidée."
       },
       "insightsTitle": "Insights clés",
       "insights": {
-        "business": "Arrêter la perte financière : environ 10% du budget d’un chantier est perdu à cause d’un manque d’organisation.",
+        "business": "Arrêter la perte financière : environ 10% du budget d’un projet est perdu à cause d’un manque d’organisation.",
         "user": "Simplifier pour fidéliser : 60% à 80% des utilisateurs abandonnent dès que le formulaire devient trop long ou complexe."
       },
       "cta": "Consulter la note de cadrage complète",
-      "pdfUrl": "/images/chantierPro/note-cadrage-chantierpro.pdf"
+      "pdfUrl": "/images/edify/note-cadrage-chantierpro.pdf"
     },
     "empathy": {
       "title": "Étape 02 : Empathy",
-      "intro": "À partir des données terrain, j’ai consolidé un persona principal et un parcours utilisateur pour cadrer les opportunités de design sur le chantier.",
+      "intro": "À partir des données terrain, j’ai consolidé un persona principal et un parcours utilisateur pour cadrer les opportunités de design sur le terrain.",
       "persona": {
         "title": "Persona — Nicolas B.",
-        "caption": "Chef de chantier, référent terrain pour la création et le suivi des chantiers."
+        "caption": "Conducteur de travaux, référent terrain pour la création et le suivi des opérations."
       },
       "journey": {
         "title": "Parcours utilisateur (Journey Map)",
@@ -72,7 +71,7 @@
       "points": [
         {
           "title": "Ergonomie terrain",
-          "body": "Basculer vers la voix et le tactile : gants épais, poussière de béton et bruit de chantier rendent la saisie classique peu réaliste."
+          "body": "Basculer vers la voix et le tactile : gants épais, poussière de béton et bruit ambiant sur site rendent la saisie classique peu réaliste."
         },
         {
           "title": "Fiabilité",
@@ -104,7 +103,7 @@
       },
       "finalUi": {
         "title": "Étape 06 : UI Haute Fidélité & Prototype",
-        "intro": "Design d'une interface à haut contraste avec un \"Mode Outdoor\" spécifique pour contrer l'éblouissement solaire sur les chantiers.",
+        "intro": "Design d'une interface à haut contraste avec un \"Mode Outdoor\" spécifique pour contrer l'éblouissement solaire en extérieur.",
         "features": [
           "Mode Outdoor (contraste inversé)",
           "Saisie vocale & scan OCR intégrés",

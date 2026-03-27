@@ -45,11 +45,11 @@
       "description": "UX research project on 0-6 year olds and screens, collaborative workshops, Nova solution."
     },
 
-    "chantierPro": {
+    "edify": {
       "category": "Product Design",
-      "title": "ChantierPro",
-      "subtitle": "Redesigning the construction project creation journey",
-      "description": "Personal, product-oriented case study leveraging Figma, Perplexity and Synthetic Users to improve the project creation flow."
+      "title": "Edify",
+      "subtitle": "Construction project creation journey redesign",
+      "description": "Personal UX/UI research case study leveraging Figma, Perplexity and Synthetic Users to improve a field-oriented creation flow."
     }
   }
 }

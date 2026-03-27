@@ -1,20 +1,22 @@
 const projectsList = [
   {
-    id: 'chantier-pro',
-    slug: 'chantier-pro',
+    id: 'edify',
+    slug: 'edify',
+    prototype:
+      'https://www.figma.com/proto/cRdVkOWthXD9v7uFIVoWua/E%CC%81tude-de-cas_La_grande_Ourse_2026?node-id=40000106-193&p=f&t=fhvTmhNUG8GZnInT-1&scaling=min-zoom&content-scaling=fixed&page-id=40000099%3A11&starting-point-node-id=40000106%3A193',
     year: 2026,
     category: 'product-design',
     featured: true,
     tags: ['Figma', 'Perplexity', 'Synthetic Users'],
     filterTags: ['UX Research', 'UI Design', 'IA Tools'],
     image: {
-      src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
-      alt: 'Chantier Pro – vue desktop équipe',
+      src: '/images/edify/chantierPro-desktop-quipe.webp',
+      alt: 'Edify – vue desktop equipe',
     },
     images: [
       {
-        src: '/images/chantierPro/chantierPro-desktop-quipe.webp',
-        alt: 'Chantier Pro – vue desktop équipe',
+        src: '/images/edify/chantierPro-desktop-quipe.webp',
+        alt: 'Edify – vue desktop equipe',
       },
     ],
   },

@@ -11,7 +11,7 @@ const ProjectNavigation = ({ currentProjectId }) => {
 
   // Liste des projets dans l'ordre (VÉRIFIE que ces IDs correspondent exactement)
   const projects = [
-    { id: 'chantier-pro', route: '/projects/chantier-pro' },
+    { id: 'edify', route: '/projects/edify' },
     { id: 'celeste-garden', route: '/projects/celeste-garden' },
     { id: 'campus-connect', route: '/projects/campus-connect' },
     { id: 'evasion', route: '/projects/evasion' },
