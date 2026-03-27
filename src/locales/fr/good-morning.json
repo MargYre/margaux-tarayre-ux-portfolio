@@ -1,0 +1,34 @@
+{
+  "goodMorning": {
+    "nav": {
+      "back": "← Accueil"
+    },
+    "hero": {
+      "tag": "UI Design",
+      "title": "Good Morning",
+      "subtitle": "Optimisation de l'expérience d'hydratation pour réduire le taux d'abandon utilisateur.",
+      "cta": "Voir le prototype"
+    },
+    "lightbox": {
+      "close": "Fermer",
+      "previous": "Image précédente",
+      "next": "Image suivante",
+      "zoomIn": "Zoomer",
+      "zoomOut": "Dézoomer"
+    },
+    "sections": {
+      "architecture": {
+        "title": "UX",
+        "body": "Définition d'une arborescence logique et de wireframes low-fi pour valider l'ergonomie avant la DA."
+      },
+      "artDirection": {
+        "title": "DA",
+        "body": "Recherche d'une identité visuelle forte, minimaliste et contrastée."
+      },
+      "designSystem": {
+        "title": "UI",
+        "body": "Établissement d'une charte graphique rigoureuse pour garantir la cohérence du produit final."
+      }
+    }
+  }
+}

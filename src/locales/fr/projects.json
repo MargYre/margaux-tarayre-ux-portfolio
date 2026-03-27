@@ -49,6 +49,13 @@
       "title": "Edify",
       "subtitle": "Refonte du parcours création de chantier",
       "description": "Projet personnel de recherche UX/UI, explorant l'usage de Figma, Perplexity et Synthetic Users pour optimiser la création d'un projet terrain."
+    },
+
+    "goodMorning": {
+      "category": "UI Design",
+      "title": "Good Morning",
+      "subtitle": "Hydratation & expérience produit",
+      "description": "Design minimaliste noir et blanc : architecture, direction artistique et charte graphique pour un parcours d'hydratation fluide."
     }
   }
 }

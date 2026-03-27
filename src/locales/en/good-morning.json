@@ -1,0 +1,34 @@
+{
+  "goodMorning": {
+    "nav": {
+      "back": "← Home"
+    },
+    "hero": {
+      "tag": "UI Design",
+      "title": "Good Morning",
+      "subtitle": "Optimizing the hydration experience to reduce user drop-off.",
+      "cta": "View prototype"
+    },
+    "lightbox": {
+      "close": "Close",
+      "previous": "Previous image",
+      "next": "Next image",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    },
+    "sections": {
+      "architecture": {
+        "title": "UX",
+        "body": "Defining a logical information architecture and low-fi wireframes to validate ergonomics before visual design."
+      },
+      "artDirection": {
+        "title": "DA",
+        "body": "Exploring a strong, minimalist, high-contrast visual identity."
+      },
+      "designSystem": {
+        "title": "UI",
+        "body": "Establishing a rigorous graphic charter to ensure consistency in the final product."
+      }
+    }
+  }
+}

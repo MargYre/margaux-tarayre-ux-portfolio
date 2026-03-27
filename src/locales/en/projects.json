@@ -50,6 +50,13 @@
       "title": "Edify",
       "subtitle": "Construction project creation journey redesign",
       "description": "Personal UX/UI research case study leveraging Figma, Perplexity and Synthetic Users to improve a field-oriented creation flow."
+    },
+
+    "goodMorning": {
+      "category": "UI Design",
+      "title": "Good Morning",
+      "subtitle": "Hydration & product experience",
+      "description": "Minimal black-and-white design: architecture, art direction, and graphic charter for a smooth hydration journey."
     }
   }
 }

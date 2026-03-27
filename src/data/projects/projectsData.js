@@ -103,6 +103,24 @@ const projectsList = [
     team: ['Yassine', 'Maroua', 'Luce', 'Margaux'],
     images: [],
   },
+  {
+    id: 'good-morning',
+    slug: 'good-morning',
+    title: 'Good Morning',
+    thumbnail: '/images/good-morning/04-Charte Graphique.png',
+    prototype:
+      'https://www.figma.com/proto/FaktydYm0fH5gS7nHkQq92/Good-Morning?node-id=27-538&p=f&t=9ROPo5N0XLNgBpFM-0&scaling=scale-down&content-scaling=fixed&page-id=27%3A507&starting-point-node-id=27%3A509',
+    year: 2026,
+    category: 'product-design',
+    featured: true,
+    tags: ['Figma', 'Product Design', 'UI'],
+    filterTags: ['UI Design'],
+    image: {
+      src: '/images/good-morning/04-Charte Graphique.png',
+      alt: 'Good Morning — charte graphique',
+    },
+    images: [],
+  },
 ]
 export const projects = [...projectsList].sort(
   (a, b) => (b.year || 0) - (a.year || 0)

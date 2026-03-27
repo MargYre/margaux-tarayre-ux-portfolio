@@ -63,6 +63,7 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
     cocovoit: 'cocovoit',
     'enfants-ecrans': 'enfantsEcrans',
     edify: 'edify',
+    'good-morning': 'goodMorning',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
@@ -139,6 +140,15 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
       <img
         src="/images/cocovoit/agile-methodology.webp"
         alt="Campus Connect preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'good-morning' ? (
+      <img
+        src={encodeURI(
+          image?.src ||
+            '/images/good-morning/04-Charte Graphique.png'
+        )}
+        alt="Good Morning preview"
         className={styles.projectPreviewImage}
       />
     ) : (

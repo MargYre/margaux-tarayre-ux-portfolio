@@ -23,6 +23,8 @@ import frEnfantsEcrans from '../locales/fr/enfants-ecrans.json'
 import enEnfantsEcrans from '../locales/en/enfants-ecrans.json'
 import frChantierPro from '../locales/fr/chantierpro.json'
 import enChantierPro from '../locales/en/chantierpro.json'
+import frGoodMorning from '../locales/fr/good-morning.json'
+import enGoodMorning from '../locales/en/good-morning.json'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -37,6 +39,7 @@ i18n.use(initReactI18next).init({
         ...frCocovoit,
         ...frEnfantsEcrans,
         ...frChantierPro,
+        ...frGoodMorning,
         ...frComingSoon,
         ...frAbout,
       },
@@ -52,6 +55,7 @@ i18n.use(initReactI18next).init({
         ...enCocovoit,
         ...enEnfantsEcrans,
         ...enChantierPro,
+        ...enGoodMorning,
         ...enComingSoon,
         ...enAbout,
       },
