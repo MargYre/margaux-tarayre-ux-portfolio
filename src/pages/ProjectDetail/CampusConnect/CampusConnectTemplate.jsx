@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer/Footer'
 import Carousel from '../../../components/Carousel/Carousel'
 import Lightbox from '../../../components/Lightbox/Lightbox'
@@ -45,13 +44,6 @@ const CampusConnectTemplate = ({ project }) => {
 
   return (
     <div className={styles.template}>
-      {/* Lien de retour simple */}
-      <div className={styles.backLinkWrapper}>
-        <Link to="/" className={styles.backLink}>
-          {t('campusConnect.nav.back')}
-        </Link>
-      </div>
-
       {/* Hero avec carousel */}
       <header className={styles.hero}>
         <div className={styles.heroContainer}>

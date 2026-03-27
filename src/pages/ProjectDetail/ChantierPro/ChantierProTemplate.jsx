@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 import Lightbox from '../../../components/Lightbox/Lightbox'
 import styles from './ChantierProTemplate.module.scss'
 
@@ -27,6 +26,7 @@ const ChantierProTemplate = ({ project }) => {
   const groupedInsightSrc = '/images/edify/06-Grouped Insight.webp'
   const oldFlowSrc = '/images/edify/07-Flow chart.jpg'
   const newFlowSrc = '/images/edify/08-UserFlow Mobile.webp'
+  const finalCtaBackgroundImage = '/images/edify/chantierPro-desktop-quipe.webp'
 
   const allLightboxImages = [
     '/images/edify/01-synteticUsers.webp',
@@ -81,12 +81,6 @@ const ChantierProTemplate = ({ project }) => {
         <header className={styles.header}>
           <div className={styles.headerGrid}>
             <div className={styles.headerContent}>
-              <div className={styles.backLinkWrapper}>
-                <Link to="/" className={styles.backLink}>
-                  {t('chantierpro.nav.back')}
-                </Link>
-              </div>
-
               <span className={styles.tag}>{t('chantierpro.hero.tag')}</span>
               <h1 className={styles.title}>{t('chantierpro.hero.title')}</h1>
               <p className={styles.subtitle}>
@@ -422,6 +416,15 @@ const ChantierProTemplate = ({ project }) => {
         </section>
 
         <section className={styles.finalCtaSection}>
+          <div className={styles.imageContainer}>
+            <img
+              src={finalCtaBackgroundImage}
+              alt=""
+              className={styles.finalCtaImage}
+              loading="lazy"
+            />
+            <div className={styles.finalCtaOverlay} aria-hidden />
+          </div>
           <div className={styles.finalCtaContent}>
             <h2 className={styles.finalCtaTitle}>
               {t('chantierpro.design.finalUi.ctaTitle')}

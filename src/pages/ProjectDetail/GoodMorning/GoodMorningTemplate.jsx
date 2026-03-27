@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer/Footer'
 import Lightbox from '../../../components/Lightbox/Lightbox'
 import ProjectNavigation from '../../../components/ProjectNavigation/ProjectNavigation'
@@ -8,13 +7,16 @@ import styles from './GoodMorningTemplate.module.scss'
 
 const IMG_ARCHITECTURE = '/images/good-morning/01-Arborescence.png'
 const IMG_WIREFRAMES = '/images/good-morning/02-Wireframe.png'
-const IMG_DA = '/images/good-morning/03-Tests_graphique.png'
+const IMG_CTA = '/images/good-morning/03-Tests_graphique.png'
 const IMG_DESIGN_SYSTEM = '/images/good-morning/04-Charte%20Graphique.png'
+
+const DOMESTIKA_FIGMA_COURSE_URL =
+  'https://www.domestika.org/fr/courses/4005-design-d-application-sur-figma-du-brief-client-au-prototype'
 
 const DELIVERABLES = [
   { key: 'architecture', src: IMG_ARCHITECTURE },
   { key: 'wireframes', src: IMG_WIREFRAMES },
-  { key: 'da', src: IMG_DA },
+  { key: 'da', src: IMG_CTA },
   { key: 'designSystem', src: IMG_DESIGN_SYSTEM },
 ]
 
@@ -45,24 +47,50 @@ const GoodMorningTemplate = ({ project }) => {
         <header className={styles.header}>
           <div className={styles.headerGrid}>
             <div className={styles.headerContent}>
-              <div className={styles.backLinkWrapper}>
-                <Link to="/" className={styles.backLink}>
-                  {t('goodmorning.nav.back')}
-                </Link>
-              </div>
-
-              <span className={styles.tag}>{t('goodmorning.hero.tag')}</span>
               <h1 className={styles.title}>{t('goodmorning.hero.title')}</h1>
-              <p className={styles.subtitle}>{t('goodmorning.hero.subtitle')}</p>
+              <p className={styles.projectPitch}>
+                {t('goodmorning.hero.pitch')}
+              </p>
 
-              <a
-                className={styles.cta}
-                href={prototypeUrl || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t('goodmorning.hero.cta')}
-              </a>
+              <dl className={styles.metaGrid}>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.year.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    {t('goodmorning.hero.meta.year.value')}
+                  </dd>
+                </div>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.tools.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    {t('goodmorning.hero.meta.tools.value')}
+                  </dd>
+                </div>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.training.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    <span className={styles.metaTraining}>
+                      « {t('goodmorning.hero.meta.training.course')} »{' '}
+                      {t('goodmorning.hero.meta.training.by')}{' '}
+                      {t('goodmorning.hero.meta.training.author')} (
+                      <a
+                        href={DOMESTIKA_FIGMA_COURSE_URL}
+                        className={styles.metaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t('goodmorning.hero.meta.training.platform')}
+                      </a>
+                      )
+                    </span>
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </header>
@@ -97,6 +125,15 @@ const GoodMorningTemplate = ({ project }) => {
         </div>
 
         <section className={styles.finalCtaSection}>
+          <div className={styles.imageContainer}>
+            <img
+              src={IMG_CTA}
+              alt=""
+              className={styles.finalCtaImage}
+              loading="lazy"
+            />
+            <div className={styles.finalCtaOverlay} aria-hidden />
+          </div>
           <div className={styles.finalCtaContent}>
             <h2 className={styles.finalCtaTitle}>
               {t('goodmorning.cta.title')}

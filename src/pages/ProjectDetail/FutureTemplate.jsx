@@ -11,9 +11,6 @@ const FutureTemplate = ({ project }) => {
       {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navContainer}>
-          <Link to="/" className={styles.backLink}>
-            {t('comingSoon.nav.back')}
-          </Link>
           <span className={styles.projectTitle}>{project.id}</span>
         </div>
       </nav>
@@ -36,10 +33,6 @@ const FutureTemplate = ({ project }) => {
           <p className={styles.description}>
             {t('comingSoon.content.description')}
           </p>
-
-          <Link to="/" className={styles.backButton}>
-            {t('comingSoon.hero.backButton')}
-          </Link>
         </div>
       </header>
 

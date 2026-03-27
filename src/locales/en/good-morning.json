@@ -1,13 +1,25 @@
 {
   "goodmorning": {
-    "nav": {
-      "back": "← Home"
-    },
     "hero": {
-      "tag": "UI Design",
       "title": "Good Morning",
-      "subtitle": "Optimizing the hydration experience to reduce user drop-off.",
-      "cta": "View prototype"
+      "pitch": "Lifestyle e-commerce site offering limited-edition items every morning. This project covers mockup design exclusively in mobile format.",
+      "meta": {
+        "year": {
+          "label": "Year",
+          "value": "2026"
+        },
+        "tools": {
+          "label": "Tools",
+          "value": "Figma"
+        },
+        "training": {
+          "label": "Training",
+          "course": "Design d'application sur Figma",
+          "by": "by",
+          "author": "Jonathan Da Costa",
+          "platform": "Domestika"
+        }
+      }
     },
     "lightbox": {
       "close": "Close",
@@ -17,25 +29,25 @@
       "zoomOut": "Zoom out"
     },
     "cta": {
-      "title": "View the interactive prototype on Figma",
-      "button": "Open prototype"
+      "title": "Want to try the experience?",
+      "button": "View the interactive prototype"
     },
     "sections": {
       "architecture": {
         "title": "Information architecture",
-        "description": "Structuring navigation levels and content to clarify the hydration journey. User journey definition and screen tree."
+        "description": "Navigation and content structure for a clear mobile shopping path: catalog, product page, and checkout flow."
       },
       "wireframes": {
         "title": "Structure & ergonomics",
-        "description": "Low-fi wireframes to establish visual hierarchy, action areas, and reading rhythm. Early validation of flows and readability before graphic exploration."
+        "description": "Low-fi wireframes to validate hierarchy, tap targets, and readability on small screens before art direction."
       },
       "da": {
         "title": "Art direction",
-        "description": "Exploring bold, minimalist, high-contrast directions to frame the art direction. Graphic tests and identity directions aligned with the product vision."
+        "description": "Minimal, high-contrast graphic exploration for a lifestyle identity aligned with limited-edition drops."
       },
       "designSystem": {
         "title": "Design system & guidelines",
-        "description": "Formalizing typography, color, and component rules for a consistent deliverable. Graphic charter and UI foundation to scale final screens."
+        "description": "Typography, color, and components to keep mobile screens consistent and speed up handoff."
       }
     }
   }

@@ -1,13 +1,25 @@
 {
   "goodmorning": {
-    "nav": {
-      "back": "← Accueil"
-    },
     "hero": {
-      "tag": "UI Design",
       "title": "Good Morning",
-      "subtitle": "Optimisation de l'expérience d'hydratation pour réduire le taux d'abandon utilisateur.",
-      "cta": "Voir le prototype"
+      "pitch": "Site e-commerce lifestyle proposant chaque matin des articles en édition limitée. Ce projet présente la conception des maquettes exclusivement au format mobile.",
+      "meta": {
+        "year": {
+          "label": "Année",
+          "value": "2026"
+        },
+        "tools": {
+          "label": "Outils",
+          "value": "Figma"
+        },
+        "training": {
+          "label": "Formation",
+          "course": "Design d'application sur Figma",
+          "by": "par",
+          "author": "Jonathan Da Costa",
+          "platform": "Domestika"
+        }
+      }
     },
     "lightbox": {
       "close": "Fermer",
@@ -17,25 +29,25 @@
       "zoomOut": "Dézoomer"
     },
     "cta": {
-      "title": "Voir le prototype interactif sur Figma",
-      "button": "Ouvrir le prototype"
+      "title": "Envie de tester l'expérience ?",
+      "button": "Voir le prototype interactif"
     },
     "sections": {
       "architecture": {
         "title": "Architecture d'information",
-        "description": "Structuration des niveaux de navigation et des contenus pour clarifier le parcours d'hydratation. Définition du parcours utilisateur et de l'arborescence des écrans."
+        "description": "Arborescence et niveaux de navigation pour un parcours d'achat mobile fluide : catalogue, fiche produit et tunnel de commande."
       },
       "wireframes": {
         "title": "Structure & ergonomie",
-        "description": "Wireframes low-fi pour poser la hiérarchie visuelle, les zones d'action et le rythme de lecture. Première validation des flux et de la lisibilité avant les tests graphiques."
+        "description": "Wireframes basse fidélité pour valider hiérarchie, zones d'action et lisibilité sur petit écran avant la direction artistique."
       },
       "da": {
         "title": "Direction artistique",
-        "description": "Exploration de directions esthétiques fortes, minimalistes et contrastées pour cadrer la DA. Tests graphiques et pistes d'identité pour choisir une direction cohérente avec le produit."
+        "description": "Recherche graphique minimaliste et contrastée pour une identité lifestyle cohérente avec l'offre en édition limitée."
       },
       "designSystem": {
         "title": "Système design & charte",
-        "description": "Formalisation des règles typographiques, couleurs et composants pour assurer la cohérence du livrable. Charte graphique et socle UI pour industrialiser les écrans finaux."
+        "description": "Typographie, couleurs et composants pour assurer la cohérence des écrans mobiles et accélérer la mise en production."
       }
     }
   }
