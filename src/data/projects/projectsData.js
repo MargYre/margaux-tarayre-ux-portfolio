@@ -3,6 +3,8 @@ const projectsList = [
     id: 'good-morning',
     slug: 'good-morning',
     title: 'Good Morning',
+    description:
+      "Conception d'un prototype e-commerce mobile à partir d'un brief client : structuration de l'architecture d'information, création d'une identité visuelle minimaliste et réalisation d'un prototype interactif sur Figma.",
     thumbnail: '/images/good-morning/03-Tests_graphique.png',
     prototype:
       'https://www.figma.com/proto/FaktydYm0fH5gS7nHkQq92/Good-Morning?node-id=27-538&p=f&t=9ROPo5N0XLNgBpFM-0&scaling=scale-down&content-scaling=fixed&page-id=27%3A507&starting-point-node-id=27%3A509',
