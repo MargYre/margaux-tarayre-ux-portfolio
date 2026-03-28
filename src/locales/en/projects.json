@@ -31,6 +31,20 @@
       "title": "Good Morning",
       "subtitle": "Mobile e-commerce prototype · Figma",
       "description": "Mobile e-commerce prototype from a client brief: information architecture, minimal visual identity, and interactive prototype built in Figma."
+    },
+
+    "celesteGarden": {
+      "category": "UI Design",
+      "title": "Celeste's Garden",
+      "subtitle": "Figma e-commerce",
+      "description": "UI mockups for an online apparel store: user flow and screens built in Figma as an academic exercise."
+    },
+
+    "evasion": {
+      "category": "Design fiction",
+      "title": "Évasion",
+      "subtitle": "Design thinking workshop",
+      "description": "Speculative project: user journeys, personas, and interfaces exploring a critical systems fiction."
     }
   }
 }

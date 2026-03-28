@@ -58,9 +58,50 @@ const projectsList = [
     prototype: null,
     images: [],
   },
+  {
+    id: 'celeste',
+    slug: 'celeste-garden',
+    title: "Celeste's Garden",
+    year: 2024,
+    category: 'ui-design',
+    featured: true,
+    tags: ['Figma', 'E-commerce', 'UI'],
+    filterTags: ['UI Design'],
+    image: {
+      src: '/images/celeste/page1.png',
+      alt: "Celeste's Garden — aperçu",
+    },
+    images: [
+      { src: '/images/celeste/page1.png', alt: "Celeste's Garden — écran 1" },
+      { src: '/images/celeste/page2.png', alt: "Celeste's Garden — écran 2" },
+      { src: '/images/celeste/page3.png', alt: "Celeste's Garden — écran 3" },
+      { src: '/images/celeste/page4.png', alt: "Celeste's Garden — écran 4" },
+    ],
+    prototype: null,
+    hasMethodology: false,
+    hasLore: false,
+  },
+  {
+    id: 'evasion',
+    slug: 'evasion',
+    title: 'Évasion',
+    year: 2024,
+    category: 'ux-research',
+    featured: true,
+    tags: ['Design Thinking', 'Figma', 'UX'],
+    filterTags: ['UX Research'],
+    image: {
+      src: '/images/evasion/interface-missions.png',
+      alt: 'Évasion — aperçu',
+    },
+    images: [],
+    prototype: null,
+    hasMethodology: false,
+    hasLore: false,
+  },
 ]
 
-/** Ordre figé : Good Morning → Edify → Campus Connect (plus récent → plus ancien) */
+/** Ordre : Good Morning → Edify → Campus Connect → Celeste's Garden → Évasion */
 export const projects = [...projectsList]
 
 export const getProjectBySlug = slug => {

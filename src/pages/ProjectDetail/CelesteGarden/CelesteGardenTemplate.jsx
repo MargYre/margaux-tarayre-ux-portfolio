@@ -180,7 +180,7 @@ const CelesteGardenTemplate = ({ project }) => {
       {/* Bloc formation */}
       <FormationSorbonne />
       {/* Navigation entre projets */}
-      <ProjectNavigation currentProjectId="celeste-garden" />
+      <ProjectNavigation currentProjectId="celeste" />
 
       {/* Footer global */}
       <Footer />

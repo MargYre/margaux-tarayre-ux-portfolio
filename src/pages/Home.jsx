@@ -3,15 +3,17 @@ import HeroSection from '../components/Hero/HeroSection'
 import ProjectsGrid from '../components/Projects/ProjectsGrid'
 import Footer from '../components/Footer/Footer'
 import Button from '../components/Button/Button'
+import { projects as allProjects } from '../data/projects/projectsData'
 import styles from './Home.module.scss'
 
 const Home = () => {
   const { t } = useTranslation()
+  const homeProjects = allProjects.slice(0, 3)
 
   return (
     <>
       <HeroSection />
-      <ProjectsGrid limit={3} />
+      <ProjectsGrid projects={homeProjects} />
       <div className={styles.viewAllWrapper}>
         <Button
           variant="primary"

@@ -14,6 +14,8 @@ const ProjectNavigation = ({ currentProjectId }) => {
     { id: 'good-morning', route: '/projects/good-morning' },
     { id: 'edify', route: '/projects/edify' },
     { id: 'campus-connect', route: '/projects/campus-connect' },
+    { id: 'celeste', route: '/projects/celeste-garden' },
+    { id: 'evasion', route: '/projects/evasion' },
   ]
 
   // Trouver l'index du projet actuel

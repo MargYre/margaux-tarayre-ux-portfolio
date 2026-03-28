@@ -59,6 +59,8 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
     'good-morning': 'goodMorning',
     edify: 'edify',
     'campus-connect': 'campusConnect',
+    celeste: 'celesteGarden',
+    evasion: 'evasion',
   }
 
   const projectKey = projectKeyMap[project.id] || project.id
@@ -117,6 +119,18 @@ const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
       <img
         src={image?.src ?? '/images/good-morning/03-Tests_graphique.png'}
         alt="Good Morning preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'celeste' ? (
+      <img
+        src={image?.src ?? '/images/celeste/page1.png'}
+        alt="Celeste's Garden preview"
+        className={styles.projectPreviewImage}
+      />
+    ) : projectId === 'evasion' ? (
+      <img
+        src={image?.src ?? '/images/evasion/interface-missions.png'}
+        alt="Évasion preview"
         className={styles.projectPreviewImage}
       />
     ) : (

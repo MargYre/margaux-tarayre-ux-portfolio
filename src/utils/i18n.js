@@ -17,6 +17,10 @@ import frChantierPro from '../locales/fr/chantierpro.json'
 import enChantierPro from '../locales/en/chantierpro.json'
 import frGoodMorning from '../locales/fr/good-morning.json'
 import enGoodMorning from '../locales/en/good-morning.json'
+import frCelesteGarden from '../locales/fr/celeste-garden.json'
+import enCelesteGarden from '../locales/en/celeste-garden.json'
+import frEvasion from '../locales/fr/evasion.json'
+import enEvasion from '../locales/en/evasion.json'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -28,6 +32,8 @@ i18n.use(initReactI18next).init({
         ...frCampusConnect,
         ...frChantierPro,
         ...frGoodMorning,
+        ...frCelesteGarden,
+        ...frEvasion,
         ...frComingSoon,
         ...frAbout,
       },
@@ -40,6 +46,8 @@ i18n.use(initReactI18next).init({
         ...enCampusConnect,
         ...enChantierPro,
         ...enGoodMorning,
+        ...enCelesteGarden,
+        ...enEvasion,
         ...enComingSoon,
         ...enAbout,
       },
