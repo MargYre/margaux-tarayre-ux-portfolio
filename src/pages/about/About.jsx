@@ -19,7 +19,7 @@ export default function About() {
           <div className={styles.heroSide}>
             <Button
               variant="secondary"
-              href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
+              href="/images/CV-Margaux_Tarayre_UXUIdesigner.png"
               target="_blank"
               rel="noopener noreferrer"
               ariaLabel={t('opening.downloadCV')}
