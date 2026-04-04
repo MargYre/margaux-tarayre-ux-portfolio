@@ -32,6 +32,13 @@
       "title": "Envie de tester l'expérience ?",
       "button": "Voir le prototype interactif"
     },
+    "designSystemShowcase": {
+      "title": "Design System & Code",
+      "intro": "Extrait de configuration Tailwind / tokens CSS du projet mobile (fichier de référence, non exécuté sur cette page).",
+      "badge": "CSS · Tailwind v4",
+      "copyButton": "Copier le code",
+      "copied": "Copié !"
+    },
     "sections": {
       "architecture": {
         "title": "Architecture d'information",
@@ -47,7 +54,7 @@
       },
       "designSystem": {
         "title": "Système design & charte",
-        "description": "Typographie, couleurs et composants pour assurer la cohérence des écrans mobiles et accélérer la mise en production."
+        "description": "Traduction de la charte graphique en jetons CSS pour garantir la cohérence technique."
       }
     }
   }

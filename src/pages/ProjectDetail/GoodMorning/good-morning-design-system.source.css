@@ -1,0 +1,77 @@
+/**
+ * Exemple de design tokens (Tailwind CSS v4) — document de référence,
+ * non importé comme feuille de style de la page portfolio.
+ */
+
+@import "tailwindcss";
+
+@theme {
+  /* Couleurs */
+  --color-primary: #eb5757;
+  --color-gray-mid: #9b9898;
+  --color-gray-light: #e3e3e3;
+  --color-dark: #000000;
+  --color-white: #ffffff;
+
+  /* Typographie — Inter */
+  --font-sans: "Inter", sans-serif;
+
+  /* Tailles de titres */
+  --text-t1: 30px; /* Titre 1 */
+  --text-t2: 26px; /* Titre 2 */
+  --text-t3: 20px; /* Titre 3 */
+  --text-t4: 16px; /* Titre 4 */
+  --text-body-lg: 14px; /* Paragraphe grand */
+  --text-body-sm: 12px; /* Paragraphe petit */
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #000;
+    color: var(--color-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    max-width: 390px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+@layer base {
+  /* Titres — Inter Semi Bold */
+  h1 {
+    font-size: var(--text-t1);
+    font-weight: 600;
+  }
+  h2 {
+    font-size: var(--text-t2);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: var(--text-t3);
+    font-weight: 600;
+  }
+  h4 {
+    font-size: var(--text-t4);
+    font-weight: 600;
+  }
+
+  /* Paragraphes — Inter Regular */
+  p {
+    font-size: var(--text-body-lg);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

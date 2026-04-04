@@ -5,7 +5,6 @@ import Navigation from './components/Navigation/Navigation'
 import Home from './pages/Home'
 import About from './pages/about/About'
 import ProjectDetail from './pages/ProjectDetail'
-import GoodMorningPage from './pages/ProjectDetail/GoodMorning/GoodMorningPage'
 import ProjectsPage from './pages/ProjectsPage'
 import NotFound from './pages/NotFound'
 import './App.module.scss'
@@ -50,7 +49,6 @@ function AppContent({ theme }) {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/good-morning" element={<GoodMorningPage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />

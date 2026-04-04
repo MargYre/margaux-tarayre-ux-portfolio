@@ -32,6 +32,13 @@
       "title": "Want to try the experience?",
       "button": "View the interactive prototype"
     },
+    "designSystemShowcase": {
+      "title": "Design System & Code",
+      "intro": "Sample Tailwind / CSS token setup for the mobile project (reference file — not executed on this page).",
+      "badge": "CSS · Tailwind v4",
+      "copyButton": "Copy code",
+      "copied": "Copied!"
+    },
     "sections": {
       "architecture": {
         "title": "Information architecture",
@@ -47,7 +54,7 @@
       },
       "designSystem": {
         "title": "Design system & guidelines",
-        "description": "Typography, color, and components to keep mobile screens consistent and speed up handoff."
+        "description": "Turning the graphic charter into CSS tokens for technical consistency."
       }
     }
   }
