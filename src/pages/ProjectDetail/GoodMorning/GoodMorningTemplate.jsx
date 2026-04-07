@@ -26,7 +26,7 @@ const GoodMorningTemplate = ({ project }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxIndex, setLightboxIndex] = useState(0)
   const [copyDone, setCopyDone] = useState(false)
-  const [activeTab, setActiveTab] = useState('visual') // État pour les onglets
+  const [activeTab, setActiveTab] = useState('visual')
 
   const lightboxImages = [...DELIVERABLES.map(d => d.src), IMG_DESIGN_SYSTEM]
 
@@ -45,55 +45,77 @@ const GoodMorningTemplate = ({ project }) => {
     }
   }, [])
 
+  // Correction de la ReferenceError : lightboxTranslations est maintenant défini
+  const lightboxTranslations = {
+    close: t('goodmorning.lightbox.close'),
+    previous: t('goodmorning.lightbox.previous'),
+    next: t('goodmorning.lightbox.next'),
+    zoomIn: t('goodmorning.lightbox.zoomIn'),
+    zoomOut: t('goodmorning.lightbox.zoomOut'),
+  }
+
   return (
     <div className={styles.template}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>{t('goodmorning.hero.title')}</h1>
-          <p className={styles.projectPitch}>{t('goodmorning.hero.pitch')}</p>
-          <dl className={styles.metaGrid}>
-            {/* ... Tes Metas (Année, Outils, Formation) ... */}
-            <div className={styles.metaItem}>
-              <dt className={styles.metaLabel}>
-                {t('goodmorning.hero.meta.year.label')}
-              </dt>
-              <dd className={styles.metaValue}>
-                {t('goodmorning.hero.meta.year.value')}
-              </dd>
+          <div className={styles.headerGrid}>
+            <div className={styles.headerContent}>
+              <h1 className={styles.title}>{t('goodmorning.hero.title')}</h1>
+              <p className={styles.projectPitch}>
+                {t('goodmorning.hero.pitch')}
+              </p>
+
+              <dl className={styles.metaGrid}>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.year.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    {t('goodmorning.hero.meta.year.value')}
+                  </dd>
+                </div>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.tools.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    {t('goodmorning.hero.meta.tools.value')}
+                  </dd>
+                </div>
+                <div className={styles.metaItem}>
+                  <dt className={styles.metaLabel}>
+                    {t('goodmorning.hero.meta.training.label')}
+                  </dt>
+                  <dd className={styles.metaValue}>
+                    <span className={styles.metaTraining}>
+                      « {t('goodmorning.hero.meta.training.course')} »{' '}
+                      {t('goodmorning.hero.meta.training.by')}{' '}
+                      {t('goodmorning.hero.meta.training.author')} (
+                      <a
+                        href={DOMESTIKA_FIGMA_COURSE_URL}
+                        className={styles.metaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t('goodmorning.hero.meta.training.platform')}
+                      </a>
+                      )
+                    </span>
+                  </dd>
+                </div>
+              </dl>
             </div>
-            <div className={styles.metaItem}>
-              <dt className={styles.metaLabel}>
-                {t('goodmorning.hero.meta.tools.label')}
-              </dt>
-              <dd className={styles.metaValue}>
-                {t('goodmorning.hero.meta.tools.value')}
-              </dd>
-            </div>
-            <div className={styles.metaItem}>
-              <dt className={styles.metaLabel}>
-                {t('goodmorning.hero.meta.training.label')}
-              </dt>
-              <dd className={styles.metaValue}>
-                « {t('goodmorning.hero.meta.training.course')} » par{' '}
-                {t('goodmorning.hero.meta.training.author')} (
-                <a
-                  href={DOMESTIKA_FIGMA_COURSE_URL}
-                  className={styles.metaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Domestika
-                </a>
-                )
-              </dd>
-            </div>
-          </dl>
+          </div>
         </header>
 
         <div className={styles.content}>
           {DELIVERABLES.map((section, index) => (
-            <section key={section.key} className={styles.deliverableSection}>
-              <h2 className={styles.deliverableTitle}>
+            <section
+              key={section.key}
+              className={styles.deliverableSection}
+              aria-labelledby={`gm-${section.key}`}
+            >
+              <h2 id={`gm-${section.key}`} className={styles.deliverableTitle}>
                 {t(`goodmorning.sections.${section.key}.title`)}
               </h2>
               <p className={styles.deliverableDescription}>
@@ -104,21 +126,27 @@ const GoodMorningTemplate = ({ project }) => {
                   src={section.src}
                   alt=""
                   className={styles.deliverableImage}
+                  loading={index === 0 ? 'eager' : 'lazy'}
                   onClick={() => openLightbox(index)}
                 />
               </figure>
             </section>
           ))}
 
-          {/* SECTION ONGLETS : DESIGN SYSTEM */}
-          <section className={styles.dsShowcaseSection}>
-            <h2 className={styles.dsShowcaseTitle}>Design System & Charte</h2>
+          <section
+            className={styles.dsShowcaseSection}
+            aria-labelledby="gm-ds-showcase"
+          >
+            <h2 id="gm-ds-showcase" className={styles.dsShowcaseTitle}>
+              {t('goodmorning.designSystemShowcase.title')}
+            </h2>
+
             <div className={styles.tabContainer}>
               <button
                 className={`${styles.tabButton} ${activeTab === 'visual' ? styles.active : ''}`}
                 onClick={() => setActiveTab('visual')}
               >
-                Visuel
+                Charte Graphique
               </button>
               <button
                 className={`${styles.tabButton} ${activeTab === 'code' ? styles.active : ''}`}
@@ -133,7 +161,7 @@ const GoodMorningTemplate = ({ project }) => {
                 <figure className={styles.deliverableFigure}>
                   <img
                     src={IMG_DESIGN_SYSTEM}
-                    alt=""
+                    alt="Charte Graphique Good Morning"
                     className={styles.deliverableImage}
                     onClick={() => openLightbox(3)}
                   />
@@ -142,6 +170,7 @@ const GoodMorningTemplate = ({ project }) => {
                 <div className={styles.codeWrapper}>
                   <div className={styles.dsShowcaseToolbar}>
                     <button
+                      type="button"
                       className={styles.dsCopyButton}
                       onClick={handleCopyDesignSystem}
                     >
@@ -159,18 +188,22 @@ const GoodMorningTemplate = ({ project }) => {
           </section>
         </div>
 
-        {/* CTA FINAL */}
         <section className={styles.finalCtaSection}>
           <div className={styles.imageContainer}>
-            <img src={IMG_CTA} alt="" className={styles.finalCtaImage} />
-            <div className={styles.finalCtaOverlay} />
+            <img
+              src={IMG_CTA}
+              alt=""
+              className={styles.finalCtaImage}
+              loading="lazy"
+            />
+            <div className={styles.finalCtaOverlay} aria-hidden />
           </div>
           <div className={styles.finalCtaContent}>
             <h2 className={styles.finalCtaTitle}>
               {t('goodmorning.cta.title')}
             </h2>
             <a
-              href={prototypeUrl}
+              href={prototypeUrl || '#'}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.finalCtaButton}
@@ -180,8 +213,11 @@ const GoodMorningTemplate = ({ project }) => {
           </div>
         </section>
       </div>
-      <ProjectNavigation currentProjectId="good-morning" />
-      <Footer />
+
+      <div className={styles.footerSpacing}>
+        <ProjectNavigation currentProjectId="good-morning" />
+      </div>
+
       {lightboxOpen && (
         <Lightbox
           images={lightboxImages}
@@ -190,6 +226,8 @@ const GoodMorningTemplate = ({ project }) => {
           translations={lightboxTranslations}
         />
       )}
+
+      <Footer />
     </div>
   )
 }
