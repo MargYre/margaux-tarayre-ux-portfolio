@@ -62,12 +62,35 @@ const GoodMorningTemplate = ({ project }) => {
     <div className={styles.template}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.headerGrid}>
-            <div className={styles.headerContent}>
+          <div className={styles.heroGrid}>
+
+            {/* ── Colonne gauche ── */}
+            <div className={styles.heroText}>
               <h1 className={styles.title}>{t('goodmorning.hero.title')}</h1>
-              <p className={styles.projectPitch}>
-                {t('goodmorning.hero.pitch')}
-              </p>
+              <p className={styles.projectPitch}>{t('goodmorning.hero.pitch')}</p>
+
+              <div className={styles.techBadges}>
+                <span className={styles.badgeFigma}>Figma</span>
+                <span className={styles.badgeRN}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={styles.rnIcon}
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="2.05" fill="#61DAFB" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2"
+                      fill="none" stroke="#61DAFB" strokeWidth="1.1" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2"
+                      fill="none" stroke="#61DAFB" strokeWidth="1.1"
+                      transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2"
+                      fill="none" stroke="#61DAFB" strokeWidth="1.1"
+                      transform="rotate(120 12 12)" />
+                  </svg>
+                  React Native
+                </span>
+              </div>
 
               <dl className={styles.metaGrid}>
                 <div className={styles.metaItem}>
@@ -109,45 +132,35 @@ const GoodMorningTemplate = ({ project }) => {
                 </div>
               </dl>
 
-              <aside className={styles.qrPanel}>
-                <span className={styles.qrBadge}>Expo Go</span>
+              {/* QR code intégré sous les métas */}
+              <div className={styles.qrBlock}>
                 <img
                   src="/images/QRcode_Good-Morning.svg"
-                  alt="QR code pour tester Good Morning sur Expo Go"
-                  width={140}
-                  height={140}
-                  className={styles.qrImage}
+                  alt="QR code Expo Go pour tester Good Morning"
+                  className={styles.qrImg}
+                  width={72}
+                  height={72}
                 />
-                <p className={styles.qrInstruction}>
-                  Scanne avec l&apos;app Expo Go pour tester sur ton téléphone
-                </p>
-                <span className={styles.qrLabel}>React Native · iOS &amp; Android</span>
-              </aside>
+                <div className={styles.qrText}>
+                  <span className={styles.qrLabel}>Tester l&apos;app</span>
+                  <span className={styles.qrSub}>Scanne avec Expo Go</span>
+                </div>
+              </div>
             </div>
 
+            {/* ── Colonne droite : maquettes en cascade ── */}
             <div className={styles.fanDeck} aria-hidden="true">
               <div className={`${styles.fanCard} ${styles.fanCardBack}`}>
-                <img
-                  src={IMG_SCREEN_LOADING}
-                  alt=""
-                  loading="eager"
-                />
+                <img src={IMG_SCREEN_LOADING} alt="" loading="eager" />
               </div>
               <div className={`${styles.fanCard} ${styles.fanCardFront}`}>
-                <img
-                  src={IMG_SCREEN_HOME}
-                  alt=""
-                  loading="eager"
-                />
+                <img src={IMG_SCREEN_HOME} alt="" loading="eager" />
               </div>
               <div className={`${styles.fanCard} ${styles.fanCardSide}`}>
-                <img
-                  src={IMG_SCREEN_COLLECTION}
-                  alt=""
-                  loading="lazy"
-                />
+                <img src={IMG_SCREEN_COLLECTION} alt="" loading="lazy" />
               </div>
             </div>
+
           </div>
         </header>
 

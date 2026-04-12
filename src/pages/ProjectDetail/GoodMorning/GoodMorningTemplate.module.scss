@@ -35,74 +35,59 @@
   padding-bottom: var(--spacing-xl);
 }
 
-.headerGrid {
+.heroGrid {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
   align-items: start;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
   }
 }
 
-.headerContent {
-  min-width: 0;
-  width: 100%;
-  max-width: 1200px;
+.heroText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
+  gap: var(--spacing-sm);
 }
 
 .title {
-  /* margin: 0 auto force le centrage si le titre devient un bloc */
-  margin: 0 auto var(--spacing-md);
-  width: 100%;
+  margin: 0;
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
-  /* On force l'alignement du texte au cas où */
-  text-align: center;
+  text-align: left;
 }
 
 .projectPitch {
-  margin: 0 auto var(--spacing-md);
-  max-width: min(52ch, 100%);
+  margin: 0;
+  max-width: 52ch;
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--color-text-secondary);
-  text-align: center;
+  text-align: left;
 }
 
 .metaGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
   margin: 0;
-  padding: var(--spacing-md) 0 0;
-  text-align: center;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
+  padding: 0;
+  text-align: left;
 }
 
 .metaItem {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xs);
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
 .metaLabel {
@@ -111,11 +96,12 @@
   letter-spacing: 0.12em;
   font-weight: 600;
   color: var(--color-text-secondary);
+  white-space: nowrap;
 }
 
 .metaValue {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.55;
   color: var(--color-text-primary);
 }
@@ -442,64 +428,89 @@
   gap: 1rem;
 }
 
-/* QR Panel — encart "Tester sur Expo Go" */
-.qrPanel {
-  width: 140px;
-  padding: 1.25rem;
-  border-radius: 20px;
-  border: 1px solid var(--color-border);
-  background: var(--color-bg-secondary);
-  box-shadow: var(--shadow-md);
+.techBadges {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: var(--spacing-lg);
-
-  [data-theme='dark'] & {
-    background: #0a0a0a;
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  @media (max-width: 768px) {
-    margin: var(--spacing-md) auto 0;
-  }
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.qrLabel {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-.qrImage {
-  width: 140px;
-  height: 140px;
-  border-radius: 10px;
-  display: block;
-}
-
-.qrInstruction {
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-.qrBadge {
+.badgeFigma {
   display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+}
+
+.badgeRN {
+  display: inline-flex;
+  align-items: center;
   gap: 0.35rem;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
-  font-size: 0.6875rem;
+  border: 1px solid #61dafb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #61dafb;
+  background: rgba(97, 218, 251, 0.07);
+
+  [data-theme='dark'] & {
+    background: rgba(97, 218, 251, 0.1);
+  }
+}
+
+.rnIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.qrBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  margin-top: var(--spacing-sm);
+  width: fit-content;
+
+  [data-theme='dark'] & {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.qrImg {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.qrText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.qrLabel {
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.qrSub {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
 }
 
 /* Fan deck — maquettes mobiles en cascade */
