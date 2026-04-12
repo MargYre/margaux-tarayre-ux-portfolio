@@ -20,6 +20,21 @@
     "linkedinButton": "Contact me on LinkedIn",
     "linkedinLabel": "Contact Margaux on LinkedIn"
   },
+  "about": {
+    "eyebrow": "About",
+    "pitch": {
+      "title": "Designer who codes.\nDeveloper who designs.",
+      "body": "2.5 years of front-end development, a specialisation in UX/UI, and the belief that the best interfaces are born when design and code truly talk to each other."
+    },
+    "stats": {
+      "frontend": "years front-end",
+      "master": "UX/UI in progress",
+      "projects": "Figma projects"
+    },
+    "video": {
+      "thanks": "Thanks for browsing my portfolio —"
+    }
+  },
   "skills": {
     "heading": "Skills",
     "design": {

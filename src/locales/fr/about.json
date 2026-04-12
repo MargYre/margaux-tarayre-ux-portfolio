@@ -20,6 +20,21 @@
     "linkedinButton": "Me contacter sur LinkedIn",
     "linkedinLabel": "Contacter Margaux sur LinkedIn"
   },
+  "about": {
+    "eyebrow": "À propos",
+    "pitch": {
+      "title": "Designer qui code.\nCodeuse qui design.",
+      "body": "2,5 ans de développement front-end, une spécialisation vers l'UX/UI, et la conviction que les meilleures interfaces naissent quand design et code se parlent vraiment."
+    },
+    "stats": {
+      "frontend": "ans front-end",
+      "master": "UX/UI en cours",
+      "projects": "projets Figma"
+    },
+    "video": {
+      "thanks": "Merci d'avoir parcouru mon portfolio —"
+    }
+  },
   "skills": {
     "heading": "Compétences",
     "design": {

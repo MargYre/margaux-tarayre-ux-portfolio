@@ -29,29 +29,83 @@ export default function About() {
           </div>
         </div>
 
-        {/* Job Search - Full width, impactful */}
-        <div className={styles.jobSearchSection}>
-          <div className={styles.jobSearchBox}>
-            <h2 className={styles.jobSearchTitle}>{t('jobSearch.title')}</h2>
-            <p className={styles.jobSearchText}>{t('jobSearch.description')}</p>
-            <div className={styles.jobSearchCtas}>
-              <Button
-                variant="primary"
-                href="mailto:margaux.tarayre@gmail.com"
-                ariaLabel={t('jobSearch.emailLabel')}
-              >
-                {t('jobSearch.emailButton')}
-              </Button>
-              <Button
-                variant="primary"
-                href="https://www.linkedin.com/in/margaux-tarayre/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ariaLabel={t('jobSearch.linkedinLabel')}
-              >
-                {t('jobSearch.linkedinButton')}
-              </Button>
+        {/* Vidéo + Contact */}
+        <div className={styles.videoSection}>
+          <div className={styles.videoGrid}>
+
+            {/* Gauche : vidéo portrait dans mockup téléphone */}
+            <div className={styles.phoneWrapper}>
+              <div className={styles.phoneShell}>
+                <div className={styles.phoneNotch} />
+                <div className={styles.phoneScreen}>
+                  <video
+                    className={styles.videoPlayer}
+                    src="/vidéo/aboutPortfolio.mp4"
+                    playsInline
+                    preload="metadata"
+                    controls
+                    aria-label="Présentation vidéo de Margaux Tarayre"
+                  />
+                  <div className={styles.videoCaption}>
+                    <p className={styles.captionThanks}>
+                      {t('about.video.thanks')}
+                    </p>
+                    <Button
+                      variant="primary"
+                      href="mailto:margaux.tarayre@gmail.com"
+                      ariaLabel={t('jobSearch.emailLabel')}
+                    >
+                      {t('jobSearch.emailButton')}
+                    </Button>
+                  </div>
+                </div>
+                <div className={styles.phoneHomeBar} />
+              </div>
             </div>
+
+            {/* Droite : pitch + stats + CTAs */}
+            <div className={styles.contactPanel}>
+              <div className={styles.pitchBlock}>
+                <span className={styles.pitchEyebrow}>{t('about.eyebrow')}</span>
+                <h2 className={styles.pitchTitle}>{t('about.pitch.title')}</h2>
+                <p className={styles.pitchBody}>{t('about.pitch.body')}</p>
+              </div>
+
+              <div className={styles.statsRow}>
+                <div className={styles.stat}>
+                  <span className={styles.statNum}>2,5</span>
+                  <span className={styles.statLabel}>{t('about.stats.frontend')}</span>
+                </div>
+                <div className={styles.stat}>
+                  <span className={styles.statNum}>Master</span>
+                  <span className={styles.statLabel}>{t('about.stats.master')}</span>
+                </div>
+                <div className={styles.stat}>
+                  <span className={styles.statNum}>5+</span>
+                  <span className={styles.statLabel}>{t('about.stats.projects')}</span>
+                </div>
+              </div>
+
+              <div className={styles.contactCtas}>
+                <Button
+                  variant="primary"
+                  href="mailto:margaux.tarayre@gmail.com"
+                  ariaLabel={t('jobSearch.emailLabel')}
+                >
+                  {t('jobSearch.emailButton')}
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://www.linkedin.com/in/margaux-tarayre/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ariaLabel={t('jobSearch.linkedinLabel')}
+                >
+                  {t('jobSearch.linkedinButton')}
+                </Button>
+              </div>
+            </div>
+
           </div>
         </div>
 
