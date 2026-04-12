@@ -12,8 +12,8 @@ const IMG_CTA = '/images/good-morning/03-Tests_graphique.png'
 const IMG_DESIGN_SYSTEM = '/images/good-morning/04-Charte%20Graphique.png'
 
 const IMG_SCREEN_LOADING = '/images/good-morning/00_Chargement.png'
-const IMG_SCREEN_HOME = '/images/good-morning/01_Accueil.png'
-const IMG_SCREEN_COLLECTION = '/images/good-morning/02_Collection.png'
+const IMG_SCREEN_HOME = '/images/good-morning/01_AccueilBIS.png'
+const IMG_SCREEN_COLLECTION = '/images/good-morning/02_CollectionBIS.png'
 
 const DOMESTIKA_FIGMA_COURSE_URL =
   'https://www.domestika.org/fr/courses/4005-design-d-application-sur-figma-du-brief-client-au-prototype'
@@ -132,19 +132,48 @@ const GoodMorningTemplate = ({ project }) => {
                 </div>
               </dl>
 
-              {/* QR code intégré sous les métas */}
-              <div className={styles.qrBlock}>
-                <img
-                  src="/images/QRcode_Good-Morning.svg"
-                  alt="QR code Expo Go pour tester Good Morning"
-                  className={styles.qrImg}
-                  width={72}
-                  height={72}
-                />
-                <div className={styles.qrText}>
-                  <span className={styles.qrLabel}>Tester l&apos;app</span>
-                  <span className={styles.qrSub}>Scanne avec Expo Go</span>
+              {/* ── Zones d'action ── */}
+              <div className={styles.ctaZones}>
+
+                {/* Zone A — Test Mobile */}
+                <div className={styles.ctaZoneA}>
+                  <img
+                    src="/images/QRcode_Good-Morning.svg"
+                    alt="QR code Expo Go pour tester Good Morning"
+                    className={styles.qrImg}
+                    width={120}
+                    height={120}
+                  />
+                  <ol className={styles.expoInstructions}>
+                    <li>Téléchargez l&apos;application <strong>Expo Go</strong> sur votre store.</li>
+                    <li>Scannez ce code pour tester l&apos;application en conditions réelles.</li>
+                  </ol>
                 </div>
+
+                {/* Zone B — Exploration Design */}
+                <a
+                  href={prototypeUrl || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.figmaButton}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width={16}
+                    height={16}
+                    aria-hidden="true"
+                    className={styles.figmaIcon}
+                  >
+                    <path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z" fill="#0ACF83"/>
+                    <path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z" fill="#A259FF"/>
+                    <path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z" fill="#F24E1E"/>
+                    <path d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z" fill="#FF7262"/>
+                    <path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z" fill="#1ABCFE"/>
+                  </svg>
+                  Explorer le prototype interactif sur Figma
+                </a>
+
               </div>
             </div>
 
