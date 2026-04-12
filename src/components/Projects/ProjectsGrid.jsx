@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 import { projects as defaultProjects } from '../../data/projects/projectsData'
 import styles from './ProjectsGrid.module.scss'
 
-const ProjectsGrid = ({ limit, projects = defaultProjects, showHeader = true }) => {
+const ProjectsGrid = ({
+  limit,
+  projects = defaultProjects,
+  showHeader = true,
+}) => {
   const { t } = useTranslation()
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const [showCursor, setShowCursor] = useState(false)
@@ -86,7 +90,6 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
       <ProjectVisual
         image={project.image}
         category={t(`projects.${projectKey}.category`)}
-        projectId={project.id}
         isHovered={isHovered}
         t={t}
       />
@@ -101,43 +104,15 @@ const ProjectCard = ({ project, t, onCursorChange }) => {
   )
 }
 
-const ProjectVisual = ({ image, category, projectId, isHovered, t }) => (
+const ProjectVisual = ({ image, category, isHovered, t }) => (
   <div className={styles.projectImage}>
-    {projectId === 'edify' ? (
+    {image?.src ? (
       <img
-        src="/images/edify/chantierPro-desktop-quipe.webp"
-        alt="Edify preview"
+        src={image.src}
+        alt={image.alt ?? ''}
         className={styles.projectPreviewImage}
       />
-    ) : projectId === 'campus-connect' ? (
-      <img
-        src="/images/campus-connect/screenshot1.webp"
-        alt="Campus Connect preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : projectId === 'good-morning' ? (
-      <img
-        src={image?.src ?? '/images/good-morning/03-Tests_graphique.png'}
-        alt="Good Morning preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : projectId === 'celeste' ? (
-      <img
-        src={image?.src ?? '/images/celeste/page1.png'}
-        alt="Celeste's Garden preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : projectId === 'evasion' ? (
-      <img
-        src={image?.src ?? '/images/evasion/interface-missions.png'}
-        alt="Évasion preview"
-        className={styles.projectPreviewImage}
-      />
-    ) : (
-      <span className={styles.emoji} role="img" aria-hidden="true">
-        {image}
-      </span>
-    )}
+    ) : null}
     <span className={styles.categoryBadge}>{category}</span>
 
     {/* Overlay "Voir" au survol */}

@@ -30,15 +30,10 @@ const projectsList = [
     tags: ['Figma', 'Perplexity', 'Synthetic Users'],
     filterTags: ['UX Research', 'UI Design', 'IA Tools'],
     image: {
+      // Modification ici :
       src: '/images/edify/04-journey-map.png',
-      alt: 'Edify – vue desktop equipe',
+      alt: 'Edify – User Journey Map',
     },
-    images: [
-      {
-        src: '/images/edify/04-journey-map.png',
-        alt: 'Edify – vue desktop equipe',
-      },
-    ],
   },
   {
     id: 'campus-connect',
@@ -46,7 +41,10 @@ const projectsList = [
     tags: ['User Testing', 'Figma', 'Mobile Design'],
     filterTags: ['UX Research', 'UI Design'],
     color: '#3b82f6',
-    image: null,
+    image: {
+      src: '/images/campus-connect/screenshot1.webp',
+      alt: 'Campus Connect — aperçu',
+    },
     hasMethodology: true,
     hasLore: false,
     year: 2025,

@@ -191,6 +191,39 @@ button {
   cursor: pointer;
 }
 
+/* ── Bouton réutilisable : Prototype Figma ── */
+.btn-figma {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: 1.5px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-figma:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-figma:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
 /* Images responsive */
 img {
   max-width: 100%;
