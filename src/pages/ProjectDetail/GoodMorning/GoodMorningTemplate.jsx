@@ -11,6 +11,10 @@ const IMG_WIREFRAMES = '/images/good-morning/02-Wireframe.png'
 const IMG_CTA = '/images/good-morning/03-Tests_graphique.png'
 const IMG_DESIGN_SYSTEM = '/images/good-morning/04-Charte%20Graphique.png'
 
+const IMG_SCREEN_LOADING = '/images/good-morning/00_Chargement.png'
+const IMG_SCREEN_HOME = '/images/good-morning/01_Accueil.png'
+const IMG_SCREEN_COLLECTION = '/images/good-morning/02_Collection.png'
+
 const DOMESTIKA_FIGMA_COURSE_URL =
   'https://www.domestika.org/fr/courses/4005-design-d-application-sur-figma-du-brief-client-au-prototype'
 
@@ -104,22 +108,46 @@ const GoodMorningTemplate = ({ project }) => {
                   </dd>
                 </div>
               </dl>
+
+              <aside className={styles.qrPanel}>
+                <span className={styles.qrBadge}>Expo Go</span>
+                <img
+                  src="/images/QRcode_Good-Morning.svg"
+                  alt="QR code pour tester Good Morning sur Expo Go"
+                  width={140}
+                  height={140}
+                  className={styles.qrImage}
+                />
+                <p className={styles.qrInstruction}>
+                  Scanne avec l&apos;app Expo Go pour tester sur ton téléphone
+                </p>
+                <span className={styles.qrLabel}>React Native · iOS &amp; Android</span>
+              </aside>
             </div>
 
-            <aside className={styles.qrPanel}>
-              <span className={styles.qrBadge}>Expo Go</span>
-              <img
-                src="/images/QRcode_Good-Morning.svg"
-                alt="QR code pour tester Good Morning sur Expo Go"
-                width={140}
-                height={140}
-                className={styles.qrImage}
-              />
-              <p className={styles.qrInstruction}>
-                Scanne avec l&apos;app Expo Go pour tester sur ton téléphone
-              </p>
-              <span className={styles.qrLabel}>React Native · iOS &amp; Android</span>
-            </aside>
+            <div className={styles.fanDeck} aria-hidden="true">
+              <div className={`${styles.fanCard} ${styles.fanCardBack}`}>
+                <img
+                  src={IMG_SCREEN_LOADING}
+                  alt=""
+                  loading="eager"
+                />
+              </div>
+              <div className={`${styles.fanCard} ${styles.fanCardFront}`}>
+                <img
+                  src={IMG_SCREEN_HOME}
+                  alt=""
+                  loading="eager"
+                />
+              </div>
+              <div className={`${styles.fanCard} ${styles.fanCardSide}`}>
+                <img
+                  src={IMG_SCREEN_COLLECTION}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </header>
 
