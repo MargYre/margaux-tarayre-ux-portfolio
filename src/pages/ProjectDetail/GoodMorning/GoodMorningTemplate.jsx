@@ -109,7 +109,7 @@ const GoodMorningTemplate = ({ project }) => {
             <aside className={styles.qrPanel}>
               <span className={styles.qrBadge}>Expo Go</span>
               <img
-                src="/images/good-morning/QRcode_Good-Morning.svg"
+                src="/images/QRcode_Good-Morning.svg"
                 alt="QR code pour tester Good Morning sur Expo Go"
                 width={140}
                 height={140}
