@@ -15,13 +15,12 @@ const Navigation = () => {
         </Link>
 
         <div className={styles.navLinks}>
+          <Link to="/projects" className={styles.navLink}>
+            {t('nav.projects')}
+          </Link>
           {/* ton lien ABOUT → toujours affiché aussi */}
           <Link to="/about" className={styles.navLink}>
             {t('nav.about')}
-          </Link>
-
-          <Link to="/projects" className={styles.navLink}>
-            {t('nav.projects')}
           </Link>
 
           <a
