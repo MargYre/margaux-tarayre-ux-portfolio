@@ -19,7 +19,7 @@ export default function About() {
           <div className={styles.heroSide}>
             <Button
               variant="secondary"
-              href="/images/CV-Margaux_Tarayre_UXUIdesigner.png"
+              href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
               target="_blank"
               rel="noopener noreferrer"
               ariaLabel={t('opening.downloadCV')}
@@ -48,7 +48,6 @@ export default function About() {
             {/* Droite : pitch + stats + CTAs */}
             <div className={styles.contactPanel}>
               <div className={styles.pitchBlock}>
-                <span className={styles.pitchEyebrow}>{t('about.eyebrow')}</span>
                 <h2 className={styles.pitchTitle}>{t('about.pitch.title')}</h2>
                 <p className={styles.pitchBody}>{t('about.pitch.body')}</p>
               </div>
