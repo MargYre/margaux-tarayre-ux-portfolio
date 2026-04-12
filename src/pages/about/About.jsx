@@ -33,34 +33,16 @@ export default function About() {
         <div className={styles.videoSection}>
           <div className={styles.videoGrid}>
 
-            {/* Gauche : vidéo portrait dans mockup téléphone */}
-            <div className={styles.phoneWrapper}>
-              <div className={styles.phoneShell}>
-                <div className={styles.phoneNotch} />
-                <div className={styles.phoneScreen}>
-                  <video
-                    className={styles.videoPlayer}
-                    src="/vidéo/aboutPortfolio.mp4"
-                    playsInline
-                    preload="metadata"
-                    controls
-                    aria-label="Présentation vidéo de Margaux Tarayre"
-                  />
-                  <div className={styles.videoCaption}>
-                    <p className={styles.captionThanks}>
-                      {t('about.video.thanks')}
-                    </p>
-                    <Button
-                      variant="primary"
-                      href="mailto:margaux.tarayre@gmail.com"
-                      ariaLabel={t('jobSearch.emailLabel')}
-                    >
-                      {t('jobSearch.emailButton')}
-                    </Button>
-                  </div>
-                </div>
-                <div className={styles.phoneHomeBar} />
-              </div>
+            {/* Gauche : vidéo portrait */}
+            <div className={styles.videoWrapper}>
+              <video
+                className={styles.videoPlayer}
+                src="/vidéo/aboutPortfolio.mp4"
+                playsInline
+                preload="metadata"
+                controls
+                aria-label="Présentation vidéo de Margaux Tarayre"
+              />
             </div>
 
             {/* Droite : pitch + stats + CTAs */}
