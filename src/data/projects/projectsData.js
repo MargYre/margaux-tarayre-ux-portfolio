@@ -14,8 +14,8 @@ const projectsList = [
     tags: ['Figma', 'Product Design', 'UI'],
     filterTags: ['UI Design'],
     image: {
-      src: '/images/good-morning/03-Tests_graphique.png',
-      alt: 'Good Morning — test graphique',
+      src: '/images/good-morning/tahnyc.webp',
+      alt: 'Good Morning — tahnyc product',
     },
     images: [],
   },
@@ -30,12 +30,12 @@ const projectsList = [
     tags: ['Figma', 'Perplexity', 'Synthetic Users'],
     filterTags: ['UX Research', 'UI Design', 'IA Tools'],
     image: {
-      src: '/images/edify/chantierPro-desktop-quipe.webp',
+      src: '/images/edify/04-journey-map.png',
       alt: 'Edify – vue desktop equipe',
     },
     images: [
       {
-        src: '/images/edify/chantierPro-desktop-quipe.webp',
+        src: '/images/edify/04-journey-map.png',
         alt: 'Edify – vue desktop equipe',
       },
     ],
