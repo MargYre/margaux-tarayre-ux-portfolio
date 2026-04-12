@@ -136,55 +136,31 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skills - Cards with essential tags only */}
-        <div className={styles.section}>
+        {/* Compétences */}
+        <div className={styles.skillsSection}>
           <h2 className={styles.sectionTitle}>{t('skills.heading')}</h2>
-
-          <div className={styles.skillsGrid}>
-            <div className={styles.skillCard}>
-              <h3 className={styles.skillCardTitle}>
-                {t('skills.design.title')}
-              </h3>
-              <div className={styles.skillTags}>
-                {t('skills.design.tags', { returnObjects: true }).map(
-                  (tag, index) => (
-                    <span key={index} className={styles.skillTag}>
+          <div className={styles.skillsTable}>
+            {[
+              { titleKey: 'skills.design.title', tagsKey: 'skills.design.tags' },
+              { titleKey: 'skills.development.title', tagsKey: 'skills.development.tags' },
+              { titleKey: 'skills.intersection.title', tagsKey: 'skills.intersection.tags' },
+            ].map(({ titleKey, tagsKey }) => (
+              <div key={titleKey} className={styles.skillsRow}>
+                <div className={styles.skillsCategoryCol}>
+                  {t(titleKey)}
+                </div>
+                <div className={styles.skillsTagList}>
+                  {t(tagsKey, { returnObjects: true }).map((tag, i) => (
+                    <span
+                      key={i}
+                      className={`${styles.skillsTag} ${i < 2 ? styles.skillsTagPrimary : ''}`}
+                    >
                       {tag}
                     </span>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className={styles.skillCard}>
-              <h3 className={styles.skillCardTitle}>
-                {t('skills.development.title')}
-              </h3>
-              <div className={styles.skillTags}>
-                {t('skills.development.tags', { returnObjects: true }).map(
-                  (tag, index) => (
-                    <span key={index} className={styles.skillTag}>
-                      {tag}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
-
-            <div className={styles.skillCard}>
-              <h3 className={styles.skillCardTitle}>
-                {t('skills.intersection.title')}
-              </h3>
-              <div className={styles.skillTags}>
-                {t('skills.intersection.tags', { returnObjects: true }).map(
-                  (tag, index) => (
-                    <span key={index} className={styles.skillTag}>
-                      {tag}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
