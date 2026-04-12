@@ -105,6 +105,21 @@ const GoodMorningTemplate = ({ project }) => {
                 </div>
               </dl>
             </div>
+
+            <aside className={styles.qrPanel}>
+              <span className={styles.qrBadge}>Expo Go</span>
+              <img
+                src="/images/good-morning/QRcode_Good-Morning.svg"
+                alt="QR code pour tester Good Morning sur Expo Go"
+                width={140}
+                height={140}
+                className={styles.qrImage}
+              />
+              <p className={styles.qrInstruction}>
+                Scanne avec l&apos;app Expo Go pour tester sur ton téléphone
+              </p>
+              <span className={styles.qrLabel}>React Native · iOS &amp; Android</span>
+            </aside>
           </div>
         </header>
 
