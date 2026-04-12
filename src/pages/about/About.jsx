@@ -90,6 +90,28 @@ export default function About() {
           </div>
         </div>
 
+        {/* Alternance */}
+        <div className={styles.alternanceSection}>
+          <h2 className={styles.sectionTitle}>{t('alternance.title')}</h2>
+          <div className={styles.alternanceGrid}>
+            <div className={styles.alternanceCell}>
+              <span className={styles.cellValue}>{t('alternance.duration.value')}</span>
+              <span className={styles.cellLabel}>{t('alternance.duration.label')}</span>
+              <p className={styles.cellSub}>{t('alternance.duration.sub')}</p>
+            </div>
+            <div className={styles.alternanceCell}>
+              <span className={styles.cellValue}>{t('alternance.rhythm.value')}</span>
+              <span className={styles.cellLabel}>{t('alternance.rhythm.label')}</span>
+              <p className={styles.cellSub}>{t('alternance.rhythm.sub')}</p>
+            </div>
+            <div className={styles.alternanceCell}>
+              <span className={styles.cellValue}>{t('alternance.school.value')}</span>
+              <span className={styles.cellLabel}>{t('alternance.school.label')}</span>
+              <p className={styles.cellSub}>{t('alternance.school.sub')}</p>
+            </div>
+          </div>
+        </div>
+
         {/* Journey - Standalone timeline */}
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t('journey.heading')}</h2>

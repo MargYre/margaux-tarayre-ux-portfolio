@@ -35,6 +35,24 @@
       "thanks": "Merci d'avoir parcouru mon portfolio —"
     }
   },
+  "alternance": {
+    "title": "Alternance",
+    "duration": {
+      "value": "24",
+      "label": "mois",
+      "sub": "Durée du contrat"
+    },
+    "rhythm": {
+      "value": "1/3",
+      "label": "Rythme",
+      "sub": "1 sem école · 3 sem entreprise"
+    },
+    "school": {
+      "value": "IIM",
+      "label": "École",
+      "sub": "Digital School · Paris"
+    }
+  },
   "skills": {
     "heading": "Compétences",
     "design": {

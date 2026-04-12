@@ -35,6 +35,24 @@
       "thanks": "Thanks for browsing my portfolio —"
     }
   },
+  "alternance": {
+    "title": "Work-study",
+    "duration": {
+      "value": "24",
+      "label": "months",
+      "sub": "Contract duration"
+    },
+    "rhythm": {
+      "value": "1/3",
+      "label": "Rhythm",
+      "sub": "1 week school · 3 weeks company"
+    },
+    "school": {
+      "value": "IIM",
+      "label": "School",
+      "sub": "Digital School · Paris"
+    }
+  },
   "skills": {
     "heading": "Skills",
     "design": {

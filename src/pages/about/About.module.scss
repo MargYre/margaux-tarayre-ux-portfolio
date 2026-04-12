@@ -176,6 +176,62 @@
   flex-wrap: wrap;
 }
 
+/* ── Alternance ── */
+.alternanceSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.alternanceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alternanceCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+
+    @media (max-width: 768px) {
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+}
+
+.cellValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.cellLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.cellSub {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Section */
 .section {
   margin-bottom: 5rem;
