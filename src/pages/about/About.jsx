@@ -112,28 +112,27 @@ export default function About() {
           </div>
         </div>
 
-        {/* Journey - Standalone timeline */}
-        <div className={styles.section}>
+        {/* Parcours */}
+        <div className={styles.parcoursSection}>
           <h2 className={styles.sectionTitle}>{t('journey.heading')}</h2>
-          <div className={styles.timeline}>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineDot}></div>
-              <div className={styles.timelineContent}>
-                <p>{t('journey.step1')}</p>
+          <div className={styles.timelineH}>
+            {[
+              { dateKey: 'journey.date1', titleKey: 'journey.title1', textKey: 'journey.step1' },
+              { dateKey: 'journey.date2', titleKey: 'journey.title2', textKey: 'journey.step2' },
+              { dateKey: 'journey.date3', titleKey: 'journey.title3', textKey: 'journey.step3' },
+            ].map(({ dateKey, titleKey, textKey }, i, arr) => (
+              <div key={i} className={styles.timelineHStep}>
+                <div className={styles.timelineHRail}>
+                  <div className={styles.timelineHDot} />
+                  {i < arr.length - 1 && <div className={styles.timelineHLine} />}
+                </div>
+                <div className={styles.timelineHContent}>
+                  <span className={styles.timelineHDate}>{t(dateKey)}</span>
+                  <p className={styles.timelineHTitle}>{t(titleKey)}</p>
+                  <p className={styles.timelineHText}>{t(textKey)}</p>
+                </div>
               </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineDot}></div>
-              <div className={styles.timelineContent}>
-                <p>{t('journey.step2')}</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineDot}></div>
-              <div className={styles.timelineContent}>
-                <p>{t('journey.step3')}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

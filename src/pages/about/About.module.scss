@@ -247,11 +247,98 @@
   text-align: center;
 }
 
-/* Timeline - Vertical with connecting line */
-.timeline {
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
+/* ── Parcours ── */
+.parcoursSection {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timelineH {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timelineHStep {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.timelineHRail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+.timelineHDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.timelineHLine {
+  flex: 1;
+  height: 0.5px;
+  background: var(--color-border);
+
+  @media (max-width: 768px) {
+    width: 0.5px;
+    height: unset;
+    flex: 1;
+    min-height: 2rem;
+  }
+}
+
+.timelineHContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-right: 2rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.timelineHDate {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.timelineHTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.timelineHText {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Skills - Cards with tags */
@@ -306,52 +393,6 @@
   }
 }
 
-.timelineItem {
-  display: flex;
-  gap: 1.5rem;
-  padding-bottom: 2.5rem;
-  position: relative;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-
-  /* Vertical line connecting dots */
-  &:not(:last-child)::before {
-    content: '';
-    position: absolute;
-    left: 9px;
-    top: 20px;
-    bottom: -10px;
-    width: 2px;
-    background-color: var(--color-border);
-  }
-}
-
-.timelineDot {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  border: 3px solid var(--color-bg);
-  box-shadow: 0 0 0 2px var(--color-border);
-  margin-top: 4px;
-  z-index: 1;
-  position: relative;
-}
-
-.timelineContent {
-  flex: 1;
-  padding-top: 2px;
-}
-
-.timelineContent p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--color-text-primary);
-  margin: 0;
-}
 
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
@@ -382,26 +423,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .timeline {
-    padding-left: 1rem;
-  }
-
-  .timelineItem {
-    gap: 1rem;
-    padding-bottom: 2rem;
-  }
-
-  .timelineDot {
-    width: 16px;
-    height: 16px;
-    margin-top: 3px;
-  }
-
-  .timelineItem:not(:last-child)::before {
-    left: 7px;
-  }
-
-  .skillsGrid {
+.skillsGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
