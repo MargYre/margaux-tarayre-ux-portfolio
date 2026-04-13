@@ -60,8 +60,8 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
 
 const HeroContent = ({ message, selectedPersona, t }) => (
   <div className={styles.heroContent} key={selectedPersona}>
-    <h1 className={styles.subtitle}>{message?.subtitle}</h1>
-    <h2 className={styles.title}>{message?.title}</h2>
+    <h1 className={styles.title}>{message?.subtitle}</h1>
+    <h2 className={styles.subtitle}>{message?.title}</h2>
     <p className={styles.description}>{message?.description}</p>
 
     <div className={styles.ctaGroup}>
