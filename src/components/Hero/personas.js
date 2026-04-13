@@ -44,31 +44,31 @@ export const personaMessages = {
       title: 'Bonjour, je suis Margaux',
       subtitle: 'UX/UI Designer & Développeuse',
       description:
-        "Designer formée au code — ou développeuse reconvertie au design, selon à qui vous posez la question. Je cherche une alternance de 24 mois pour concevoir des interfaces qui fonctionnent vraiment.",
+        'Designer formée au code, ou développeuse reconvertie au design, selon à qui vous posez la question. Je cherche une alternance de 24 mois pour concevoir des interfaces qui fonctionnent vraiment.',
     },
     recruiter: {
       title: 'Vous cherchez un profil hybride ?',
       subtitle: 'UX/UI Designer qui parle React',
       description:
-        "2,5 ans de développement front-end avant de me spécialiser en design. Je comprends ce que coûte un mauvais handoff — et je sais l'éviter. Disponible en alternance 24 mois, rythme 1 sem / 3 sem.",
+        "2,5 ans de développement front-end avant de me spécialiser en design. Je comprends ce que coûte un mauvais handoff, et je sais l'éviter. Disponible en alternance 24 mois, rythme 1 sem / 3 sem.",
     },
     director: {
       title: 'Pour les équipes qui veulent aller plus loin',
       subtitle: "Une designer avec l'œil et le code",
       description:
-        "Je lis un brief, je questionne les partis pris, je livre des maquettes qui anticipent l'intégration. Mon parcours dev me permet d'évaluer ce qui est faisable avant même que ça parte en prod — sans allers-retours inutiles.",
+        "Je lis un brief, je questionne les partis pris, je livre des maquettes qui anticipent l'intégration. Mon parcours dev me permet d'évaluer ce qui est faisable avant même que ça parte en prod, sans allers-retours inutiles.",
     },
     pm: {
       title: 'Pour les Product Managers',
       subtitle: 'Design livrable dès le premier sprint',
       description:
-        "Je produis des maquettes qui anticipent les edge cases, documentent les états et parlent le langage des devs. Moins d'allers-retours, des specs qui tiennent la route — et un prototype en code si la situation le demande.",
+        "Je produis des maquettes qui anticipent les edge cases, documentent les états et parlent le langage des devs. Moins d'allers-retours, des specs qui tiennent la route, et un prototype en code si la situation le demande.",
     },
     engineer: {
       title: 'Pour les développeurs',
       subtitle: "J'écris en React, pas que des mockups",
       description:
-        "Ce portfolio est codé en React + Vite + SCSS Modules, déployé sur Netlify, versionné sur Git. Je connais la différence entre un composant réutilisable et un composant qu'on copie-colle en espérant que ça tienne. Jetez un œil à mon portfolio développeuse — le lien est dans la navigation.",
+        "Ce portfolio est codé en React + Vite + SCSS Modules, déployé sur Netlify, versionné sur Git. Je connais la différence entre un composant réutilisable et un composant qu'on copie-colle en espérant que ça tienne. Jetez un œil à mon portfolio développeuse, le lien est dans la navigation.",
     },
   },
 }
