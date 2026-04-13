@@ -1,107 +1,88 @@
-/* Reset CSS moderne */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ═══════════════════════════════════════════════
+   CHARTE GRAPHIQUE — Margaux Tarayre
+   Portfolio UX/UI · 2026
+   ═══════════════════════════════════════════════
 
-/* ============================================================
-   DESIGN SYSTEM — Margaux Tarayre Portfolio
-   Charte graphique centralisée. Toutes les décisions visuelles
-   sont définies ici et consommées via var() dans les composants.
-   ============================================================ */
+   1. TYPOGRAPHIE     — Polices, tailles, graisses
+   2. COULEURS        — Palette, thèmes clair/sombre
+   3. ESPACEMENTS     — Système 8px
+   4. TRANSITIONS     — Durées et courbes
+   5. OMBRES          — Élévations
+   ═══════════════════════════════════════════════ */
+
+
+/* ─── 1. TYPOGRAPHIE ───────────────────────────── */
 
 :root {
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
 
-  /* ── Polices ─────────────────────────────────────────────── */
-  /* Titres — serif élégant */
-  --font-display: 'Playfair Display', Georgia, serif;
-  /* Corps — sans-serif moderne, lisible */
-  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  --font-size-xs:   0.75rem;   /*  12px — labels, badges       */
+  --font-size-sm:   0.875rem;  /*  14px — secondaire, captions */
+  --font-size-base: 1rem;      /*  16px — corps de texte       */
+  --font-size-lg:   1.125rem;  /*  18px — intro, lead          */
+  --font-size-xl:   1.25rem;   /*  20px — sous-titres          */
+  --font-size-2xl:  1.5rem;    /*  24px — titres de section    */
+  --font-size-3xl:  2rem;      /*  32px — titres de page       */
+  --font-size-4xl:  2.5rem;    /*  40px — héros                */
 
-  /* ── Échelle typographique ───────────────────────────────── */
-  --font-size-xs:   0.75rem;   /* 12px — labels, badges */
-  --font-size-sm:   0.875rem;  /* 14px — secondaire, captions */
-  --font-size-base: 1rem;      /* 16px — corps de texte */
-  --font-size-md:   1.125rem;  /* 18px — intro, lead */
-  --font-size-lg:   1.25rem;   /* 20px — sous-titres */
-  --font-size-xl:   1.5rem;    /* 24px — titres de section */
-  --font-size-2xl:  2rem;      /* 32px — titres de page */
-  --font-size-3xl:  2.5rem;    /* 40px — héros */
-
-  /* ── Graisses ────────────────────────────────────────────── */
   --font-weight-light:    300;
   --font-weight-regular:  400;
   --font-weight-medium:   500;
   --font-weight-semibold: 600;
   --font-weight-bold:     700;
 
-  /* ── Interlignages ───────────────────────────────────────── */
-  --line-height-tight:   1.2;  /* Titres */
-  --line-height-base:    1.6;  /* Corps */
-  --line-height-relaxed: 1.75; /* Textes longs, paragraphes */
+  --line-height-tight:   1.15; /* Grands titres                */
+  --line-height-snug:    1.25; /* Titres moyens                */
+  --line-height-base:    1.6;  /* Corps de texte               */
+  --line-height-relaxed: 1.75; /* Textes longs, paragraphes    */
 
-  /* ── Espacement des lettres ──────────────────────────────── */
-  --letter-spacing-tight:   -0.02em; /* Grands titres */
-  --letter-spacing-normal:   0em;
-  --letter-spacing-wide:     0.05em;
-  --letter-spacing-wider:    0.1em;  /* Labels uppercase */
-  --letter-spacing-widest:   0.15em; /* Eyebrows */
+  --letter-spacing-tight:  -0.02em; /* Grands titres            */
+  --letter-spacing-normal:  0em;
+  --letter-spacing-wide:    0.06em; /* Tags, captions           */
+  --letter-spacing-wider:   0.12em; /* Labels uppercase         */
+}
 
-  /* ── Couleurs — Light Theme (défaut) ────────────────────── */
+
+/* ─── 2. COULEURS ──────────────────────────────── */
+
+/* Thème clair (défaut) */
+:root {
+  /* Texte */
   --color-text: #0a0a0a;
   --color-text-primary: var(--color-text);
   --color-text-primary-rgb: 10, 10, 10;
   --color-text-secondary: #6b6b6b;
-  --color-bg: #f2f2f2;
+
+  /* Fonds */
+  --color-bg: #f2f2f2;          /* Cloudy White */
   --color-bg-primary: var(--color-bg);
   --color-bg-secondary: #e8e8e8;
   --color-bg-tertiary: #dedede;
+
+  /* Bordures */
   --color-border: rgba(0, 0, 0, 0.12);
   --color-border-light: rgba(0, 0, 0, 0.06);
+
+  /* Blanc pur — réservé aux éléments sur fond sombre */
   --color-white: #ffffff;
-  /* Noir fixe (reste noir même en dark mode — boutons CTA, texte sur fond blanc). */
+
+  /* Noir fixe — reste noir même en dark mode */
   --color-dark: #0a0a0a;
-  /* Accent monochrome (CTA, focus, tags). */
+
+  /* Accent — monochrome intentionnel (troisième couleur à venir) */
   --color-accent: var(--color-dark);
   --color-accent-dark: var(--color-dark);
   --color-accent-rgb: 0, 0, 0;
-  /* Alias legacy (some components still reference --color-primary). */
-  --color-primary: var(--color-accent);
 
-  /* ── Couleurs contextuelles ──────────────────────────────── */
+  /* Alias legacy */
+  --color-primary: var(--color-accent);
   --color-card-bg: var(--color-bg);
   --color-nav-bg: rgba(242, 242, 242, 0.95);
   --color-hover-bg: #e8e8e8;
-
-  /* ── Layout ──────────────────────────────────────────────── */
-  --nav-height: 5rem;
-
-  /* ── Espacements — système 8px ───────────────────────────── */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-
-  /* ── Animations ──────────────────────────────────────────── */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.3s ease;
-  --transition-slow: 0.5s ease;
-
-  /* ── Ombres ───────────────────────────────────────────────── */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ============================================================
-   DARK THEME — s'applique via <html class="dark">
-   Seules les valeurs qui changent sont redéfinies ici.
-   Les variables typographiques sont héritées de :root.
-   ============================================================ */
+/* Thème sombre */
 html.dark {
   --color-text: #f2f2f2;
   --color-text-primary: var(--color-text);
@@ -114,9 +95,7 @@ html.dark {
   --color-border: rgba(255, 255, 255, 0.1);
   --color-border-light: rgba(255, 255, 255, 0.06);
   --color-white: #ffffff;
-  /* Noir fixe (reste noir même en dark mode). */
   --color-dark: #0a0a0a;
-  /* Accent monochrome (mode sombre). */
   --color-accent: #ffffff;
   --color-accent-dark: #f5f5f5;
   --color-accent-rgb: 255, 255, 255;
@@ -124,57 +103,97 @@ html.dark {
   --color-card-bg: var(--color-bg-secondary);
   --color-nav-bg: rgba(10, 10, 10, 0.95);
   --color-hover-bg: #1e1e1e;
+}
+
+
+/* ─── 3. ESPACEMENTS ───────────────────────────── */
+/* Système basé sur 8px */
+
+:root {
+  --nav-height: 5rem;
+
+  --spacing-xs:  0.5rem;  /*  8px */
+  --spacing-sm:  1rem;    /* 16px */
+  --spacing-md:  1.5rem;  /* 24px */
+  --spacing-lg:  2rem;    /* 32px */
+  --spacing-xl:  3rem;    /* 48px */
+  --spacing-2xl: 4rem;    /* 64px */
+}
+
+
+/* ─── 4. TRANSITIONS ───────────────────────────── */
+
+:root {
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+
+/* ─── 5. OMBRES ────────────────────────────────── */
+
+:root {
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+html.dark {
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* CORRECTION: Media queries DPI pour Windows */
+
+/* ─── Reset CSS ────────────────────────────────── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ─── Corrections DPI Windows ──────────────────── */
+/* Ajustements pour scaling 125 % (120 dpi) et 150 % (144 dpi) */
+
 @media (min-resolution: 120dpi) {
   :root {
-    --nav-height: 4.5rem;
-    /* Réduire légèrement les espacements sur Windows avec scaling 125% */
-    --spacing-xs: 0.45rem;
-    --spacing-sm: 0.9rem;
-    --spacing-md: 1.35rem;
-    --spacing-lg: 1.8rem;
-    --spacing-xl: 2.7rem;
+    --nav-height:  4.5rem;
+    --spacing-xs:  0.45rem;
+    --spacing-sm:  0.9rem;
+    --spacing-md:  1.35rem;
+    --spacing-lg:  1.8rem;
+    --spacing-xl:  2.7rem;
     --spacing-2xl: 3.6rem;
   }
-}
-
-@media (min-resolution: 144dpi) {
-  :root {
-    --nav-height: 4rem;
-    /* Réduire encore plus pour scaling 150% */
-    --spacing-xs: 0.4rem;
-    --spacing-sm: 0.8rem;
-    --spacing-md: 1.2rem;
-    --spacing-lg: 1.6rem;
-    --spacing-xl: 2.4rem;
-    --spacing-2xl: 3.2rem;
-  }
-}
-
-/* Base HTML */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  /* CORRECTION: Scroll padding pour compenser la nav fixe */
-  scroll-padding-top: var(--nav-height);
-}
-
-/* CORRECTION: Adapter le font-size selon le DPI Windows */
-@media (min-resolution: 120dpi) {
   html {
     font-size: 15px;
   }
 }
 
 @media (min-resolution: 144dpi) {
+  :root {
+    --nav-height:  4rem;
+    --spacing-xs:  0.4rem;
+    --spacing-sm:  0.8rem;
+    --spacing-md:  1.2rem;
+    --spacing-lg:  1.6rem;
+    --spacing-xl:  2.4rem;
+    --spacing-2xl: 3.2rem;
+  }
   html {
     font-size: 14px;
   }
+}
+
+
+/* ─── Styles de base ───────────────────────────── */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
 }
 
 body {
@@ -188,13 +207,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  /* CORRECTION: Padding-top pour la navigation fixe */
   padding-top: var(--nav-height);
 }
 
-/* Custom cursor removed: keep native pointer */
-
-/* CORRECTION: Transitions ciblées au lieu de globales */
+/* Transitions ciblées (évite les transitions globales trop larges) */
 a,
 button,
 nav,
@@ -216,7 +232,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
@@ -227,7 +243,6 @@ p {
   margin-bottom: var(--spacing-sm);
 }
 
-/* Liens */
 a {
   color: inherit;
   text-decoration: none;
@@ -237,7 +252,12 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Boutons */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 button {
   font-family: inherit;
   font-size: inherit;
@@ -246,7 +266,9 @@ button {
   cursor: pointer;
 }
 
-/* ── Bouton réutilisable : Prototype Figma ── */
+
+/* ─── Composant .btn-figma ─────────────────────── */
+
 .btn-figma {
   display: inline-flex;
   align-items: center;
@@ -257,9 +279,9 @@ button {
   background: var(--color-dark);
   color: var(--color-white);
   font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
   text-decoration: none;
   cursor: pointer;
   transition:
@@ -279,14 +301,9 @@ button {
   outline-offset: 3px;
 }
 
-/* Images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
-/* Conteneur principal */
+/* ─── Conteneur principal ──────────────────────── */
+
 .app {
   display: flex;
   flex-direction: column;
@@ -295,11 +312,12 @@ img {
 
 main {
   flex: 1;
-  /* CORRECTION: S'assurer qu'il n'y a pas de margin-top qui chevauche */
   position: relative;
 }
 
-/* Animations globales */
+
+/* ─── Keyframes ────────────────────────────────── */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -322,7 +340,17 @@ main {
   }
 }
 
-/* Responsive */
+
+/* ─── Accessibilité ────────────────────────────── */
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+
+/* ─── Responsive ───────────────────────────────── */
+
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -333,13 +361,9 @@ main {
   }
 }
 
-/* Accessibilité */
-*:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-}
 
-/* Print styles */
+/* ─── Print ────────────────────────────────────── */
+
 @media print {
   body * {
     cursor: auto !important;
@@ -355,14 +379,17 @@ main {
   }
 }
 
-/* CORRECTION: Prévenir les problèmes de rendu sur Windows */
+
+/* ─── Corrections navigateur ───────────────────── */
+
+/* Prévenir les problèmes de rendu sur Windows */
 * {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* CORRECTION: Support amélioré pour anciens navigateurs */
+/* Support anciens navigateurs sans scroll-padding-top */
 @supports not (scroll-padding-top: 5rem) {
   html {
     scroll-padding-top: 80px;
