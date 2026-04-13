@@ -5,14 +5,51 @@
   box-sizing: border-box;
 }
 
-/* Variables CSS - Design System avec Dark Mode */
-:root {
-  /* Typographie */
-  --font-sans:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
+/* ============================================================
+   DESIGN SYSTEM — Margaux Tarayre Portfolio
+   Charte graphique centralisée. Toutes les décisions visuelles
+   sont définies ici et consommées via var() dans les composants.
+   ============================================================ */
 
-  /* Couleurs - Light Theme (défaut) */
+:root {
+
+  /* ── Polices ─────────────────────────────────────────────── */
+  /* Titres — serif élégant */
+  --font-display: 'Playfair Display', Georgia, serif;
+  /* Corps — sans-serif moderne, lisible */
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Échelle typographique ───────────────────────────────── */
+  --font-size-xs:   0.75rem;   /* 12px — labels, badges */
+  --font-size-sm:   0.875rem;  /* 14px — secondaire, captions */
+  --font-size-base: 1rem;      /* 16px — corps de texte */
+  --font-size-md:   1.125rem;  /* 18px — intro, lead */
+  --font-size-lg:   1.25rem;   /* 20px — sous-titres */
+  --font-size-xl:   1.5rem;    /* 24px — titres de section */
+  --font-size-2xl:  2rem;      /* 32px — titres de page */
+  --font-size-3xl:  2.5rem;    /* 40px — héros */
+
+  /* ── Graisses ────────────────────────────────────────────── */
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* ── Interlignages ───────────────────────────────────────── */
+  --line-height-tight:   1.2;  /* Titres */
+  --line-height-base:    1.6;  /* Corps */
+  --line-height-relaxed: 1.75; /* Textes longs, paragraphes */
+
+  /* ── Espacement des lettres ──────────────────────────────── */
+  --letter-spacing-tight:   -0.02em; /* Grands titres */
+  --letter-spacing-normal:   0em;
+  --letter-spacing-wide:     0.05em;
+  --letter-spacing-wider:    0.1em;  /* Labels uppercase */
+  --letter-spacing-widest:   0.15em; /* Eyebrows */
+
+  /* ── Couleurs — Light Theme (défaut) ────────────────────── */
   --color-text: #0a0a0a;
   --color-text-primary: var(--color-text);
   --color-text-primary-rgb: 10, 10, 10;
@@ -33,15 +70,15 @@
   /* Alias legacy (some components still reference --color-primary). */
   --color-primary: var(--color-accent);
 
-  /* Couleurs spécifiques */
+  /* ── Couleurs contextuelles ──────────────────────────────── */
   --color-card-bg: var(--color-bg);
   --color-nav-bg: rgba(242, 242, 242, 0.95);
   --color-hover-bg: #e8e8e8;
 
-  /* CORRECTION: Variable pour la hauteur de navigation */
+  /* ── Layout ──────────────────────────────────────────────── */
   --nav-height: 5rem;
 
-  /* Espacements - Système 8px */
+  /* ── Espacements — système 8px ───────────────────────────── */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
@@ -49,18 +86,22 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
 
-  /* Animations */
+  /* ── Animations ──────────────────────────────────────────── */
   --transition-fast: 0.15s ease;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 
-  /* Ombres */
+  /* ── Ombres ───────────────────────────────────────────────── */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Dark Theme - S'applique quand <html class="dark"> */
+/* ============================================================
+   DARK THEME — s'applique via <html class="dark">
+   Seules les valeurs qui changent sont redéfinies ici.
+   Les variables typographiques sont héritées de :root.
+   ============================================================ */
 html.dark {
   --color-text: #f2f2f2;
   --color-text-primary: var(--color-text);
@@ -138,9 +179,11 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.6;
+  line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -166,15 +209,17 @@ footer,
     transform var(--transition-base);
 }
 
-/* Typographie responsive */
+/* Titres — Playfair Display */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
   margin-bottom: var(--spacing-sm);
 }
 
