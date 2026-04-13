@@ -46,7 +46,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-white);
   border-radius: 2rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -211,7 +211,7 @@
 
 .primaryButton {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-white);
 
   &:hover {
     transform: translateY(-2px);

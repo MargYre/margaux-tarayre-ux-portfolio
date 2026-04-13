@@ -37,7 +37,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: var(--color-accent);
-  color: #ffffff; /* TODO: utiliser variable si thème évolue */
+  color: var(--color-white);
   border-radius: 2rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -140,7 +140,7 @@
   &:hover {
     border-color: var(--color-accent);
     background-color: var(--color-accent);
-    color: white;
+    color: var(--color-white);
   }
 
   &:focus-visible {
@@ -436,7 +436,7 @@
   padding: 2rem;
   background: linear-gradient(135deg, var(--color-accent) 0%, #2563eb 100%);
   border-radius: 0.75rem;
-  color: white;
+  color: var(--color-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -444,7 +444,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: white; /* Force blanc */
+  color: var(--color-white);
 }
 
 .auditDesc {
@@ -452,7 +452,7 @@
   line-height: 1.6;
   opacity: 0.95;
   margin: 0;
-  color: white; /* Force blanc */
+  color: var(--color-white);
 }
 
 /* Responsive */

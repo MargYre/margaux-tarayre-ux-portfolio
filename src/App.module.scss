@@ -175,7 +175,7 @@
 /* CORRECTION: Support pour les anciens navigateurs Windows */
 @supports not (backdrop-filter: blur(10px)) {
   .nav {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-bg);
   }
 
   html.dark .nav {
