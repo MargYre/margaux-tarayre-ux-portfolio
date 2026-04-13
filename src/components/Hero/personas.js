@@ -12,31 +12,31 @@ export const personaMessages = {
       title: "Hi, I'm Margaux",
       subtitle: 'UX/UI Designer & Developer',
       description:
-        'I craft digital experiences that blend thoughtful design with technical execution. Let me show you how design thinking meets code.',
+        "Designer trained in code — or a developer turned designer, depending on who you ask. I'm looking for a 24-month work-study placement to build interfaces that actually work.",
     },
     recruiter: {
       title: 'Looking for a Hybrid Profile?',
-      subtitle: 'UX/UI Designer Who Speaks Code',
+      subtitle: 'UX/UI Designer Who Speaks React',
       description:
-        'My dual background allows me to bridge the gap between design and development teams. I understand constraints, technical feasibility, and can prototype in code.',
+        '2.5 years of front-end development before specialising in design. I know what a bad handoff costs — and I know how to avoid it. Available for a 24-month work-study, 1 week school / 3 weeks company.',
     },
     director: {
-      title: 'Design That Ships',
-      subtitle: 'Strategic Design with Technical Insight',
+      title: 'For Teams Who Want to Go Further',
+      subtitle: 'A Designer With Both Eye and Code',
       description:
-        'I bring a unique perspective to your design team: the ability to evaluate technical feasibility early, collaborate seamlessly with engineers, and ship pixel-perfect interfaces.',
+        'I read a brief, I question the creative direction, I deliver mockups that anticipate integration. My dev background lets me assess feasibility before anything goes to production — no unnecessary back-and-forth.',
     },
     pm: {
-      title: 'Your Design-Dev Liaison',
-      subtitle: 'I Translate Between Teams',
+      title: 'For Product Managers',
+      subtitle: 'Design Ready From the First Sprint',
       description:
-        'As a PM, you need someone who understands both worlds. I can refine requirements, create realistic prototypes, and communicate effectively with engineering.',
+        'I produce mockups that anticipate edge cases, document states and speak the language of developers. Less back-and-forth, specs that hold up — and a coded prototype when the situation calls for it.',
     },
     engineer: {
-      title: 'Finally, A Designer Who Gets It',
+      title: 'For Developers',
       subtitle: 'I Write React, Not Just Mockups',
       description:
-        "Component thinking? Design systems? Responsive logic? I speak your language. Check out my technical work and see how I approach design with a developer's mindset.",
+        'This portfolio is built with React + Vite + SCSS Modules, deployed on Netlify, versioned on Git. I know the difference between a reusable component and one you copy-paste and hope for the best. Check out my developer portfolio — the link is in the navigation.',
     },
   },
   fr: {
@@ -44,31 +44,31 @@ export const personaMessages = {
       title: 'Bonjour, je suis Margaux',
       subtitle: 'UX/UI Designer & Développeuse',
       description:
-        'Je crée des expériences numériques qui allient design réfléchi et exécution technique. Laissez-moi vous montrer comment la pensée design rencontre le code.',
+        "Designer formée au code — ou développeuse reconvertie au design, selon à qui vous posez la question. Je cherche une alternance de 24 mois pour concevoir des interfaces qui fonctionnent vraiment.",
     },
     recruiter: {
       title: 'Vous cherchez un profil hybride ?',
-      subtitle: 'UX/UI Designer qui parle code',
+      subtitle: 'UX/UI Designer qui parle React',
       description:
-        'Mon double parcours me permet de faire le pont entre les équipes design et développement. Je comprends les contraintes, la faisabilité technique, et je peux prototyper en code.',
+        "2,5 ans de développement front-end avant de me spécialiser en design. Je comprends ce que coûte un mauvais handoff — et je sais l'éviter. Disponible en alternance 24 mois, rythme 1 sem / 3 sem.",
     },
     director: {
-      title: 'Du design qui se concrétise',
-      subtitle: 'Design stratégique avec vision technique',
+      title: 'Pour les équipes qui veulent aller plus loin',
+      subtitle: "Une designer avec l'œil et le code",
       description:
-        "J'apporte une perspective unique à votre équipe design : la capacité d'évaluer la faisabilité technique en amont, de collaborer efficacement avec les développeurs, et de livrer des interfaces pixel-perfect.",
+        "Je lis un brief, je questionne les partis pris, je livre des maquettes qui anticipent l'intégration. Mon parcours dev me permet d'évaluer ce qui est faisable avant même que ça parte en prod — sans allers-retours inutiles.",
     },
     pm: {
-      title: 'Votre lien Design-Dev',
-      subtitle: 'Je traduis entre les équipes',
+      title: 'Pour les Product Managers',
+      subtitle: 'Design livrable dès le premier sprint',
       description:
-        "En tant que PM, vous avez besoin de quelqu'un qui comprend les deux mondes. Je peux affiner les requirements, créer des prototypes réalistes, et communiquer efficacement avec l'engineering.",
+        "Je produis des maquettes qui anticipent les edge cases, documentent les états et parlent le langage des devs. Moins d'allers-retours, des specs qui tiennent la route — et un prototype en code si la situation le demande.",
     },
     engineer: {
-      title: 'Enfin, une designer qui comprend',
+      title: 'Pour les développeurs',
       subtitle: "J'écris en React, pas que des mockups",
       description:
-        "Pensée composant ? Design systems ? Logique responsive ? Je parle votre langue. Découvrez mon travail technique et voyez comment j'aborde le design avec l'esprit d'une développeuse.",
+        "Ce portfolio est codé en React + Vite + SCSS Modules, déployé sur Netlify, versionné sur Git. Je connais la différence entre un composant réutilisable et un composant qu'on copie-colle en espérant que ça tienne. Jetez un œil à mon portfolio développeuse — le lien est dans la navigation.",
     },
   },
 }
