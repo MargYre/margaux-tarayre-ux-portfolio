@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import HeroSection from '../components/Hero/HeroSection'
 import ProjectsGrid from '../components/Projects/ProjectsGrid'
+import ContactSection from '../components/Contact/ContactSection'
 import Footer from '../components/Footer/Footer'
 import Button from '../components/Button/Button'
 import { projects as allProjects } from '../data/projects/projectsData'
@@ -26,6 +27,7 @@ const Home = () => {
           </span>
         </Button>
       </div>
+      <ContactSection />
       <Footer />
     </>
   )

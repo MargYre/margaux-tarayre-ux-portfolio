@@ -29,6 +29,10 @@
     "viewCaseStudy": "View case study",
     "github": "GitHub"
   },
+  "contact": {
+    "title": "Want to chat or collaborate?",
+    "button": "Contact me by email"
+  },
   "home": {
     "projects": {
       "seeAll": "See all projects"
