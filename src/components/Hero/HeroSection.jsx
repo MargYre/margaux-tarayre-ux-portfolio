@@ -1,16 +1,47 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { personas, personaMessages } from './personas'
 import Button from '../Button/Button'
 import styles from './HeroSection.module.scss'
 
+const TypewriterTitle = ({ text, isFirstLoad, onDone }) => {
+  const [displayed, setDisplayed] = useState(isFirstLoad ? '' : text)
+  const [done, setDone] = useState(!isFirstLoad)
+
+  useEffect(() => {
+    if (!isFirstLoad) {
+      setDisplayed(text)
+      setDone(true)
+      return
+    }
+    setDisplayed('')
+    setDone(false)
+    if (!text) return
+    let i = 0
+    const id = setInterval(() => {
+      i++
+      setDisplayed(text.slice(0, i))
+      if (i >= text.length) {
+        clearInterval(id)
+        setDone(true)
+        onDone?.()
+      }
+    }, 50)
+    return () => clearInterval(id)
+  }, [text, isFirstLoad])
+
+  return (
+    <>
+      {displayed}
+      {!done && <span className={styles.cursor}>|</span>}
+    </>
+  )
+}
+
 const HeroSection = () => {
   const [selectedPersona, setSelectedPersona] = useState('anyone')
+  const [hasLoaded, setHasLoaded] = useState(false)
   const { t, i18n } = useTranslation()
-
-  const handlePersonaClick = personaId => {
-    setSelectedPersona(personaId)
-  }
 
   const currentLang = i18n.language
   const currentMessage =
@@ -33,7 +64,7 @@ const HeroSection = () => {
             key={persona.id}
             persona={persona}
             isActive={selectedPersona === persona.id}
-            onClick={handlePersonaClick}
+            onClick={setSelectedPersona}
           />
         ))}
       </nav>
@@ -41,6 +72,8 @@ const HeroSection = () => {
       <HeroContent
         message={currentMessage}
         selectedPersona={selectedPersona}
+        isFirstLoad={!hasLoaded}
+        onIntroComplete={() => setHasLoaded(true)}
         t={t}
       />
 
@@ -58,39 +91,53 @@ const PersonaButton = ({ persona, isActive, onClick }) => (
   </button>
 )
 
-const HeroContent = ({ message, selectedPersona, t }) => (
-  <div className={styles.heroContent} key={selectedPersona}>
-    <h1 className={styles.title}>{message?.subtitle}</h1>
+const HeroContent = ({ message, selectedPersona, isFirstLoad, onIntroComplete, t }) => (
+  <div
+    className={`${styles.heroContent} ${isFirstLoad ? styles.introContent : styles.personaContent}`}
+    key={selectedPersona}
+  >
+    <h1 className={styles.title}>
+      <TypewriterTitle
+        text={message?.subtitle || ''}
+        isFirstLoad={isFirstLoad}
+        onDone={onIntroComplete}
+      />
+    </h1>
     <h2 className={styles.subtitle}>{message?.title}</h2>
     <p className={styles.description}>{message?.description}</p>
 
     <div className={styles.ctaGroup}>
-      {/* Bouton Projets TOUJOURS visible */}
       <Button variant="primary" href="#projects">
         {t('nav.projects')}
       </Button>
 
-      {/* RECRUTEUR : CV seulement */}
       {selectedPersona === 'recruiter' && (
-        <Button
-          variant="secondary"
-          href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          ariaLabel={t('hero.viewCV')}
-        >
-          {t('hero.viewCV')}
-        </Button>
+        <>
+          <Button
+            variant="secondary"
+            href="/images/CV-Margaux_Tarayre_UXUIdesigner.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            ariaLabel={t('hero.viewCV')}
+          >
+            {t('hero.viewCV')}
+          </Button>
+          <Button
+            variant="secondary"
+            href="mailto:margaux.tarayre@gmail.com"
+            ariaLabel={t('hero.contact')}
+          >
+            {t('hero.contact')}
+          </Button>
+        </>
       )}
 
-      {/* DIRECTEUR DESIGN : Case Study */}
       {selectedPersona === 'director' && (
         <Button variant="secondary" to="/projects/good-morning">
           {t('hero.viewCaseStudy')}
         </Button>
       )}
 
-      {/* PRODUCT MANAGER : CV */}
       {selectedPersona === 'pm' && (
         <Button
           variant="secondary"
@@ -103,7 +150,6 @@ const HeroContent = ({ message, selectedPersona, t }) => (
         </Button>
       )}
 
-      {/* DEVELOPPEUR : Portfolio Dev + GitHub */}
       {selectedPersona === 'engineer' && (
         <>
           <Button
