@@ -10,39 +10,37 @@
    5. OMBRES          — Élévations
    ═══════════════════════════════════════════════ */
 
-
 /* ─── 1. TYPOGRAPHIE ───────────────────────────── */
 
 :root {
   --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Nixie One', Georgia, serif;
 
-  --font-size-xs:   0.75rem;   /*  12px — labels, badges       */
-  --font-size-sm:   0.875rem;  /*  14px — secondaire, captions */
-  --font-size-base: 1rem;      /*  16px — corps de texte       */
-  --font-size-lg:   1.125rem;  /*  18px — intro, lead          */
-  --font-size-xl:   1.25rem;   /*  20px — sous-titres          */
-  --font-size-2xl:  1.5rem;    /*  24px — titres de section    */
-  --font-size-3xl:  2rem;      /*  32px — titres de page       */
-  --font-size-4xl:  2.5rem;    /*  40px — héros                */
+  --font-size-xs: 0.75rem; /*  12px — labels, badges       */
+  --font-size-sm: 0.875rem; /*  14px — secondaire, captions */
+  --font-size-base: 1rem; /*  16px — corps de texte       */
+  --font-size-lg: 1.125rem; /*  18px — intro, lead          */
+  --font-size-xl: 1.25rem; /*  20px — sous-titres          */
+  --font-size-2xl: 1.5rem; /*  24px — titres de section    */
+  --font-size-3xl: 2rem; /*  32px — titres de page       */
+  --font-size-4xl: 2.5rem; /*  40px — héros                */
 
-  --font-weight-light:    300;
-  --font-weight-regular:  400;
-  --font-weight-medium:   500;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
-  --font-weight-bold:     700;
+  --font-weight-bold: 700;
 
-  --line-height-tight:   1.15; /* Grands titres                */
-  --line-height-snug:    1.25; /* Titres moyens                */
-  --line-height-base:    1.6;  /* Corps de texte               */
+  --line-height-tight: 1.15; /* Grands titres                */
+  --line-height-snug: 1.25; /* Titres moyens                */
+  --line-height-base: 1.6; /* Corps de texte               */
   --line-height-relaxed: 1.75; /* Textes longs, paragraphes    */
 
-  --letter-spacing-tight:  -0.02em; /* Grands titres            */
-  --letter-spacing-normal:  0em;
-  --letter-spacing-wide:    0.06em; /* Tags, captions           */
-  --letter-spacing-wider:   0.12em; /* Labels uppercase         */
+  --letter-spacing-tight: -0.02em; /* Grands titres            */
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.06em; /* Tags, captions           */
+  --letter-spacing-wider: 0.12em; /* Labels uppercase         */
 }
-
 
 /* ─── 2. COULEURS ──────────────────────────────── */
 
@@ -55,7 +53,7 @@
   --color-text-secondary: #6b6b6b;
 
   /* Fonds */
-  --color-bg: #f2f2f2;          /* Cloudy White */
+  --color-bg: #f2f2f2; /* Cloudy White */
   --color-bg-primary: var(--color-bg);
   --color-bg-secondary: #e8e8e8;
   --color-bg-tertiary: #dedede;
@@ -105,21 +103,19 @@ html.dark {
   --color-hover-bg: #1e1e1e;
 }
 
-
 /* ─── 3. ESPACEMENTS ───────────────────────────── */
 /* Système basé sur 8px */
 
 :root {
   --nav-height: 5rem;
 
-  --spacing-xs:  0.5rem;  /*  8px */
-  --spacing-sm:  1rem;    /* 16px */
-  --spacing-md:  1.5rem;  /* 24px */
-  --spacing-lg:  2rem;    /* 32px */
-  --spacing-xl:  3rem;    /* 48px */
-  --spacing-2xl: 4rem;    /* 64px */
+  --spacing-xs: 0.5rem; /*  8px */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-2xl: 4rem; /* 64px */
 }
-
 
 /* ─── 4. TRANSITIONS ───────────────────────────── */
 
@@ -128,7 +124,6 @@ html.dark {
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
-
 
 /* ─── 5. OMBRES ────────────────────────────────── */
 
@@ -144,7 +139,6 @@ html.dark {
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-
 /* ─── Reset CSS ────────────────────────────────── */
 
 * {
@@ -153,18 +147,17 @@ html.dark {
   box-sizing: border-box;
 }
 
-
 /* ─── Corrections DPI Windows ──────────────────── */
 /* Ajustements pour scaling 125 % (120 dpi) et 150 % (144 dpi) */
 
 @media (min-resolution: 120dpi) {
   :root {
-    --nav-height:  4.5rem;
-    --spacing-xs:  0.45rem;
-    --spacing-sm:  0.9rem;
-    --spacing-md:  1.35rem;
-    --spacing-lg:  1.8rem;
-    --spacing-xl:  2.7rem;
+    --nav-height: 4.5rem;
+    --spacing-xs: 0.45rem;
+    --spacing-sm: 0.9rem;
+    --spacing-md: 1.35rem;
+    --spacing-lg: 1.8rem;
+    --spacing-xl: 2.7rem;
     --spacing-2xl: 3.6rem;
   }
   html {
@@ -174,19 +167,18 @@ html.dark {
 
 @media (min-resolution: 144dpi) {
   :root {
-    --nav-height:  4rem;
-    --spacing-xs:  0.4rem;
-    --spacing-sm:  0.8rem;
-    --spacing-md:  1.2rem;
-    --spacing-lg:  1.6rem;
-    --spacing-xl:  2.4rem;
+    --nav-height: 4rem;
+    --spacing-xs: 0.4rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.2rem;
+    --spacing-lg: 1.6rem;
+    --spacing-xl: 2.4rem;
     --spacing-2xl: 3.2rem;
   }
   html {
     font-size: 14px;
   }
 }
-
 
 /* ─── Styles de base ───────────────────────────── */
 
@@ -225,7 +217,7 @@ footer,
     transform var(--transition-base);
 }
 
-/* Titres — Playfair Display */
+/* Titres — Ubuntu Bold */
 h1,
 h2,
 h3,
@@ -233,7 +225,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 700;
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
   margin-bottom: var(--spacing-sm);
@@ -265,7 +257,6 @@ button {
   background: none;
   cursor: pointer;
 }
-
 
 /* ─── Composant .btn-figma ─────────────────────── */
 
@@ -301,7 +292,6 @@ button {
   outline-offset: 3px;
 }
 
-
 /* ─── Conteneur principal ──────────────────────── */
 
 .app {
@@ -314,7 +304,6 @@ main {
   flex: 1;
   position: relative;
 }
-
 
 /* ─── Keyframes ────────────────────────────────── */
 
@@ -340,14 +329,12 @@ main {
   }
 }
 
-
 /* ─── Accessibilité ────────────────────────────── */
 
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 4px;
 }
-
 
 /* ─── Responsive ───────────────────────────────── */
 
@@ -360,7 +347,6 @@ main {
     padding-top: calc(var(--nav-height) + 1rem);
   }
 }
-
 
 /* ─── Print ────────────────────────────────────── */
 
@@ -378,7 +364,6 @@ main {
     padding-top: 0;
   }
 }
-
 
 /* ─── Corrections navigateur ───────────────────── */
 
