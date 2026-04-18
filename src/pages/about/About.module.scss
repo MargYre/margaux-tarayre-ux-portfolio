@@ -40,6 +40,7 @@
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
   margin: 0;
+  min-height: 1.2em;
 }
 
 .heroDescription {
@@ -122,6 +123,7 @@
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
   margin: 0;
+  min-height: 1.2em;
   white-space: pre-line;
 }
 
@@ -231,6 +233,7 @@
   color: var(--color-text-secondary);
   margin-bottom: 2.5rem;
   text-align: center;
+  min-height: 1em;
 }
 
 /* ── Parcours ── */

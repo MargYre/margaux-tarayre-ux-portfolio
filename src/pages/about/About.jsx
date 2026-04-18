@@ -2,6 +2,7 @@ import styles from './About.module.scss'
 import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer/Footer'
 import Button from '../../components/Button/Button'
+import TypewriterOnVisible from '../../components/Typewriter/TypewriterOnVisible'
 
 export default function About() {
   const { t } = useTranslation()
@@ -12,7 +13,9 @@ export default function About() {
         {/* Hero - Text + Motivation on left, CV button centered vertically on right */}
         <div className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>{t('opening.title')}</h1>
+            <h1 className={styles.heroTitle}>
+              <TypewriterOnVisible text={t('opening.title')} threshold={0.3} />
+            </h1>
             <p className={styles.heroDescription}>{t('opening.description')}</p>
             <p className={styles.heroMotivation}>{t('opening.motivation')}</p>
           </div>
@@ -48,7 +51,9 @@ export default function About() {
             {/* Droite : pitch + stats + CTAs */}
             <div className={styles.contactPanel}>
               <div className={styles.pitchBlock}>
-                <h2 className={styles.pitchTitle}>{t('about.pitch.title')}</h2>
+                <h2 className={styles.pitchTitle}>
+                  <TypewriterOnVisible text={t('about.pitch.title')} />
+                </h2>
                 <p className={styles.pitchBody}>{t('about.pitch.body')}</p>
               </div>
 
@@ -92,7 +97,9 @@ export default function About() {
 
         {/* Alternance */}
         <div className={styles.alternanceSection}>
-          <h2 className={styles.sectionTitle}>{t('alternance.title')}</h2>
+          <h2 className={styles.sectionTitle}>
+            <TypewriterOnVisible text={t('alternance.title')} speed={40} />
+          </h2>
           <div className={styles.alternanceGrid}>
             <div className={styles.alternanceCell}>
               <span className={styles.cellValue}>{t('alternance.duration.value')}</span>
@@ -114,7 +121,9 @@ export default function About() {
 
         {/* Parcours */}
         <div className={styles.parcoursSection}>
-          <h2 className={styles.sectionTitle}>{t('journey.heading')}</h2>
+          <h2 className={styles.sectionTitle}>
+            <TypewriterOnVisible text={t('journey.heading')} speed={40} />
+          </h2>
           <div className={styles.timelineH}>
             {[
               { dateKey: 'journey.date1', titleKey: 'journey.title1', textKey: 'journey.step1' },
@@ -138,7 +147,9 @@ export default function About() {
 
         {/* Compétences */}
         <div className={styles.skillsSection}>
-          <h2 className={styles.sectionTitle}>{t('skills.heading')}</h2>
+          <h2 className={styles.sectionTitle}>
+            <TypewriterOnVisible text={t('skills.heading')} speed={40} />
+          </h2>
           <div className={styles.skillsTable}>
             {[
               { titleKey: 'skills.design.title', tagsKey: 'skills.design.tags' },
