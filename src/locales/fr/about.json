@@ -1,8 +1,7 @@
 {
   "opening": {
-    "title": "Designer UX/UI avec plus de 2 ans d'expérience en développement front-end",
-    "description": "Je conçois des interfaces en comprenant les contraintes techniques qui les rendent réelles. Mon double parcours me permet de faire le pont entre design et développement.",
-    "motivation": "Ce qui m'anime : trouver la solution qui satisfait l'utilisateur, honore l'accessibilité et reste techniquement viable.",
+    "title": "Designer UX/UI nourrie par 2,5 ans de front-end",
+    "description": "Chez Infotel, Arsene Innovation et La Centrale, j'ai développé des interfaces React face aux vraies contraintes du terrain — accessibilité, performance, délais serrés. Ce parcours m'a appris ce que le design doit respecter pour être réel. Aujourd'hui en Mastère UX Design à l'IIM Paris, je conçois des expériences qui tiennent en production, pas seulement en maquette.",
     "cvButton": "Télécharger mon CV",
     "downloadCV": "Télécharger le CV de Margaux Tarayre"
   },
@@ -19,7 +18,8 @@
     "step3": "Mastère UX Design Interactif à l'IIM Paris pour formaliser cette expertise hybride. Je parle le langage des développeurs et conçois des systèmes viables en production."
   },
   "jobSearch": {
-    "title": "Disponible dès octobre 2026",
+    "title": "Septembre 2026",
+    "availability": "Disponibilité",
     "description": "Je recherche une alternance de 24 mois • Rythme 1 semaine école / 3 semaines entreprise",
     "emailButton": "Me contacter par email",
     "emailLabel": "Envoyer un email à Margaux",
@@ -33,9 +33,8 @@
       "body": "2,5 ans de développement front-end, une spécialisation vers l'UX/UI, et la conviction que les meilleures interfaces naissent quand design et code se parlent vraiment."
     },
     "stats": {
-      "frontend": "ans front-end",
-      "master": "UX/UI en cours",
-      "projects": "projets Figma"
+      "frontend": "d'expérience front-end",
+      "master": "UX/UI en cours"
     },
     "video": {
       "thanks": "Merci d'avoir parcouru mon portfolio —"

@@ -1,8 +1,7 @@
 {
   "opening": {
-    "title": "UX/UI Designer with over 2 years of front-end development experience",
-    "description": "I design interfaces by understanding the technical constraints that make them real. My dual background allows me to bridge design and development.",
-    "motivation": "What drives me: finding solutions that satisfy users, honor accessibility, and remain technically viable.",
+    "title": "UX/UI Designer with 2.5 years of front-end in my DNA",
+    "description": "At Infotel, Arsene Innovation and La Centrale, I built React interfaces against real constraints — accessibility, performance, tight deadlines. That background taught me what good design must respect to exist in production. Now pursuing a Master's in UX Design at IIM Paris, I design experiences that hold up beyond the mockup.",
     "cvButton": "Download my CV",
     "downloadCV": "Download Margaux Tarayre's CV"
   },
@@ -19,7 +18,8 @@
     "step3": "Master's in Interactive UX Design at IIM Paris to formalize this hybrid expertise. I speak developers' language and design systems that work in production."
   },
   "jobSearch": {
-    "title": "Available from October 2026",
+    "title": "September 2026",
+    "availability": "Availability",
     "description": "Looking for a 24-month work-study program • 1 week school / 3 weeks company rhythm",
     "emailButton": "Contact me by email",
     "emailLabel": "Send an email to Margaux",
@@ -33,9 +33,8 @@
       "body": "2.5 years of front-end development, a specialisation in UX/UI, and the belief that the best interfaces are born when design and code truly talk to each other."
     },
     "stats": {
-      "frontend": "years front-end",
-      "master": "UX/UI in progress",
-      "projects": "Figma projects"
+      "frontend": "years front-end exp.",
+      "master": "UX/UI in progress"
     },
     "video": {
       "thanks": "Thanks for browsing my portfolio —"
